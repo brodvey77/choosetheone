@@ -31,31 +31,19 @@ store = {
     ],
 }
 
-# Рассчитать на какую сумму лежит каждого товара на складе.
-#
-# Вывести суммарную стоимость каждого товара на складе c помощью циклов
-# То есть: всего по лампам, стульям, етс.
-# Формат строки вывода: "<товар> - <кол-во> шт, стоимость <общая стоимость> руб"
-#
-# Алгоритм должен получиться приблизительно такой:
-#
-# цикл for по товарам с получением кода и названия товара
-#     инициализация переменных для подсчета количества и стоимости товара
-#     получение списка на складе по коду товара
-#     цикл for по списку на складе
-#         подсчет количества товара
-#         подсчет стоимости товара
-#     вывод на консоль количества и стоимости товара на складе
+
 
 for element in goods:
-    element_1 = element
-    element_2 = goods[element]
-    element_qty = 0
-    element_price = 0
-    for i in store[element_2]:
-        element_qty = i['quantity']
-        element_price = i['price'] * element_qty
-        print(element_1, 'количество', element_qty, 'шт. Стоимость', element_price, 'руб')
+    good = element
+    good_code = goods[good]
+    good_qty = 0
+    good_price = 0
+    for i in store[good_code]:
+        good_qty = i['quantity']
+        good_price = i['price'] * good_qty
+        print(good, good_qty, good_price)
+
+
 
 
 
