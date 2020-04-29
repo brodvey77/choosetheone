@@ -41,7 +41,7 @@ for element in goods:
     for i in store[good_code]:
         good_qty = i['quantity']
         good_price = i['price'] * good_qty
-        print(good, good_qty, good_price)
+        print(good, 'Количество', good_qty, 'шт. Стоимость', good_price, 'руб')
 
 
 
