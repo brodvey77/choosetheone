@@ -112,3 +112,10 @@
 # new_list = my_list[:3]
 # print(new_list)
 # # print(my_list)
+
+
+#  Dictionary
+
+# my_dict = {'name': 'Jack', 'surname': 'Nilson', 'age': 36}
+# print(type(my_dict))
+# print(my_dict['name'])
