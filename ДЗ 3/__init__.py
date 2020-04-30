@@ -119,3 +119,10 @@
 # my_dict = {'name': 'Jack', 'surname': 'Nilson', 'age': 36}
 # print(type(my_dict))
 # print(my_dict['name'])
+
+my_computer = ('Samsung', 'R560', 'On_linux')
+print(type(my_computer))
+print(my_computer)
+mark, model, system = my_computer
+
+print(mark, system, model)
