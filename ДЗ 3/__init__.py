@@ -64,16 +64,16 @@
 #      '\n asasasasasasa asasasasas')
 
 
-greeting = 'Hello Python!'
-print(greeting[3])
+# greeting = 'Hello Python!'
+# print(greeting[3])
+#
+# print('Hello Python!'[3])
+# print(greeting[0:2])
+# print(greeting[:2])
+# print(greeting[-13:-11])
+# print(greeting[:2:1])
+# print(greeting[-13:-11:1])
+#
+# print(greeting[6] + 'a' + greeting[-5:-3])
 
-print('Hello Python!'[3])
-print(greeting[0:2])
-print(greeting[:2])
-print(greeting[-13:-11])
-print(greeting[:2:1])
-print(greeting[-13:-11:1])
 
-
-
-print(greeting[6] + 'a' + greeting[-5:-3])
