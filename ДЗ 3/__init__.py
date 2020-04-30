@@ -76,4 +76,6 @@
 #
 # print(greeting[6] + 'a' + greeting[-5:-3])
 
+string = 'z'
+print(string.upper() * 7)
 
