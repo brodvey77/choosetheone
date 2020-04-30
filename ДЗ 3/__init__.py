@@ -76,6 +76,30 @@
 #
 # print(greeting[6] + 'a' + greeting[-5:-3])
 
-string = 'z'
-print(string.upper() * 7)
+# string = 'z'
+# print(string.upper() * 7)
 
+# float_result = 1000 / 7
+# print (float_result)
+# print('asdsadasdas is {0:10.3f}'.format(float_result))
+#
+# print('''
+# {0:10.2f} {1:10.2f} {2:10.2f}
+# {3:10.2f} {4:10.2f} {5:10.2f}
+# {6:10.2f} {7:10.2f} {8:10.2f}
+# '''.format(1.34234324, 3.34324324, 3.3443423, 3.34342432,
+#             1.34243243, 6.2312312312, 3.32312312321, 9.23123213123,
+#             1.0343243243))
+
+# name = 'Jack'
+# age = 34
+# name_age = f'My name is {name}. I\'m {age} years old'
+# print(name_age)
+
+
+print('''
+{0:15.4f}{1:15.4f}{2:15.4f}{3:15.4f}
+{4:15.4f}{5:15.4f}{6:15.4f}{7:15.4f}
+'''.format(62.234345234, 1.233454324, 62.2342345334,
+           456.233454324, 62.233454234, 8.2343534324,
+           625.233454234, 0.23432544354))
