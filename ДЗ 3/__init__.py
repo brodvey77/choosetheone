@@ -120,9 +120,15 @@
 # print(type(my_dict))
 # print(my_dict['name'])
 
-my_computer = ('Samsung', 'R560', 'On_linux')
-print(type(my_computer))
-print(my_computer)
-mark, model, system = my_computer
+# my_computer = ('Samsung', 'R560', 'On_linux')
+# print(type(my_computer))
+# print(my_computer)
+# mark, model, system = my_computer
+#
+# print(mark, system, model)
 
-print(mark, system, model)
+# SET
+
+my_computer = set('Создайте множество при помощи функции set() из текста, чтобы получить уникальные символы')
+print(my_computer)
+print(type(my_computer))
