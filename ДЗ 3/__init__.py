@@ -170,3 +170,40 @@
 #     print('The number is even')
 # else:
 #     print('The number is odd')
+
+
+# for number in range(10,31,2):
+#     print(number)
+
+
+# user_input = input('Input your number: >>>')
+#
+# for number in range(int(user_input)):
+#     print("hello ")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
