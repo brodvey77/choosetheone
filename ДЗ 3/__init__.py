@@ -182,6 +182,18 @@
 #     print("hello ")
 
 
+#  While
+# from random import randint
+#
+# number = 0
+# count = 0
+# my_list = []
+#
+# while number != 7:
+#     count += 1
+#     number = randint(1, 10)
+#     my_list.append(number)
+# print(my_list)
 
 
 
