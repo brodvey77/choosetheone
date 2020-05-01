@@ -119,7 +119,7 @@
 # my_dict = {'name': 'Jack', 'surname': 'Nilson', 'age': 36}
 # print(type(my_dict))
 # print(my_dict['name'])
-
+#
 # my_computer = ('Samsung', 'R560', 'On_linux')
 # print(type(my_computer))
 # print(my_computer)
@@ -129,6 +129,29 @@
 
 # SET
 
-my_computer = set('Создайте множество при помощи функции set() из текста, чтобы получить уникальные символы')
-print(my_computer)
-print(type(my_computer))
+# my_computer = set('Создайте множество при помощи функции set() из текста, чтобы получить уникальные символы')
+# print(my_computer)
+# print(type(my_computer))
+
+
+# bool
+
+# x, y = 1, 2
+# print(x > y)
+# print(x < y)
+# print(x >= y)
+# print(x <= y)
+# print(x == y)
+# print(x != y)
+
+
+x, y = 'A', 'a'
+print('A' > 'a')
+print('A' < 'a')
+print('A' >= 'a')
+print('A' <= 'a')
+print('A' == 'a')
+print('A' != 'a')
+
+print(ord('A'))
+print(ord('a'))
