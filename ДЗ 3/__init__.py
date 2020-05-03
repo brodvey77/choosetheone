@@ -197,6 +197,17 @@
 
 
 
+# greetings = ['hello', 'hi', 'hey', 'hola']
+# new_list = []
+#
+# for greetings in greetings:
+#     new_list.append(greetings[1])
+#
+# print(new_list)
+
+# new_list = [letter[1] for letter in greetings]
+# print(new_list)
+
 
 
 
