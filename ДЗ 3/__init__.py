@@ -197,7 +197,7 @@
 
 
 
-# greetings = ['hello', 'hi', 'hey', 'hola']
+greetings = ['hello', 'hi', 'hey', 'hola']
 # new_list = []
 #
 # for greetings in greetings:
@@ -205,8 +205,8 @@
 #
 # print(new_list)
 
-# new_list = [letter[1] for letter in greetings]
-# print(new_list)
+new_list = [letter[1] for letter in greetings]
+print(new_list)
 
 
 
