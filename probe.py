@@ -198,15 +198,34 @@
 # print(is_item_here('Hi', 'Hello', 3 , 7, 'H'))
 
 
-def your_favorite_color(my_color, **kwargs):
-    if 'color' in kwargs:
-        print('My favourite color is {}, but {} is also pretty good!'.format(my_color, kwargs['color']))
-    else:
-        print('My favourite color is {}, What is your favourite color?'.format(my_color))
+# def your_favorite_color(my_color, **kwargs):
+#     if 'color' in kwargs:
+#         print('My favourite color is {}, but {} is also pretty good!'.format(my_color, kwargs['color']))
+#     else:
+#         print('My favourite color is {}, What is your favourite color?'.format(my_color))
+#
+# your_favorite_color('green', color='red', car='toyota')
 
-your_favorite_color('green', color='red', car='toyota')
 
+class Car:
+    wheels_number = 4
 
+    def __init__(self, name, color, year, is_crashed):
+        self.name = name
+        self.color = color
+        self.year = year,
+        self.is_crashed = is_crashed
+
+    def drive(self):
+        print('Car is driving')
+
+opel_car = Car('Opel Tigra', 'red', 2018, False)
+opel_car.drive()
+print(opel_car.wheels_number)
+print(opel_car.name)
+print(opel_car.year)
+print(opel_car.is_crashed)
+print(opel_car.color)
 
 
 
