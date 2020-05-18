@@ -12,9 +12,9 @@ print(sum_of_customs_clearance)
 
 # расчет на одно авто
 sum_of_trucks = int(weight_of_specification) / 22000
-print(sum_of_trucks)
-cost_invoice = int(sum_of_specification) / int(sum_of_trucks)
-print(cost_invoice)
-sum_of_insurance = int(cost_invoice) * 0.2 / 100
-print(sum_of_insurance)
+print('Колличество авто {}'.format(sum_of_trucks))
+# cost_invoice = int(sum_of_specification) / int(sum_of_trucks)
+# print(cost_invoice)
+# sum_of_insurance = int(cost_invoice) * 0.2 / 100
+# print(sum_of_insurance)
 
