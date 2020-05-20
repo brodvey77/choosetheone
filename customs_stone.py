@@ -5,7 +5,7 @@ sum_of_transport = input('Введите общую сумму транспор�
 sum_of_customs_clearance = input('Введите стоимость таможенного оформления: ')
 exchange_rates = input('Введите курс евро в рублях: ')
 
-print(sum_of_specification)
+print('сумма предложения - ' + sum_of_specification)
 print(sum_of_transport)
 print(weight_of_specification)
 print(sum_of_customs_clearance)
