@@ -1,4 +1,5 @@
 import math
+# Ввод данных
 
 sum_of_specification = input('Введите сумму предложения: ')
 weight_of_specification = input('Введите вес по спецификации: ')
@@ -25,6 +26,10 @@ print('Сумма транспорта до границы с ТС - ' + str(tra
 
 customs_value = cost_invoice + transport_to_board + sum_of_insurance
 print('Таможенная стоимость - ' + str(customs_value) + ' евро')
+
+# Расчет таможенных платежей
+
+
 
 
 
