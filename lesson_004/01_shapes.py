@@ -22,9 +22,31 @@ import simple_draw as sd
 # В итоге должен получиться ПОЧТИ одинаковый код в каждой функции
 
 # Пригодятся функции
-# sd.get_point()
-# sd.get_vector()
-# sd.line()
+# point_0 = sd.get_point(500, 100)
+# v1 = sd.get_vector(start_point=point_0, angle=30, length=100)
+# v2 = sd.get_vector(start_point=v1.end_point, angle=-90, length=100)
+# v3 = sd.get_vector(start_point=v2.end_point, angle=150, length=100)
+#
+# v1.draw()
+# v2.draw()
+# v3.draw()
+
+
+
+def draw_figure(point, angle=0):
+    v1 = sd.get_vector(start_point=point, angle=angle, length=100)
+    v1.draw()
+    v2 = sd.get_vector(start_point=v1.end_point, angle=angle-60, length=100)
+    v2.draw()
+    v3 = sd.get_vector(start_point=v2.end_point, angle=angle-120, length=100)
+    v3.draw()
+
+draw_figure(120)
+
+
+
+
+
 # Результат решения см lesson_004/results/exercise_01_shapes.jpg
 
 # TODO здесь ваш код

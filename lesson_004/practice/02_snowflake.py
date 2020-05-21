@@ -17,7 +17,7 @@ x2 = 150
 while True:
     sd.clear_screen()
     point = sd.get_point(x, y)
-    sd.snowflake(center=point, length=50, color=[100, 200, 100])
+    sd.snowflake(center=point, length=50, color=[200, 200, 100], factor_a=0.7)
     y -= 10
     if y < 50:
        break
