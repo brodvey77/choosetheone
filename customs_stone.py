@@ -14,7 +14,7 @@ print('Стоимость таможенного оформления - ' + sum_
 
 # расчет на одно авто
 sum_of_trucks = math.ceil(int(weight_of_specification) / 22000)
-print('Колличество авто - {}'.format(int(sum_of_trucks)))
+print('Колличество авто - {} машин'.format(int(sum_of_trucks)))
 cost_invoice = math.ceil(int(sum_of_specification) / sum_of_trucks)
 print('Сумма инвойса - ' + str(cost_invoice) + ' евро')
 sum_of_insurance = math.ceil(int(cost_invoice) * 0.2 / 100)
@@ -29,7 +29,29 @@ print('Таможенная стоимость - ' + str(customs_value) + ' ев
 
 # Расчет таможенных платежей
 
+custom_duty = math.ceil(customs_value * 14 / 100)
+print('Пошлина - ' + str(custom_duty))
+vat = math.ceil((customs_value + custom_duty) * 20 / 100)
+print('НДС - ' + str(vat))
 
 
+# Расчет таможенного сбора
 
 
+customs_value_ru = math.ceil(customs_value * int(exchange_rates))
+print('Таможенная стоимость в рублях - ' + str(customs_value_ru) + ' рублей')
+
+if customs_value_ru in range(0, 200001):
+    print('Таможенный сбор - 375 рублей')
+elif customs_value_ru in range(200001, 450001):
+    print('Таможенный сбор - 750 рублей')
+elif customs_value_ru in range(450001, 1000201):
+    print('Таможенный сбор - 1500 рублей')
+elif customs_value_ru in range(1000201, 2500001):
+    print('Таможенный сбор - 4125 рублей')
+elif customs_value_ru in range(2500001, 5000001):
+    print('Таможенный сбор - 5625 рублей')
+elif customs_value_ru in range(5000001, 10000001):
+    print('Таможенный сбор - 15000 рублей')
+elif customs_value_ru in range(10000001, 99999999999999999999999):
+    print('Таможенный сбор - 22500 рублей')
