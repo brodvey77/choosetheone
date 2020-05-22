@@ -42,16 +42,23 @@ customs_value_ru = math.ceil(customs_value * int(exchange_rates))
 print('Таможенная стоимость в рублях - ' + str(customs_value_ru) + ' рублей')
 
 if customs_value_ru in range(0, 200001):
-    print('Таможенный сбор - 375 рублей')
+    customs_fee = 375
+    print('Таможенный сбор - ' + str(customs_fee) + ' рублей')
 elif customs_value_ru in range(200001, 450001):
-    print('Таможенный сбор - 750 рублей')
+    customs_fee = 750
+    print('Таможенный сбор - ' + str(customs_fee) + ' рублей')
 elif customs_value_ru in range(450001, 1000201):
-    print('Таможенный сбор - 1500 рублей')
+    customs_fee = 1500
+    print('Таможенный сбор - ' + str(customs_fee) + ' рублей')
 elif customs_value_ru in range(1000201, 2500001):
-    print('Таможенный сбор - 4125 рублей')
+    customs_fee = 4125
+    print('Таможенный сбор - ' + str(customs_fee) + ' рублей')
 elif customs_value_ru in range(2500001, 5000001):
-    print('Таможенный сбор - 5625 рублей')
+    customs_fee = 5625
+    print('Таможенный сбор - ' + str(customs_fee) + ' рублей')
 elif customs_value_ru in range(5000001, 10000001):
-    print('Таможенный сбор - 15000 рублей')
-elif customs_value_ru in range(10000001, 99999999999999999999999):
-    print('Таможенный сбор - 22500 рублей')
+    customs_fee = 15000
+    print('Таможенный сбор - ' + str(customs_fee) + ' рублей')
+elif customs_value_ru > 10000001:
+    customs_fee = 22500
+    print('Таможенный сбор - ' + str(customs_fee) + ' рублей')
