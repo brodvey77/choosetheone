@@ -1,5 +1,7 @@
 import math
 # Ввод данных
+from pprint import pprint
+
 sum_of_specification = input('Введите сумму предложения: ')
 weight_of_specification = input('Введите вес по спецификации: ')
 sum_of_transport = input('Введите общую сумму транспорта: ')
@@ -14,7 +16,7 @@ exchange_rates = input('Введите курс евро в рублях: ')
 
 # расчет на одно авто
 sum_of_trucks = math.ceil(int(weight_of_specification) / 22000)
-print('Колличество авто - {} машин'.format(int(sum_of_trucks)))
+print('Количество авто - {} машин'.format(int(sum_of_trucks)))
 cost_invoice = math.ceil(int(sum_of_specification) / sum_of_trucks)
 print('Сумма инвойса - ' + str(cost_invoice) + ' евро')
 sum_of_insurance = math.ceil(int(cost_invoice) * 0.2 / 100)
@@ -68,23 +70,16 @@ sum_of_customs_payments = custom_duty + vat + customs_fee_eur
 
 # Вывод данных
 print('Расчет на одно авто:')
-# print('''
-# {0:12.3f} {1:12.3f}
-# {2:12.3f} {3:12.3f}
-# {4:12.3f} {5:12.3f}
-# {6:12.3f} {7:12.3f}
-# {8:12.3f} {9:12.3f}
-# {10:12.3f} {11:12.3f}
-# '''.format('Сумма инвойса', cost_invoice, 'Транспорт', sum_of_transport,
-#            'Страховка', sum_of_insurance, 'Таможенные платежи', sum_of_customs_payments,
-#            'Таможенное оформление', sum_of_customs_clearance))
 
 sum_of_one_track = cost_invoice + int(sum_of_transport) + sum_of_insurance + sum_of_customs_payments + int(sum_of_customs_clearance)
 
-print('Сумма инвойса - ' + str(cost_invoice) + ' евро')
-print('сумма транспорта - ' + sum_of_transport + ' евро')
-print('Сумма страховки - ' + str(sum_of_insurance) + ' евро')
-print('Сумма таможенных платежей - ' + str(sum_of_customs_payments))
-print('Стоимость таможенного оформления - ' + sum_of_customs_clearance + ' евро')
-print('Итого на одно авто - ' + str(sum_of_one_track) + ' евро')
+pprint('Сумма инвойса - ' + str(cost_invoice) + ' евро')
+pprint('сумма транспорта - ' + sum_of_transport + ' евро')
+pprint('Сумма страховки - ' + str(sum_of_insurance) + ' евро')
+pprint('Сумма таможенных платежей - ' + str(sum_of_customs_payments))
+pprint('Стоимость таможенного оформления - ' + sum_of_customs_clearance + ' евро')
+pprint('Итого на одно авто - ' + str(sum_of_one_track) + ' евро')
+
+pprint('Общий расчет:')
+pprint('Итого - ' + str(sum_of_one_track * sum_of_trucks) + ' евро')
 
