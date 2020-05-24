@@ -305,61 +305,13 @@
 # man_truck.load_cargo(2000)
 
 
-# polymorphism
-
-class Animal:
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        raise NotImplementedError('Class successor must implement this method')
-
-class Dog(Animal):
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying woof')
-
-
-class Cat(Animal):
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying meow')
-
-
-class Mouse(Animal):
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying pe-pe-pe')
-
-class Fish(Animal):
-    def __init__(self, name):
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying nothink')
 
 
 
-spike = Dog('Spike')
-tom = Cat('Tom')
-jerry = Mouse('Jerry')
-freddy = Fish('Freddy')
 
-pet_list = [spike, tom, jerry, freddy]
 
-for pet in pet_list:
-    pet.speak()
 
-def pet_voice(pet):
-    pet.speak()
 
-pet_voice(spike)
-pet_voice(tom)
-pet_voice(jerry)
-pet_voice(freddy)
+
+
+
