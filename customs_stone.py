@@ -2,10 +2,10 @@ import math
 # Ввод данных
 from pprint import pprint
 
-sum_of_specification = input('Введите сумму предложения: ')
-weight_of_specification = input('Введите вес по спецификации: ')
-sum_of_transport = input('Введите общую сумму транспорта: ')
-sum_of_customs_clearance = input('Введите стоимость таможенного оформления: ')
+sum_of_specification = input('Введите сумму предложения(евро): ')
+weight_of_specification = input('Введите вес по спецификации(кг): ')
+sum_of_transport = input('Введите сумму транспорта за одно авто(евро): ')
+sum_of_customs_clearance = input('Введите стоимость таможенного оформления(евро): ')
 exchange_rates = input('Введите курс евро в рублях: ')
 
 # проверка
