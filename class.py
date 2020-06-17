@@ -308,33 +308,70 @@
 # print(isinstance(5.5, object))
 
 
-class A:
-    def some_method(self):
-        print('Method of class A')
+# class A:
+#     def some_method(self):
+#         print('Method of class A')
+#
+#
+# class B(A):
+#     def some_method(self):
+#         print('Method of class B')
+#
+#
+# class C(A):
+#
+#     def some_method(self):
+#         print('Method of class C')
+#
+#
+# class D(B, C):
+#     @classmethod
+#     def some_method(cls):
+#         print('Method of class D')
+#
+# print(D.__mro__)
+# print(D.mro())
+#
+# help(D)
+#
+# some_object = D()
+# some_object.some_method()
+# magic methods
 
+class Person:
+    def __init__(self, first_name, last_name, age):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.age = age
 
-class B(A):
-    def some_method(self):
-        print('Method of class B')
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
 
+    def __len__(self):
+        return self.age
 
-class C(A):
+    def __add__(self, other):
+        return self.age + other.age
 
-    def some_method(self):
-        print('Method of class C')
+    def __del__(self):
+        print('Person object with name ' + self.first_name + ' is deleted')
 
+jack = Person('Jack', 'Black', 23)
 
-class D(B, C):
-    @classmethod
-    def some_method(cls):
-        print('Method of class D')
+jane = Person('Jane', 'Smith', 18)
 
-print(D.__mro__)
-print(D.mro())
+print(jane + jack)
+print(len([1, 2, 3, 4, 5]))
+print(jack)
+print(len(jack))
+#
+# del (jack)
+# # print(jack)
+#
+# x = 5
+# y = 3
+# a = '5'
+# b = '5'
+# print(x.__add__(y))
+# print(a.__add__(b))
 
-
-
-help(D)
-
-some_object = D()
-some_object.some_method()
