@@ -309,27 +309,25 @@
 
 
 class A:
-    pass
-    # def some_method(self):
-    #     print('Method of class A')
+    def some_method(self):
+        print('Method of class A')
 
 
 class B(A):
-    pass
-    # def some_method(self):
-    #     print('Method of class B')
+    def some_method(self):
+        print('Method of class B')
 
 
 class C(A):
-    pass
-    # def some_method(self):
-    #     print('Method of class C')
+
+    def some_method(self):
+        print('Method of class C')
 
 
 class D(B, C):
-    pass
-    # def some_method(self):
-    #     print('Method of class D')
+    @classmethod
+    def some_method(cls):
+        print('Method of class D')
 
 print(D.__mro__)
 print(D.mro())
