@@ -30,8 +30,8 @@ class BankAccount:
         self.balance += amount
         print(self.client_first_name + ' Баланс равен = ' +  str(self.balance))
 
-    def withdraw(self, amaunt):
-        self.balance -= amaunt
+    def withdraw(self, amount):
+        self.balance -= amount
         print(self.client_first_name + ' Баланс равен = ' +  str(self.balance))
 
 sergey = BankAccount(406193,'Sergey', 'Romanov')
