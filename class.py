@@ -181,63 +181,162 @@
 # print(man_truck.color)
 # man_truck.load_cargo(2000)
 
-class Animal:
-    def __init__(self, name):
-        self.name = name
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def speak(self):
+#         raise NotImplementedError('Class successor '
+#                                   'must implement this method')
+#
+#
+# class Dog(Animal):
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying woof')
+#
+# class Cat(Animal):
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying meow')
+#
+# class Mouse(Animal):
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying pipipi')
+#
+# class Fish(Animal):
+#     def __init__(self, name):
+#         super().__init__(name)
+#         self.name = name
+#
+#     def speak(self):
+#         print(self.name + ' is saying nothing')
+#
+# spyke = Dog('Spyke')
+# tom = Cat('Tom')
+# jerry = Mouse('Jerry')
+# freddy = Fish('Freddy')
+#
+# pet_list = [spyke, tom, jerry, freddy]
+#
+# for pet in pet_list:
+#     pet.speak()
+#
+# def pet_voice(pet):
+#     pet.speak()
+#
+# pet_voice(spyke)
+# pet_voice(tom)
+# pet_voice(jerry)
+#
+#
+# pet_voice(freddy)
 
-    def speak(self):
-        raise NotImplementedError('Class successor '
-                                  'must implement this method')
+
+# class Swimmable:
+#     def __init__(self, name):
+#         print('Method init() of Swimmable')
+#         self.name = name
+#
+#     def greetings(self):
+#         print(f'Hello, my name is {self.name} and I can swim')
+#
+#     def swim(self):
+#         print('I`m swiming')
+#
+#
+# class Wolkable:
+#     def __init__(self, name):
+#         print('Method init() of Wolkable')
+#         self.name = name
+#
+#     def greetings(self):
+#         print(f'Hello, my name is {self.name} and I can walk')
+#
+#     def walk(self):
+#         print('I`m wolking')
+#
+#
+# class Flyable:
+#     def __init__(self, name):
+#         print('Method init() of Flyable')
+#         self.name = name
+#
+#     def greetings(self):
+#         print(f'Hello, my name is {self.name} and I can fly')
+#
+#     def fly(self):
+#         print('I`m flying')
+#
+#
+# class GameCharacter(Wolkable, Flyable, Swimmable):
+#     def __init__(self, name):
+#         print('Method init() of GameCharacter')
+#         self.name = name
+#         Swimmable.__init__(self, name)
+#         Flyable.__init__(self, name)
+#         Wolkable.__init__(self, name)
 
 
-class Dog(Animal):
-    def __init__(self, name):
-        super().__init__(name)
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying woof')
-
-class Cat(Animal):
-    def __init__(self, name):
-        super().__init__(name)
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying meow')
-
-class Mouse(Animal):
-    def __init__(self, name):
-        super().__init__(name)
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying pipipi')
-
-class Fish(Animal):
-    def __init__(self, name):
-        super().__init__(name)
-        self.name = name
-
-    def speak(self):
-        print(self.name + ' is saying nothing')
-
-spyke = Dog('Spyke')
-tom = Cat('Tom')
-jerry = Mouse('Jerry')
-freddy = Fish('Freddy')
-
-pet_list = [spyke, tom, jerry, freddy]
-
-for pet in pet_list:
-    pet.speak()
-
-def pet_voice(pet):
-    pet.speak()
-
-pet_voice(spyke)
-pet_voice(tom)
-pet_voice(jerry)
+    # def greetings(self):
+    #     print(f'Hello, my name is {self.name}')
 
 
-pet_voice(freddy)
+
+
+# james = GameCharacter('James')
+# james.greetings()
+# james.fly()
+# james.walk()
+# james.swim()
+#
+# print(isinstance(james, Wolkable))
+# print(isinstance(james, Swimmable))
+# print(isinstance(james, Flyable))
+# print(isinstance(james, Gamecharacter))
+# print(isinstance(james, dict))
+# print(isinstance(5.5, object))
+
+
+class A:
+    pass
+    # def some_method(self):
+    #     print('Method of class A')
+
+
+class B(A):
+    pass
+    # def some_method(self):
+    #     print('Method of class B')
+
+
+class C(A):
+    pass
+    # def some_method(self):
+    #     print('Method of class C')
+
+
+class D(B, C):
+    pass
+    # def some_method(self):
+    #     print('Method of class D')
+
+print(D.__mro__)
+print(D.mro())
+
+
+
+help(D)
+
+some_object = D()
+some_object.some_method()

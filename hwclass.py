@@ -50,40 +50,41 @@
 # print((sergey.balance))
 # print((victor.balance))
 
-class GameCharacter:
+# class GameCharacter:
+#
+#     def __init__(self, name, health, level):
+#         self.name = name
+#         self.health = health
+#         self.level = level
+#
+#     def speak(self):
+#         print('Hi, my name is ' + self.name)
+#
+#
+# class Villain(GameCharacter):
+#     def __init__(self, name, health, level):
+#         self.name = name
+#         self.health = health
+#         self.level = level
+#
+#     def speak(self):
+#         print('Hi, my name is ' + self.name + 'and I will kill you')
+#
+#     def kill(self, other):
+#         other.health = 0
+#         print('Bang-bang, now you\'re dead')
+#
+# james = GameCharacter('James', 100, 1)
+# jim = Villain('Jim', 100, 2)
+#
+# print(james.health)
+# print(jim.health)
+#
+# james.speak()
+# jim.speak()
+# jim.kill(james)
 
-    def __init__(self, name, health, level):
-        self.name = name
-        self.health = health
-        self.level = level
 
-    def speak(self):
-        print('Hi, my name is ' + self.name)
+# print(james.health)
+# print(jim.health)
 
-
-class Villain(GameCharacter):
-    def __init__(self, name, health, level):
-        self.name = name
-        self.health = health
-        self.level = level
-
-    def speak(self):
-        print('Hi, my name is ' + self.name + 'and I will kill you')
-
-    def kill(self, other):
-        other.health = 0
-        print('Bang-bang, now you\'re dead')
-
-james = GameCharacter('James', 100, 1)
-jim = Villain('Jim', 100, 2)
-
-print(james.health)
-print(jim.health)
-
-james.speak()
-jim.speak()
-jim.kill(james)
-
-
-print(james.health)
-print(jim.health)
