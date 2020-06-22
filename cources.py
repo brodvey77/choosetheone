@@ -14,16 +14,11 @@ cource_of_euro = 0
 for sum in table[-1:]:
     cource_of_euro = sum.text
 
-print('Курс евро ' + cource_of_euro[:7])
 cource_of_euro_m = cource_of_euro[:7]
-
-
-
-
 cource_of_euro_m = cource_of_euro_m.replace(',', '.')
 cource_of_euro_m = (float(cource_of_euro_m))
 cource_of_euro_m = math.ceil(cource_of_euro_m)
-print(type(cource_of_euro_m))
+print(cource_of_euro_m)
 
 
 

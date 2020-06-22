@@ -21,7 +21,7 @@ cost_invoice = math.ceil(int(sum_of_specification) / sum_of_trucks)
 print('Сумма инвойса - ' + str(cost_invoice) + ' евро')
 sum_of_insurance = math.ceil(int(cost_invoice) * 0.2 / 100)
 print('Сумма страховки - ' + str(sum_of_insurance) + ' евро')
-transport_to_board = math.ceil(int(sum_of_transport) * 27 / 100)
+transport_to_board = math.ceil(int(sum_of_transport) * 44 / 100)
 print('Сумма транспорта до границы с ТС - ' + str(transport_to_board) + ' евро')
 
 # Расчет таможенной стоимости
@@ -82,4 +82,7 @@ pprint('Итого на одно авто - ' + str(sum_of_one_track) + ' евр
 
 pprint('Общий расчет:')
 pprint('Итого - ' + str(sum_of_one_track * sum_of_trucks) + ' евро')
+
+
+
 
