@@ -10,8 +10,16 @@ soup = BeautifulSoup(main_text)
 table = soup.find('div', {'class':'row flex-nowrap'})
 table_2 = table.findAll('div', {'class':'indicator_el_value mono-num'})
 
-for sum in table_2:
-    print(sum.text)
+cource_of_dollar = 0
+for sum in table_2[1:]:
+
+    cource_of_dollar = sum.text
+
+print('Курс доллара ' + cource_of_dollar[:7])
+
+
+
+
 
 # table_2 = table_2.text
 
