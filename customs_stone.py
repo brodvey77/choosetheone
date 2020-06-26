@@ -3,6 +3,9 @@ import math
 from pprint import pprint
 
 sum_of_specification = input('Введите сумму предложения(евро): ')
+
+# создать функцию выбора по количеству м2
+
 weight_of_specification = input('Введите вес по спецификации(кг): ')
 sum_of_transport = input('Введите сумму транспорта за одно авто(евро): ')
 sum_of_customs_clearance = input('Введите стоимость таможенного оформления(евро): ')
@@ -21,7 +24,10 @@ cost_invoice = math.ceil(int(sum_of_specification) / sum_of_trucks)
 print('Сумма инвойса - ' + str(cost_invoice) + ' евро')
 sum_of_insurance = math.ceil(int(cost_invoice) * 0.2 / 100)
 print('Сумма страховки - ' + str(sum_of_insurance) + ' евро')
-transport_to_board = math.ceil(int(sum_of_transport) * 44 / 100)
+
+#  создать функцию выбора процентной ставки
+
+transport_to_board = math.ceil(int(sum_of_transport) * 55.2 / 100)
 print('Сумма транспорта до границы с ТС - ' + str(transport_to_board) + ' евро')
 
 # Расчет таможенной стоимости
