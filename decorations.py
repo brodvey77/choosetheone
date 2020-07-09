@@ -78,32 +78,66 @@ from random import choice
 #
 # simple_function()
 
-def make_complement(func):
+# def make_complement(func):
+#     def wrapper(*args, **kwargs):
+#         print('Nice to meet you')
+#         func(*args, **kwargs)
+#         print('You look great!')
+#     return wrapper
+#
+#
+# @make_complement
+# def ask_name():
+#     print('What is your name?')
+#
+# ask_name()
+#
+# @make_complement
+# def say_name(name):
+#     print('My name is ' + name)
+#
+# say_name('Jack')
+#
+# @make_complement
+# def order(food, drink):
+#     print(f'Give me {food}, and {drink}')
+#
+# order(food='Chips', drink='kola')
+
+#WRAPS
+
+
+# print(square_sum(2, 3))
+
+from functools import  wraps
+
+def print_function_data(function):
+    """
+    This is decoration function
+    :param function:
+    :return:
+    """
+    @wraps(function)
     def wrapper(*args, **kwargs):
-        print('Nice to meet you')
-        func(*args, **kwargs)
-        print('You look great!')
+        print(f'You are using {function.__name__}')
+        print(f'Function documentation {function.__doc__}')
+        return function(*args, **kwargs)
     return wrapper
 
+@print_function_data
+def square_sum(a, b):
+    """
+    :param a: first number
+    :param b: second number
+    :return: sum of squarees first and second number
+    """
+    return a * a + b * b
 
-@make_complement
-def ask_name():
-    print('What is your name?')
 
-ask_name()
-
-@make_complement
-def say_name(name):
-    print('My name is ' + name)
-
-say_name('Jack')
-
-@make_complement
-def order(food, drink):
-    print(f'Give me {food}, and {drink}')
-
-order(food='Chips', drink='kola')
-
+# print(square_sum(2, 3))
+print(square_sum.__doc__)
+print(square_sum.__name__)
+help(square_sum)
 
 
 
