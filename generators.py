@@ -223,22 +223,168 @@
 # print(next(even_odd_generator))
 
 
-def get_infinite_square_generator():
-    number = 1
-    while True:
-        yield number * number
-        number += 1
+# def get_infinite_square_generator():
+#     number = 1
+#     while True:
+#         yield number * number
+#         number += 1
+#
+# infinite_square_generator = get_infinite_square_generator()
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
+# print(infinite_square_generator.__next__())
 
-infinite_square_generator = get_infinite_square_generator()
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
-print(infinite_square_generator.__next__())
 
+# import time
+#
+# start_time = time.time()
+# sum([number for number in range(1000000)])
+# end_time = time.time() - start_time
+#
+# start_time = time.time()
+# sum(number for number in range(1000000))
+# end_time = time.time() - start_time
+
+
+#  decoration time
+
+# from time import time
+# from functools import wraps
+#
+# def speed_test(function):
+#     @wraps(function)
+#     def wrapper(*args, **kwargs):
+#         start_time = time()
+#         result = function(*args, **kwargs)
+#         end_time = time()
+#         print(f'Time of code execution {end_time - start_time}')
+#         return result
+#     return wrapper
+#
+# @speed_test
+# def sum_with_list():
+#     return sum([number for number in range(100000000)])
+#
+# print(sum_with_list())
+#
+# @speed_test
+# def sum_with_gen():
+#     return sum(number for number in range(100000000))
+#
+# @speed_test
+# def product(range_value):
+#     result = 1
+#     for number in range(1, range_value):
+#         result *= number
+#
+#     return result
+#
+# print(sum_with_list())
+# print(sum_with_gen())
+# print(product(100000))
+
+
+# checking arguments
+
+# from functools import wraps
+#
+# def prhibit_kwargs(func):
+#     wraps(func)
+#     def wrapper(*args, **kwargs):
+#         if kwargs:
+#             raise ValueError('kwargs are prohibited')
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+# @prhibit_kwargs
+# def print_hello(name):
+#     print(f'hello {name}!')
+#
+# print_hello('Jack')
+# print_hello('Jack')
+#
+# def prhibit_int_args(func):
+#     wraps(func)
+#     def wrapper(*args, **kwargs):
+#         for val in args:
+#             if type(val) == int:
+#                 raise ValueError('int are prohibited')
+#         for key, val in kwargs.items():
+#             if type(val) == int:
+#                 raise ValueError('int are prohibited')
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+# @prhibit_int_args
+# def print_hello(name):
+#     print(f'hello {name}!')
+#
+# print_hello(50)
+# print_hello('Jack')
+
+
+# decorations with arguments
+
+from functools import wraps
+
+# def check_if_first_arg_is(value):
+#     def inner_dec(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             if args and args[0] != value:
+#                 print(f'First arguments has to be {value}')
+#             return func(*args, **kwargs)
+#         return wrapper
+#     return inner_dec
+#
+# @check_if_first_arg_is('red')
+# def print_rainbow_colors(*colors):
+#     print(colors)
+#
+# @check_if_first_arg_is('7')
+# def multiplay_7(a, b):
+#     return a * b
+#
+# print_rainbow_colors('red', 'orange', 'yellow', 'green',
+#                            'blue', 'indigo', 'violet')
+#
+# print(multiplay_7(3, 5))
+
+
+# def enforce(*types):
+#     def inner_dec(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             new_args = []
+#             for a, t in zip(args, types):
+#                 new_args.append(t(a))
+#             return func(*new_args, **kwargs)
+#         return wrapper
+#     return inner_dec
+#
+# @enforce(str, int)
+# def print_text_n_times(text, n):
+#     for number in range(n):
+#         print(text)
+#
+# print_text_n_times('hi!', '3')
+#
+# @enforce(float,float)
+# def devide(a, b):
+#     return a / b
+#
+# print(devide(4, 2))
+# print(devide('4', '2'))
+
+def some_func():
+    print('some code')
+
+some_func()
