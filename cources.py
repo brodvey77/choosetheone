@@ -27,3 +27,4 @@ print(cource_of_euro_m)
 
 
 
+

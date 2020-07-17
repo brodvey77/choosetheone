@@ -305,18 +305,35 @@
 # man_truck.load_cargo(2000)
 
 
-a = 1411*414
-b = 401*2012
-c = 1466*886
-d = 401*1492
-e = 2273*675
-f = 2273*675
-g = 2329*469
-h = 2273*830
-i = 2012*401
-j = 2273*675
+# a = 1411*414
+# b = 401*2012
+# c = 1466*886
+# d = 401*1492
+# e = 2273*675
+# f = 2273*675
+# g = 2329*469
+# h = 2273*830
+# i = 2012*401
+# j = 2273*675
+#
+# print((a + b + c + d + e + f + g + h + i + j) / 1000 )
 
-print((a + b + c + d + e + f + g + h + i + j) / 1000 )
+import random
+import time
+from datetime import datetime
+
+odds = list(i for i in range(1, 61, 2))
+print(odds)
+
+for i in range(5):
+    right_this_minute = datetime.today().minute
+    if right_this_minute in odds:
+        print('This minute seems a little odd.')
+    else:
+        print('Not an odd minute.')
+    waite_time =  random.randint(1, 20)
+    time.sleep(waite_time)
+
 
 
 
