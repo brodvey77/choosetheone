@@ -6,7 +6,7 @@ url = 'https://cbr.ru/'
 
 source = requests.get(url)
 main_text = source.text
-soup = BeautifulSoup(main_text)
+soup = BeautifulSoup(main_text, 'html.parser')
 
 table = soup.findAll('div', {'class':'indicator_el_value mono-num'})
 
