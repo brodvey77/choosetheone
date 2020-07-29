@@ -2,6 +2,8 @@ import math
 # Ввод данных
 from pprint import pprint
 
+from cources import func_cource_of_euro
+
 sum_of_specification = input('Введите сумму предложения(евро): ')
 
 # создать функцию выбора по количеству м2
@@ -9,7 +11,11 @@ sum_of_specification = input('Введите сумму предложения(�
 weight_of_specification = input('Введите вес по спецификации(кг): ')
 sum_of_transport = input('Введите сумму транспорта за одно авто(евро): ')
 sum_of_customs_clearance = input('Введите стоимость таможенного оформления(евро): ')
-exchange_rates = input('Введите курс евро в рублях: ')
+
+# вставка курса евро
+
+exchange_rates = func_cource_of_euro()
+print(f'Курс евро по ЦБ с округлением - {exchange_rates} рублей')
 
 # проверка
 # print('сумма предложения - ' + sum_of_specification + ' евро')
@@ -48,7 +54,7 @@ print(f'НДС - {str(vat)}')
 
 
 # Расчет таможенного сбора
-customs_value_ru = math.ceil(customs_value * int(exchange_rates))
+customs_value_ru = math.ceil(customs_value * exchange_rates)
 # print('Таможенная стоимость в рублях - ' + str(customs_value_ru) + ' рублей')
 customs_fee = 0
 if customs_value_ru in range(0, 200001):
