@@ -82,17 +82,18 @@ sum_of_customs_payments = custom_duty + vat + customs_fee_eur
 # Вывод данных
 print('Расчет на одно авто:')
 
-sum_of_one_track = cost_invoice + int(sum_of_transport) + sum_of_insurance + sum_of_customs_payments + int(sum_of_customs_clearance)
+sum_of_one_track = cost_invoice + int(sum_of_transport) + sum_of_insurance + sum_of_customs_payments + \
+                   int(sum_of_customs_clearance)
 print_delimetr()
-pprint('Сумма инвойса - ' + str(cost_invoice) + ' евро')
-pprint('сумма транспорта - ' + sum_of_transport + ' евро')
-pprint('Сумма страховки - ' + str(sum_of_insurance) + ' евро')
-pprint('Сумма таможенных платежей - ' + str(sum_of_customs_payments))
-pprint('Стоимость таможенного оформления - ' + sum_of_customs_clearance + ' евро')
-pprint('Итого на одно авто - ' + str(sum_of_one_track) + ' евро')
+pprint(f'Сумма инвойса - {str(cost_invoice)} евро')
+pprint(f'сумма транспорта - {sum_of_transport} евро')
+pprint(f'Сумма страховки - {str(sum_of_insurance)} евро')
+pprint(f'Сумма таможенных платежей - {str(sum_of_customs_payments)}')
+pprint(f'Стоимость таможенного оформления - {sum_of_customs_clearance} евро')
+pprint(f'Итого на одно авто - {str(sum_of_one_track)} евро')
 
 pprint('Общий расчет:')
-pprint('Итого - ' + str(sum_of_one_track * sum_of_trucks) + ' евро')
+pprint(f'Итого - {str(sum_of_one_track * sum_of_trucks)} евро')
 print_delimetr()
 
 
