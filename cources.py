@@ -17,9 +17,9 @@ for sum in table[-1:]:
 cource_of_euro_m = cource_of_euro[:7]
 cource_of_euro_m = cource_of_euro_m.replace(',', '.')
 cource_of_euro_m = (float(cource_of_euro_m))
-print(cource_of_euro_m)
+print('Официальный курс евро по ЦБ - ', cource_of_euro_m, 'рублей')
 cource_of_euro_m = math.ceil(cource_of_euro_m)
-print(cource_of_euro_m)
+print('Официальный курс евро по ЦБ с округлением - ', cource_of_euro_m, 'рублей')
 
 
 
