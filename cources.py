@@ -23,14 +23,6 @@ print('Официальный курс евро по ЦБ - ', cource_of_euro_m,
 cource_of_euro_m = math.ceil(cource_of_euro_m)
 print('Официальный курс евро по ЦБ с округлением - ', cource_of_euro_m, 'рублей')
 
+
 def func_cource_of_euro():
     return cource_of_euro_m
-
-
-
-
-
-
-
-
-
