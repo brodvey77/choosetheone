@@ -1,6 +1,7 @@
+customs_value_ru = int(input('Введите сумму таможеной стоимоти >>>  '))
 
-def customs_fee_tarif(customs_value_ru):
-    customs_fee = 0
+
+def customs_fee_tariff():
     if customs_value_ru in range(0, 200001):
         customs_fee = 775
         print(f'Таможенный сбор - {str(customs_fee)} рублей')
@@ -34,6 +35,6 @@ def customs_fee_tarif(customs_value_ru):
     elif customs_value_ru > 10000000:
         customs_fee = 30000
         print(f'Таможенный сбор - {str(customs_fee)} рублей')
-  
 
-customs_fee_tarif(952548)
+
+customs_fee_tariff()
