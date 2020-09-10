@@ -85,7 +85,7 @@ elif customs_value_ru in range(8000001, 9000001):
 elif customs_value_ru in range(9000001, 10000001):
     customs_fee = 27000
     print(f'Таможенный сбор - {str(customs_fee)} рублей')
-elif customs_value_ru > 10000001:
+elif customs_value_ru > 10000000:
     customs_fee = 30000
     print(f'Таможенный сбор - {str(customs_fee)} рублей')
 print_delimetr()

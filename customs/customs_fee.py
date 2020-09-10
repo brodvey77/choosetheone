@@ -36,4 +36,4 @@ def customs_fee_tarif(customs_value_ru):
         print(f'Таможенный сбор - {str(customs_fee)} рублей')
   
 
-customs_fee_tarif(500)
+customs_fee_tarif(952548)
