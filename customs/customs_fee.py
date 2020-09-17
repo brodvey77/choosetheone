@@ -1,4 +1,4 @@
-customs_value_ru = int(input('Введите сумму таможеной стоимоти >>>  '))
+customs_value_ru = int(input('Введите сумму таможеной стоимоти в рублях >>>  '))
 
 
 def customs_fee_tariff():
