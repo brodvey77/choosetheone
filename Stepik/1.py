@@ -11,5 +11,85 @@
 # print('I', 'like', 'Python', sep='***', end='')
 #
 
-name = input()
-print('Привет, ' + name + '!', end='')
+# name = input()
+# print('Привет, ' + name + '!', end='')
+
+# num_1 = int(input())
+# num_2 = num_1 + 1
+# num_3 = num_2 + 1
+#
+# print(num_1, num_2, num_3, sep='\n')
+
+# num_1 = int(input())
+# num_2 = int(input())
+# num_3 = int(input())
+#
+# print(num_1 + num_2 + num_3)
+
+# dlina_rebra = int(input())
+# obem_kuba = dlina_rebra ** 3
+# square_of_cube = 6 * dlina_rebra ** 2
+#
+# print('Объем =', obem_kuba)
+# print('Площадь полной поверхности =', square_of_cube)
+
+# f(a,b) = 3(a+b)3 + 275b 2 − 127a − 41
+
+# a = int(input())
+# b = int(input())
+#
+# c = 3 * (a + b) ** 3 + 275 * b ** 2 - 127 * a - 41
+#
+# print(c)
+
+# num_1 = int(input())
+# print('Следующее за числом', num_1, 'число:', num_1 + 1)
+# print('Для числа', num_1, 'предыдущее число:', num_1 - 1)
+
+# monitor = int(input())
+# system_box = int(input())
+# keyboard = int(input())
+# mouse = int(input())
+#
+# print(monitor * 3 + system_box * 3 + keyboard * 3 + mouse * 3)
+
+# number_1, number_2 = int(input()), int(input())
+#
+# print(number_1, '+', number_2, '=', (number_1 + number_2))
+# print(number_1, '-', number_2, '=', (number_1 - number_2))
+# print(number_1, '*', number_2, '=', (number_1 * number_2))
+
+# a1, d, n = int(input()),int(input()),int(input())
+# an = a1 + d * (n - 1)
+# print(an)
+
+# x = int(input())
+# print(x, '---', x * 2, '---', x * 3, '---', x * 4, '---', x * 5, sep='')
+
+
+#
+# a = 82 // 3 ** 2 % 7
+# print(a)
+
+# b1, q, n = int(input()),int(input()),int(input())
+# bn = b1 * q ** (n - 1)
+# print(bn)
+
+
+# cm = int(input())
+# print(cm // 100)
+
+
+# n = int(input())
+# k = int(input())
+# print(k // n)
+# print(k % n)
+
+# n = int(input())
+# dead = n // 2
+# life = n - dead
+# print(life)
+
+# a=int(input())  #вводимое значение
+# b=(a+3)//4      # поскольку мест в купе 4, доьавляем еще три от обнуления при целочисленном делении, и собственно делим нацело на 4
+# print (b)
