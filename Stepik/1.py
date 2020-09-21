@@ -90,6 +90,63 @@
 # life = n - dead
 # print(life)
 
-# a=int(input())  #вводимое значение
-# b=(a+3)//4      # поскольку мест в купе 4, доьавляем еще три от обнуления при целочисленном делении, и собственно делим нацело на 4
+# a = int(input())  # вводимое значение
+# b = (a + 3) // 4      # поскольку мест в купе 4, доьавляем еще три от обнуления при целочисленном делении, и собственно делим нацело на 4
 # print (b)
+
+# minute = int(input())
+#
+# print(minute, 'мин - это', minute // 60, 'час', minute % 60, 'минут')
+
+# num = int(input())
+# last_digit = num % 10
+# first_digit = num // 10
+# print('Число десятков =', first_digit)
+# print('Число единиц =', last_digit)
+
+
+# num = int(input())
+# digit3 = num % 10
+# digit2 = (num // 10) % 10
+# digit1 = num // 100
+# print(digit1, digit2, digit3, sep=',')
+
+# number = int(input())
+#
+# first_digit = number % 10
+# second_digit = (number % 100) // 10
+# third_digit = number // 100
+#
+# # Сумма цифр = 6
+# # Произведение цифр = 6
+#
+# print('Сумма цифр =', first_digit + second_digit + third_digit )
+# print('Произведение цифр', first_digit * second_digit * third_digit)
+
+# number = int(input())
+# c = number % 10
+# b = (number % 100) // 10
+# a = number // 100
+#
+# print(a, b, c, sep='')
+# print(a, c, b, sep='')
+# print(b, a, c, sep='')
+# print(b, c, a, sep='')
+# print(c, a, b, sep='')
+# print(c, b, a, sep='')
+
+# Цифра в позиции тысяч равна 3
+# Цифра в позиции сотен равна 2
+# Цифра в позиции десятков равна 8
+# Цифра в позиции единиц равна 1
+
+# number = int(input())
+# d = number % 10
+# c = (number % 100) // 10
+# b = (number % 1000) // 100
+# a = number // 1000
+#
+# print('Цифра в позиции тысяч равна', a)
+# print('Цифра в позиции сотен равна', b)
+# print('Цифра в позиции десятков равна', c)
+# print('Цифра в позиции единиц равна', d)
