@@ -150,3 +150,28 @@
 # print('Цифра в позиции сотен равна', b)
 # print('Цифра в позиции десятков равна', c)
 # print('Цифра в позиции единиц равна', d)
+
+# print('*' * 17)
+# print('*', ' ' * 13, '*')
+# print('*', ' ' * 13, '*')
+# print('*' * 17)
+
+# a = int(input())
+# b = int(input())
+# print('Квадрат суммы', a, 'и', b, 'равен', (a + b) ** 2)
+# print('Сумма квадратов', a, 'и', b, 'равна', a**2 + b**2)
+
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = int(input())
+#
+# print(a ** b + c ** d)
+
+# a = int(input())
+# aa = 10*a + a
+# aaa = 100*a + aa
+# print(a + aa + aaa)
+# print(a)
+# print(aa)
+# print(aaa)
