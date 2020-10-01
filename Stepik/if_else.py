@@ -40,3 +40,28 @@
 # else:
 #     print('Нечетное')
 # print('Четное' if not int(input()) % 2 else 'Нечетное')
+
+# number = int(input())
+# d = number % 10
+# c = (number % 100) // 10
+# b = (number % 1000) // 100
+# a = number // 1000
+# if a + d == b - c:
+#     print('ДА')
+# else:
+#     print('НЕТ')
+
+# age = int(input())
+# if age >= 18:
+#     print('Доступ разрешен')
+# else:
+#     print('Доступ запрещен')
+#
+#
+# print('Доступ разрешен' if  int(input()) >= 18 else 'Доступ запрещен')
+
+
+
+
+
+
