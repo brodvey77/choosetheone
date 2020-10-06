@@ -2,8 +2,6 @@ import math
 import requests
 from bs4 import BeautifulSoup
 
-
-
 url = 'https://cbr.ru/'
 
 source = requests.get(url)
