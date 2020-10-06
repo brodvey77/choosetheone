@@ -1,4 +1,3 @@
-
 # language = input('input language >> ')
 # if language == 'Python':
 #     print('Yes')
@@ -81,11 +80,44 @@
 # b = int(input())
 # print(a if a < b else b)
 
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = int(input())
+#
+# min = a
+#
+# if min > b:
+#     min = b
+# if min > c:
+#     min = c
+# if min > d:
+#     min = d
+# print(min)
 
+# age = int(input())
+#
+# if age in range(0, 14):
+#     print('детство')
+# elif age in range(14, 25):
+#     print('молодость')
+# elif age in range(25, 60):
+#     print('зрелость')
+# elif age >= 60:
+#     print('старость')
 
-
-
-
-
-
-
+# a = int(input())
+# b = int(input())
+# c = int(input())
+#
+# count = 0
+# if a >= 0:
+#     count = a
+# if b >= 0:
+#     count = count + b
+# if c >= 0:
+#     count = count + c
+# if count < 0:
+#     print(0)
+# else:
+#     print(count)

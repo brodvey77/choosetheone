@@ -47,13 +47,10 @@
 # print(''.join(book_list[13:3:-1]))
 
 
-
-phrase = "Don't panic!"
-plist = list(phrase)
-print(phrase)
-print(plist)
-
-
-
-print(plist)
-print(newphrase)
+# phrase = "Don't panic!"
+# plist = list(phrase)
+# print(phrase)
+# print(plist)
+#
+# print(plist)
+# print(newphrase)
