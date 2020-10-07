@@ -31,7 +31,7 @@ async def send_welcome(message: types.Message):
 
 @dp.message_handler(regexp='(^cat[s]?$|puss)')
 async def cats(message: types.Message):
-    with open('data/cats.jpg', 'rb') as photo:
+    with open('D:/1.jpeg', 'rb') as photo:
         '''
         # Old fashioned way:
         await bot.send_photo(
