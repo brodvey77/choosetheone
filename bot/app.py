@@ -1,16 +1,16 @@
 # from aiogram import Bot
 # from aiogram.utils import executor
-#
 # bot = Bot(token='1363273986:AAEHIpzsNhJYEeeiN1I3s4sAr4j86vQYVL4')
 
 
 # executor.start_polling()
 
 import logging
-
 from aiogram import Bot, Dispatcher, executor, types
+from curs import func_cource_of_euro
 
 API_TOKEN = '1363273986:AAEHIpzsNhJYEeeiN1I3s4sAr4j86vQYVL4'
+
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -44,12 +44,12 @@ async def cats(message: types.Message):
         await message.reply_photo(photo, caption='Cats are here 😺')
 
 
-@dp.message_handler()
+@dp.message_handler(commands=['euro'])
 async def echo(message: types.Message):
     # old style:
     # await bot.send_message(message.chat.id, message.text)
-
-    await message.answer(message.text)
+    
+    await message.answer(func_cource_of_euro())
 
 
 if __name__ == '__main__':

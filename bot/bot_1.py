@@ -17,6 +17,7 @@ async def cmd_start(message: types.Message):
 async def action_cancel(message: types.Message):
     remove_keyboard = types.ReplyKeyboardRemove()
     await message.answer("Действие отменено. Введите /start, чтобы начать заново.", reply_markup=remove_keyboard)
+    
 if __name__ == "__main__":
     executor.start_polling(dp, skip_updates=True)
 
