@@ -121,3 +121,42 @@
 #     print(0)
 # else:
 #     print(count)
+
+# num1 = 34
+# num2 = 81
+# if num1 // 9 == 0 or num2 % 9 == 0:
+#     print('число', num1, 'выиграло')
+# else:
+#     print('число', num2, 'выиграло')
+#
+# print(num1 // 9 )
+# print(num2 % 9)
+
+# a = int(input())
+# if a >= 2 and a <= 17:
+#     b = 3
+#     p = a * a + b * b
+# else:
+#     b = 5
+# p = (a + b) * (a + b)
+# print(p)
+
+# a = 7
+# print(a <= 17)
+# if a >= 2 and a <= 17:
+
+# a = int(input())
+# if a >= 2 and a <= 17:
+#     b = 3
+#     p = a * a + b * b
+# else:
+#     b = 5
+# p = (a + b) * (a + b)
+# print(p)
+
+# x = int(input())
+#
+# if -30 < x <= -2 or 7 < x <= 25:
+#     print('Принадлежит')
+# else:
+#     print('Не принадлежит')
