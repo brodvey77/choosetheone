@@ -160,3 +160,13 @@
 #     print('Принадлежит')
 # else:
 #     print('Не принадлежит')
+
+
+# number = int(input())
+#
+# if 999 < number <= 9999 and (number % 7 == 0 or number % 17 == 0):
+#     print('YES')
+# else:
+#     print('NO')
+
+
