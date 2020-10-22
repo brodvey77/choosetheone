@@ -184,3 +184,17 @@
 #     print('YES')
 # else:
 #     print('NO')
+
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+if a == c or b == d:
+    print('YES')
+else:
+    print('NO')
+
+# for a in range(0, 101):
+#     if a % 5 == 0:
+#         print(a)
