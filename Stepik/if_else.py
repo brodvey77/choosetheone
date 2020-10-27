@@ -185,16 +185,27 @@
 # else:
 #     print('NO')
 
-a = int(input())
-b = int(input())
-c = int(input())
-d = int(input())
-
-if a == c or b == d:
-    print('YES')
-else:
-    print('NO')
-
+# a = int(input())
+# b = int(input())
+# c = int(input())
+# d = int(input())
+#
+# if a == c or b == d:
+#     print('YES')
+# else:
+#     print('NO')
+#
 # for a in range(0, 101):
 #     if a % 5 == 0:
 #         print(a)
+
+
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+
+if (x2 == x1 or x2 == x1 + 1 or x2 == x1 - 1) and (y2 == y1 or y2 == y1 + 1 or y2 == y1 - 1):
+    print('YES')
+else:
+    print('NO')
