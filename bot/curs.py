@@ -23,4 +23,4 @@ def func_cource_of_euro():
     # cource_of_euro_m_o = math.ceil(cource_of_euro_m)
     # return cource_of_euro_m_o
 
-# print(func_cource_of_euro())
+print(func_cource_of_euro())

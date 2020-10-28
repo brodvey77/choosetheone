@@ -200,12 +200,80 @@
 #         print(a)
 
 
-x1 = int(input())
-y1 = int(input())
-x2 = int(input())
-y2 = int(input())
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+#
+# if (x2 == x1 or x2 == x1 + 1 or x2 == x1 - 1) and (y2 == y1 or y2 == y1 + 1 or y2 == y1 - 1):
+#     print('YES')
+# else:
+#     print('NO')
 
-if (x2 == x1 or x2 == x1 + 1 or x2 == x1 - 1) and (y2 == y1 or y2 == y1 + 1 or y2 == y1 - 1):
-    print('YES')
+
+# n = int(input('Speed Zum >> '))
+# k = int(input('Speed Flash >> '))
+#
+# if n > k:
+#     print('NO')
+# elif n< k:
+#     print('YES')
+# else:
+#     print('Don\'t know')
+
+# a = int(input())
+# b = int(input())
+# c = int(input())
+#
+# if a == b == c:
+#     print('Равносторонний')
+# elif a == b != c or a != b == c or a == c:
+#     print('Равнобедренный')
+# else:
+#     print('Разносторонний')
+
+
+# a = int(input())
+# b = int(input())
+# c = int(input())
+#
+# if b < a < c or c < a < b:
+#     print(a)
+# elif a < b < c or c < b < a:
+#     print(b)
+# else:
+#     print(c)
+
+
+# month = int(input())
+#
+# if month % 2 != 0 and month != 9 and month != 11 or month == 8 or month == 10 or month == 12:
+#     print(31)
+#
+# elif month == 2:
+#     print(28)
+#
+# else:
+#     print(30)
+
+# elif month()
+
+# month = int(input())
+#
+# if month == 2:
+#     print(28)
+# else:
+#     if month <= 7:
+#         print(month % 2 + 30)
+#     else:
+#         print(31 - month % 2)
+
+
+weight = int(input())
+
+if weight < 60:
+    print('Легкий вес')
+elif 60 <= weight < 64:
+    print('Первый полусредний вес')
 else:
-    print('NO')
+    print('Полусредний вес')
