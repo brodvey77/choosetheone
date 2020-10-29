@@ -269,11 +269,47 @@
 #         print(31 - month % 2)
 
 
-weight = int(input())
+# weight = int(input())
+#
+# if weight < 60:
+#     print('Легкий вес')
+# elif 60 <= weight < 64:
+#     print('Первый полусредний вес')
+# else:
+#     print('Полусредний вес')
 
-if weight < 60:
-    print('Легкий вес')
-elif 60 <= weight < 64:
-    print('Первый полусредний вес')
-else:
-    print('Полусредний вес')
+# number_1 = int(input())
+# number_2 = int(input())
+# operator = str(input())
+#
+# # if number_2 == 0 and operator == '/':
+# #     print('На ноль делить нельзя!')
+# if operator == '+':
+#     print(number_1 + number_2)
+# elif operator == '-':
+#     print(number_1 - number_2)
+# elif operator == '*':
+#     print(number_1 * number_2)
+# elif 0!= operator == '/':
+#     print(number_1 / number_2)
+# else:
+#     print('Неверная операция')
+
+
+# color_1 = str(input())
+# color_2 = str(input())
+#
+# if color_1 == 'красный' and color_2 == 'синий' or color_2 == 'красный' and color_1 == 'синий':
+#     print('фиолетовый')
+# elif color_1 == 'красный' and color_2 == 'желтый' or color_2 == 'красный' and color_1 == 'желтый':
+#     print('оранжевый')
+# elif color_1 == 'синий' and color_2 == 'желтый' or color_2 == 'синий' and color_1 == 'желтый':
+#     print('зеленый')
+# elif color_1 == 'красный' and color_2 == 'красный':
+#     print('красный')
+# elif color_1 == 'синий' and color_2 == 'синий':
+#     print('синий')
+# elif color_1 == 'желтый' and color_2 == 'желтый':
+#     print('желтый')
+# else:
+#     print('ошибка цвета')
