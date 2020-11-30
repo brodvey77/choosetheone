@@ -368,3 +368,117 @@
 #     print(a1, b2)
 # else:
 #     print('пустое множество')
+
+
+# экзамен
+
+# year = int(input())
+#
+# if year % 10 == 0 and year % 100 // 10 == 0:
+#     print('YES')
+# else:
+#     print('NO')
+
+
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+#
+# if (x1 + y1 + x2 + y2) % 2 == 0:
+#     print('YES')
+# else:
+#     print('NO')
+
+
+# age = int(input())
+# pol = str(input())
+#
+# if 10 <= age <= 15 and pol == 'f':
+#     print('YES')
+# else:
+#     print('NO')
+
+
+# digit = int(input())
+#
+# if digit == 1:
+#     print('I')
+# elif digit == 2:
+#     print('II')
+# elif digit == 3:
+#     print('III')
+# elif digit == 4:
+#     print('IV')
+# elif digit == 5:
+#     print('V')
+# elif digit == 6:
+#     print('VI')
+# elif digit == 7:
+#     print('VII')
+# elif digit == 8:
+#     print('VIII')
+# elif digit == 9:
+#     print('IX')
+# elif digit == 10:
+#     print('X')
+# else:
+#     print('ошибка')
+
+
+# digit = int(input())
+#
+# if digit % 2 != 0:
+#     print('YES')
+# elif digit % 2 == 0 and 2 <= digit <= 5:
+#     print('NO')
+# elif digit % 2 == 0 and 6 <= digit <= 20:
+#     print('YES')
+# elif digit % 2 == 0 and digit > 20:
+#     print('NO')
+
+
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+#
+# if abs(x1 - x2) == abs(y1 - y2):
+#     print('YES')
+# else:
+#     print('NO')
+#
+# print(str(x1 - x2))
+# print(str(y1 - y2))
+#
+#
+# a=int(input())
+# b=int(input())
+# c=int(input())
+# d=int(input())
+# if  (a-c)**2==(b-d)**2:
+#     print ("YES")
+# else:
+#     print ("NO")
+
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+# dx = abs(x1 - x2)
+# dy = abs(y1 - y2)
+# if dx == 1 and dy == 2 or dx == 2 and dy == 1:
+#     print('YES')
+# else:
+#     print('NO')
+
+# Ход Ферзя
+
+# x1 = int(input())
+# y1 = int(input())
+# x2 = int(input())
+# y2 = int(input())
+# if abs(x1 - x2) == abs(y1 - y2) or x1 == x2 or y1 == y2:
+#     print('YES')
+# else:
+#     print('NO')
