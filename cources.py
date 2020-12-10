@@ -8,7 +8,7 @@ source = requests.get(url)
 main_text = source.text
 soup = BeautifulSoup(main_text, 'html.parser')
 
-table = soup.findAll('div', {'class': 'indicator_el_value mono-num'})
+table = soup.findAll('div', {'class': 'col-md-2 col-xs-9 _right mono-num'})
 
 cource_of_euro = 0
 for sum in table[-1:]:
