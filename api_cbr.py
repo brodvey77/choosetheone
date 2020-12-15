@@ -8,6 +8,7 @@ response = requests.get(url)
 if response.status_code == 200:
     text = response.json()
 
-print(str(text['Date'][:10]))
-print(text['Valute']['USD']['Value'])
-print(text['Valute']['EUR']['Value'])
+# print(str(text['Date'][:10]))
+cource_of_usd = text['Valute']['USD']['Value']
+cource_of_eur = text['Valute']['EUR']['Value']
+

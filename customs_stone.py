@@ -1,6 +1,6 @@
 import math
 from pprint import pprint
-from cources import func_cource_of_euro
+from api_cbr import cource_of_eur
 
 # Ввод данных
 sum_of_specification = input('Введите сумму предложения(евро): ')
@@ -10,7 +10,7 @@ sum_of_specification = input('Введите сумму предложения(�
 weight_of_specification = input('Введите вес по спецификации(кг): ')
 sum_of_transport = input('Введите сумму транспорта за одно авто(евро): ')
 # вставка курса евро
-exchange_rates = func_cource_of_euro()
+exchange_rates = int(cource_of_eur)
 sum_of_customs_clearance_ruble = input('Введите стоимость таможенного оформления(в рублях): ')
 sum_of_customs_clearance = math.ceil(int(sum_of_customs_clearance_ruble) / exchange_rates)
 # print(f'Курс евро по ЦБ с округлением - {exchange_rates} рублей')
