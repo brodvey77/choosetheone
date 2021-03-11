@@ -35,7 +35,7 @@ def print_delimetr():   # функция разделителя
 
 #  создать функцию выбора процентной ставки
 
-transport_to_board = math.ceil(int(sum_of_transport) * 40 / 100)
+transport_to_board = math.ceil(int(sum_of_transport) * 55 / 100)
 print(f'Сумма транспорта до границы с ТС - {str(transport_to_board)} евро')
 print_delimetr()
 
@@ -61,10 +61,10 @@ if customs_value_ru in range(0, 200001):
 elif customs_value_ru in range(200001, 450001):
     customs_fee = 1550
     print(f'Таможенный сбор - {str(customs_fee)} рублей')
-elif customs_value_ru in range(450001, 1000201):
+elif customs_value_ru in range(450001, 1200001):
     customs_fee = 3100
     print(f'Таможенный сбор - {str(customs_fee)} рублей')
-elif customs_value_ru in range(1000201, 2700001):
+elif customs_value_ru in range(1200001, 2700001):
     customs_fee = 8530
     print(f'Таможенный сбор - {str(customs_fee)} рублей')
 elif customs_value_ru in range(2700001, 4200001):
