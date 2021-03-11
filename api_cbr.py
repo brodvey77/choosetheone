@@ -12,3 +12,7 @@ if response.status_code == 200:
 cource_of_usd = text['Valute']['USD']['Value']
 cource_of_eur = text['Valute']['EUR']['Value']
 
+# print('Date: '+ str(text['Date'][:10]))
+# print(cource_of_usd)
+# print(cource_of_usd)
+
