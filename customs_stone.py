@@ -114,3 +114,5 @@ print_delimetr()
 
 
 
+# with open('D:/хрень рабочая/Downloads/sample.txt', 'w') as test:
+#     print(f'Итого - {str(sum_of_one_track * sum_of_trucks)} евро', file=test)

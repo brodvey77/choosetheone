@@ -42,20 +42,21 @@
 #     for color in color_list:
 #         print(color, file=rainbow_colors)
 
-colors_list = []
-with open('/home/choosetheone/Documents/sample.txt', 'r') as rainbow_colors:
-    for color in rainbow_colors:
-        colors_list.append(color.strip('\n'))
-
-print(colors_list)
-
-with open('/home/choosetheone/Documents/sample.txt', 'a') as rainbow_colors:
-    print('dark black', file=rainbow_colors)
-    print('dark red', file=rainbow_colors)
-
-
+# colors_list = []
+# with open('/home/choosetheone/Documents/sample.txt', 'r') as rainbow_colors:
+#     for color in rainbow_colors:
+#         colors_list.append(color.strip('\n'))
+#
+# print(colors_list)
+#
+# with open('/home/choosetheone/Documents/sample.txt', 'a') as rainbow_colors:
+#     print('dark black', file=rainbow_colors)
+#     print('dark red', file=rainbow_colors)
 
 
+# D:\хрень рабочая\Downloads\
 
+with open('D:/хрень рабочая/Downloads/sample.txt', 'a') as test:
+    print('dark black', file=test)
 
 
