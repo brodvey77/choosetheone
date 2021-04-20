@@ -142,4 +142,85 @@
 #
 # print(abs(p1 - q1) + abs(p2 - q2))
 
+# from  math import *
+#
+# x1 = float(input())
+# y1 = float(input())
+# x2 = float(input())
+# y2 = float(input())
+# s = sqrt((x1-x2)**2 + (y1 - y2)**2)
+# print(s)
+
+# from math import pi
+#
+# r = float(input())
+#
+# s = pi * (r ** 2)
+# c = (2 * pi) * r
+#
+# print(s)
+# print(c)
+
+# from math import *
+#
+# a = float(input())
+# b = float(input())
+#
+#
+# arif = (a + b) / 2
+# geom = sqrt(a * b)
+# garm = ((2 * a) * b) / (a + b)
+# qvad = sqrt((a ** 2 + b ** 2) / 2)
+#
+# print(arif)
+# print(geom)
+# print(garm)
+# print(qvad)
+
+# from math import *
+# x = float(input())
+#
+# r = radians(x)
+# r = (x * pi) / 180
+#
+# result = sin(r) + cos(r) + (tan(r) ** 2)
+#
+# print(result)
+
+
+# from math import ceil, floor
+# x = float(input())
+#
+# result = ceil(x) + floor(x)
+# print(result)
+
+
+# from math import pow, sqrt
+#
+# a = float(input())
+# b = float(input())
+# c = float(input())
+#
+# d = pow(b, 2) - 4 * a * c
+#
+# if d < 0:
+#     print('Нет корней')
+# elif d == 0:
+#     x = -b / (2 * a)
+#     print(x)
+# elif d > 0:
+#     x1 = (-b + sqrt(d)) / (2 * a)
+#     x2 = (-b - sqrt(d)) / (2 * a)
+#     print(min(x1, x2))
+#     print(max(x1, x2))
+
+# from math import tan, pi
+#
+# n = int(input())
+# a = float(input())
+#
+# s = n * (a ** 2) / (4 * tan(pi / n))
+#
+# print(s)
+
 
