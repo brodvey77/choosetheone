@@ -223,4 +223,110 @@
 #
 # print(s)
 
+# STRINS!!!!
 
+# a = '"Python is a great language!"'
+# b = ', said Fred.'
+# c = '"I don\'t ever remember having this much fun before."'
+#
+# print(a + b + c)
+
+
+# What's Your Name?
+# Напишите программу, которая считывает с клавиатуры две строки – имя и фамилию пользователя и выводит фразу:
+#
+# «Hello [введенное имя] [введенная фамилия]! You just delved into Python».
+#
+# Формат входных данных
+# На вход программе подаётся две строки (имя и фамилия), каждая на отдельной строке.
+#
+# Формат выходных данных
+# Программа должна вывести текст в соответствии с условием задачи.
+#
+# Примечание. Между firstname lastname вставьте пробел =)
+
+# name = input()
+# surname = input()
+#
+# print('«Hello', name, surname + '!'  ' You just delved into Python».')
+
+# Футбольная команда
+# Напишите программу, которая считывает с клавиатуры название футбольной команды и выводит фразу:
+#
+# «Футбольная команда [введённая строка] имеет длину [длина введённой строки] символов».
+#
+# Формат входных данных
+# На вход программе подаётся строка – название футбольной команды.
+#
+# Формат выходных данных
+# Программа должна вывести текст в соответствии с условием задачи.
+
+
+# name_soccer_club = input()
+#
+# dlina = len(name_soccer_club)
+#
+# print('Футбольная команда', name_soccer_club, 'имеет длину', dlina, 'символов')
+
+
+# Три города
+# Даны названия трех городов. Напишите программу, которая определяет самое короткое и самое длинное название города.
+#
+# Формат входных данных
+# На вход программе подаётся названия трех городов, каждое на отдельной строке.
+
+# Формат выходных данных
+# Программа должна вывести самое короткое и длинное название города, каждое на отдельной строке.
+#
+# Примечание. Гарантируется, что длины названий всех трех городов различны.
+
+# city_1, city_2, city_3 = input(), input(), input()
+# min_city = 0
+# max_city = 0
+#
+# if len(city_2) > len(city_1) < len(city_3):
+#     min_city = city_1
+# elif len(city_1) > len(city_2) < len(city_3):
+#     min_city = city_2
+# elif len(city_1) > len(city_3) < len(city_2):
+#     min_city = city_3
+#
+# print(min_city)
+#
+# if len(city_2) < len(city_1) > len(city_3):
+#     max_city = city_1
+# elif len(city_1) < len(city_2) > len(city_3):
+#     max_city = city_2
+# elif len(city_1) < len(city_3) > len(city_2):
+#     max_city = city_3
+#
+# print(max_city)
+
+# s1 = input()
+# s2 = input()
+# s3 = input()
+# print(min([s1, s2, s3], key=len))
+# print(max([s1, s2, s3], key=len))
+
+# a = len(input())
+# b = len(input())
+# c = len(input())
+#
+# if ((2 *b) - c -a) * ((2 * c) - b - a) * ((2 * a) - b - c) == 0:
+#     print('YES')
+# else:
+#     print('NO')
+
+# text = input()
+# if 'синий' in text or 'воскресенье' in text:
+#     print('YES')
+# else:
+#     print('NO')
+
+
+# text = input()
+#
+# if '@' in text and '.' in text:
+#     print('YES')
+# else:
+#     print('NO')
