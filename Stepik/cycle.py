@@ -62,3 +62,54 @@
 # for i in range(n):
 #     print(i + 1, m * (p / 100 + 1) ** i)
 
+# for i in range(10, 0, -2):
+#         print(i)
+
+# m = int(input())
+# n = int(input())
+# i = 0
+#
+# if m <= n:
+#         for i in range(m, n + 1):
+#                 print(i)
+# else:
+#         print('первое чило должно быть меньше либо равно второму числу')
+
+# m = int(input())
+# n = int(input())
+#
+# if m <= n:
+#         for i in range(m, n + 1):
+#                 print(i)
+# else:
+#         for i in range(m, n - 1, -1):
+#                 print(i)
+
+# m = int(input())
+# n = int(input())
+#
+# if m > n:
+#         for i in range(m, n - 1, -1):
+#                 if i % 2 != 0:
+#                         print(i)
+# else:
+#         print('Первое число должно быть больше второго числа')
+
+# m = int(input())
+# n = int(input())
+#
+# if m <= n:
+#         for i in range(m, n + 1):
+#                 if i % 17 == 0:
+#                         print(i)
+#                 elif i % 10 == 9:
+#                         print(i)
+#                 elif i % 3 == 0 and i % 5 == 0:
+#                         print(i)
+
+
+# m, n = int(input()), int(input())
+# for i in range(m, n + 1):
+#     if i % 17 == 0 or i % 10 == 9 or i % 15 == 0:
+#         print(i)
+
