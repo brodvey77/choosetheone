@@ -158,3 +158,70 @@
 # for i in range(1, 6):
 #     total += i
 #     print(total)
+
+# list = ('Mast 13', 'Mast 12', 'Mast PRO 13', 'Mast PRO 12', 'Mast 22', 'Mast PRO 22', 'Mast 22', 'Coast 16',
+#         'Coast 16 PRO', 'Coast 12', 'Coast 12 PRO', 'Coast 13', 'Coast 13 PRO', 'Coast 20', 'Coast 22 PRO',
+#         'Coast 22', 'Coast 10', 'Coast 10 PRO', 'Coast 24', 'Coast 24 PRO', 'Mast 24', 'Mast 24 PRO')
+# count = 0
+# for i in list:
+#     count += 1
+#     print(count, i)
+
+# a = int(input())
+# b = int(input())
+#
+# count = 0
+# if a <= b:
+#     for i in range(a, b + 1):
+#         if (i ** 3) % 10 == 4 or (i ** 3) % 10 == 9:
+#             count += 1
+#     print(count)
+# else:
+#     print('Первое число должно быть меньше или равно второму числу')
+
+
+# n = int(input())
+#
+# count = 0
+#
+# for i in range(n):
+#     count = int(input()) + count
+# print(count)
+
+# import math
+#
+# n = int(input())
+# log = math.log(n)
+# count = 0
+# for i in range(1, n + 1):
+#     count = count + 1 / i
+# print(count - log)
+
+# n = int(input())
+# counter = 0
+#
+# for i in range(1, n + 1):
+#     if (i * i) % 10 == 2 or (i * i) % 10 == 5 or \
+#             (i * i) % 10 == 8:
+#         counter = counter + i
+# if counter != 0:
+#     print(counter)
+# else:
+#     print(0)
+
+# n = int(input())
+# count = 1
+#
+# if n <= 12:
+#     for i in range(1, n + 1):
+#         count = count * i
+# print(count)
+
+
+
+
+
+
+
+
+
