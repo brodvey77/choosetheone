@@ -274,3 +274,17 @@
 #     print('YES')
 # else:
 #     print('NO')
+
+n = 5
+largest = 0
+pre_largest = 0
+
+for i in range(1, n + 1):
+    if pre_largest < n > largest:
+        largest = n
+        if largest > n or n > pre_largest:
+            pre_largest = n
+
+
+print(largest)
+print(pre_largest)

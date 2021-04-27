@@ -225,15 +225,39 @@
 # print(total)
 
 
+# n = int(input())
+# total = 0
+# for i in range(1, n + 1):
+#     if n % i == 0:
+#         total += i
+# print(total)
+
+# n = int(input())
+# total = 0
+#
+# for i in range(1, n+1):
+#     if i % 2 == 0:
+#         total -= i
+#     else:
+#         total += i
+# print(total)
+
 n = int(input())
-total = 0
-for i in range(1, n + 1):
-    if n % i == 0:
-        total += i
-print(total)
+largest = 0
+pre_largest = 0
+
+if n >= 2:
+    for i in range(1, n + 1):
+        n = int(input())
+        if n > pre_largest:
+            pre_largest = largest
+            largest = n
+        else:
+            if n < largest and n > pre_largest:
+                pre_largest = n
+print(largest)
+print(pre_largest)
 
 
-
-
-
-
+# else:
+#     print('Ваше число должно быть больше двух, либо равно двум')
