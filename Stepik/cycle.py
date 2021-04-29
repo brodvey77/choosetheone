@@ -242,22 +242,47 @@
 #         total += i
 # print(total)
 
-n = int(input())
-largest = 0
-pre_largest = 0
+# n = int(input())
+# bigest = 0
+# big = 0
+#
+# if n >= 2:
+#     for i in range(n):
+#         n = int(input())
+#         if n > bigest:
+#             big = bigest
+#             bigest = n
+#         else:
+#             if n < bigest and n > big:
+#                 big = n
+# print(bigest)
+# print(big)
 
-if n >= 2:
-    for i in range(1, n + 1):
-        n = int(input())
-        if n > pre_largest:
-            pre_largest = largest
-            largest = n
-        else:
-            if n < largest and n > pre_largest:
-                pre_largest = n
-print(largest)
-print(pre_largest)
+# even_number = 0
+#
+# for i in range(10):
+#     n = int(input())
+#     if n % 2 == 0:
+#         even_number += 1
+#         if even_number == 10:
+#             print('YES')
+# if even_number != 10:
+#     print('NO')
 
+# flag = 'YES'
+#
+# for i in range(10):
+#     n = int(input())
+#     if n % 2 != 0:
+#         flag = 'NO'
+# print(flag)
 
-# else:
-#     print('Ваше число должно быть больше двух, либо равно двум')
+# n = int(input())
+# big = 0
+# biggest = 1
+#
+# #
+# for i in range(n):
+#     biggest, big = biggest + big, biggest
+#
+#     print(big, end=' ')
