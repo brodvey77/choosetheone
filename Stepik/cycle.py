@@ -157,7 +157,7 @@
 # total = 0
 # for i in range(1, 6):
 #     total += i
-#     print(total)
+#     print(total, end='')
 
 # list = ('Mast 13', 'Mast 12', 'Mast PRO 13', 'Mast PRO 12', 'Mast 22', 'Mast PRO 22', 'Mast 22', 'Coast 16',
 #         'Coast 16 PRO', 'Coast 12', 'Coast 12 PRO', 'Coast 13', 'Coast 13 PRO', 'Coast 20', 'Coast 22 PRO',
