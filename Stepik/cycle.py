@@ -271,7 +271,7 @@
 
 # flag = 'YES'
 #
-# for i in range(10):
+# for i in range(10):r
 #     n = int(input())
 #     if n % 2 != 0:
 #         flag = 'NO'
@@ -286,3 +286,34 @@
 #     biggest, big = biggest + big, biggest
 #
 #     print(big, end=' ')
+
+# text = str(input())
+# while 'КОНЕЦ' != text != 'конец':
+#     print(text)
+#     text = str(input())
+
+# стоп, хватит, достаточно
+
+# text = str(input())
+# total = 0
+#
+# while text != 'стоп' and text != 'хватит' and text != 'достаточно':
+#     total += 1
+#     text = str(input())
+# print(total)
+
+# num = int(input())
+# while num % 7 == 0:
+#     print(num)
+#     num = int(input())
+
+# num = int(input())
+# total = 0
+#
+# while num > -1:
+#     total += num
+#     num = int(input())
+# print(total)
+
+
+
