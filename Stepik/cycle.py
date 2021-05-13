@@ -366,17 +366,84 @@
 #     num = num // 10
 #     print(last_digit, end='')
 
-num = int(input())
+# num = int(input())
+# largest = 0
+# smallest = 9
+#
+# while num != 0:
+#     last_digit = num % 10
+#     if last_digit > largest:
+#         largest = last_digit
+#     if last_digit < smallest:
+#         smallest = last_digit
+#     num = num // 10
+# print('Максимальная цифра равна', largest)
+# print('Минимальная цифра равна', smallest)
 
-largest = 0
 
-while num != 0:
-    last_digit = num % 10
-    if last_digit > largest:
-        largest = last_digit
-    if last_digit < largest:
-        smallest = last_digit
+# num = int(input())
+# sum_of_digit = 0
+# multiplication = 1
+# total_digit = 0
+# average = 0
+# first_digit = 0
+# last_digit = 0
+# sum_of_last_anf_first_digit = 0
+#
+# while num != 0:
+#     digit = num % 10
+#     total_digit += 1
+#     sum_of_digit += digit
+#     multiplication *= digit
+#     first_digit = num % 10
+#     if total_digit == 1:
+#         last_digit = digit
+#     num = num // 10
+#
+# print(sum_of_digit)
+# print(total_digit)
+# print(multiplication)
+# print(sum_of_digit / total_digit)
+# print(first_digit)
+# print(first_digit + last_digit)
 
-    num = num // 10
-print('Максимальная цифра равна', largest)
-print('Минимальная цифра равна', smallest)
+
+# num = int(input())
+# last = 0
+# pre_last = 0
+#
+#
+# while num != 0:
+#     last_digit = num % 10
+#     last, pre_last = last_digit, last
+#     num = num // 10
+# print(pre_last)
+
+# num = int(input())
+# tank = num % 10
+# flag = 'YES'
+#
+# while num != 0:
+#     digit = num % 10
+#     if digit != tank:
+#         flag = 'NO'
+#     num = num // 10
+# print(flag)
+
+# num = int(input())
+# tank = num % 10
+# flag = 'YES'
+#
+# while num != 0:
+#     digit = num % 10
+#     if digit < tank:
+#         flag = 'NO'
+#     else:
+#         tank = digit
+#     num = num // 10
+#
+# print(flag)
+
+
+
+
