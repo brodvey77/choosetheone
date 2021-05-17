@@ -444,6 +444,74 @@
 #
 # print(flag)
 
+# mult = 1
+# for i in range(1, 11):
+#    if i % 2 == 0:
+#       continue
+#    if i % 9 == 0:
+#       break
+#    mult *= i
+# print(mult)
+
+# num = int(input())
+#
+# for i in range(1, num + 1):
+#     if num % i == 0 and i > 1:
+#         print(i)
+#         break
+
+# num = int(input())
+#
+# for i in range(1, num + 1):
+#     if 5 <= i <= 9 or 17 <= i <= 37 or 78 <= i <= 87:
+#         continue
+#     print(i)
+
+# n = 0
+# while n < 10:
+#     n += 2
+#     if n == 8:
+#         break
+#     print(n)
+# else:
+#     print('Цикл завершен.')
 
 
+# count = 0
+# p = 1
+# for i in range(1, 11):
+#     x = int(input())
+#     if x >= 0:
+#         p *= x
+#         count += 1
+# if count > 0:
+#     print(count)
+#     print(p)
+# else:
+#     print('NO')
 
+# mx = 0
+# s = 0
+# for i in range(11):
+#     x = int(input())
+#     if x < 0:
+#         s = x
+#     if x > mx:
+#         mx = x
+# print(s)
+# print(mx)
+
+
+# mx = -10 ** 6
+# s = 0
+# for i in range(10):
+#     x = int(input())
+#     if x < 0:
+#         s += x
+#     if mx < x < 0:
+#         mx = x
+# if s < 0:
+#     print(s)
+#     print(mx)
+# else:
+#     print('NO')
