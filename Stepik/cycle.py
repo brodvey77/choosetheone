@@ -587,3 +587,60 @@
 #     product = product * digit
 #     n = n // 10
 # print(product)
+
+# for hours in range(24):
+#     for minutes in range(60):
+#         for seconds in range(60):
+#             print(hours, ':', minutes, ':', seconds)
+
+
+# for i in range(8):
+#     for j in range(i + 1):
+#         print('*', end='')
+#     print()
+
+# counter = 0
+# for i in range(99, 102):
+#     temp = i
+#     while temp > 0:
+#         counter += 1
+#         temp //= 10
+# print(counter)
+
+# num = int(input())
+#
+# for i in range(1, num + 1):
+#     for j in range(5):
+#         print(i, end=" ")
+#     print()
+
+# num = int(input())
+#
+# for i in range(1, num + 1):
+#     for j in range(1,10):
+#         print(i, '+', j, '=', i + j)
+#     print()
+
+
+# Сложное задание!!!!
+# n = int(input())
+#
+# for i in range((n // 2) + 1):
+#     for j in range(i):
+#         print('*', end='')
+#     print('*')
+# for i in range(n // 2, 0, -1):
+#     for j in range(i - 1):
+#         print('*', end='')
+#     print('*')
+
+# n = int(input())
+#
+# for i in range(1, n + 1):
+#     for j in range(i - 1):
+#         print(i, end='')
+#     print(i)
+
+
+
+
