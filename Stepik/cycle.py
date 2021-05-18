@@ -515,3 +515,75 @@
 #     print(mx)
 # else:
 #     print('NO')
+
+# s = 1
+# for i in range(1, 7):
+#     n = input()
+#     if i % 2 == 0:
+#         s = s + n
+# print(s)
+
+# s = 0
+#
+# for i in range(1, 8):
+#     n = int(input())
+#     if n % 2 == 0:
+#         s += n
+# else:
+#     print(s)
+
+
+# n = int(input())
+# max_digit = n % 10
+# while n > 0:
+#     digit = n % 10
+#     if digit % 3 == 0:
+#         if digit < max_digit:
+#             digit = max_digit
+#     n = n % 10
+# if max_digit == 0:
+#     print('NO')
+# else:
+#     print(max_digit)
+
+# n = int(input())
+# max_digit = -1
+#
+# while n != 0:
+#     digit = n % 10
+#     if digit % 3 == 0:
+#         if digit > max_digit:
+#             max_digit = digit
+#     n = n // 10
+# if max_digit == -1:
+#     print('NO')
+# else:
+#     print(max_digit)
+
+# n = int(input())
+# while n > 0:
+#     n %= 10
+# print(n)
+
+# n = int(input())
+# while n != 0:
+#     l = n % 10
+#     n = n // 10
+# print(l)
+
+# n = input()
+# product = n % 10
+# while n >= 10:
+#     digit = n % 10
+#     product = product * digit
+#     n //= 10
+# print(product)
+
+# n = int(input())
+# product = 1
+#
+# while n != 0:
+#     digit = n % 10
+#     product = product * digit
+#     n = n // 10
+# print(product)
