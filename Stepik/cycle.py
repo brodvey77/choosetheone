@@ -635,12 +635,73 @@
 #     print('*')
 
 # n = int(input())
+# #
+# # for i in range(1, n + 1):
+# #     for j in range(i - 1):
+# #         print(i, end='')
+# #     print(i)
+
+# total = 0
+# for x in range(1, 65):
+#     for y in range(1, 60):
+#         if 12 * x + 13 * y == 777:
+#             total += 1
+#             print('x =', x, 'y =', y)
+# print('Общее количество натуральных решений =', total)
+
+# counter = 0
+#
+# for n in range(1, 14):
+#     for k in range(1, 12):
+#         for m in range(1, 11):
+#             if 28 * n + 30 * k + 31 * m == 365:
+#                 counter +=1
+#                 print(n, '+', k, '+', m)
+
+# for x in range(100):
+#     for y in range(100):
+#         for z in range(100):
+#             if (10 * x + 5 * y + 0.5 * z == 100) and (x + y + z == 100):
+#                 print(x, y, z)
+
+
+# for a in range(1, 10):
+#     for b in range(1, 10):
+#         for c in range(1, 10):
+#             for d in range(1, 10):
+#                 for e in range(1, 10):
+#                     if a ** 3 + b ** 3 + c ** 3 + d ** 3 == e ** 3:
+#                         print(a + b + c + d + e)
+
+
+# for a in range(1, 151):
+#     for b in range(a + 1, 151):
+#         for c in range(b + 1, 151):
+#             for d in range(c + 1, 151):
+#                 e = int(((a ** 5) + (b ** 5) + (c ** 5) + (d ** 5)) ** 0.2)
+#                 if e ** 5 == int((a ** 5) + (b ** 5) + (c ** 5) + (d ** 5)):
+#                     print(a + b + c + d + e)
+
+# n = int(input())
+# count = 1
 #
 # for i in range(1, n + 1):
-#     for j in range(i - 1):
-#         print(i, end='')
-#     print(i)
+#     for j in range(1, i + 1):
+#         print(count, end=' ')
+#         count += 1
+#     print()
 
 
-
-
+# n = int(input())
+# p = 1
+#
+# for i in range(1, n + 1):
+#     k = 0
+#     for j in range(1, p + 1):
+#         if j <= i:
+#             k += 1
+#         else:
+#             k -= 1
+#         print(k, end='')
+#     print()
+#     p += 2
