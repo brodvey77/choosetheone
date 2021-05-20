@@ -744,6 +744,39 @@
 #     print()
 
 
+# n = int(input())
+#
+# total = 0
+# final = 0
+#
+# while n > 0:
+#     i = n % 10
+#     total += i
+#     n = n //10
+#     while total != 0:
+#         j = total % 10
+#         total //= 10
+#         final += j
+#         if final >= 10 and n == 0:
+#             total, final = final, total
+# print(final)
+
+# number = int(input())
+#
+# total = 0
+#
+# while number > 9:
+#     while number != 0:
+#         total += number % 10
+#         number //= 10
+#     number, total = total, 0
+#
+# print(number)
+
+
+
+
+
 
 
 
