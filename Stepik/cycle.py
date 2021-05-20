@@ -705,3 +705,53 @@
 #         print(k, end='')
 #     print()
 #     p += 2
+
+# n = int(input())
+
+# counter = 1
+# for i in range(1, 10):
+#     p = 0
+#     for j in range(1, counter + 1):
+#         if j <= i:
+#             p += 1
+#         else:
+#             p -= 1
+#         print(p, end=' ')
+#     print()
+#     counter += 1
+
+# a, b = int(input()), int(input())
+# sum_count = 0
+# max_x = 0
+#
+# for x in range(a, b + 1):
+#     count = 0
+#     for i in range(1, x + 1):
+#         if x % i == 0:
+#             count += i
+#         if count >= sum_count:
+#             sum_count = count
+#             max_x = x
+# print(max_x, sum_count)
+
+# n = int(input())
+#
+# for i in range(1, n + 1):
+#     print(i, end='')
+#     for j in range(1, i + 1):
+#         if i % j == 0:
+#             print('+', end='')
+#     print()
+
+
+
+
+
+
+
+
+
+
+
+
+
