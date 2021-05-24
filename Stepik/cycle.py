@@ -775,16 +775,46 @@
 
 
 
+# import math
+#
+# a = math.factorial(3)
+#
+# print(a)
 
 
+# n = int(input())
+# counter = 1
+# summa = 0
+#
+# for i in range(1, n + 1):
+#     counter *= i
+#     summa += counter
+#
+# print(counter, summa)
 
+# n = int(input())
+# counter = 1
+# final = 0
+#
+# for i in range(1, n + 1):
+#     counter *= i
+#     for j in range(1):
+#         final += counter
+#
+# print(final)
 
-
-
-
-
-
-
-
-
-
+# a = int(input())
+# b = int(input())
+#
+# counter = 0
+# for i in range(a, b + 1):
+#     for j in range(1, i + 1):
+#         if i % j == 0:
+#             counter += 1
+#     if counter < 3:
+#         if i == 1:
+#             counter = 0
+#             continue
+#         else:
+#             print(i)
+#     counter = 0
