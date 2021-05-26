@@ -804,17 +804,149 @@
 # print(final)
 
 # a = int(input())
-# b = int(input())
+# # b = int(input())
+# #
+# # counter = 0
+# # for i in range(a, b + 1):
+# #     for j in range(1, i + 1):
+# #         if i % j == 0:
+# #             counter += 1
+# #     if counter < 3:
+# #         if i == 1:
+# #             counter = 0
+# #             continue
+# #         else:
+# #             print(i)
+# #     counter = 0
+
+# n = int(input())
+# s = 0
+# while n > 0:
+#     if n % 2 == 0:
+#         s += n % 10
+#     n //= 10
+# print(s)
+
+# n = 7
+# count = 0
+# maximum = 1000
+# for i in range(1, n + 1):
+#     x = int(input())
+#     if x // 4 == 0:
+#         count += 1
+#         if x < maximum:
+#             maximum = x
+# if count > 0:
+#     print(count)
+#     print(maximum)
+# else:
+#     print('NO')
+
+# n = 8
+# count = 0
+# maximum = -10 ** 6 - 1
+# for i in range(1, n + 1):
+#     x = int(input())
+#     if x % 4 == 0:
+#         count += 1
+#         if x > maximum:
+#             maximum = x
+# if count > 0:
+#     print(count)
+#     print(maximum)
+# else:
+#     print('NO')
+
+# n = 4
+# count = 0
+# maximum = 999
+# for i in range(1, n + 1):
+#     x = int(input())
+#     if x % 2 != 0:
+#         count += 1
+#         if x > maximum:
+#             maximum = i
+#             break
+# if count > 0:
+#     print(count)
+#     print(maximum)
+# else:
+#     print('NO')
+
+# n = 4
+# count = 0
+# maximum = -10 ** 6 - 1
+# for i in range(1, n + 1):
+#     x = int(input())
+#     if x % 2 != 0:
+#         count += 1
+#         if x > maximum:
+#             maximum = x
+# if count > 0:
+#     print(count)
+#     print(maximum)
+# else:
+#     print('NO')
+
+# n = int(input())
+# for i in range(n):
+#      if i in (0, n-1):
+#           print('*' * 19)
+#      else:
+#           print('*'.ljust(18) + '*')
 #
-# counter = 0
-# for i in range(a, b + 1):
-#     for j in range(1, i + 1):
-#         if i % j == 0:
-#             counter += 1
-#     if counter < 3:
-#         if i == 1:
-#             counter = 0
-#             continue
-#         else:
-#             print(i)
-#     counter = 0
+# a = int(input())
+# print('*'*19)
+# for j in range(a-2):
+#     print('*',' '*15,'*')
+# print('*'*19)
+
+# n = int(input())
+#
+# while n > 99:
+#     last_digit = n % 10
+#     n //= 10
+# print(last_digit)
+
+# n = int(input())
+# kolichestvo_cifr_3 = 0
+# last_digit_meet = n % 10
+# kolichestvo_chetnix_cifr = 0
+# summa_cifr_bolshe_5 = 0
+# proizvedenie_cifr_bolshe_7 = 1
+# cifri_0_i_5 = 0
+# counter_last = 0
+#
+# while n != 0:
+#     digit = n % 10
+#     if digit == 3:
+#         kolichestvo_cifr_3 += 1
+#     if digit == last_digit_meet:
+#         counter_last += 1
+#     if digit % 2 == 0:
+#         kolichestvo_chetnix_cifr += 1
+#     if digit > 5:
+#         summa_cifr_bolshe_5 += digit
+#     if digit > 7:
+#         proizvedenie_cifr_bolshe_7 *= digit
+#     if digit == 0 or digit == 5:
+#         cifri_0_i_5 += 1
+#
+#     n //= 10
+#
+# print(kolichestvo_cifr_3)
+# print(counter_last)
+# print(kolichestvo_chetnix_cifr)
+# print(summa_cifr_bolshe_5)
+# print(proizvedenie_cifr_bolshe_7)
+# print(cifri_0_i_5)
+
+# import numpy as np
+# from itertools import combinations
+#
+# numbers = np.arange(100)
+# pairs = np.array(list(combinations(numbers, 2)))
+# sums = np.apply_along_axis(lambda x: sum(x ** 3), 1, pairs)
+#
+# nums, counts = np.unique(sums, return_counts=True)
+# print(*[num for num, count in zip(nums, counts) if count == 2][:5])
