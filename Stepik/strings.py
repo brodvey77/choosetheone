@@ -59,20 +59,107 @@
 # print(text[::-1])
 # print(text[-1::-2])
 
+# text = 'abcdefg'
+# central = text[len(text) // 2]
+# first_part = text[:len(text) // 2]
+# second_part = text[-1:len(text) // 2:-1]
+# second_part_chet = text[len(text) // 2:]
+# right_second_part = second_part[-1::-1]
+#
+# if len(text) % 2 == 0:
+#     print(second_part_chet + first_part)
+# else:
+#     print(right_second_part + central + first_part)
+#
+# # print(central)
+# # print(first_part)
+# # print(second_part)
+# # print(second_part_chet)
+# # print(right_second_part)
 
-# l = len(text) + 1
-# part_1 = text[0:l//2]
-# part_2 = text[l//2:]
-# print (part_1)
-# print (part_2)
 
-s = str(input())
-l = len(s) + 1
+# text = 'abcdefg'
+# central = text[len(text) // 2]
+# first_part = text[:len(text) // 2]
+# second_part = text[-1:len(text) // 2:-1]
+# second_part_chet = text[len(text) // 2:]
+# right_second_part = second_part[-1::-1]
 
-part_1 = s[:l // 2]
-part_2 = s[l // 2:]
+# if len(text) % 2 == 0:
+#     print(second_part_chet + first_part)
+# else:
+#     print(right_second_part + central + first_part)
 
-print(part_2 + part_1)
+# print(central)
+# print(first_part)
+# print(second_part)
+# print(second_part_chet)
+# print(right_second_part)
 
+# s = 'foO BaR BAZ quX'
+# print(s.capitalize())
+# s = 'FOO Bar 123 baz qUX'
+# print(s.swapcase())
+# s = 'the sun also rises'
+# print(s.title())
 
+# s = 'FOO Bar 123 baz qUX'
+# print(s.lower())
 
+# s = 'FOO Bar 123 baz qUX'
+# print(s.upper())
+
+# capitalize — писать прописными буквами, закрепить.
+# swapcase — обменять регистр. swap — гл. обмениваться, case — случай, регистр, падеж, дело, расследование...
+# title — заголовок, титул.
+# lower — нижний.
+# upper — верхний.
+
+# s = 'i Learn Python language'
+# print(s.capitalize())
+# s = 'i LEARN Python LAnguaGE'
+# print(s.lower())
+# s = '$12344%^$#@!'
+# print(s.lower())
+# s1 = 'a'
+# s2 = s1.upper()
+# print(s1, s2)
+
+# s = 'i LEARN Python LAnguaGE'
+# print(s.upper())
+# s = 'i LEARN Python LAnguaGE'
+# print(s.swapcase())
+
+# text = input()
+#
+# if text == text.title():
+#     print('YES')
+# else:
+#     print('NO')
+
+# text = input()
+#
+# print(text.swapcase())
+
+# text = input()
+#
+# if 'хорош' in text.lower():
+#     print('YES')
+# else:
+#     print('NO')
+
+# text = input()
+# counter = 0
+# for i in text:
+#     if i != i.swapcase() and i == i.lower():
+#         counter += 1
+# print(counter)
+
+# s = 'foo bar foo baz foo qux'
+# print(s.find('foo'))
+# print(s.find('bar'))
+# print(s.find('qu'))
+# print(s.find('python'))
+
+# s = '     foo bar foo baz foo qux      '
+# print(s.strip())
