@@ -163,3 +163,172 @@
 
 # s = '     foo bar foo baz foo qux      '
 # print(s.strip())
+
+# s = 'foo bar foo baz foo qux'
+# print(s.replace('foo', 'grault'))
+# s = 'aabbAAccDDaa'
+# s = s.lower()
+# print(s.count('a'))
+
+
+# s = 'www.stepik.org'
+# print(s.endswith('.ru'))
+
+# s = 'I learn Python language. Python - awesome!'
+# print(s.find('Python'))
+#
+# s = '     I learn Python language               '
+# print(s.strip())
+#
+# s = 'abcdababa'
+# print(s.replace('ab', '123'))
+
+# text = input()
+# print(text.count(' ') + 1)
+
+# text = input()
+#
+# a = 0
+# g = 0
+# c = 0
+# t = 0
+#
+# for i in text.lower():
+#     if i == 'a':
+#         a += 1
+#     elif i == 'г':
+#         g += 1
+#     elif i == 'ц':
+#         c += 1
+#     elif i == 'т':
+#         t += 1
+# print('Аденин:', a)
+# print('Гуанин:', g)
+# print('Цитозин:', c)
+# print('Тимин:', t)
+
+# text = input().lower()
+# print('Аденин:', text.count('а'))
+# print('Гуанин:', text.count('г'))
+# print('Цитозин:', text.count('ц'))
+# print('Тимин:', text.count('т'))
+
+# n = int(input())
+# counter = 0
+#
+# for i in range(1, n + 1):
+#     text = str(input())
+#     if text.count('11') >= 3:
+#         counter += 1
+# print(counter)
+
+# text = str(input())
+# counter = 0
+# for i in text:
+#     if i in '0123456789':
+#         counter += 1
+# print(counter)
+
+
+# text = str(input())
+#
+# if text.endswith('.com') or text.endswith('.ru'):
+#     print('YES')
+# else:
+#     print('NO')
+
+# text = str(input())
+# counter = 0
+# letter = ''
+#
+# for i in text:
+#     if text.count(i) >= counter:
+#         counter = text.count(i)
+#         letter = i
+# print(letter)
+
+# text = str(input())
+#
+# if text.count('f') == 1:
+#     print(text.index('f'))
+# elif text.count('f') > 1:
+#     print(text.find('f'), text.rfind('f'))
+# else:
+#     print('NO')
+
+# text = str(input())
+# print(text[:text.find('h')] + text[text.rfind('h') + 1:])
+
+# s1 = 'abc123'
+# s2 = 'abc$*123'
+# s3 = ''
+#
+# print(s1.isalnum())
+# print(s2.isalnum())
+# print(s3.isalnum())
+
+# s1 = 'ABCabc'
+# s2 = 'abc123'
+# s3 = ''
+#
+# print(s1.isalpha())
+# print(s2.isalpha())
+# print(s3.isalpha())
+
+# s1 = '1234567'
+# s2 = 'abc123'
+# s3 = ''
+#
+# print(s1.isdigit())
+# print(s2.isdigit())
+# print(s3.isdigit())
+
+# s1 = 'abc'
+# s2 = 'abc1$d'
+# s3 = 'Abc1$D'
+#
+# print(s1.islower())
+# print(s2.islower())
+# print(s3.islower())
+
+# s1 = 'ABC'
+# s2 = 'ABC1$D'
+# s3 = 'Abc1$D'
+#
+# print(s1.isupper())
+# print(s2.isupper())
+# print(s3.isupper())
+#
+# s = 'aabbAA111ccDDaa'
+# print(s.isalnum())
+# print(s.isalpha())
+# print(s.isdigit())
+
+# s = 'aabb!@#$11cc'
+# print(s.islower())
+
+# s = 'AAb!@#$11CC'
+# print(s.isupper())
+
+# In 2010, someone paid 10k Bitcoin for two pizzas.
+
+# year = 2010
+# amount = '10K'
+# currency = 'Bitcoin'
+#
+# print(f'In {year}, someone paid {amount} {currency} for two pizzas.')
+
+# num1 = ord('A')
+# num2 = ord('B')
+# num3 = ord('a')
+# print(num1, num2, num3)
+
+# chr1 = chr(65)
+# chr2 = chr(75)
+# chr3 = chr(2344)
+# print(chr1, chr2, chr3)
+
+# for i in range(26):
+#     print(chr(ord('A') + i))
+
+
