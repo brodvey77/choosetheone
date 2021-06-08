@@ -331,4 +331,120 @@
 # for i in range(26):
 #     print(chr(ord('A') + i))
 
+# print(ord('foo'))
 
+# a, b = int(input()), int(input())
+#
+# for i in range(a, b + 1):
+#     print(chr(i), end=' ')
+
+# text = str(input())
+#
+# for i in text:
+#     print(ord(i), end=' ')
+
+# sdvig = int(input())
+# text = str(input())
+# char = 0
+# shifr = ''
+#
+# for i in text:
+#     char = ord(i) - sdvig
+#     if char < 97:
+#         shifr = 122 - (96 - char)
+#     else:
+#         shifr = char
+#     print(chr(shifr), end='')
+
+# a = 'asdsadasdsasdas&'
+#
+# print(a.isletters())
+
+# s = str(input())
+# to_print = ''
+#
+# for i in range(len(s)):
+#     if i % 3 != 0:
+#         print(s[i], end='')
+
+# text = str(input())
+#
+# for i in text:
+#     if i == '1':
+#         i = 'one'
+#     print(i, end='')
+
+# print(text.replace('1', 'one'))
+
+
+# text = str(input())
+# count = 0
+# text_2 = text.replace('f', 'a', 1)
+# text_3 = text_2.find('f')
+# # print(text_3)
+#
+# for i in text:
+#     if i == 'f':
+#         count += 1
+#
+# if count <= 0:
+#     print('-2')
+# else:
+#     print(text_3)
+
+# text = 'qwertyhasdfghzxcvb'
+# print(text.find('h'))
+# print(text.rfind('h'))
+# text_2 = text[text.find('h') + 1:text.rfind('h')]
+# print(text_2[::-1])
+#
+# print(text[text.rfind('h'):])
+
+# print(text[:text.find('h')+1] + text_2[::-1] + text[text.rfind('h'):])
+
+# names = ['Michael', 'John', 'Freddie']
+# print(names)
+
+# num = int(input())
+#
+# print(list(range(1, num + 1)))
+
+# num = int(input())
+# first = 96
+# alphabet = ''
+# for i in range(1, num + 1):
+#     first += 1
+#     alphabet += chr(first)
+# print(list(alphabet))
+
+
+# primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71]
+#
+# print(primes[16])
+
+# numbers = [12.5, 3.1415, 2.718, 9.8, 1.414, 1.1618, 1.324]
+# maximum = max(numbers)
+# minimum = min(numbers)
+# print(sum([max(numbers), min(numbers)]))
+
+# evens = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+# average = sum(evens)/len(evens)
+#
+# print(average)
+
+# rainbow = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']
+# rainbow[3], rainbow[-1] = 'Зеленый', 'Фиолетовый'
+#
+# print(rainbow)
+
+# languages = ['Chinese', 'Spanish', 'English', 'Hindi', 'Arabic', 'Bengali', 'Portuguese', 'Russian', 'Japanese',
+#              'Lahnda']
+#
+# print(languages[::-1])
+
+# [1, 2, 3, 1, 2, 3, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 8, 9, 10, 11, 12, 13]
+# numbers1 = [1, 2, 3]
+# numbers2 = [6]
+# numbers3 = [7, 8, 9, 10, 11, 12, 13]
+#
+# print(numbers1 * 2 + numbers2 * 9 + numbers3)
