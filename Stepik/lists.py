@@ -178,7 +178,129 @@
 #         print(i)
 
 
+# n = int(input())
+# lst = []
+# search_array = []
+#
+# for i in range(n):
+#     a = lst.append(input())
+#
+# k = int(input())
+#
+# for j in range(k):
+#     search = search_array.append(str.lower(input()))
 
 
+# n = 5
+# lst = ['trac', 'Язык Python прекрасен', 'C# - отличный язык программирования', 'Stepik - отличная платформа',
+#        'BEEGEEK FOREVER!', 'язык Python появился 20 февраля 1991', 'язык фывфывфыв',
+#        'Язык выаываыва ваыва ываыв Python', 'язык Python ,kf', 'kf', 'Язык Python']
+# search_array = ['язык', 'python']
+# final = []
+#
+# final_lst = []
+#
+# for i in range(n):
+#     a = lst.append(input())
+#
+# k = int(input())
+#
+# for j in range(k):
+#     search = search_array.append(str.lower(input()))
+#
+# print(search_array[0])
+#
+# while len(lst) != 0:
+#     for elem in lst:
+#         if search_array[0] not in elem.lower():
+#             lst.remove(elem)
+#         else:
+#             final_lst.append(elem)
+#
+# print(final_lst)
 
 
+# lst = ['Язык Python прекрасен', 'C# - отличный язык программирования', 'Stepik - отличная платформа',
+#        'BEEGEEK FOREVER!', 'язык Python появился 20 февраля 1991']
+#
+# search_array = ['язык', 'python']
+# new_lst = []
+#
+# while len(search_array) > 0:
+#     for element in search_array:
+#         for i in lst:
+#             if element not in i.lower():
+#                 lst.remove(i)
+#                 print(lst)
+#     del search_array[0]
+
+# n = int(input())
+# lst = []
+# search_array = []
+# final_lst = []
+#
+# for i in range(n):
+#     a = lst.append(input())
+#
+# k = int(input())
+#
+# for j in range(k):
+#     search = search_array.append(str.lower(input()))
+#
+# while len(search_array) > 0:
+#     for element in search_array:
+#         for i in lst:
+#             if element not in i.lower():
+#                 lst.remove(i)
+#     del search_array[0]
+#
+# print(*lst, sep='\n')
+
+
+# s = [input() for _ in range(int(input()))]
+# d = [input() for _ in range(int(input()))]
+# for i in s:
+#     for j in d:
+#         if j.lower() not in i.lower():
+#             break
+#     else:
+#         print(i)
+
+# n = int(input())
+# lst = []
+# minus = []
+# zero = []
+# plus = []
+#
+# for i in range(n):
+#     digit = int(input())
+#     if digit < 0:
+#         minus.append(digit)
+#     if digit == 0:
+#         zero.append(digit)
+#     if digit > 0:
+#         plus.append(digit)
+# lst = minus + zero + plus
+#
+# print(lst)
+
+# ip = '192.168.1.24'
+# numbers = ip.split('.')    # указываем явно разделитель
+# print(numbers)
+
+# words = ['Python', 'is', 'the', 'most', 'powerful', 'language']
+# s = ' '.join(words)
+# print(s)
+
+# s = 'BEEGEEK'
+# chars = list(s)
+# s = '**'.join(chars)
+# print(s)
+
+# string = str(input())
+# a = string.split()
+# for i in a:
+#     print(i)
+
+# print('\n'.join(input().split()))
+# print(*input().split(), sep='\n')
