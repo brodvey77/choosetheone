@@ -304,3 +304,39 @@
 
 # print('\n'.join(input().split()))
 # print(*input().split(), sep='\n')
+
+# string = str(input())
+#
+# lst = string.split()
+#
+# for i in lst:
+#     print(i[0] + '.', end='')
+
+# string = str(input())
+# lst = string.split('\\')
+# for i in lst:
+#     print(i)
+
+# string = input().split()
+# print(type(string))
+# for i in string:
+#     print('+' * int(i))
+
+# string = input().split('.')
+# flag = 'YES'
+# for i in string:
+#     if int(i) > 255 or int(i) < 0:
+#         flag = 'NO'
+#         break
+# print(flag)
+
+# text = input()
+# delimiter = input()
+# print(delimiter.join(text))
+
+
+
+
+
+
+
