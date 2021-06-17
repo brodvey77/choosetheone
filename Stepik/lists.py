@@ -335,6 +335,58 @@
 # print(delimiter.join(text))
 
 
+# string = input()
+# lst = string.split()
+# counter = 0
+#
+# for i in lst[:-1]:
+#     for j in lst[1:]:
+#         if int(i) == int(j):
+#             counter += 1
+#     del lst[0]
+# print(counter)
+
+# colors = ['Orange']
+# colors.append('Red')
+# colors.append('Blue')
+# colors.append('Green')
+# colors.insert(0, 'Violet')
+# colors.insert(2, 'Purple')
+#
+# print(colors)
+
+# colors = ['Red', 'Blue', 'Green', 'Black', 'White']
+# del colors[-1]
+# colors.remove('Green')
+#
+# print(colors)
+
+
+# Все сразу 2 🌶️
+# Дополните приведенный код, чтобы он:
+#
+# Заменил второй элемент списка на 17; ok
+# Добавил числа 4, 5 и 6 в конец списка; ok
+# Удалил первый элемент списка; ok
+# Удвоил список; ok
+# Вставил число 25 по индексу 3; ok
+# Вывел список, с помощью функции print().
+
+# numbers = [8, 9, 10, 11]
+# a = numbers.remove(9)
+# b = numbers.insert(1, 17)
+# c = numbers.append(4)
+# d = numbers.append(5)
+# e = numbers.append(6)
+# for i in numbers:
+#     if i == numbers[0]:
+#         numbers.remove(i)
+# numbers += numbers
+# f = numbers.insert(3, 25)
+#
+# print(numbers)
+
+
 
 
 
