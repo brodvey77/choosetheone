@@ -386,9 +386,54 @@
 #
 # print(numbers)
 
+# numbers = input().split()
+#
+# for i in range(len(numbers)):
+#     numbers[i] = int(numbers[i])
+#
+# maximum = numbers.index(max(numbers))
+# minimum = numbers.index(min(numbers))
+# numbers[maximum], numbers[minimum] = min(numbers), max(numbers)
+#
+# print(numbers)
 
+# text = input()
+# counter = 0
+# for i in text.split():
+#     if i.lower() in ['a', 'an', 'the']:
+#         counter += 1
+# print(f'Общее количество артиклей: {counter}')
 
+# n = input()
+# n = int(n.lstrip('#'))
+#
+# for i in range(1, n + 1):
+#     string = str(input())
+#     if '#' in string:
+#         string = string[:string.index('#')]
+#         string = string.rstrip()
+#     print(string)
 
+# numbers = [4, 2, 8, 6, 5, 3, 10, 4, 100, 1, -7]
+# numbers.sort()
+# del numbers[0]
+# del numbers[-1]
+# numbers.sort(reverse=True)
+# print(numbers)
 
+# numbers = input().split()
+#
+# for i in range(len(numbers)):
+#     numbers[i] = int(numbers[i])
+# print(numbers)
+# numbers.sort()
+# print(*numbers)
+# numbers.sort(reverse=True)
+# print(*numbers)
 
+# n = input().split()
+# n.sort(key=int)
+# print(*n)
+# n.sort(reverse=True, key=int)
+# print(*n)
 
