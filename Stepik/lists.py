@@ -437,3 +437,49 @@
 # n.sort(reverse=True, key=int)
 # print(*n)
 
+# keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del',
+#             'elif', 'else', 'except', 'finally', 'try', 'for', 'from', 'global', 'if', 'import', 'in', 'is',
+#             'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'while', 'yield']
+#
+# new_keywords = [m[1:] for m in keywords]
+#
+# print(new_keywords)
+
+
+# keywords = ['False', 'True', 'None', 'and', 'with', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del',
+#             'elif', 'else', 'except', 'finally', 'try', 'for', 'from', 'global', 'if', 'import', 'in', 'is',
+#             'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'while', 'yield']
+#
+# new_keywords = [c for c in keywords if len(c) >= 5]
+#
+# print(new_keywords)
+
+
+# palindromes = [p for p in range(101, 1000) if p // 100 == p % 10]
+#
+# print(palindromes)
+
+# for i in range(100, 1000):
+#     if i // 100 == i % 10:
+#         print(i)
+
+# import emoji
+#
+# print(emoji.emojize('hello world :red_heart:', variant='emoji_type'))
+
+# n = int(input())
+#
+# list = [i ** 2 for i in range(1, n + 1)]
+#
+# print(*list, sep='\n')
+
+# n = str(input())
+#
+# list =[pow(int(i), 3) for i in n.split()]
+#
+# print(*list)
+
+# string = str(input())
+# list = [i for i in string.split()]
+#
+# print(*list, sep='\n')
