@@ -565,3 +565,68 @@
 #     a[j] = elem
 #
 # print(f'Отсортированный список: {a}')
+
+
+
+# names = ['Джим', 'Джилл', 'Джон', 'Джасмин']
+# if 'Джасмин' not in names:
+#     print ('Не могу найти Джасмин.')
+# else:
+#     print('Ceмья Джасмин: ', end='')
+#     print(names)
+
+# n = int(input())
+#
+# list = [i for i in range(2, n + 1) if i % 2 == 0]
+# print(list)
+import smtplib
+
+# l = str(input())
+# m = str(input())
+#
+#
+# list_l = [int(i) for i in l.split()]
+# list_m = [int(i) for i in m.split()]
+# list_f =[]
+# for i in range(len(list_l)):
+#     list_f = list_l[0] + list_m[0]
+#     del list_l[0]
+#     del list_m[0]
+#     print(list_f, end=' ')
+
+# string = str(input())
+# list = [i for i in string.split()]
+# sum_list = sum([int(i) for i in string.split()])
+# print('+'.join(list), '=', sum_list, sep='')
+
+# stroka = str(input())
+#
+# list = [i for i in stroka.split('-')]
+#
+# if ''.join(list).isdigit():
+#     list_2 = [int(i) for i in stroka.split('-')]
+#     if list_2[0] == 7:
+#         del list_2[0]
+#     if 99 < list_2[0] <= 999 and 99 < list_2[1] <= 999 and 999 < list_2[2] <= 9999:
+#         print('YES')
+# else:
+#     ('NO')
+
+# spisok1=[i for i in input().split('-')]
+# spisok2=[len(i) for i in spisok1 if i.isdigit()]
+# print('YES' if spisok2==[1, 3, 3, 4] and spisok1[0]=='7' or spisok2==[3, 3, 4] else 'NO')
+
+# string = str(input())
+#
+# list = [len(i) for i in string.split()]
+#
+# print(max(list))
+
+# string = str(input())
+#
+# list = [i[1:] + i[0] + 'ки' for i in string.split()]
+#
+# print(list)
+
+
+

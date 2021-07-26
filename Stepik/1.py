@@ -6,7 +6,7 @@
 # print('p', 'q', 'r', sep='1', end='%')
 # print('s', 't', 'u', sep='&', end='\n')
 # print('v', 'w', 'x', sep='%')
-# print('y', 'z', sep='/', end='!')
+print('y', 'z', sep='/', end='!')
 
 # print('I', 'like', 'Python', sep='***', end='')
 #
