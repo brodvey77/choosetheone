@@ -599,21 +599,21 @@ import smtplib
 # sum_list = sum([int(i) for i in string.split()])
 # print('+'.join(list), '=', sum_list, sep='')
 
-stroka = str(input())
-
-list = [i for i in stroka.split('-')]
-
-if list[0] == '7':
-    del list[0]
-
-if ''.join(list).isdigit():
-    list_2 = [int(i) for i in list]
-    if 99 < list_2[0] <= 999 and 99 < list_2[1] <= 999 and 999 < list_2[2] <= 9999:
-        print('YES')
-    else:
-        print('NO')
-else:
-    print('NO')
+# stroka = str(input())
+#
+# list = [i for i in stroka.split('-')]
+#
+# if list[0] == '7':
+#     del list[0]
+#
+# if ''.join(list).isdigit():
+#     list_2 = [int(i) for i in list]
+#     if 99 < list_2[0] <= 999 and 99 < list_2[1] <= 999 and 999 < list_2[2] <= 9999:
+#         print('YES')
+#     else:
+#         print('NO')
+# else:
+#     print('NO')
 
 # spisok1=[i for i in input().split('-')]
 # spisok2=[len(i) for i in spisok1 if i.isdigit()]
@@ -630,6 +630,34 @@ else:
 # list = [i[1:] + i[0] + 'ки' for i in string.split()]
 #
 # print(list)
+
+# # объявление функции
+# def draw_box():
+#     print('*' * 10)
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*        *')
+#     print('*' * 10)
+#
+# # основная программа
+# draw_box()  # вызов функции
+
+# объявление функции
+# def draw_triangle():
+#     for i in range(1, 11):
+#         print('*' * i)
+#
+# # основная программа
+# draw_triangle()  # вызов функции
 
 
 
