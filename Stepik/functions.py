@@ -119,13 +119,58 @@
 # add()
 # print(x)
 
-x = 5
+# x = 5
+#
+# def add():
+#     global x
+#     x = 3
+#     x = x + 5
+#     print(x)
+#
+# add()
+# print(x)
 
-def add():
-    global x
-    x = 3
-    x = x + 5
-    print(x)
+# def do_something(numbers):
+#     result = 1
+#     for i in numbers:
+#         result *= i
+#     return result
+#
+# print(do_something([2, 2, 2, 2]))
 
-add()
-print(x)
+# def get_sum(x, y, z):
+#     return x + y + z
+#     print('Сумма равна', x + y + z)
+#
+#
+# print(get_sum(1, 2, 3))
+
+# объявление функции  мили = километры * 0.6214
+# def convert_to_miles(km):
+#     return round(num * 0.6214, 3)
+#
+# # считываем данные,
+# num = int(input())
+#
+# # вызываем функцию
+# print(convert_to_miles(num))
+
+# # объявление функции
+# def get_days(month):
+#     if month in [1, 3, 5, 7, 8, 10, 12]:
+#         return 31
+#     elif month in [4, 6, 9, 11]:
+#         return 30
+#     else:
+#         return 28
+#
+# num = int(input())
+#
+# print(get_days(num))
+
+# def get_factors(num):
+#     return [i for i in range(1, num + 1) if num % i == 0]
+#
+# n = int(input())
+#
+# print(get_factors(n))
