@@ -271,3 +271,35 @@
 # print(*spisok)
 
 
+#  List creation
+# s = list(map(int, input().split()))
+#
+# print(s)
+
+# def is_valid_triangle(side_1, side_2, side_3):
+#     if side_1 < side_2 + side_3 and side_2 < side_3 + side_1 and side_3 < side_1 + side_2:
+#         return True
+#     else:
+#         return False
+#
+#
+# a = int(input())
+# b = int(input())
+# c = int(input())
+#
+# print(is_valid_triangle(a, b, c))
+
+# def is_prime(num):
+#     flag = True
+#     for i in range(2, num):
+#         if num % i == 0:
+#             flag = False
+#     if num > 1 and flag == True:
+#         return True
+#     else:
+#         return False
+#
+# phone_number = int(input())
+#
+#
+# print(is_prime(phone_number))
