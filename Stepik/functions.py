@@ -269,3 +269,5 @@
 #     spisok = quick_merge(spisok, [int(c) for c in input().split()])
 #
 # print(*spisok)
+
+
