@@ -174,3 +174,38 @@
 # n = int(input())
 #
 # print(get_factors(n))
+
+
+# # объявление функции
+# def find_all(target, symbol):
+#     list = []
+#     counter = 0
+#     for i in s:
+#         if i == symbol:
+#             list.append(counter)
+#         counter += 1
+#     return list
+#
+#
+# # считываем данные
+# s = input()
+# char = input()
+
+# вызываем функцию
+# print(find_all(s, char))
+
+# def merge(list1, list2):
+#     return sorted(list1 + list2)
+#
+#
+# # считываем данные
+# numbers1 = [int(c) for c in input().split()]
+# numbers2 = [int(c) for c in input().split()]
+#
+# # вызываем функцию
+# print(merge(numbers1, numbers2))
+
+
+
+
+
