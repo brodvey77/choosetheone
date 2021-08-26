@@ -175,6 +175,15 @@
 #
 # print(get_factors(n))
 
+# n = int(input())
+# list = []
+# for c in range(n):
+#     list1 = [int(i) for i in input().split()]
+#     list = quick_merge(list, list1)
+#
+# print(list)
+
+
 
 # # объявление функции
 # def find_all(target, symbol):
@@ -303,3 +312,26 @@
 #
 #
 # print(is_prime(phone_number))
+
+
+
+def is_prime(num):
+    flag = True
+    for i in range(2, num):
+        if num % i == 0:
+            flag = False
+    if num > 1 and flag == True:
+        return True
+    else:
+        return False
+
+def get_next_prime(num):
+    while is_prime(num) == False:
+
+        return num
+
+phone_number = int(input())
+
+print(get_next_prime(phone_number))
+
+
