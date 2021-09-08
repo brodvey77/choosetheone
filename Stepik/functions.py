@@ -336,14 +336,52 @@
 # print(get_next_prime(phone_number))
 
 
-# объявление функции
-def is_password_good(password):
-    pass
-
-# считываем данные
-txt = input()
-
-# вызываем функцию
-print(is_password_good(txt))
-
-
+# def is_lower(num):
+#     flag = False
+#     for i in num:
+#         if i.isalpha() and i.islower():
+#             flag = True
+#     if flag == True:
+#         return True
+#     else:
+#         return False
+#
+#
+# def is_upper(num):
+#     flag = False
+#     for i in num:
+#         if i.isalpha() and i.isupper():
+#             flag = True
+#     if flag == True:
+#         return True
+#     else:
+#         return False
+#
+#
+# def is_len_eight(num):
+#     if len(num) >= int(8):
+#         return True
+#     else:
+#         return False
+#
+#
+# def is_digit(num):
+#     flag = False
+#     for i in num:
+#         if i in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']:
+#             flag = True
+#             break
+#     return flag
+#
+#
+# def is_password_good(password):
+#     if is_lower(password) == True and is_upper(password) == True and \
+#             is_len_eight(password) == True and is_digit(password) == True:
+#         return True
+#     else:
+#         return False
+#
+# txt = str(input())
+#
+#
+# print(is_password_good(txt))
