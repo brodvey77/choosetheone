@@ -315,23 +315,35 @@
 
 
 
-def is_prime(num):
-    flag = True
-    for i in range(2, num):
-        if num % i == 0:
-            flag = False
-    if num > 1 and flag == True:
-        return True
-    else:
-        return False
+# def is_prime(num):
+#     flag = True
+#     for i in range(2, num):
+#         if num % i == 0:
+#             flag = False
+#     if num > 1 and flag == True:
+#         return True
+#     else:
+#         return False
+#
+# def get_next_prime(num):
+#     while is_prime(num + 1) == False:
+#         num += 1
+#     return num + 1
+#
+#
+# phone_number = int(input())
+#
+# print(get_next_prime(phone_number))
 
-def get_next_prime(num):
-    while is_prime(num) == False:
 
-        return num
+# объявление функции
+def is_password_good(password):
+    pass
 
-phone_number = int(input())
+# считываем данные
+txt = input()
 
-print(get_next_prime(phone_number))
+# вызываем функцию
+print(is_password_good(txt))
 
 
