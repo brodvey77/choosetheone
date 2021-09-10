@@ -410,15 +410,70 @@
 
 
 
-# объявление функции
-def is_palindrome(text):
-    if text.lower()[::] == text.lower()[::-1]:
-        print('YES')
+# # объявление функции
+# def is_palindrome(text):
+#     new_text = ''
+#     for i in text:
+#         if i not in '.,!?- ':
+#             new_text += i
+#     if new_text.lower()[::] == new_text.lower()[::-1]:
+#         return True
+#     else:
+#         return False
+#
+# # считываем данные
+# txt = input()
+#
+# # вызываем функцию
+# print(is_palindrome(txt))
+
+
+
+
+def delim_number(text):
+    a = text.split(':')[0]
+    b = int(text.split(':')[1])
+    c = int(text.split(':')[2])
+
+
+def is_number_polindrom(num):
+    if a[::] == a[::-1]:
+        return True
     else:
-        print('NO')
+        return False
+
+
+def is_prime(num):
+    flag = True
+    for i in range(2, b):
+        if b % i == 0:
+            flag = False
+    if b > 1 and flag == True:
+        return True
+    else:
+        return False
+
+
+def is_num_even(num):
+    if int(num) % 2 == 0:
+        return True
+    else:
+        return False
+
+
+def is_valid_password(password):
+    if is_number_polindrom(password) == True and is_prime(password) == True and is_num_even(password) == True:
+        return True
+    else:
+        return False
+
 
 # считываем данные
-txt = input()
+psw = input()
 
 # вызываем функцию
-print(is_palindrome(txt))
+print(is_valid_password(psw))
+print(a, b, c)
+
+
+
