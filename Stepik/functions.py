@@ -430,50 +430,67 @@
 
 
 
-def delim_number(text):
-    a = text.split(':')[0]
-    b = int(text.split(':')[1])
-    c = int(text.split(':')[2])
 
 
-def is_number_polindrom(num):
-    if a[::] == a[::-1]:
-        return True
-    else:
-        return False
 
-
-def is_prime(num):
-    flag = True
-    for i in range(2, b):
-        if b % i == 0:
-            flag = False
-    if b > 1 and flag == True:
-        return True
-    else:
-        return False
-
-
-def is_num_even(num):
-    if int(num) % 2 == 0:
-        return True
-    else:
-        return False
-
-
-def is_valid_password(password):
-    if is_number_polindrom(password) == True and is_prime(password) == True and is_num_even(password) == True:
-        return True
-    else:
-        return False
-
-
-# считываем данные
-psw = input()
-
-# вызываем функцию
-print(is_valid_password(psw))
-print(a, b, c)
+# def is_dlina_tree(num):
+#     if len(num.split(':')) == 3:
+#         return True
+#     else:
+#         return False
+#
+#
+# def is_number_polindrom(num):
+#     a = num.split(':')[0]
+#     if a[::] == a[::-1]:
+#         return True
+#     else:
+#         return False
+#
+#
+# def is_prime(num):
+#     b = num.split(':')[1]
+#     flag = True
+#     for i in range(2, int(b)):
+#         if int(b) % i == 0:
+#             flag = False
+#     if int(b) > 1 and flag == True:
+#         return True
+#     else:
+#         return False
+# #
+# #
+# def is_num_even(num):
+#     c = num.split(':')[2]
+#     if int(c) % 2 == 0:
+#         return True
+#     else:
+#         return False
+# #
+# #
+# def is_valid_password(password):
+#     if is_dlina_tree(password) == True and is_number_polindrom(password) == True and is_prime(password) == True and \
+#             is_num_even(password) == True:
+#         return True
+#     else:
+#         return False
+#
+#
+# # считываем данные
+# psw = input()
+# # a = int(psw.split(':')[0])
+# # b = int(psw.split(':')[1])
+# # c = int(psw.split(':')[2])
+#
+#
+# # вызываем функцию
+# # print(is_dlina_tree(psw))
+# # print(is_number_polindrom(psw))
+# # print(is_prime(psw))
+# # print(is_num_even(psw))
+# print(is_valid_password(psw))
+# #
+# # print(a, b, c)
 
 
 
