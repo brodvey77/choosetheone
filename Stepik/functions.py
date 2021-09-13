@@ -494,3 +494,26 @@
 
 
 
+# объявление функции
+# def is_correct_bracket(text):
+#     counter = 0
+#     for i in text:
+#         if i == '(':
+#             counter += 1
+#         else:
+#             counter -= 1
+#             if counter == -1:
+#                 break
+#     if counter == 0:
+#         return True
+#     else:
+#         return False
+#
+#
+#
+# # считываем данные
+# txt = input()
+#
+# # вызываем функцию
+# print(is_correct_bracket(txt))
+
