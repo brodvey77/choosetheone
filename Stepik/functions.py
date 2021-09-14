@@ -549,19 +549,64 @@
 # print(x, y)
 
 
-# объявление функции
-import math
+# # объявление функции
+# import math
+#
+#
+# def get_circle(radius):
+#     p = math.pi
+#     c = 2*p*radius
+#     s = p*(radius**2)
+#     return c, s
+#
+# # считываем данные
+# r = float(input())
+#
+# # вызываем функцию
+# length, square = get_circle(r)
+# print(length, square)
 
 
-def get_circle(radius):
-    p = math.pi
-    c = 2*p*radius
-    s = p*(radius**2)
-    return c, s
 
-# считываем данные
-r = float(input())
 
-# вызываем функцию
-length, square = get_circle(r)
-print(length, square)
+
+
+# # объявление функции
+# def solve(a, b, c):
+#     from math import pow, sqrt
+#     d = pow(b, 2) - 4 * a * c
+#     if d < 0:
+#         print('Нет корней')
+#     elif d == 0:
+#         x = -b / (2 * a)
+#         return x, x
+#     elif d > 0:
+#         x1 = (-b + sqrt(d)) / (2 * a)
+#         x2 = (-b - sqrt(d)) / (2 * a)
+#         x1_min = (min(x1, x2))
+#         x2_max = (max(x1, x2))
+#         return x1_min, x2_max
+#
+# # считываем данные
+# a, b, c = int(input()), int(input()), int(input())
+#
+# # вызываем функцию
+# x1, x2 = solve(a, b, c)
+# print(x1, x2)
+
+
+# # объявление функции
+# def solve(a, b, c):
+#     d = (b ** 2) - 4 * a * c
+#     x1 = ((-1 * b) - d ** 0.5) / (2 * a)
+#     x2 = ((-1 * b) + d ** 0.5) / (2 * a)
+#
+#     return min(x1, x2), max(x1, x2)
+#
+#
+# # считываем данные
+# a, b, c = int(input()), int(input()), int(input())
+#
+# # вызываем функцию
+# x1, x2 = solve(a, b, c)
+# print(x1, x2)
