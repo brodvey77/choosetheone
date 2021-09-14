@@ -547,3 +547,21 @@
 # # вызываем функцию
 # x, y = get_middle_point(x_1, y_1, x_2, y_2)
 # print(x, y)
+
+
+# объявление функции
+import math
+
+
+def get_circle(radius):
+    p = math.pi
+    c = 2*p*radius
+    s = p*(radius**2)
+    return c, s
+
+# считываем данные
+r = float(input())
+
+# вызываем функцию
+length, square = get_circle(r)
+print(length, square)
