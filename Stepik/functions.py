@@ -610,3 +610,211 @@
 # # вызываем функцию
 # x1, x2 = solve(a, b, c)
 # print(x1, x2)
+
+# import math
+# x = int(input("Enter a value for x: "))
+# y = int(input("Enter a value for y: "))
+#
+# if y == 1 or y == x:
+#     print(1)
+#
+# if y > x:
+#     print(0)
+# else:
+#     a = math.factorial(x)
+#     b = math.factorial(y)
+#     div = a // (b*(x-y))
+#     print(div)
+
+# symbol = "*"
+# empty = " "
+#
+#
+# def star(n):
+#     for i in range(n):
+#         print((n - i - 1) * empty + (i + i + 1) * symbol)
+#
+# star(8)
+#
+#
+# # объявление функции
+# def draw_triangle():
+#     m = 15
+#     for i in range(1, m + 1, 2):
+#         print(' ' * ((m - i) // 2) + '*' * i)
+#
+# # основная программа
+# draw_triangle()
+
+
+# # объявление функции
+# def get_shipping_cost(quantity):
+#     return 1000 + (quantity - 1) * 120
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print(get_shipping_cost(n))
+
+
+
+
+
+
+# # объявление функции
+# def compute_binom(x, y):
+#     import math
+#     if y == 1 or y == x:
+#         print(1)
+#
+#     if y > x:
+#         print(0)
+#     else:
+#         a = math.factorial(x)
+#         b = math.factorial(y)
+#         div = a // (b * (x - y))
+#         print(div)
+#
+# # считываем данные
+# x = int(input())
+# y = int(input())
+#
+# # вызываем функцию
+# print(compute_binom(x, y))
+
+
+# # объявление функции
+# def compute_binom(n, k):
+#     import math
+#     n_1 = math.factorial(n)
+#     k_1 = math.factorial(k)
+#     return int(n_1/(k_1 * math.factorial(n - k)))
+#
+# # считываем данные
+# n = int(input())
+# k = int(input())
+#
+# # вызываем функцию
+# print(compute_binom(n, k))
+
+
+# d = zero_to_ninety_nine = ['ноль', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь',
+#                            'девять', 'десять', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать',
+#                            'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать', 'двадцать',
+#                            'двадцать один', 'двадцать два', 'двадцать три', 'двадцать четыре', 'двадцать пять',
+#                            'двадцать шесть', 'двадцать семь', 'двадцать восемь', 'двадцать девять', 'тридцать',
+#                            'тридцать один', 'тридцать два', 'тридцать три', 'тридцать четыре', 'тридцать пять',
+#                            'тридцать шесть', 'тридцать семь', 'тридцать восемь', 'тридцать девять', 'сорок',
+#                            'сорок один', 'сорок два', 'сорок три', 'сорок четыре', 'сорок пять', 'сорок шесть',
+#                            'сорок семь', 'сорок восемь', 'сорок девять', 'пятьдесят', 'пятьдесят один',
+#                            'пятьдесят два', 'пятьдесят три', 'пятьдесят четыре', 'пятьдесят пять', 'пятьдесят шесть',
+#                            'пятьдесят семь', 'пятьдесят восемь', 'пятьдесят девять', 'шестьдесят', 'шестьдесят один',
+#                            'шестьдесят два', 'шестьдесят три', 'шестьдесят четыре', 'шестьдесят пять',
+#                            'шестьдесят шесть', 'шестьдесят семь', 'шестьдесят восемь', 'шестьдесят девять',
+#                            'семьдесят', 'семьдесят один', 'семьдесят два', 'семьдесят три', 'семьдесят четыре',
+#                            'семьдесят пять', 'семьдесят шесть', 'семьдесят семь', 'семьдесят восемь',
+#                            'семьдесят девять', 'восемьдесят', 'восемьдесят один', 'восемьдесят два',
+#                            'восемьдесят три', 'восемьдесят четыре', 'восемьдесят пять', 'восемьдесят шесть',
+#                            'восемьдесят семь', 'восемьдесят восемь', 'восемьдесят девять', 'девяносто',
+#                            'девяносто один', 'девяносто два', 'девяносто три', 'девяносто четыре', 'девяносто пять',
+#                            'девяносто шесть', 'девяносто семь', 'девяносто восемь', 'девяносто девять']
+#
+# # объявление функции
+# def number_to_words(num):
+#     for i in range(num):
+#         result = d[i + 1]
+#
+#     return result
+#
+#
+# # считываем данные
+# n = int(input())
+#
+# # вызываем функцию
+# print(number_to_words(n))
+
+
+
+# lng_ru = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь', 'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь',
+#           'декабрь']
+#
+# lng_en = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october',
+#           'november', 'december']
+#
+# # объявление функции
+# def get_month(language, number):
+#     if language == 'ru':
+#         return lng_ru[num-1]
+#     if language == 'en':
+#         return lng_en[num-1]
+#
+# # считываем данные
+# lan = input()
+# num = int(input())
+
+# # вызываем функцию
+# print(get_month(lan, num))
+
+# spisok = []
+#
+#
+# # объявление функции
+# def is_magic(date):
+#     string = date.split('.')
+#     for i in string:
+#         spisok.append(int(i))
+#     if spisok[0] * spisok[1] == spisok[2] % 100:
+#         return True
+#     else:
+#         return False
+#
+#
+# # считываем данные
+# date = input()
+#
+# # вызываем функцию
+# print(is_magic(date))
+#
+#
+# def is_magic(date):
+#     return int(date[:2]) * int(date[3:5]) == int(date[-2:])
+#
+#
+# date = input()
+#
+# print(is_magic(date))
+
+
+
+# # объявление функции
+# def is_pangram(text):
+#     sort_text = set(text)
+#     if ' ' in sort_text:
+#         sort_text.remove(' ')
+#     if len(sort_text) == 26:
+#         return True
+#     else:
+#         return False
+#
+#
+# # считываем данные
+# text = input().lower()
+#
+# # вызываем функцию
+# print(is_pangram(text))
+#
+#
+# # объявление функции
+# def is_pangram(text):
+#     for i in range(97, 123):
+#         if not chr(i) in text.lower():
+#             return False
+#     return True
+#
+#
+# # считываем данные
+# text = input()
+#
+# # вызываем функцию
+# print(is_pangram(text))
