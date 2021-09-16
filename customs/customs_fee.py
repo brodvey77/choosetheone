@@ -8,10 +8,10 @@ def customs_fee_tariff():
     elif customs_value_ru in range(200001, 450001):
         customs_fee = 1550
         print(f'Таможенный сбор - {str(customs_fee)} рублей')
-    elif customs_value_ru in range(450001, 1000201):
+    elif customs_value_ru in range(450001, 1200201):
         customs_fee = 3100
         print(f'Таможенный сбор - {str(customs_fee)} рублей')
-    elif customs_value_ru in range(1000201, 2700001):
+    elif customs_value_ru in range(1200201, 2700001):
         customs_fee = 8530
         print(f'Таможенный сбор - {str(customs_fee)} рублей')
     elif customs_value_ru in range(2700001, 4200001):
