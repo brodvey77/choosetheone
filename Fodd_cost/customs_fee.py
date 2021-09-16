@@ -3,9 +3,9 @@ def customs_fee_tariff(customs_value_ru):
         return 775
     elif customs_value_ru in range(200001, 450001):
         return 1550
-    elif customs_value_ru in range(450001, 1000201):
+    elif customs_value_ru in range(450001, 1200201):
         return 3100
-    elif customs_value_ru in range(1000201, 2700001):
+    elif customs_value_ru in range(1200201, 2700001):
         return 8530
     elif customs_value_ru in range(2700001, 4200001):
         return 12000
