@@ -35,7 +35,7 @@ def print_delimetr():   # функция разделителя
 
 #  создать функцию выбора процентной ставки
 
-transport_to_board = math.ceil(int(sum_of_transport) * 42 / 100)
+transport_to_board = math.ceil(int(sum_of_transport) * 68 / 100)
 print(f'Сумма транспорта до границы с ТС - {str(transport_to_board)} евро')
 print_delimetr()
 

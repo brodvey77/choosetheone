@@ -430,233 +430,42 @@
 
 
 
+def delim_number(text):
+    a = text.split(':')[0]
+    b = int(text.split(':')[1])
+    c = int(text.split(':')[2])
 
 
-
-# def is_dlina_tree(num):
-#     if len(num.split(':')) == 3:
-#         return True
-#     else:
-#         return False
-#
-#
-# def is_number_polindrom(num):
-#     a = num.split(':')[0]
-#     if a[::] == a[::-1]:
-#         return True
-#     else:
-#         return False
-#
-#
-# def is_prime(num):
-#     b = num.split(':')[1]
-#     flag = True
-#     for i in range(2, int(b)):
-#         if int(b) % i == 0:
-#             flag = False
-#     if int(b) > 1 and flag == True:
-#         return True
-#     else:
-#         return False
-# #
-# #
-# def is_num_even(num):
-#     c = num.split(':')[2]
-#     if int(c) % 2 == 0:
-#         return True
-#     else:
-#         return False
-# #
-# #
-# def is_valid_password(password):
-#     if is_dlina_tree(password) == True and is_number_polindrom(password) == True and is_prime(password) == True and \
-#             is_num_even(password) == True:
-#         return True
-#     else:
-#         return False
-#
-#
-# # считываем данные
-# psw = input()
-# # a = int(psw.split(':')[0])
-# # b = int(psw.split(':')[1])
-# # c = int(psw.split(':')[2])
-#
-#
-# # вызываем функцию
-# # print(is_dlina_tree(psw))
-# # print(is_number_polindrom(psw))
-# # print(is_prime(psw))
-# # print(is_num_even(psw))
-# print(is_valid_password(psw))
-# #
-# # print(a, b, c)
+def is_number_polindrom(num):
+    if a[::] == a[::-1]:
+        return True
+    else:
+        return False
 
 
-
-# объявление функции
-# def is_correct_bracket(text):
-#     counter = 0
-#     for i in text:
-#         if i == '(':
-#             counter += 1
-#         else:
-#             counter -= 1
-#             if counter == -1:
-#                 break
-#     if counter == 0:
-#         return True
-#     else:
-#         return False
-#
-#
-#
-# # считываем данные
-# txt = input()
-#
-# # вызываем функцию
-# print(is_correct_bracket(txt))
-
-#
-# # объявление функции
-# def convert_to_python_case(text):
-#     s = ''
-#     for i in text:
-#         if i.isupper():
-#             i = '_' + i.lower()
-#         s += i
-#     return s[1:]
-#
-# # считываем данные
-# txt = input()
-#
-# # вызываем функцию
-# print(convert_to_python_case(txt))
+def is_prime(num):
+    flag = True
+    for i in range(2, b):
+        if b % i == 0:
+            flag = False
+    if b > 1 and flag == True:
+        return True
+    else:
+        return False
 
 
-# # объявление функции
-# def get_middle_point(x1, y1, x2, y2):
-#     a = (x1 + x2) / 2
-#     b = (y1 + y2) / 2
-#     return a, b
-#
-# # считываем данные
-# x_1, y_1 = int(input()), int(input())
-# x_2, y_2 = int(input()), int(input())
-#
-# # вызываем функцию
-# x, y = get_middle_point(x_1, y_1, x_2, y_2)
-# print(x, y)
+def is_num_even(num):
+    if int(num) % 2 == 0:
+        return True
+    else:
+        return False
 
 
-# # объявление функции
-# import math
-#
-#
-# def get_circle(radius):
-#     p = math.pi
-#     c = 2*p*radius
-#     s = p*(radius**2)
-#     return c, s
-#
-# # считываем данные
-# r = float(input())
-#
-# # вызываем функцию
-# length, square = get_circle(r)
-# print(length, square)
-
-
-
-
-
-
-# # объявление функции
-# def solve(a, b, c):
-#     from math import pow, sqrt
-#     d = pow(b, 2) - 4 * a * c
-#     if d < 0:
-#         print('Нет корней')
-#     elif d == 0:
-#         x = -b / (2 * a)
-#         return x, x
-#     elif d > 0:
-#         x1 = (-b + sqrt(d)) / (2 * a)
-#         x2 = (-b - sqrt(d)) / (2 * a)
-#         x1_min = (min(x1, x2))
-#         x2_max = (max(x1, x2))
-#         return x1_min, x2_max
-#
-# # считываем данные
-# a, b, c = int(input()), int(input()), int(input())
-#
-# # вызываем функцию
-# x1, x2 = solve(a, b, c)
-# print(x1, x2)
-
-
-# # объявление функции
-# def solve(a, b, c):
-#     d = (b ** 2) - 4 * a * c
-#     x1 = ((-1 * b) - d ** 0.5) / (2 * a)
-#     x2 = ((-1 * b) + d ** 0.5) / (2 * a)
-#
-#     return min(x1, x2), max(x1, x2)
-#
-#
-# # считываем данные
-# a, b, c = int(input()), int(input()), int(input())
-#
-# # вызываем функцию
-# x1, x2 = solve(a, b, c)
-# print(x1, x2)
-
-# import math
-# x = int(input("Enter a value for x: "))
-# y = int(input("Enter a value for y: "))
-#
-# if y == 1 or y == x:
-#     print(1)
-#
-# if y > x:
-#     print(0)
-# else:
-#     a = math.factorial(x)
-#     b = math.factorial(y)
-#     div = a // (b*(x-y))
-#     print(div)
-
-# symbol = "*"
-# empty = " "
-#
-#
-# def star(n):
-#     for i in range(n):
-#         print((n - i - 1) * empty + (i + i + 1) * symbol)
-#
-# star(8)
-#
-#
-# # объявление функции
-# def draw_triangle():
-#     m = 15
-#     for i in range(1, m + 1, 2):
-#         print(' ' * ((m - i) // 2) + '*' * i)
-#
-# # основная программа
-# draw_triangle()
-
-
-# # объявление функции
-# def get_shipping_cost(quantity):
-#     return 1000 + (quantity - 1) * 120
-#
-# # считываем данные
-# n = int(input())
-#
-# # вызываем функцию
-# print(get_shipping_cost(n))
-
+def is_valid_password(password):
+    if is_number_polindrom(password) == True and is_prime(password) == True and is_num_even(password) == True:
+        return True
+    else:
+        return False
 
 
 
