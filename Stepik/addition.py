@@ -1,4 +1,4 @@
-import random
+# import random
 
 # num1 = random.randint(1, 100)
 # num2 = random.randint(-10, 150)
@@ -66,3 +66,73 @@ import random
 #     else:
 #         print('Вы угадали, поздравляем!')
 #         break
+
+# import math
+# a = math.log2(12000000)
+# print(math.ceil(a))
+
+
+# Алгоритм угадывания
+
+# left = 1
+# right = 100
+# middle = (left + right) // 2
+# count = 0
+# user_num = int(input())
+#
+# if middle == user_num:
+#     print('YES')
+# elif middle < user_num:
+#     left = middle + 1
+#     count += 1
+# elif middle > user_num:
+#     right = middle - 1
+#     count += 1
+
+
+# import math
+
+# n = int(input())
+# answer = math.ceil(math.log2(n))
+# print(answer)
+
+from random import randint
+
+num = randint(1, 100)
+print('Добро пожаловать в числовую угадайку')
+
+
+def is_valid(text):
+    if text.isdigit() and 1 <= int(text) <= 100:
+        return True
+    else:
+        return False
+
+def input_digit():
+    popitka = 0
+    while True:
+        user_num = input('Введите ваше число от 1 до 100: ')
+        if is_valid(user_num) == True:
+            user_num = int(user_num)
+            if user_num < num:
+                print('Ваше число меньше загаданного, попробуйте еще разок')
+                popitka +=1
+                continue
+            elif user_num > num:
+                print('Ваше число больше загаданного, попробуйте еще разок')
+                popitka += 1
+                continue
+            else:
+                print(f'Вы угадали c {popitka} попытки, поздравляем!')
+                print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
+                break
+
+        else:
+            print('А может быть все-таки введем целое число от 1 до 100?')
+
+
+input_digit()
+
+
+
+
