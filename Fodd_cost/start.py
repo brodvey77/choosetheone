@@ -6,7 +6,8 @@ from customs_fee import customs_fee_tariff
 from duty import duty
 from NDS import nds
 
-cost_of_invoice, cost_of_transport_to_board = int(input('Введите стоимость инвойса: ')), int(input('Введите стоимость транспортда до границы: '))          # Запрос данных от пользователя
+cost_of_invoice, cost_of_transport_to_board = int(input('Введите стоимость инвойса: ')), \
+                                              int(input('Введите стоимость транспортда до границы: '))
 
 customs_value_ru = ceil((cost_of_invoice + cost_of_transport_to_board +
                         cost_of_insurance(cost_of_invoice)) * cource_of_eur)      # расчет таможенной стоимости в руб

@@ -53,4 +53,16 @@ import random
 # print(random.sample(numbers, 3))
 # print(random.sample(numbers, 5))
 
-
+# number = random.randint(1, 100)
+#
+# while True:
+#     num_of_user = int(input('Введите число от 1 до 100: '))
+#     if num_of_user > number:
+#         print('Слишком много, попробуйте еще раз')
+#         continue
+#     elif num_of_user < number:
+#         print('Слишком мало, попробуйте еще раз')
+#         continue
+#     else:
+#         print('Вы угадали, поздравляем!')
+#         break
