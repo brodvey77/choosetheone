@@ -96,53 +96,54 @@
 # answer = math.ceil(math.log2(n))
 # print(answer)
 
-from random import randint
+# from random import randint
+#
+# print('Добро пожаловать в числовую угадайку')
+# n = int(input('до какого числа выбрать диапозон? '))
+# num = randint(1, n)
+#
+# def is_valid(text):
+#     if text.isdigit() and 1 <= int(text) <= n:
+#         return True
+#     else:
+#         return False
+#
+# def input_digit():
+#     popitka = 1
+#     while True:
+#         user_num = input(f'Введите ваше число от 1 до {n}: ')
+#         if is_valid(user_num) == True:
+#             user_num = int(user_num)
+#             if user_num < num:
+#                 print('Ваше число меньше загаданного, попробуйте еще разок')
+#                 popitka += 1
+#                 continue
+#             elif user_num > num:
+#                 print('Ваше число больше загаданного, попробуйте еще разок')
+#                 popitka += 1
+#                 continue
+#             else:
+#                 print(f'Вы угадали c {popitka} попытки, поздравляем!')
+#                 print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
+#                 break
+#
+#         else:
+#             print(f'А может быть все-таки введем целое число от 1 до {n}?')
+#
+#
+# input_digit()
+#
+# while True:
+#     print('Хотите еще сыграть? ')
+#     answer = input('ДА или НЕТ')
+#     if answer.lower() == 'да':
+#         n = int(input('до какого числа выбрать диапозон? '))
+#         num = randint(1, n)
+#         input_digit()
+#     else:
+#         print('До свидания')
+#         break
 
-print('Добро пожаловать в числовую угадайку')
-n = int(input('до какого числа выбрать диапозон? '))
-num = randint(1, n)
-
-def is_valid(text):
-    if text.isdigit() and 1 <= int(text) <= n:
-        return True
-    else:
-        return False
-
-def input_digit():
-    popitka = 1
-    while True:
-        user_num = input(f'Введите ваше число от 1 до {n}: ')
-        if is_valid(user_num) == True:
-            user_num = int(user_num)
-            if user_num < num:
-                print('Ваше число меньше загаданного, попробуйте еще разок')
-                popitka += 1
-                continue
-            elif user_num > num:
-                print('Ваше число больше загаданного, попробуйте еще разок')
-                popitka += 1
-                continue
-            else:
-                print(f'Вы угадали c {popitka} попытки, поздравляем!')
-                print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
-                break
-
-        else:
-            print(f'А может быть все-таки введем целое число от 1 до {n}?')
-
-
-input_digit()
-
-while True:
-    print('Хотите еще сыграть? ')
-    answer = input('ДА или НЕТ')
-    if answer.lower() == 'да':
-        n = int(input('до какого числа выбрать диапозон? '))
-        num = randint(1, n)
-        input_digit()
-    else:
-        print('До свидания')
-        break
 
 
 
