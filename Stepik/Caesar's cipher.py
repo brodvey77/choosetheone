@@ -4,7 +4,6 @@ import time
 
 
 
-
 english_symbols = 'abcdefghijklmnopqrstuvwxyz'
 russian_symbols = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
 
