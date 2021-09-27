@@ -1,11 +1,10 @@
 # Caesar's cipher
 import time
 
-english_symbols_lower = 'abcdefghijklmnopqrstuvwxyz'
-english_symbols_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-russian_symbols_lower = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
-russian_symbols_upper = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-
+english_symbols_lower = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
+english_symbols_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+russian_symbols_lower = 'абвгдежзийклмнопрстуфхцчшщъыьэюяабвгдежзийклмнопрстуфхцчшщъыьэюя'
+russian_symbols_upper = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
 
 switch = input('Выберете шифровние (s) или дешифрование (d) ').lower()
 time.sleep(0.5)
@@ -15,22 +14,47 @@ key = int(input('Какой применить шаг сдвига? '))
 time.sleep(0.5)
 
 
-final_text = ''
-for i in text:
-    if i in russian_symbols_upper:
-        final_text += i[russian_symbols_upper] + key
+def eng_lang(text, key):
+    final_text = ''
+    for i in text:
+        if i.isupper():
+            now = english_symbols_upper.find(i)
+            final = now + key
+            final_text += english_symbols_upper[final]
+        if i.islower():
+            now = english_symbols_lower.find(i)
+            final = now + key
+            final_text += english_symbols_lower[final]
+        if i not in english_symbols_lower and i not in english_symbols_upper:
+            final_text += i
+    return final_text
 
-    if i in russian_symbols_lower:
-        final_text += i[russian_symbols_lower] + key
+
+def rus_eng(text, key):
+    final_text = ''
+    for i in text:
+        if i.isupper():
+            now = russian_symbols_upper.find(i)
+            final = now + key
+            final_text += russian_symbols_upper[final]
+        if i.islower():
+            now = russian_symbols_lower.find(i)
+            final = now + key
+            final_text += russian_symbols_lower[final]
+        if i not in russian_symbols_lower and i not in russian_symbols_upper:
+            final_text += i
+    return final_text
 
 
-
-
-
-
-# if switch == 's':
-#     text = input('Введите текст для шифрования: ')
-#     print(func_of_cipfer(text, language, key))
-# if switch == 'd':
-#     text = input('Введите текст для расшифровки: ')
-#     print(func_of_decipher(text, language, key))
+if switch == 's':
+    user_input = input('Введите текст для шифрования: ')
+    if language == 'e':
+        print(eng_lang(user_input, key))
+    else:
+        print(rus_eng(user_input, key))
+if switch == 'd':
+    user_input = input('Введите текст для расшифровки: ')
+    if language == 'e':
+        print(eng_lang(user_input, -key))
+    else:
+        print(rus_eng(user_input, -key))

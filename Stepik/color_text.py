@@ -12,29 +12,70 @@
 # print(Style.NORMAL + 'back to normal now')
 
 
-english_symbols_lower = 'abcdefghijklmnopqrstuvwxyz'
-english_symbols_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-russian_symbols_lower = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
-russian_symbols_upper = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
-key = 2
+english_symbols_lower = 'abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz'
+english_symbols_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+russian_symbols_lower = 'абвгдежзийклмнопрстуфхцчшщъыьэюяабвгдежзийклмнопрстуфхцчшщъыьэюя'
+russian_symbols_upper = 'АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
+key = -3
 #
 # switch = input('Выберете шифровние (s) или дешифрование (d) ').lower()
 # language = input('Какой язык выбрать? Английский (е) или Русский (r) ').lower()
 # key = int(input('Какой применить шаг сдвига? '))
 
-text = 'эюя'
-final_text = ''
+user_input = input('input your text here: ')
 
-for i in text:
-    if i in russian_symbols_lower:
-        if russian_symbols_lower[russian_symbols_lower.index(i) + key] > len(russian_symbols_lower):
 
-    else:
-        print(russian_symbols_lower[russian_symbols_lower.index(i) + key], end='')
-    if i in russian_symbols_upper:
-        if
-    else:
-        print(russian_symbols_upper[russian_symbols_upper.index(i) + key], end='')
+def eng_lang(text):
+    final_text = ''
+    for i in text:
+        if i.isupper():
+            now = english_symbols_upper.find(i)
+            final = now + key
+            final_text += english_symbols_upper[final]
+        if i.islower():
+            now = english_symbols_lower.find(i)
+            final = now + key
+            final_text += english_symbols_lower[final]
+        if i not in english_symbols_lower and i not in english_symbols_upper:
+            final_text += i
+    return final_text
+
+
+print(eng_lang(user_input))
+
+
+# for i in text:
+#     if i.isupper():
+#         now = english_symbols_upper.find(i)
+#         final = now + key
+#         final_text = english_symbols_upper[final]
+#     if i.islower():
+#         now = english_symbols_lower.find(i)
+#         final = now + key
+#         final_text = english_symbols_lower[final]
+#     if i not in english_symbols_lower and i not in english_symbols_upper:
+#         final_text = i
+#
+#     print(final_text, end='')
+
+
+
+# for i in text:
+#     now = english_symbols_lower.find(i)
+#     final = now + key
+#     final_text = english_symbols_lower[final]
+#     if i not in english_symbols_lower:
+#         final_text = i
+#     print(final_text, end='')
+#
+#
+# for i in text:
+#     now = russian_symbols_lower.find(i)
+#     final = now + key
+#     final_text = russian_symbols_lower[final]
+#     if i not in russian_symbols_lower:
+#         final_text = i
+#     print(final_text, end='')
 
 
 
