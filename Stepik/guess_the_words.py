@@ -110,5 +110,9 @@ def get_word():
     return random.choice(word_list)
 
 def display_hangman(tries):
-    pass
+    print('-' * 8)
+    for i in range(5):
+        print('|')
+    print('_')
 
+display_hangman(5)
