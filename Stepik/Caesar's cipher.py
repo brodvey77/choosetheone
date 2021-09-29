@@ -65,13 +65,18 @@ english_symbols_upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
 
 input_text = input('Input your text here: ')
 text = input_text.split(' ')
-new_text = []
 
-for i in text:
-    new_text.append(i.replace(',', '').replace('.', '').replace('"', '').replace('!', '').replace('?', ''))
+list_text = []
+
+for i in input_text.split(' '):
+    list_text.append(i.replace(',', '').replace('.', '').replace('?', '').replace('!', '').replace('"', ''))
+
+key_list = []
+for i in list_text:
+    key_list.append(len(i))
 
 
-def decoder(text, key):
+def eng_lang(text, key):
     final_text = ''
     for i in text:
         if i.isupper():
@@ -84,6 +89,13 @@ def decoder(text, key):
             final_text += english_symbols_lower[final]
         if i not in english_symbols_lower and i not in english_symbols_upper:
             final_text += i
-        return final_text
+    return final_text + ' '
 
 
+final = ''
+flag = 0
+for i in text:
+    final += eng_lang(i, key_list[flag])
+    flag += 1
+
+print(final.rstrip())
