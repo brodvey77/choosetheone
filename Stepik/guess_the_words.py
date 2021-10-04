@@ -1,4 +1,5 @@
 import random
+
 word_list = ['год', 'человек', 'время', 'дело', 'жизнь', 'день', 'рука', 'раз', 'работа', 'слово', 'место', 'лицо',
              'друг', 'глаз', 'вопрос', 'дом', 'сторона', 'страна', 'мир', 'случай', 'голова', 'ребенок', 'сила',
              'конец', 'вид', 'система', 'часть', 'город', 'отношение', 'женщина', 'деньги', 'земля', 'машина',
@@ -105,71 +106,8 @@ word_list = ['год', 'человек', 'время', 'дело', 'жизнь',
              'кризис', 'указание', 'плата', 'яблоко', 'препарат', 'действительность', 'москвич', 'остаток',
              'изображение', 'сделка', 'сочинение', 'покупатель', 'танк', 'затрата', 'строка', 'единица']
 
-
-def get_word():
-    word = random.choice(word_list).upper()
-    return word
-
-# def display_hangman(tries):
-#     if tries == 6:
-#         print('-' * 8)
-#         print('|      |')
-#         print('|')
-#         print('|')
-#         print('|')
-#         print('|')
-#         print('_')
-#     elif tries == 5:
-#         print('-' * 8)
-#         print('|      |')
-#         print('|      O')
-#         print('|')
-#         print('|')
-#         print('|')
-#         print('_')
-#     elif tries == 4:
-#         print('-' * 8)
-#         print('|      |')
-#         print('|      O')
-#         print('|      |')
-#         print('|      |')
-#         print('|')
-#         print('_')
-#     elif tries == 3:
-#         print('-' * 8)
-#         print('|      |')
-#         print('|      O')
-#         print('|     \\|')
-#         print('|      |')
-#         print('|')
-#         print('_')
-#     elif tries == 2:
-#         print('-' * 8)
-#         print('|      |')
-#         print('|      O')
-#         print('|     \\|/')
-#         print('|      |')
-#         print('|')
-#         print('_')
-#     elif tries == 1:
-#         print('-' * 8)
-#         print('|      |')
-#         print('|      O')
-#         print('|     \\|/')
-#         print('|      |')
-#         print('|     /')
-#         print('_')
-#     elif tries == 0:
-#         print('-' * 8)
-#         print('|      |')
-#         print('|      O')
-#         print('|     \\|/')
-#         print('|      |')
-#         print('|     / \\')
-#         print('_')
-#
-#
-# display_hangman(0)
+def get_word(a):
+    return random.choice(a).upper()
 
 def display_hangman(tries):
     stages = [  # финальное состояние: голова, торс, обе руки, обе ноги
@@ -246,6 +184,8 @@ def display_hangman(tries):
     return stages[tries]
 
 
+word = get_word(word_list)
+
 
 def play(word):
     word_completion = '_' * len(word)  # строка, содержащая символы _ на каждую букву задуманного слова
@@ -253,21 +193,40 @@ def play(word):
     guessed_letters = []  # список уже названных букв
     guessed_words = []  # список уже названных слов
     tries = 6  # количество попыток
-    print('Давайте играть в угадайку слов!')
+    sym = '!@#$%^&*()-=+/\\.?,'
+    print("Let's play!")
     print(display_hangman(tries))
     print(word_completion)
-    print(word)
-    while True:
-        user_input = input('Введите вашу букву или слово: ').upper()
-        print(user_input)
-        if not user_input.isalpha():
-            print('Вы ошиблись, попробуйте ещё')
-            continue
-        if user_input in guessed_words or user_input in guessed_letters:
-            print('Уже было')
-            continue
-        if user_input in word:
-            print('угадал букву')
+
+    while tries != 0 and guessed == False:
+        a = input().upper()
+        while a.isalpha() == False or a in sym or a in guessed_letters or a in guessed_words:
+            a = input('Enter another letter or word').upper()
+            print()
+        if a in word and len(a) == 1:
+            guessed_letters.append(a)
+            for i in range(len(word)):
+                if word[i] == a:
+                    word_completion = word_completion[:i] + a + word_completion[i + 1:]
+            print(word_completion)
+            if word_completion == word:
+                guessed = True
+                return print('Congratulations, you are guessing word. You win!')
+        elif a == word:
+            guessed = True
+            return print('Congratulations, you are guessing word. You win!')
+        elif a != word and len(a) == len(word):
+            tries -= 1
+            print(display_hangman(tries))
+            guessed_words.append(a)
+            print(word_completion)
+        elif a not in word and len(a) == 1:
+            guessed_letters.append(a)
+            tries -= 1
+            print(display_hangman(tries))
+            print(word_completion)
+
+    return print(f'You lose\nthe hidden word was {word}')
 
 
-play(get_word())
+play(word)
