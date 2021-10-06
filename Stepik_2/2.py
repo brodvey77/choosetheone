@@ -59,8 +59,70 @@
 
 # print(len(input().split()))
 
-year = int(input())
+# year = int(input())
+#
+# list_of_enimals = ["Дракон", "Змея", "Лошадь", "Овца", "Обезьяна", "Петух", "Собака", "Свинья", "Крыса", "Бык", "Тигр",
+#                    "Заяц"]
+#
+# list_of_years = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011]
+#
+# if year in list_of_years:
+#     print(list_of_enimals[list_of_years.index(year)])
+#
+# if year > 2000:
+#     while year not in list_of_years:
+#         year -= 12
+#         if year in list_of_years:
+#             print(list_of_enimals[list_of_years.index(year)])
+#
+# if year < 2000:
+#     while year not in list_of_years:
+#         year += 12
+#         if year in list_of_years:
+#             print(list_of_enimals[list_of_years.index(year)])
 
 
+# year = int(input())
+# animals = ['Обезьяна', 'Петух', 'Собака', 'Свинья', 'Крыса', 'Бык', 'Тигр', 'Заяц', 'Дракон', 'Змея', 'Лошадь', 'Овца']
+#
+# print(animals[year % 12])
+
+# number = int(input())
+# list_digits = []
+#
+# while number != 0:
+#     last_digit = number % 10
+#     list_digits.append(last_digit)
+#     number //= 10
+#
+# if len(list_digits) > 5:
+#     list_digits.insert(0, list_digits[-1])
+#     del list_digits[-1]
+#
+# for i in list_digits:
+#     if list_digits[0] == 0:
+#         del list_digits[0]
+#
+# print(*list_digits, sep='')
+
+# n = int(input())
+# print('{:,}'.format(n))
 
 
+# n = int(input())
+# list_d = []
+# counter = 0
+# while n != 0:
+#     last_digit = n % 10
+#     counter += 1
+#     list_d.append(str(last_digit))
+#     if counter == 3 and n != 1:
+#         list_d.append(',')
+#         counter = 0
+#     n //= 10
+#
+# new = list_d[::-1]
+# # if new[0] ==',':
+# #     del new[0]
+#
+# print(*new, sep='', end='')

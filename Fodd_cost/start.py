@@ -6,6 +6,7 @@ from customs_fee import customs_fee_tariff
 from duty import duty
 from NDS import nds
 from colorama import init, Fore, Back, Style
+init(autoreset=True)
 
 
 cost_of_invoice, cost_of_transport_to_board = int(input('Введите стоимость инвойса: ')), \
@@ -25,4 +26,4 @@ customs_vat = nds(customs_value)
 print(f'Сбор - {tax} евро')
 print(f'Пошлина - {customs_duty} евро')
 print(f'НДС - {customs_vat} евро')
-print(Fore.RED + f'Итого - {tax + customs_duty + customs_vat} евро')
+print(Style.BRIGHT + Fore.RED + f'Итого - {tax + customs_duty + customs_vat} евро')
