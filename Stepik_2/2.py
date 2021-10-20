@@ -126,3 +126,80 @@
 # #     del new[0]
 #
 # print(*new, sep='', end='')
+
+
+# The problem of Josephus Flavius
+
+# n, k = int(input()), int(input())
+# digit = 0
+# for i in range(1, n + 1):
+#     digit = (digit + k) % i
+# print(digit + 1)
+
+
+# n = int(input())
+# numbers = []
+# user_input = []
+#
+# for i in range(n):
+#     user_input += input().split(' ')
+#
+#
+# for i in user_input:
+#     numbers.append(int(i))
+#
+# first = []
+# second = []
+# third = []
+# forth = []
+#
+# flag = 0
+#
+# for i in numbers[flag::]:
+#     x = numbers[flag]
+#     y = numbers[flag + 1]
+#     if x > 0 and y > 0:
+#         first.append(1)
+#     elif x < 0 and y > 0:
+#         second.append(1)
+#     elif x < 0 and y < 0:
+#         third.append(1)
+#     elif x > 0 and y < 0:
+#         forth.append(1)
+#     flag += 2
+#     if len(numbers[flag::]) <= 0:
+#         break
+#
+# print(f'Первая четверть: {len(first)}')
+# print(f'Вторая четверть: {len(second)}')
+# print(f'Третья четверть: {len(third)}')
+# print(f'Четвертая четверть: {len(forth)}')
+
+# n = int(input())
+# count = [0, 0, 0, 0]
+# names = ['Первая четверть:', 'Вторая четверть:',
+#          'Третья четверть:', 'Четвертая четверть:']
+#
+# for _ in range(n):
+#     x, y = [int(num) for num in input().split()]
+#     if x > 0 and y > 0:
+#         count[0] += 1
+#     elif x < 0 and y > 0:
+#         count[1] += 1
+#     elif x < 0 and y < 0:
+#         count[2] += 1
+#     elif x > 0 and y < 0:
+#         count[3] += 1
+#
+# for i in range(4):
+#     print(names[i], count[i])
+
+text = [int(i) for i in input().split(' ')]
+counter = 0
+
+for i in text:
+    if text[i] > text[0]:
+        counter += 1
+    del text[0]
+
+print(counter)
