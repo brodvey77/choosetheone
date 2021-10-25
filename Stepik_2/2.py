@@ -196,10 +196,13 @@
 
 text = [int(i) for i in input().split(' ')]
 counter = 0
+flag = text[0]
 
-for i in text:
-    if text[i] > text[0]:
+
+
+for element in text:
+    if element > flag:
         counter += 1
-    del text[0]
+    flag = element
 
 print(counter)
