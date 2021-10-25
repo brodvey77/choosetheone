@@ -194,15 +194,31 @@
 # for i in range(4):
 #     print(names[i], count[i])
 
-text = [int(i) for i in input().split(' ')]
-counter = 0
-flag = text[0]
+# text = [int(i) for i in input().split(' ')]
+# counter = 0
+# flag = text[0]
+#
+#
+#
+# for element in text:
+#     if element > flag:
+#         counter += 1
+#     flag = element
+#
+# print(counter)
 
-
-
-for element in text:
-    if element > flag:
-        counter += 1
-    flag = element
-
-print(counter)
+# text = [int(i) for i in input().split(' ')]
+#
+#
+# new_list = []
+#
+# while len(text) > 1:
+#     new_list.append(text[1])
+#     new_list.append(text[0])
+#     del text[0]
+#     del text[0]
+#
+# if len(text) % 2 == 0:
+#     print(*new_list)
+# else:
+#     print(*(new_list + text))
