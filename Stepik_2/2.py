@@ -222,3 +222,22 @@
 #     print(*new_list)
 # else:
 #     print(*(new_list + text))
+
+# text = [int(i) for i in input().split(' ')]
+#
+# text.insert(0, text.pop(-1))
+#
+# print(*text)
+
+
+# text = [int(i) for i in input().split(' ')]
+# text_2 = []
+#
+# for element in text:
+#     if element in text_2:
+#         continue
+#     else:
+#         text_2.append(element)
+#
+# print(*text_2)
+
