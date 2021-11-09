@@ -241,3 +241,19 @@
 #
 # print(*text_2)
 
+n = int(input())
+list_of_numbers = [int(input()) for i in range(n)]
+number_of_check = int(input())
+flag = 'НЕТ'
+
+for i in range(n - 1):
+    for j in list_of_numbers:
+        print(j, list_of_numbers[i + 1])
+        # if id(j) == id(list_of_numbers[i + 1]):
+        #     continue
+        # print(id(j), id(list_of_numbers[i + 1]))
+        if j * list_of_numbers[i + 1] == number_of_check:
+            flag = 'ДА'
+            # break
+
+print(flag)
