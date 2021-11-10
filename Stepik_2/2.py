@@ -253,3 +253,18 @@
 #             flag = 'ДА'
 #
 # print(flag)
+
+t = str(input())
+r = str(input())
+bank = ['камень', 'ножницы', 'бумага']
+
+if r.lower() == t.lower():
+    print('ничья')
+elif t.lower() == bank[0] and r.lower() == bank[1]:
+    print('Тимур')
+elif t.lower() == bank[1] and r.lower() == bank[2]:
+    print('Тимур')
+elif t.lower() ==bank[2] and r.lower() == bank[0]:
+    print('Тимур')
+else:
+    print('Руслан')
