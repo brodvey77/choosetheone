@@ -254,17 +254,38 @@
 #
 # print(flag)
 
-t = str(input())
-r = str(input())
-bank = ['камень', 'ножницы', 'бумага']
+# t = str(input())
+# r = str(input())
+# bank = ['камень', 'ножницы', 'бумага']
+#
+# if r.lower() == t.lower():
+#     print('ничья')
+# elif t.lower() == bank[0] and r.lower() == bank[1]:
+#     print('Тимур')
+# elif t.lower() == bank[1] and r.lower() == bank[2]:
+#     print('Тимур')
+# elif t.lower() ==bank[2] and r.lower() == bank[0]:
+#     print('Тимур')
+# else:
+#     print('Руслан')
 
-if r.lower() == t.lower():
-    print('ничья')
-elif t.lower() == bank[0] and r.lower() == bank[1]:
-    print('Тимур')
-elif t.lower() == bank[1] and r.lower() == bank[2]:
-    print('Тимур')
-elif t.lower() ==bank[2] and r.lower() == bank[0]:
-    print('Тимур')
-else:
-    print('Руслан')
+# x, y = input(), input()
+# var = ['камень', 'ножницы', 'бумага']
+# ans = ['ничья', 'Руслан', 'Тимур']
+# print(ans[var.index(x) - var.index(y)])
+
+# num = input().split()
+# c = 0
+# for i in num:
+#     c += int(i)
+# print(c)
+
+# a, b = map(int, input().split())
+# print(a + b)
+
+# s = int(input())
+#
+# p, c = int(s / 6), int(s / 6)
+# k = int((p + c) * 2)
+#
+# print(p, k, c, sep=' ')
