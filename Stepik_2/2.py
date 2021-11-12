@@ -340,31 +340,31 @@
 #
 # print((h_f*3600) +(m_f*60)+ s_f)
 
-t = str(input())
-r = str(input())
-bank = ['камень', 'ножницы', 'бумага', 'ящерица', 'Спок']
-
-if r.lower() == t.lower():
-    print('ничья')
-elif t.lower() == bank[0] and r.lower() == bank[3]:
-    print('Тимур')
-elif t.lower() == bank[0] and r.lower() == bank[1]:
-    print('Тимур')
-elif t.lower() == bank[1] and r.lower() == bank[2]:
-    print('Тимур')
-elif t.lower() == bank[1] and r.lower() == bank[3]:
-    print('Тимур')
-elif t.lower() == bank[2] and r.lower() == bank[0]:
-    print('Тимур')
-elif t.lower() == bank[2] and r.lower() == bank[4]:
-    print('Тимур')
-elif t.lower() == bank[3] and r.lower() == bank[4]:
-    print('Тимур')
-elif t.lower() == bank[3] and r.lower() == bank[2]:
-    print('Тимур')
-elif t.lower() == bank[4] and r.lower() == bank[1]:
-    print('Тимур')
-elif t.lower() == bank[4] and r.lower() == bank[0]:
-    print('Тимур')
-else:
-    print('Руслан')
+# t = str(input())
+# r = str(input())
+# bank = ['камень', 'ножницы', 'бумага', 'ящерица', 'Спок']
+#
+# if r.lower() == t.lower():
+#     print('ничья')
+# elif t.lower() == bank[0].lower() and r.lower() == bank[3].lower():
+#     print('Тимур')
+# elif t.lower() == bank[0].lower() and r.lower() == bank[1].lower():
+#     print('Тимур')
+# elif t.lower() == bank[1].lower() and r.lower() == bank[2].lower():
+#     print('Тимур')
+# elif t.lower() == bank[1].lower() and r.lower() == bank[3].lower():
+#     print('Тимур')
+# elif t.lower() == bank[2].lower() and r.lower() == bank[0].lower():
+#     print('Тимур')
+# elif t.lower() == bank[2].lower() and r.lower() == bank[4].lower():
+#     print('Тимур')
+# elif t.lower() == bank[3].lower() and r.lower() == bank[4].lower():
+#     print('Тимур')
+# elif t.lower() == bank[3].lower() and r.lower() == bank[2].lower():
+#     print('Тимур')
+# elif t.lower() == bank[4].lower() and r.lower() == bank[1].lower():
+#     print('Тимур')
+# elif t.lower() == bank[4].lower() and r.lower() == bank[0].lower():
+#     print('Тимур')
+# else:
+#     print('Руслан')
