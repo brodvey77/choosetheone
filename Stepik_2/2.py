@@ -289,3 +289,36 @@
 # k = int((p + c) * 2)
 #
 # print(p, k, c, sep=' ')
+
+# x, y, z = map(int, input().split())
+# karandash = 3
+# pen = karandash + 2
+# marker = pen + 7
+#
+# print((karandash * x) + (pen * y) + (marker * z))
+
+
+# n, a, b = map(int, input().split())
+#
+# square = (a * b)*2
+#
+# print(square * n)
+#
+# print(*[2 * n * a * b for n, a, b in [map(int, input().split())]])
+
+
+# a, b, c, d = map(int, input().split())
+#
+# print((a+b+c+d)/4)
+
+# a, b = map(float, input().split())
+#
+# # if a >= 0 and b >= 0:
+# #     if a > b:
+# #         print(a - b)
+# #     else:
+# #         print(b - a)
+# # elif a < 0 or b < 0:
+# #     print(abs(a) + abs(b))
+#
+# print(abs(a - b))
