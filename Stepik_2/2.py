@@ -322,3 +322,29 @@
 # #     print(abs(a) + abs(b))
 #
 # print(abs(a - b))
+
+# g, l = map(int, input().split())
+#
+# print(l - 1, g - 1)
+
+# h1 = int(input())
+# m1 = int(input())
+# s1 = int(input())
+# h2 = int(input())
+# m2 = int(input())
+# s2 = int(input())
+#
+# h_f = h2 - h1
+# m_f = m2 - m1
+# s_f = s2 - s1
+#
+# print((h_f*3600) +(m_f*60)+ s_f)
+
+t = str(input())
+r = str(input())
+bank = ['камень', 'ножницы', 'бумага', 'ящерица', 'Спок']
+
+if r.lower() == t.lower():
+    print('ничья')
+elif t.lower() == bank[0] and r.lower() == bank[3]:
+    print('Тимур')
