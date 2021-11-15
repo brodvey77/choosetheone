@@ -390,3 +390,30 @@
 # s = input().split('О')
 # print(len(max(s)))
 
+# Кремниевая долина 🌶️🌶️
+
+# n = int(input())
+# final_list = []
+#
+# def get_list_of_ref(num):
+#     list_of_ref = []
+#     for i in range(1, num + 1):
+#         list_of_ref.append(input())
+#     return list_of_ref
+#
+# for i in get_list_of_ref(n):
+#     for j in i:
+#         if j in ['a', 'n', 't', 'o']:
+#             final_list.append(j)
+# print(final_list)
+
+list_of_ref = [input() for i in range(1, int(input()) + 1)]
+final_list = []
+for i in list_of_ref:
+    for j in i:
+        if j in ['a', 'n', 't', 'o']:
+            final_list.append(j)
+
+
+
+
