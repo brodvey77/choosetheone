@@ -368,3 +368,25 @@
 #     print('Тимур')
 # else:
 #     print('Руслан')
+
+# text = input()
+# counter = 0
+# flag = 'О'
+# maximum = 0
+#
+# for i in text:
+#     if i == 'Р':
+#         flag = 'Р'
+#         counter += 1
+#         if counter > maximum:
+#             maximum = counter
+#     else:
+#         flag = 'О'
+#         counter = 0
+#
+# print(maximum)
+
+
+# s = input().split('О')
+# print(len(max(s)))
+
