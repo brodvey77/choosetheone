@@ -392,28 +392,47 @@
 
 # Кремниевая долина 🌶️🌶️
 
-# n = int(input())
-# final_list = []
-#
-# def get_list_of_ref(num):
-#     list_of_ref = []
-#     for i in range(1, num + 1):
-#         list_of_ref.append(input())
-#     return list_of_ref
-#
-# for i in get_list_of_ref(n):
-#     for j in i:
-#         if j in ['a', 'n', 't', 'o']:
-#             final_list.append(j)
-# print(final_list)
+n = int(input())
 
-list_of_ref = [input() for i in range(1, int(input()) + 1)]
-final_list = []
-for i in list_of_ref:
-    for j in i:
-        if j in ['a', 'n', 't', 'o']:
-            final_list.append(j)
+def is_anton(s):
+    new_string = ''
+    final_string = ''
 
+    for i in 'anton':           # ошибка в этом блоке!!!
+        for j in s:
+            if j == i:
+                new_string += j
+
+    for i in new_string:
+        if i not in final_string:
+            final_string += i
+
+    if new_string.endswith('n'):
+        print(final_string)
+        final_string += 'n'
+    if final_string == 'anton':
+        return True
+
+
+counter = 1
+flag = False
+final = ''
+for i in range(1, n + 1):
+    my_string = input()
+    if is_anton(my_string) == True:
+        flag = True
+        final += str(counter)
+    counter += 1
+else:
+    print()
+
+if len(final) > 1:
+    print(' '.join(final))
+
+else:
+    print()
+
+print(is_anton(my_string))
 
 
 
