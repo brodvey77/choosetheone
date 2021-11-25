@@ -6,7 +6,7 @@
 # print('p', 'q', 'r', sep='1', end='%')
 # print('s', 't', 'u', sep='&', end='\n')
 # print('v', 'w', 'x', sep='%')
-print('y', 'z', sep='/', end='!')
+# print('y', 'z', sep='/', end='!')
 
 # print('I', 'like', 'Python', sep='***', end='')
 #
@@ -175,3 +175,24 @@ print('y', 'z', sep='/', end='!')
 # print(a)
 # print(aa)
 # print(aaa)
+
+my_string = 'aoooooooooontoooooooooo'
+new_string = ''
+final_string = ''
+flag = False
+
+for i in my_string:
+    if i in 'anton':
+        new_string += i
+
+for i in new_string:
+    for j in new_string[new_string.find(i)]:
+        if j in 'anton' and j not in final_string:
+            final_string += j
+
+
+
+
+
+
+

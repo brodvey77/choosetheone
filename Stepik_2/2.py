@@ -392,47 +392,41 @@
 
 # Кремниевая долина 🌶️🌶️
 
-n = int(input())
-
-def is_anton(s):
-    new_string = ''
-    final_string = ''
-
-    for i in 'anton':           # ошибка в этом блоке!!!
-        for j in s:
-            if j == i:
-                new_string += j
-
-    for i in new_string:
-        if i not in final_string:
-            final_string += i
-
-    if new_string.endswith('n'):
-        print(final_string)
-        final_string += 'n'
-    if final_string == 'anton':
-        return True
+# text = 'oantoooooooooooooooooooooooooooooooooooooooooooooooooooon'
+# start = ''
+# finish = ''
+# reserve_list = ''
+# new_list = ''
+# flag = False
 
 
-counter = 1
-flag = False
-final = ''
-for i in range(1, n + 1):
-    my_string = input()
-    if is_anton(my_string) == True:
-        flag = True
-        final += str(counter)
-    counter += 1
-else:
-    print()
-
-if len(final) > 1:
-    print(' '.join(final))
-
-else:
-    print()
-
-print(is_anton(my_string))
+# import re
+#
+# lst = []
+# regex = ''.join(f'.*?{i}' for i in 'anton')
+# for i in range(int(input('N: '))):
+#     if re.search(regex, input()):
+#         lst.append(i + 1)
+# print(*lst)
 
 
+# otvet=[]
+# for s in range(int(input())):
+#     a=input()
+#     for i in 'anton':
+#         if i in a:
+#             a=a[a.find(i):]
+#         else:
+#             break
+#     else:
+#         otvet.append(s+1)
+# print(*otvet)
 
+# for i in range(int(input())):
+#     s, virus, x = input(), 'anton', 0
+#     for sym in s:
+#         if sym == virus[x]:
+#             x += 1
+#         if x == 5:
+#             print(i + 1, end=' ')
+#             break
