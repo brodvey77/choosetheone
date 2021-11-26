@@ -430,3 +430,21 @@
 #         if x == 5:
 #             print(i + 1, end=' ')
 #             break
+
+s = input()
+res = 'запретил букву'
+n = len(set(s + res.replace(' ', '')))
+text, x = sorted(set(s + res.replace(' ', ''))), 0
+
+print(text)
+
+for _ in range(n):
+    string = (s + ' ' + res + ' ' + text[x]).lstrip()
+    print(string)
+    s = s.replace(text[x], '').rstrip().lstrip()
+    res = res.replace(text[x], '').lstrip().rstrip()
+    x += 1
+
+
+
+
