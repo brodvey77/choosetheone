@@ -431,20 +431,57 @@
 #             print(i + 1, end=' ')
 #             break
 
-s = input()
-res = 'запретил букву'
-n = len(set(s + res.replace(' ', '')))
-text, x = sorted(set(s + res.replace(' ', ''))), 0
+# s = input()
+# res = 'запретил букву'
+# n = len(set(s + res.replace(' ', '')))
+# text, x = sorted(set(s + res.replace(' ', ''))), 0
+#
+# print(text)
+#
+# for _ in range(n):
+#     string = (s + ' ' + res + ' ' + text[x]).strip().replace('  ',' ')
+#     print(string)
+#     s = s.replace(text[x], '').lstrip()
+#     res = res.replace(text[x], '').rstrip()
+#     x += 1
+#
+#
+# word = input() + ' запретил букву'
+# alpha = [chr(i) for i in range(1072, 1104)]
+#
+# for letter in alpha:
+#     if letter in word:
+#         print(word, letter)
+#         word = word.replace(letter, '').replace('  ', ' ').strip()
 
-print(text)
+# numbers = [-6, -8, 0, 1, 3, 8, -7, 12, 17, 24, 25, 3, 5, 1]
+# res = 0
+# for num in numbers:
+#     res += (num % 2 == 1) and (num > 1)
+# print(res)
 
-for _ in range(n):
-    string = (s + ' ' + res + ' ' + text[x]).lstrip()
-    print(string)
-    s = s.replace(text[x], '').rstrip().lstrip()
-    res = res.replace(text[x], '').lstrip().rstrip()
-    x += 1
+# def is_even(num):
+#     return num % 2 == 0
+#
+# print(is_even(2))
+
+# print(isinstance(3, int))
+# print(isinstance(3.5, float))
+# print(isinstance('Beegeek', str))
+# print(isinstance([1, 2, 3], list))
+# print(isinstance(True, bool))
 
 
-
+# # объявление функции
+# def func(num1, num2):
+#     return num1 % num2 == 0
+#
+# # считываем данные
+# num1, num2 = int(input()), int(input())
+#
+# # вызываем функцию
+# if func(num1, num2):
+#     print('делится')
+# else:
+#     print('не делится')
 
