@@ -485,3 +485,46 @@
 # else:
 #     print('не делится')
 
+# letters = ['a', 'b', 'c', 'd']
+#
+# new_letters = list(letters)
+# new_letters = letters.copy()
+# new_letters = letters[:]
+
+# numbers = [1, 2, 3, 4, 5, 6, 7]
+# new_numbers = [2 * x for x in numbers]
+# print(new_numbers)
+
+# list1 = [10, 20, [300, 400, [5000, 6000], 500], 30, 40]
+# list1[2][2].append(7000)
+#
+# print(list1)
+
+
+# list1 = [[1, 7, 8], [9, 7, 102], [6, 106, 105], [100, 99, 98, 103], [1, 2, 3]]
+# maximum = -1
+#
+# for i in list1:
+#     if max(i) > maximum:
+#         maximum = max(i)
+#
+# print(maximum)
+
+
+# list1 = [[1, 7, 8], [9, 7, 102], [102, 106, 105], [100, 99, 98, 103], [1, 2, 3]]
+#
+# for i in list1:
+#     i.reverse()
+#
+# print(list1)
+
+
+# list1 = [[1, 7, 8], [9, 7, 102], [102, 106, 105], [100, 99, 98, 103], [1, 2, 3]]
+# total = 0
+# counter = 0
+#
+# for element in list1:
+#     counter += len(element)
+#     total += sum(element)
+#
+# print(total/counter)
