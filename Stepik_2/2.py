@@ -528,3 +528,138 @@
 #     total += sum(element)
 #
 # print(total/counter)
+
+# n, m = int(input()), int(input())    # считываем значения n и m
+# my_list = []
+#
+# for _ in range(n):
+#     my_list.append([0] * m)
+#
+# print(my_list)
+
+# n, m = int(input()), int(input())    # считываем значения n и m
+# my_list = [0] * n
+#
+# for i in range(n):
+#     my_list[i] = [0] * m
+#
+# print(my_list)
+#
+# n, m = int(input()), int(input())    # считываем значения n и m
+#
+# my_list = [[0] * m for _ in range(n)]
+#
+# print(my_list)
+
+# n = 4                                          # количество строк (элементов)
+# my_list = []
+#
+# for _ in range(n):
+#     elem = [int(i) for i in input().split()]   # создаем список из элементов строки
+#     my_list.append(elem)
+# print(my_list)
+
+# my_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+#
+# for i in range(len(my_list)):
+#     for j in range(len(my_list[i])):
+#         print(my_list[i][j], end=' ')   # используем необязательный параметр end
+#     print()                             # перенос на новую строку
+
+
+# my_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+#
+# for row in my_list:
+#     for elem in row:
+#         print(elem, end=' ')
+#     print()
+
+# my_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+#
+# for i in range(len(my_list)):
+#     for j in range(len(my_list[i])):
+#         print(my_list[j][i], end=' ')    # выводим my_list[j][i] вместо my_list[i][j]
+#     print()
+
+# Используем два вложенных цикла для подсчета суммы всех чисел в списке:
+
+# my_list = [[1, 9, 8, 7, 4], [7, 3, 4], [2, 1]]
+#
+# total = 0
+# for i in range(len(my_list)):
+#     for j in range(len(my_list[i])):
+#         total += my_list[i][j]
+# print(total)
+
+# my_list = [[1, 9, 8, 7, 4], [7, 3, 4], [2, 1]]
+#
+# total = 0
+# for row in my_list:
+#     for elem in row:
+#         total += elem
+# print(total)
+
+# Подсчет суммы с помощью функции sum() выглядит так:
+
+# my_list = [[1, 9, 8, 7, 4], [7, 3, 4], [2, 1]]
+#
+# total = 0
+# for row in my_list:      # в один цикл
+#     total += sum(row)
+# print(total)
+
+# list1 = [[1, 2, 3], [4, 5]]
+# list2 = list1
+#
+# list1[0].append(7)
+#
+# print(list2)
+
+# my_list = [[1], [2, 3], [4, 5, 6]]
+# total = 0
+#
+# for row in my_list:
+#     total += sum(row)
+#
+# print(total)
+# print(type(row))
+
+# my_list = [[12, 221, 3], [41, 5, 633], [71, 8, 99]]
+#
+# maximum = my_list[0][0]
+# minimum = my_list[0][0]
+#
+# for row in my_list:
+#     if max(row) > maximum:
+#         maximum = max(row)
+#     if min(row) < minimum:
+#         minimum = min(row)
+#
+# print(maximum + minimum)
+
+# n = int(input())
+# my_list = [[int(i) for i in range(1, n + 1)] for i in range(1, n + 1)]
+# for element in my_list:
+#     print(element)
+#
+# n = int(input())
+# result = []
+#
+# for _ in range(n):
+#     result.append(list(range(1, n + 1)))
+#
+# print(*result, sep='\n')
+
+# def pascal(n):
+#     my_list = []
+#     for i in range(1, n + 1):
+#         my_list.append(i)
+#         print(my_list)
+#
+# n = int(input())
+#
+# print(pascal(n))
+
+import math
+
+n =
