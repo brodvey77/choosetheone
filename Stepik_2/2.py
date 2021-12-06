@@ -660,10 +660,62 @@
 #
 # print(pascal(n))
 
-import speedtest
+# import speedtest
+#
+# speed = speedtest.Speedtest()
+# download_speed = speed.download()
+# upload_speed = speed.upload()
+# print(f'The download speed is {download_speed}')
+# print(f'The upload speed is {upload_speed}')
 
-speed = speedtest.Speedtest()
-download_speed = speed.download()
-upload_speed = speed.upload()
-print(f'The download speed is {download_speed}')
-print(f'The upload speed is {upload_speed}')
+# Треугольник Паскаля 1
+
+# n = int(input())
+# p = []
+#
+# for i in range(n + 1):
+#     row = [1] * (i + 1)
+#     for j in range(i + 1):
+#         if j != 0 and j != i:
+#             row[j] = p[i - 1][j - 1] + p[i - 1][j]
+#     p.append(row)
+#
+# counter = 0
+# flag = n
+# for r in p:
+#     if counter != flag:
+#         counter += 1
+#         continue
+#     print(r)
+
+
+# n = int(input())
+# p = []
+#
+# for i in range(n):
+#     row = [1] * (i + 1)
+#     for j in range(i + 1):
+#         if j != 0 and j != i:
+#             row[j] = p[i - 1][j - 1] + p[i - 1][j]
+#     p.append(row)
+#
+# for k in p:
+#     print(k)
+
+
+# Упаковка дубликатов 🌶️
+
+s = input().split()
+nl = []
+for i in s:
+    nl.append([i])
+
+fl = []
+n = 1
+for row in nl:
+    for elem in row:
+        print(row, elem)
+
+
+
+
