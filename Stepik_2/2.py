@@ -705,17 +705,86 @@
 
 # Упаковка дубликатов 🌶️
 
-s = input().split()
-nl = []
-for i in s:
-    nl.append([i])
 
-fl = []
-n = 1
-for row in nl:
-    for elem in row:
-        print(row, elem)
+# s = input()
+# counter = 0
+# l = []
+# for i in range(2, len(s), 2):
+#     if s[i] != s[i-2]:
+#         l.append(s[counter:i].split())
+#         counter = i
+# l.append(s[counter:].split())
+# print(l)
+
+# res = []
+#
+# for el in input().split():
+#     if res and el in res[-1]:
+#         res[-1].append(el)
+#     else:
+#         res.append([el])
+#
+# print(res)
+
+# a, s, x = input().split(), [], ''
+# for i in a:
+#     if x != i:
+#         s.append(list(i))
+#     else:
+#         s[-1].append(i)
+#     x = i
+# print(s)
+
+# from itertools import groupby
+#
+# s = 'w w w o r l d g g g g r e a t t e c c h e m g g p w w'
+# res = [list(v) for k, v in groupby(s.split())]
+# print(res)
+
+# import pyspeedtest
+
+# st = pyspeedtest.SpeedTest()
+# st.download()
+# st.upload()
+# st.ping()
+
+# s = input().split()            # vvod stroki
+# l = []                         # create empty list
+# x = ''                         # create auxiliary element
+#
+# for i in s:
+#     if x != i:
+#         l.append(list(i))     # if element different add new list
+#     else:
+#         l[-1].extend(i)       # if element same extend previous list
+#     x = i                     # auxiliary element = current value
+# print(l)
 
 
 
 
+
+# def chunked(s, n):
+#     c = 0
+#     l = []
+#     for i in range(len(s)):
+#         if len(s[c:c + n]) != 0:
+#             l.append(s[c:c + n])
+#         c = c + n
+#     return l
+#
+# s, n = input().split(), int(input())
+#
+# print(chunked(s, n))
+
+
+# def chunked(symbols, n):
+#     result = []
+#     for i in range(0, len(symbols), n):
+#         result.append(symbols[i:i + n])
+#     return result
+#
+# symbols = input().split()
+# n = int(input())
+#
+# print(chunked(symbols, n))
