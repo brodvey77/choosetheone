@@ -788,3 +788,31 @@
 # n = int(input())
 #
 # print(chunked(symbols, n))
+
+
+# Подсписки списка 🌶️🌶️
+
+# s = input().split()                         # get input list
+#
+# l = [[]]                                    # create empty list in list
+#
+# for index_list in range(len(s)):
+#     for i in range(len(s) - index_list):
+#         l.append(s[i:i + index_list + 1])
+#
+# print(l)
+
+# def get_sublists(symbols, n):
+#     sublists = []
+#     for i in range(len(symbols) - n + 1):
+#         sublists.append(symbols[i:i + n])
+#     return sublists
+#
+#
+# symbols = input().split()
+# result = [[]]
+#
+# for i in range(1, len(symbols) + 1):
+#     result.extend(get_sublists(symbols, i))
+#
+# print(result)
