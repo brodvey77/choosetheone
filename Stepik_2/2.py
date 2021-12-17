@@ -816,3 +816,95 @@
 #     result.extend(get_sublists(symbols, i))
 #
 # print(result)
+
+# rows, cols = 3, 4           # rows - количество строк, cols - количество столбцов
+#
+# matrix  = [[2, 3, 1, 0],
+#            [9, 4, 6, 8],
+#            [4, 7, 2, 7]]
+#
+# for r in range(rows):
+#     for c in range(cols):
+#         print(matrix[r][c], end=' ')
+#     print()
+
+# rows, cols = 3, 4                # rows - количество строк, cols - количество столбцов
+#
+# matrix  = [[277, -930, 11, 0],
+#            [9, 43, 6, 87],
+#            [4456, 8, 290, 7]]
+#
+# for r in range(rows):
+#     for c in range(cols):
+#         print(str(matrix[r][c]).ljust(9), end='')
+#     print()
+
+# n = 4
+# matrix = [[0]*n for _ in range(n)]    # создаем квадратную матрицу размером 8×8
+#
+# for i in range(n):                     # заполняем главную диагональ 1-цами, а побочную 2-ками
+#     matrix[i][i] = 1
+#     matrix[i][n-i-1] = 2
+#
+# for r in range(n):                     # выводим матрицу
+#     for c in range(n):
+#         print(matrix[r][c], end=' ')
+#     print()
+
+
+# Примечание 2. Используйте функцию print_matrix() для вывода квадратной матрицы размерности n:
+#
+# def print_matrix(matrix, n, width=1):
+#     for r in range(n):
+#         for c in range(n):
+#             print(str(matrix[r][c]).ljust(width), end=' ')
+#         print()
+# Примечание 3. Для считывания матрицы из n строк, заполненной числами, удобно использовать следующий код:
+#
+# n = int(input())
+# matrix = []
+# for i in range(n):
+#     temp = [int(num) for num in input().split()]
+#     matrix.append(temp)
+
+
+# n = 3
+# a = [[1, 2, 3],
+#      [4, 5, 6],
+#      [7, 8, 9]]
+#
+# for i in range(n):
+#     for j in range(n):
+#         print(a[i][j], end=' ')
+#     print()
+
+
+# n = 3
+# a = [[1, 2, 3],
+#      [4, 5, 6],
+#      [7, 8, 9]]
+#
+# for i in range(n):
+#     for j in range(n):
+#         print(a[n - i - 1][n - j - 1], end=' ')
+#     print()
+
+
+# n = 5
+# a = [[19, 21, 33, 78, 99],
+#      [41, 53, 66, 98, 76],
+#      [79, 80, 90, 60, 20],
+#      [33, 11, 45, 67, 90],
+#      [45, 67, 12, 98, 23]]
+#
+# maximum = -1
+# minimum = 100
+#
+# for i in range(n):
+#     if a[i][i] > maximum:
+#         print('максимум - ', a[i][i])
+#         maximum = a[i][i]
+#     if a[i][n - i - 1] < minimum:
+#         print('минимум - ', a[i][n - i - 1])
+#         minimum = a[i][n - i - 1]
+# print(minimum + maximum)
