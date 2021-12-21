@@ -942,6 +942,54 @@
 
 
 
+# def matrix(n, m):
+#     matrix = []
+#     for i in range(n):
+#         row = []
+#         for j in range(m):
+#             row.append(input())
+#         matrix.append(row)
+#
+#
+#     for i in range(n):
+#         for j in range(m):
+#             print(matrix[i][j], end=' ')
+#         print()
+#
+#     print()
+#
+#     for j in range(m):
+#         for i in range(n):
+#             print(matrix[i][j], end=' ')
+#         print()
+#
+# n, m = int(input()), int(input())
+#
+# matrix(n, m)
+
+
+n = int(input())
+
+matrix = []
+
+for i in range(n):
+    row = []
+    for j in range(n):
+        row.append(int(input()))
+    matrix.append(row)
+
+
+def sum_of_matrix(matrix):
+    sum = 0
+    for i in range(n):
+        for j in range(n):
+            if i == j:
+                sum += matrix[i][j]
+    print(sum)
+
+
+
+
 
 
 
