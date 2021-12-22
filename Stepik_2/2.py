@@ -968,25 +968,29 @@
 # matrix(n, m)
 
 
+# n = int(input())
+# matrix = []
+#
+# for i in range(n):
+#     row = []
+#     for j in range(n):
+#         row.append(int(input()))
+#     matrix.append(row)
+#
+#
+# def sum_of_matrix(matrix):
+#     sum = 0
+#     for i in range(n):
+#         for j in range(n):
+#             if i == j:
+#                 sum += matrix[i][j]
+#     print(sum)
+
+
 n = int(input())
 
-matrix = []
-
-for i in range(n):
-    row = []
-    for j in range(n):
-        row.append(int(input()))
-    matrix.append(row)
-
-
-def sum_of_matrix(matrix):
-    sum = 0
-    for i in range(n):
-        for j in range(n):
-            if i == j:
-                sum += matrix[i][j]
-    print(sum)
-
+matrix = [input().split() for _ in range(n)]
+print(matrix)
 
 
 
