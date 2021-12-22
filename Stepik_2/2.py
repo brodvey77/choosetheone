@@ -987,14 +987,26 @@
 #     print(sum)
 
 
+# n = int(input())
+# sum = 0
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i == j:
+#             sum += matrix[i][j]
+# print(sum)
+
+
 n = int(input())
+sum = 0
+matrix = [[int(i) for i in input().split()] for _ in range(n)]
 
-matrix = [input().split() for _ in range(n)]
-print(matrix)
-
-
-
-
+for i in range(n):
+    for j in range(n):
+        if i == j:
+            sum += matrix[i][j]
+print(sum)
 
 
 
