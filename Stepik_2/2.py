@@ -998,19 +998,34 @@
 # print(sum)
 
 
-n = int(input())
-sum = 0
-matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# counter = 0
+#
+# for r in range(n):
+#     average = sum(matrix[r]) / len(matrix[r])
+#     for c in range(n):
+#         if matrix[r][c] > average:
+#             counter += 1
+#         if c == (n - 1):
+#             print(counter)
+#             counter = 0
 
-for i in range(n):
-    for j in range(n):
-        if i == j:
-            sum += matrix[i][j]
-print(sum)
 
-
-
-
+# n = int(input())
+# matrix = []
+#
+# for _ in range(n):
+#     row = [int(i) for i in input().split()]
+#     matrix.append(row)
+#
+# for i in range(n):
+#     counter = 0
+#     average = sum(matrix[i]) / n
+#     for j in range(n):
+#         if matrix[i][j] > average:
+#             counter += 1
+#     print(counter)
 
 
 
