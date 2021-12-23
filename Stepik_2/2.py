@@ -1028,10 +1028,41 @@
 #     print(counter)
 
 
+# n = int(input())
+# matrix = []
+# l = []
+#
+# for _ in range(n):
+#     row = [int(i) for i in input().split()]
+#     matrix.append(row)
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i < j and i >= n - 1 - j:
+#             l.append(matrix[i][j])
+#         if i > j and i <= n - 1 - j:
+#             l.append(matrix[i][j])
+#         if i == j:
+#             l.append(matrix[i][j])
+#
+# print(max(l))
 
-
-
-
+# n = int(input())
+# matrix = []
+#
+# for _ in range(n):
+#     row = [int(i) for i in input().split()]
+#     matrix.append(row)
+#
+# largest = matrix[0][0]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if (i >= j and i + j + 1 <= n) or (i <= j and i + j + 1 >= n):
+#             if matrix[i][j] > largest:
+#                 largest = matrix[i][j]
+#
+# print(largest)
 
 
 
