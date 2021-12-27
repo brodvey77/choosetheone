@@ -1064,7 +1064,58 @@
 #
 # print(largest)
 
+# n = int(input())
+# matrix = []
+#
+# for _ in range(n):
+#     row = [int(_) for _ in input().split()]
+#     matrix.append(row)
+#
+# sum1 = 0
+# sum2 = 0
+# sum3 = 0
+# sum4 = 0
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i == j or j == n - i - 1:
+#             continue
+#         if i < j and i < n - 1 - j:
+#             sum1 += matrix[i][j]
+#         if i < j and i > n - 1 - j:
+#             sum2 += matrix[i][j]
+#         if i > j and i > n - 1 - j:
+#             sum3 += matrix[i][j]
+#         if i > j and i < n - 1 - j:
+#             sum4 += matrix[i][j]
+#
+# print(f'Верхняя четверть: {sum1}')
+# print(f'Правая четверть: {sum2}')
+# print(f'Нижняя четверть: {sum3}')
+# print(f'Левая четверть: {sum4}')
 
 
-
-
+# n = int(input())
+# matrix = []
+# quadrants = [['Верхняя четверть:', 0],
+#              ['Правая четверть:', 0],
+#              ['Нижняя четверть:', 0],
+#              ['Левая четверть:', 0]]
+#
+# for _ in range(n):
+#     row = [int(i) for i in input().split()]
+#     matrix.append(row)
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i < j and i + j + 1 < n :
+#             quadrants[0][1] += matrix[i][j]
+#         elif i < j and i + j + 1 > n:
+#             quadrants[1][1] += matrix[i][j]
+#         elif i > j and i + j + 1 > n:
+#             quadrants[2][1] += matrix[i][j]
+#         elif i > j and i + j + 1 < n:
+#             quadrants[3][1] += matrix[i][j]
+#
+# for i in range(4):
+#     print(quadrants[i][0], quadrants[i][1])
