@@ -1119,3 +1119,4 @@
 #
 # for i in range(4):
 #     print(quadrants[i][0], quadrants[i][1])
+
