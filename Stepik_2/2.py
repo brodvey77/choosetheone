@@ -1120,3 +1120,42 @@
 # for i in range(4):
 #     print(quadrants[i][0], quadrants[i][1])
 
+
+# p = 5
+# y = 7
+# w = p + y
+# w = w + 1
+# p = y
+# y = 10
+# p = 2 + w + y
+#
+# print(p)
+#
+# a, b = int(input()), int(input())
+# print(abs(a) + abs(b))
+
+
+# s = map(int, input().split())
+# print(max(s))
+
+# n = float(input())
+# print(round(n, 2), round(n, 3))
+
+
+# n, m = int(input()), int(input())
+#
+# mult = []
+#
+# # for _ in range(n):
+# #     mult.append([_] * m)
+#
+# for i in range(n):
+#     for j in range(m):
+#         if j != m - 1:
+#             print(str((i * j)).ljust(2), end=' ')
+#         else:
+#             print(str((i * j)), end='')
+#     print()
+
+# print(mult)
+
