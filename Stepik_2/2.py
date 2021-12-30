@@ -1189,3 +1189,14 @@
 #             row, col = i, j
 #
 # print(row, col)
+
+
+n, m = int(input()), int(input())
+matrix = [[int(i) for i in input().split()] for _ in range(n)]
+a, b = map(int, input().split())
+
+
+
+
+
+
