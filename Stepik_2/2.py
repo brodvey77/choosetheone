@@ -1191,11 +1191,15 @@
 # print(row, col)
 
 
-n, m = int(input()), int(input())
-matrix = [[int(i) for i in input().split()] for _ in range(n)]
-a, b = map(int, input().split())
+# n, m = int(input()), int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# a, b = map(int, input().split())
 
 
+one = [1, 2, 3]
+two = {1, 2, 3}
+
+print(list(two) == one)
 
 
 
