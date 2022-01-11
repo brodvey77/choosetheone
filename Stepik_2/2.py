@@ -761,9 +761,6 @@
 # print(l)
 
 
-
-
-
 # def chunked(s, n):
 #     c = 0
 #     l = []
@@ -921,7 +918,6 @@
 #         l.clear()
 
 
-
 # n, m = int(input()), int(input())
 # matrix = []
 #
@@ -936,10 +932,6 @@
 #     for j in range(m):
 #         print(matrix[i][j], end=' ')
 #     print()
-
-
-
-
 
 
 # def matrix(n, m):
@@ -1233,7 +1225,6 @@
 # print(result)
 
 
-
 # n = int(input())
 # matrix = [input().split() for _ in range(n)]
 #
@@ -1246,7 +1237,6 @@
 #     print()
 
 
-
 # n = int(input())
 # matrix = [input().split() for _ in range(n)]
 # matrix.reverse()
@@ -1257,8 +1247,6 @@
 #
 # n = int(input())
 # matrix = [[int(i) for i in input().split()] for _ in range(n)]
-
-
 
 
 # for i in range(n):
@@ -1276,3 +1264,23 @@
 #
 # for row in result:
 #     print(*row)
+
+# Ходы коня
+
+#  (y - j) * (x - i) in [-2, 2]
+
+yx = input()
+board = [['.'] * 8 for _ in range(8)]
+y = 8 - int(yx[-1])
+x = ord(yx[0]) - 97
+
+for i in range(8):
+    for j in range(8):
+        board[y][x] ='N'
+
+for i in range(8):
+    for j in range(8):
+        print(board[i][j], end=' ')
+    print()
+
+# добавить возможные ходы коня!
