@@ -1254,7 +1254,25 @@
 # #     matrix[i], matrix[n - i - 1] = matrix[n - i - 1], matrix[i]
 # for row in matrix:
 #     print(*row)
+#
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
 
 
 
 
+# for i in range(n):
+#     for j in range(n-1, -1, -1):
+#         print(matrix[j][i], end=' ')
+#     print()
+
+# n = int(input())
+# matrix = [input().split() for _ in range(n)]
+# result = [[0] * n for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         result[i][j] = matrix[n - j - 1][i]
+#
+# for row in result:
+#     print(*row)
