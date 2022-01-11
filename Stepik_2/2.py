@@ -1191,20 +1191,46 @@
 # print(row, col)
 
 
-n, m = int(input()), int(input())
-matrix = [[int(i) for i in input().split()] for _ in range(n)]
-a, b = map(int, input().split())
-counter = 0
+# n, m = int(input()), int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# a, b = map(int, input().split())
+# counter = 0
+#
+# for j in range(m):
+#     for i in range(n):
+#         if j == a:
+#             matrix[i][j], matrix[i][b] = matrix[i][b], matrix[i][j]
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(matrix[i][j], end=' ')
+#     print()
 
-for j in range(m):
-    for i in range(n):
-        if j == a:
-            matrix[i][j], matrix[i][b] = matrix[i][b], matrix[i][j]
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# flag = 'YES'
+# for i in range(n):
+#     for j in range(n):
+#         if i != j:
+#             if matrix[i][j] != matrix[j][i]:
+#                 flag = 'NO'
+#                 break
+# print(flag)
 
-for i in range(n):
-    for j in range(m):
-        print(matrix[i][j], end=' ')
-    print()
+
+# n = int(input())
+# matrix = [input().split() for _ in range(n)]
+# result = 'YES'
+#
+# for i in range(n):
+#     for j in range(i + 1, n):
+#         if matrix[i][j] != matrix[j][i]:
+#             result = 'NO'
+#             break
+#     if result == 'NO':
+#         break
+#
+# print(result)
 
 
 
