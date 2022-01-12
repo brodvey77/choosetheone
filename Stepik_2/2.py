@@ -1276,11 +1276,12 @@ x = ord(yx[0]) - 97
 
 for i in range(8):
     for j in range(8):
-        board[y][x] ='N'
+        board[y][x] = 'N'
+        if (i - y) ** 2 + (j - x) ** 2 == 5:
+            board[i][j] = '*'
 
 for i in range(8):
     for j in range(8):
         print(board[i][j], end=' ')
     print()
 
-# добавить возможные ходы коня!
