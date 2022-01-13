@@ -1269,19 +1269,88 @@
 
 #  (y - j) * (x - i) in [-2, 2]
 
-yx = input()
-board = [['.'] * 8 for _ in range(8)]
-y = 8 - int(yx[-1])
-x = ord(yx[0]) - 97
+# yx = input()
+# board = [['.'] * 8 for _ in range(8)]
+# y = 8 - int(yx[-1])
+# x = ord(yx[0]) - 97
+#
+# for i in range(8):
+#     for j in range(8):
+#         board[y][x] = 'N'
+#         if (i - y) ** 2 + (j - x) ** 2 == 5:
+#             board[i][j] = '*'
+#
+# for i in range(8):
+#     for j in range(8):
+#         print(board[i][j], end=' ')
+#     print()
 
-for i in range(8):
-    for j in range(8):
-        board[y][x] = 'N'
-        if (i - y) ** 2 + (j - x) ** 2 == 5:
-            board[i][j] = '*'
 
-for i in range(8):
-    for j in range(8):
-        print(board[i][j], end=' ')
-    print()
+# import matplotlib.pyplot as pplt
+#
+# data = [ 5, 55, 6, 9, 18, 78, 89, 100, 109,84, 65, 97, 15, 75, 77, 88]
+# pplt.plot(data)
+# pplt.show()
 
+# import pyscreenshot as ImageGrab
+#
+# # grab fullscreen
+# im = ImageGrab.grab()
+#
+# # save image file
+# im.save("fullscreen.jpeg")
+
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+# sum_of_nums = 0
+# check_sum = 0
+# flag = True
+# list_n = [int(i) for i in range(1, n ** 2 + 1)]
+# list_n_check = []
+#
+# for i in range(n):
+#     for j in range(n):
+#         list_n_check.append(matrix[i][j])
+# if list_n != sorted(list_n_check):
+#     flag = False
+#
+#
+# if flag:
+#     for i in range(n):
+#         for j in range(n):
+#             if i == j:
+#                 sum_of_nums += matrix[i][j]
+#     check_sum = sum_of_nums
+#     sum_of_nums = 0
+#
+#     for i in range(n):
+#         for j in range(n):
+#             if j == n - i - 1:
+#                 sum_of_nums += matrix[i][j]
+#     if sum_of_nums != check_sum:
+#         flag = False
+#
+#
+# if flag:
+#     for i in range(n):
+#         sum_of_nums = 0
+#         for j in range(n):
+#             sum_of_nums += matrix[i][j]
+#         if sum_of_nums != check_sum:
+#             print('NO')
+#             flag = False
+#             break
+#
+# if flag:
+#     for j in range(n):
+#         sum_of_nums = 0
+#         for i in range(n):
+#             sum_of_nums += matrix[i][j]
+#         if sum_of_nums != check_sum:
+#             print('NO')
+#             flag = False
+#             break
+# if flag:
+#     print('YES')
+# else:
+#     print('NO')
