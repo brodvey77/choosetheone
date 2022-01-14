@@ -1384,3 +1384,18 @@
 # for row in matrix:
 #     print(*row)
 
+
+n, m = map(int, input().split())
+matrix = [[0 for _ in range(m)] for i in range(n)]
+counter = 1
+
+
+for j in range(m):
+    for i in range(n):
+        matrix[i][j] = counter
+        counter += 1
+
+for r in range(n):
+    for c in range(m):
+        print(str(matrix[r][c]).ljust(2), end=' ')
+    print()
