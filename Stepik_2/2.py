@@ -1370,3 +1370,17 @@
 #
 # for i in matrix:
 #     print(*i)
+
+# n = int(input())
+#
+# matrix = [[0] * n for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         matrix[i][n - i - 1] = 1
+#         if i +j >= n:
+#             matrix[i][j] = 2
+#
+# for row in matrix:
+#     print(*row)
+
