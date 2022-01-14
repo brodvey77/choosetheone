@@ -1385,17 +1385,47 @@
 #     print(*row)
 
 
-n, m = map(int, input().split())
-matrix = [[0 for _ in range(m)] for i in range(n)]
-counter = 1
+# n, m = map(int, input().split())
+# matrix = [[0 for _ in range(m)] for i in range(n)]
+# counter = 1
+#
+#
+# for j in range(m):
+#     for i in range(n):
+#         matrix[i][j] = counter
+#         counter += 1
+#
+# for r in range(n):
+#     for c in range(m):
+#         print(str(matrix[r][c]).ljust(2), end=' ')
+#     print()
+
+# n = int(input())
+#
+# matrix = [[0 for i in range(n)] for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i == j or j == n - i - 1:
+#             matrix[i][j] = 1
+#         print(str(matrix[i][j]).ljust(2), end=' ')
+#     print()
 
 
-for j in range(m):
-    for i in range(n):
-        matrix[i][j] = counter
-        counter += 1
+# n = int(input())
+#
+# matrix = [[0 for i in range(n)] for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i == j or j == n - i - 1:
+#             matrix[i][j] = 1
+#         elif i > j and i > n - 1 - j:
+#             matrix[i][j] = 1
+#         elif i < j and i < n - 1 - j:
+#             matrix[i][j] = 1
+#         print(str(matrix[i][j]).ljust(2), end=' ')
+#     print()
 
-for r in range(n):
-    for c in range(m):
-        print(str(matrix[r][c]).ljust(2), end=' ')
-    print()
+
+
