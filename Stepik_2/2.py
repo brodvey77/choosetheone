@@ -1428,4 +1428,15 @@
 #     print()
 
 
+n, m = map(int, input().split())
+matrix = [[0 for _ in range(m)] for i in range(n)]
+counter = 1
 
+for j in range(m):
+    counter = 1
+    for i in range(n):
+        matrix[i][j] = counter
+        counter += 1
+
+for row in matrix:
+    print(*row)
