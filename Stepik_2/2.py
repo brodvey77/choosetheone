@@ -1428,15 +1428,19 @@
 #     print()
 
 
-n, m = map(int, input().split())
-matrix = [[0 for _ in range(m)] for i in range(n)]
-counter = 1
+# n, m = map(int, input().split())
+# matrix = [[0 for _ in range(m)] for i in range(n)]
+#
+#
+# for i in range(n):
+#     for j in range(m):
+#         matrix[i][j] = (i + j) % m + 1
+#
+# for i in range(n):
+#     for j in range(m):
+#         print(str(matrix[i][j]).ljust(3), end=' ')
+#     print()
 
-for j in range(m):
-    counter = 1
-    for i in range(n):
-        matrix[i][j] = counter
-        counter += 1
 
-for row in matrix:
-    print(*row)
+
+# print(l)
