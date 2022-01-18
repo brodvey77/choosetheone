@@ -1441,6 +1441,15 @@
 #         print(str(matrix[i][j]).ljust(3), end=' ')
 #     print()
 
+n, m = map(int, input().split())
+matrix = [[0] * m for _ in range(n)]
 
+for i in range(n):
+    for j in range(m):
+        if i % 2 == 0:
+            matrix[i][j] = str(i * m + j + 1).ljust(3)
+        else:
+            matrix[i][j] = str(i * m + m - j).ljust(3)
 
-# print(l)
+for row in matrix:
+    print(*row)
