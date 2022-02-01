@@ -1482,3 +1482,59 @@
 #         row = diag - col
 #
 #     matrix[row][col] += i
+
+# n, m = map(int, input().split())
+# matrix = [[0] * m for i in range(n)]
+# counter = n * 2 // 2
+# matrix[0] = [str(_).ljust(3) for _ in range(1, m + 1)]
+# y = 0; x = n - 1; q = n
+# while counter < n * m:
+#     q -= 1
+#     for _ in range(q):
+#         y += 1
+#         counter += 1; matrix[y][x] = str(counter).ljust(3)
+#     for _ in range(q):
+#         x -= 1
+#         counter += 1; matrix[y][x] = str(counter).ljust(3)
+#     if counter == n * m:
+#         break
+#     q -= 1
+#     for _ in range(q):
+#         y -= 1
+#         counter += 1;
+#         matrix[y][x] = str(counter).ljust(3)
+#     for _ in range(q):
+#         x += 1
+#         counter += 1;
+#         matrix[y][x] = str(counter).ljust(3)
+#
+#
+# for row in matrix:
+#     print(*row)
+
+# n, m = map(int, input().split())
+# a = [[0] * m for _ in range(n)]
+#
+# i, j, d = 0, 0, 0
+# moves = ((0, 1,), (1, 0,), (0, -1,), (-1, 0,),)
+# for k in range(1, n * m + 1):
+#     a[i][j] = k
+#     for l in range(4):
+#         newD = (d + l) % 4
+#         di, dj = moves[newD]
+#         newI, newJ = i + di, j + dj
+#         if 0 <= newI < n and 0 <= newJ < m and a[newI][newJ] == 0:
+#             i, j, d = newI, newJ, newD
+#             break
+# for row in a:
+#     print(*row)
+
+
+k = 25
+matrix = [[1, 0], [4, 1]]
+
+for i in range(2):
+    for j in range(2):
+        matrix[i][j] = (matrix[i][j]) * k
+
+print(matrix)
