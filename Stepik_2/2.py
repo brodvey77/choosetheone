@@ -1530,11 +1530,18 @@
 #     print(*row)
 
 
-k = 25
-matrix = [[1, 0], [4, 1]]
-
-for i in range(2):
-    for j in range(2):
-        matrix[i][j] = (matrix[i][j]) * k
-
-print(matrix)
+# n, m = map(int, input().split())
+#
+# matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
+# space = input()
+# matrix_b = [[int(i) for i in input().split()] for _ in range(n)]
+# matrix_r = [[[0] for i in range(m)] for j in range(n)]
+#
+#
+# for i in range(n):
+#     for j in range(m):
+#         matrix_r[i][j] = matrix_a[i][j] + matrix_b[i][j]
+#
+#
+# for row in matrix_r:
+#     print(*row)
