@@ -1545,3 +1545,37 @@
 #
 # for row in matrix_r:
 #     print(*row)
+
+# import pyautogui
+#
+# print(pyautogui.size())
+# print(pyautogui.position())
+# pyautogui.moveTo(500, 600)
+# pyautogui.moveTo(600, 600)
+# pyautogui.moveTo(700, 600)
+# pyautogui.moveTo(800, 600)
+# pyautogui.moveTo(900, 450)
+# print(pyautogui.position())
+import numpy as np
+
+n, m = map(int, input().split())
+matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
+input()
+
+m, x = map(int, input().split())
+matrix_b = [[int(i) for i in input().split()] for _ in range(m)]
+
+matrix_c = [[0] * n for i in range(x)]
+
+# c[ i ][ j ] += a[ i ][ k ] * b[ k ][ j ]
+
+for i in range(n):
+    for j in range(x):
+        for k in range(m):
+            matrix_c[i][j] += matrix_a[i][k] * matrix_b[k][j]
+
+
+
+for row in matrix_c:
+    print(*row)
+
