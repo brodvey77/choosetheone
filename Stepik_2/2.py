@@ -1558,24 +1558,46 @@
 # print(pyautogui.position())
 import numpy as np
 
-n, m = map(int, input().split())
-matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
-input()
+# n, m = map(int, input().split())
+# matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
+# input()
+#
+# m, x = map(int, input().split())
+# matrix_b = [[int(i) for i in input().split()] for _ in range(m)]
+#
+# matrix_c = [[0] * n for i in range(x)]
+#
+# # c[ i ][ j ] += a[ i ][ k ] * b[ k ][ j ]
+#
+# for i in range(n):
+#     for j in range(x):
+#         for k in range(m):
+#             matrix_c[i][j] += matrix_a[i][k] * matrix_b[k][j]
+#
+#
+#
+# for row in matrix_c:
+#     print(*row)
 
-m, x = map(int, input().split())
-matrix_b = [[int(i) for i in input().split()] for _ in range(m)]
-
-matrix_c = [[0] * n for i in range(x)]
-
-# c[ i ][ j ] += a[ i ][ k ] * b[ k ][ j ]
-
-for i in range(n):
-    for j in range(x):
-        for k in range(m):
-            matrix_c[i][j] += matrix_a[i][k] * matrix_b[k][j]
-
-
-
-for row in matrix_c:
-    print(*row)
-
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for j in range(n)]
+# m = int(input())
+#
+# def func_of_multiplication(a, b):
+#     matrix_x = [[0] * n for _ in range(n)]
+#     for i in range(n):
+#         for j in range(n):
+#             for k in range(n):
+#                 matrix_x[i][j] += a[i][k] * b[k][j]
+#     return matrix_x
+#
+# # print(func_of_multiplication(matrix, matrix))
+#
+# matrix_b = func_of_multiplication(matrix, matrix)
+#
+# while m != 2:
+#     matrix_b = func_of_multiplication(matrix, matrix_b)
+#     m -= 1
+#
+# for row in matrix_b:
+#     print(*row)
