@@ -1609,3 +1609,12 @@ import numpy as np
 # d = n % 10 // 5
 # e = n % 5 // 1
 # print(int(a + b + c + d + e))
+#
+# n = int(input())
+# h = n % (60 * 24) // 60
+# m = n % 60
+# print(h, m)
+
+
+# n = int(input())
+# print(n + 2 - n % 2)
