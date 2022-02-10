@@ -1618,3 +1618,19 @@ import numpy as np
 
 # n = int(input())
 # print(n + 2 - n % 2)
+
+# n = int(input())
+# h = n // 3600
+# m = n % 3600 // 60
+# s = n % 60
+# print(h, str(m // 10) + str(m % 10), str(s // 10) + str(s % 10), sep=':')
+
+# print(3721 // 3600)
+# print(3721 % 3600 // 60)
+# print(3721 % 60)
+
+import pyshorteners
+
+link = input('Введите ссылку, которую нужно сократить: ')
+s = pyshorteners.Shortener()
+print(s.tinyurl.short(link))
