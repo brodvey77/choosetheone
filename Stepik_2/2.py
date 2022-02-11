@@ -1556,7 +1556,6 @@
 # pyautogui.moveTo(800, 600)
 # pyautogui.moveTo(900, 450)
 # print(pyautogui.position())
-import numpy as np
 
 # n, m = map(int, input().split())
 # matrix_a = [[int(i) for i in input().split()] for _ in range(n)]
@@ -1638,3 +1637,8 @@ import numpy as np
 # import calendar
 #
 # print(calendar.calendar(2022))
+
+
+import calendar
+
+print(calendar.month(2022, 3))
