@@ -1629,8 +1629,12 @@ import numpy as np
 # print(3721 % 3600 // 60)
 # print(3721 % 60)
 
-import pyshorteners
-
-link = input('Введите ссылку, которую нужно сократить: ')
-s = pyshorteners.Shortener()
-print(s.tinyurl.short(link))
+# import pyshorteners
+#
+# link = input('Введите ссылку, которую нужно сократить: ')
+# s = pyshorteners.Shortener()
+# print(s.tinyurl.short(link))
+#
+# import calendar
+#
+# print(calendar.calendar(2022))
