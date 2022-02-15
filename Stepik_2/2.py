@@ -1745,3 +1745,9 @@ import numpy as np
 #
 # print(chunked(s, n))
 
+
+
+
+import calendar
+
+print(calendar.month(2022, 3))
