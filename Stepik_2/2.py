@@ -1556,6 +1556,8 @@
 # pyautogui.moveTo(800, 600)
 # pyautogui.moveTo(900, 450)
 # print(pyautogui.position())
+import time
+
 import numpy as np
 
 # n, m = map(int, input().split())
@@ -1638,3 +1640,108 @@ import numpy as np
 # import calendar
 #
 # print(calendar.calendar(2022))
+
+# examine
+
+#2
+# n = int(input())
+# matrix = []
+# l = []
+#
+# for _ in range(n):
+#     row = [int(i) for i in input().split()]
+#     matrix.append(row)
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i < j and i >= n - 1 - j:
+#             l.append(matrix[i][j])
+#         if i > j and i >= n - 1 - j:
+#             l.append(matrix[i][j])
+#         if j == n - i - j:
+#             l.append(matrix[i][j])
+#         if i == j and i >= n - 1 - j:
+#             l.append(matrix[i][j])
+#         if i == j and i >= n - 1 - j:
+#             l.append(matrix[i][j])
+#
+# print(max(l))
+
+#3
+# n = int(input())
+# matrix = [[int(i) for i in input().split()] for _ in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         print(matrix[j][i], end=' ')
+#     print()
+
+#3
+# n = int(input())
+# matrix = [['.'] * n for i in range(n)]
+#
+# for i in range(n):
+#     for j in range(n):
+#         if i == n // 2 or j == n // 2:
+#             matrix[i][j] = '*'
+#         if i == j or j == n - i - 1:
+#             matrix[i][j] = '*'
+#
+# for row in matrix:
+#     print(*row)
+
+#7
+# yx = input()
+# board = [['.'] * 8 for _ in range(8)]
+# y = 8 - int(yx[-1])
+# x = ord(yx[0]) - 97
+#
+# for i in range(8):
+#     for j in range(8):
+#         board[y][x] = 'Q'
+#         if abs(y - i) == abs(x - j) or x == j or y == i:
+#             board[i][j] = '*'
+#
+# for i in range(8):
+#     for j in range(8):
+#         print(board[i][j], end=' ')
+#     print()
+
+
+#8
+# n = int(input())
+# a = [[abs(i - j) for j in range(n)] for i in range(n)]
+# for row in a:
+#     print(' '.join([str(i) for i in row]))
+
+# import sys
+# n = int(input())
+# lst = [[int(i) for i in input().split()] for _ in range(n)]
+#
+# for i in sys.stdin:
+#     temp = i.split()
+#     inttemp = []
+#     for k in temp:
+#         inttemp.append(int(k))
+#     lst.append(inttemp)
+#
+# res = sum(lst[0])
+#
+# if all([sum(x) == res for x in lst]) and all([sum(x) == res for x in list(zip(*lst))]):
+#     print('YES')
+# else:
+#     print('NO')
+
+# def chunked(s, n):
+#     c = 0
+#     l = []
+#     for i in range(len(s)):
+#         if len(s[c:c + n]) != 0:
+#             l.append(s[c:c + n])
+#         c = c + n
+#     return l
+#
+# s, n = input().split(), int(input())
+#
+# print(chunked(s, n))
+
