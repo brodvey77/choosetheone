@@ -46,4 +46,47 @@
 # print(new_tuples)
 
 
+# poets = [
+#     ('Есенин', 13),
+#     ('Тургенев', 14),
+#     ('Маяковский', 28),
+#     ('Лермонтов', 20),
+#     ('Фет', 15)]
+#
+# for i in range(len(poets)):
+#     for j in range(i+1, len(poets)):
+#         if poets[i][1] > poets[j][1]:
+#             poets[i], poets[j] = poets[j], poets[i]
+#
+# print(poets[0])
+# print(poets[-1])
+
+# poets = [
+#     ('Тургенев', 14),
+#     ('Есенин', 13),
+#     ('Маяковский', 28),
+#     ('Фет', 15),
+#     ('Лермонтов', 20)]
+#
+# for i in range(len(poets)):
+#     for j in range(i+1, len(poets)):
+#         print(poets[i], 'vs', poets[j])
+#         if poets[i] > poets[j]:
+#             poets[i], poets[j] = poets[j], poets[i]
+#
+# print(poets[0])
+# print(poets[-1])
+
+
+# numbers = (2, 3, 5, 7, -11, 13, 17, 19, 23, 29, 31, -6, 41, 43, 47, 53, 59, 61, -96, 71, 1000, -1)
+#
+# temp_num = numbers[0]
+#
+# for i in range(len(numbers) - 1):
+#     temp_num *= numbers[i + 1]
+#
+# print(temp_num)
+
+
+
 
