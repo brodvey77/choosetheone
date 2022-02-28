@@ -88,5 +88,49 @@
 # print(temp_num)
 
 
+# data = 'Python для продвинутых!'
+# a = tuple(data)
+# print(a)
+
+
+# poet_data = ('Пушкин', 1799, 'Санкт-Петербург')
+# city = list(poet_data)
+# city[2] = 'Москва'
+# poet_data = tuple(city)
+# print(poet_data)
+
+
+# numbers = ((10, 10, 10, 12), (30, 45, 56, 45), (81, 80, 39, 32), (1, 2, 3, 4), (90, 10))
+# list_of_numbers = [sum(i) / len(i) for i in numbers]
+# print(list_of_numbers)
+
+# a, b, c = int(input()), int(input()), int(input())
+#
+#
+# def get_x(a, b):
+#     x = -b / (2 * a)
+#     return x
+#
+#
+# def get_y(a, b, c, x):
+#     y = a * (x ** 2) + b * x + c
+#     return round(y, 2)
+#
+#
+# x = get_x(a, b)
+# y = get_y(a, b, c, x)
+#
+# point = [x, y]
+# point = tuple(point)
+#
+# print(point)
+
+# def parabola_vertex(a, b, c):
+#     x = -(b / (2 * a))
+#     y = (4 * a * c - b**2) / (4 * a)
+#     return x, y
+#
+#
+# print(parabola_vertex(int(input()), int(input()), int(input())))
 
 
