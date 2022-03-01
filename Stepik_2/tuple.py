@@ -133,4 +133,34 @@
 #
 # print(parabola_vertex(int(input()), int(input()), int(input())))
 
+#      Конкурсный отбор
+
+# n = int(input())
+# students = []
+#
+# for i in range(n):
+#     students.append(input().split())
+#
+# for row in students:
+#     print(*row)
+#
+# print()
+#
+# for i in students:
+#     if i[-1] == '4':
+#         print(*i)
+#     if i[-1] == '5':
+#         print(*i)
+
+# students = [tuple(input().split()) for _ in range(int(input()))]
+#
+# for student in students:
+#     print(*student)
+#
+# print()
+#
+# for name, grade in students:
+#     if int(grade) > 3:
+#         print(name, grade)
+
 
