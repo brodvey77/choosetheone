@@ -163,4 +163,50 @@
 #     if int(grade) > 3:
 #         print(name, grade)
 
+# tuple1 = 1,
+# tuple2 = 1, 2, 4
+#
+# print(type(tuple1))
+# print(type(tuple2))
 
+# n = int(input())
+# f1, f2 = 1, 1
+# for i in range(n):
+#     print(f1)
+#     f1, f2 = f2, f1 + f2
+
+# points = [('матан', 100), ('линал', 98), ('ангем', 90)]
+#
+# subject, value = points[1]
+#
+# print(subject, value)
+
+
+# notes = ('Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si')
+#
+# do, re, mi, *tail = notes
+#
+# print(tail)
+
+
+# notes = ('Do', 'Re', 'Mi', 'Fa', 'Sol', 'La', 'Si')
+#
+# do, re, *tail, si = notes
+#
+# print(tail)
+
+
+# n = int(input())
+# f1, f2, f3 = 1, 1, 1
+#
+# for i in range(n):
+#     print(f2, end=' ')
+#     f1, f2, f3 = f3, f1, f1 + f2 + f3
+
+
+# tpl = (100, 200, 300, 400, 500)
+# print(tpl[-2])
+# print(tpl[-4:-1])
+
+# a, *b, c = 'No bees', 'no honey'
+# print(b)
