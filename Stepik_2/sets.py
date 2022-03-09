@@ -29,3 +29,18 @@ import math
 # al = clear_n + x + clear_m + y + clear_k + z
 #
 # print(al)
+
+# n, m, k, x, y, z, t, a = [int(input()) for _ in range(8)]
+#
+# n_m = n + m - x
+# m_k = m + k - y
+# k_n = k + n - z
+# only_n = n - (n_m - t) - (k_n - t) - t
+# only_m = m - (n_m - t) - (m_k - t) - t
+# only_k = k - (k_n - t) - (m_k - t) - t
+# only_one = only_k + only_n + only_m
+# only_two = (n_m - t) + (m_k - t) + (k_n - t)
+# not_read = a - (only_one + (n_m -t) + (m_k - t) + (k_n - t) + t)
+# print(only_one, only_two, not_read, sep='\n')
+
+
