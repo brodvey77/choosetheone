@@ -21,11 +21,11 @@ import math
 # print(a)
 
 
-n, m, k, x, y, z = 25, 20, 7, 8, 3, 10
-
-n1 = n - x
-m1 = m - x - y
-k1 = k - y
-al = n + n1
-
-print(al)
+# n, m, k, x, y, z = 25, 20, 7, 8, 3, 10
+#
+# clear_n = n - x
+# clear_m = m - x - y
+# clear_k = k - y
+# al = clear_n + x + clear_m + y + clear_k + z
+#
+# print(al)
