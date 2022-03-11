@@ -83,3 +83,25 @@ import math
 # else:
 #     print("NO")
 
+# myset = set()
+# for i in range(10):
+#     if i % 2 == 0:
+#         myset.add('even')
+#     else:
+#         myset.add('odd')
+# print(myset)
+# print(len(myset))
+
+# n = int(input())
+# my_list = []
+#
+# for i in range(n):
+#     my_list.append(input().lower())
+#
+# for i in my_list:
+#     print(len(set(i)))
+
+# for _ in range(int(input())):
+#     print(len(set(input().lower())))
+
+
