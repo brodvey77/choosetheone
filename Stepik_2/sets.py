@@ -43,4 +43,43 @@ import math
 # not_read = a - (only_one + (n_m -t) + (m_k - t) + (k_n - t) + t)
 # print(only_one, only_two, not_read, sep='\n')
 
+# fruits = {'apple', 'banana', 'cherry', 'avocado', 'pineapple', 'apricot', 'banana', 'avocado', 'grapefruit'}
+# fruits_sorted = sorted(fruits, reverse=True)
+# print(*fruits_sorted, sep='\n')
+
+# print(len(set(input())))
+
+# numbers = input()
+# if len(numbers) == len(set(numbers)):
+#     print('YES')
+# else:
+#     print('NO')
+
+# s1 = input()
+# s2 = input()
+# s3 = s1 + s2
+# if len(set(s3)) != 10:
+#     print('NO')
+# else:
+#     print('YES')
+
+# numbers = set(input() + input())
+# print('YES' if len(numbers) == 10 else 'NO')
+
+
+# a = input()
+# b = input()
+#
+# if set(a) == set(b):
+#     print('YES')
+# else:
+#     print("NO")
+
+# print('YES' if set(input()) == set(input()) else 'NO')
+
+# text = input().split()
+# if set(text[0]) == set(text[1]) == set(text[2]):
+#     print('YES')
+# else:
+#     print("NO")
 
