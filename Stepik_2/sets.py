@@ -104,4 +104,75 @@ import math
 # for _ in range(int(input())):
 #     print(len(set(input().lower())))
 
+# n = int(input())
+# myset = set()
+# for i in range(n):
+#     myset.update(input().lower())
+# print(len(myset))
+
+# n = int(input())
+# symbols = set()
+#
+# for _ in range(n):
+#     for c in input().lower():
+#         symbols.add(c)
+#
+# print(len(symbols))
+
+# text = input().lower().split()
+# text_2 = ''
+# for word in text:
+#     for sym in word:
+#         if sym in '.,;:-?!':
+#             continue
+#         text_2 += sym
+#     text_2 += ' '
+# text_2 = text_2.split()
+# print(len(set(text_2)))
+
+
+# words = [word.lower().strip('.,;:-?!') for word in input().split()]
+#
+# print(len(set(words)))
+
+
+# numbers = input().split()
+# my_set = set()
+# for num in numbers:
+#     if int(num) not in my_set:
+#         print('NO')
+#         my_set.add(int(num))
+#     else:
+#         print('YES')
+
+
+
+# set1 = {'a', 'b', 'c', 'd', 'h'}
+# set2 = {'b', 'd', 'f', 'h'}
+#
+# set3 = set1 - set2 & set1
+#
+# print(set3)
+
+# 231 1234 6754 7 78 56 34 890
+# 1234 6754 7 3456 890
+
+
+# num = set(input().split()) - set(input().split())
+# numbers = sorted([int(i) for i in num])
+# print(*numbers)
+
+
+
+# my_list = [{int(i) for i in input()} for j in range(int(input()))]
+# my_set = set(my_list[0])
+#
+# for i in my_list:
+#     my_set &= i
+#
+# print(*sorted(my_set))
+
+
+
+
 
