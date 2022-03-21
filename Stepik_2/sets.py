@@ -226,3 +226,11 @@ import math
 # result = sorted([int(i) for i in n], reverse=True)
 # print(*result)
 
+# n1 = set(int(i) for i in input().split())
+# n2 = set(int(i) for i in input().split())
+# n3 = set(int(i) for i in input().split())
+# time_set = set()
+#
+# result = sorted((n1 | n2 | n3) - (n1 & n2 & n3))
+#
+# print(*result)
