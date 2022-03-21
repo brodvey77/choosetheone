@@ -229,8 +229,23 @@ import math
 # n1 = set(int(i) for i in input().split())
 # n2 = set(int(i) for i in input().split())
 # n3 = set(int(i) for i in input().split())
-# time_set = set()
+
 #
 # result = sorted((n1 | n2 | n3) - (n1 & n2 & n3))
 #
 # print(*result)
+
+
+# n1 = set(int(i) for i in input().split())
+# n2 = set(int(i) for i in input().split())
+# n3 = set(int(i) for i in input().split())
+# new_set = set(int(i) for i in range(0, 11))
+#
+# result = sorted(new_set - (n1 | n2 | n3))
+# print(*result)
+
+# set1 = set(int(i) for i in input().split())
+# set2 = set(int(i) for i in input().split())
+# set3 = set(int(i) for i in input().split())
+#
+# print(*sorted(set(range(11)) - set1 - set2 - set3))
