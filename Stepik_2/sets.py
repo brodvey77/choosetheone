@@ -249,3 +249,38 @@ import math
 # set3 = set(int(i) for i in input().split())
 #
 # print(*sorted(set(range(11)) - set1 - set2 - set3))
+
+# files = ['python.png', 'qwerty.py', 'stepik.png', 'beegeek.org', 'windows.pnp', 'pen.txt', 'phone.py',
+#          'book.txT', 'board.pNg', 'keyBoard.jpg', 'Python.PNg', 'apple.jpeg', 'png.png', 'input.tXt',
+#          'split.pop', 'solution.Py', 'stepik.org', 'kotlin.ko', 'github.git']
+# myset = {i.lower() for i in files if 'png' in i.lower()}
+# print(*sorted(myset))
+
+# files = ['python.png', 'qwerty.py', 'stepik.png', 'beegeek.org', 'windows.pnp', 'pen.txt', 'phone.py', 'book.txT', 'board.pNg', 'keyBoard.jpg', 'Python.PNg', 'apple.jpeg', 'png.png', 'input.tXt', 'split.pop', 'solution.Py', 'stepik.org', 'kotlin.ko', 'github.git']
+# result = {c.lower() for c in files if c.lower().endswith('.png')}
+#
+# print(*sorted(result))
+
+# myset1 = frozenset({1, 2, 3})                         # на основе множества
+# myset2 = frozenset([1, 1, 2, 3, 4, 4, 4, 5, 6, 6])    # на основе списка
+# myset3 = frozenset('aabcccddee')                      # на основе строки
+#
+# print(myset1)
+# print(myset2)
+# print(myset3)
+
+# sentence = 'The cat in the hat had two sidekicks, thing one and thing two.'
+#
+# words = sentence.lower().replace('.', '').replace(',', '').split()
+#
+# vowels = ['a', 'e', 'i', 'o', 'u']
+#
+# consonants = {frozenset({letter for letter in word if letter not in vowels}) for word in words}
+#
+# print(*consonants, sep='\n')
+
+
+# set1 = frozenset('beegeek')
+# set2 = frozenset('stepik')
+#
+# set3 = set1 & set2
