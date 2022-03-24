@@ -243,9 +243,120 @@ import math
 #
 # result = sorted(new_set - (n1 | n2 | n3))
 # print(*result)
-
+#
 # set1 = set(int(i) for i in input().split())
 # set2 = set(int(i) for i in input().split())
 # set3 = set(int(i) for i in input().split())
 #
 # print(*sorted(set(range(11)) - set1 - set2 - set3))
+
+# n, m, k, p = [int(input()) for i in range(4)]
+# result = n - m -k + p
+# print(result)
+
+# n = [int(i) for i in input().split()]
+# myset = set(n)
+# print(len(n) - len(myset))
+# sunrise = input().split()
+#
+# print(len(sunrise) - len(set(sunrise)))
+#
+# n = int(input())
+# myset = {input() for i in range(n)}
+# city = input()
+# if city in myset:
+#     print('REPEAT')
+# else:
+#     print('OK')
+
+# set_set = {input() for _ in range(int(input()))}
+# print('REPEAT' if input() in set_set else 'OK')
+
+# m = int(input())
+# n = int(input())
+# home = {input() for _ in range(m)}
+# work = [input() for _ in range(n)]
+#
+# for book in work:
+#     if book in home:
+#         print('YES')
+#     else:
+#         print('NO')
+
+# a = set(int(i) for i in input().split())
+# b = set(int(i) for i in input().split())
+# myset = a | b
+# if len(myset) == 0:
+#     print('BAD DAY')
+# else:
+#     print(*sorted(myset, reverse=True))
+
+# set1 = {int(i) for i in input().split()}
+# set2 = {int(i) for i in input().split()}
+#
+# if set1.isdisjoint(set2):
+#     print('BAD DAY')
+# else:
+#     print(*sorted(set1 & set2, reverse=True))
+
+# set_of_numbers = {int(i) for i in input().split()}
+# numbers = {int(i) for i in input().split()}
+#
+# if set_of_numbers == numbers:
+#     print('YES')
+# else:
+#     print('NO')
+
+# m, n = int(input()), int(input())
+# mathematic = {input() for _ in range(m)}
+# informatic = {input() for _ in range(n)}
+# counter = mathematic ^ informatic
+# if len(counter) != 0:
+#     print(len(counter))
+# else:
+#     print('NO')
+
+# ruk = input().split()
+# pomruk = input().split()
+# result = sorted(set(ruk) | set(pomruk))
+# print(*result)
+
+
+
+
+# if len(first) - len(set(first)) == 0:
+#     print('NO')
+# else:
+#     print(len(first) - (len(first) - len(set(first)) * 2))
+
+
+# n = int(input()) + int(input())
+# s = {input() for _ in range(n)}
+# k = 2 * len(s) - n
+# print(k if k else 'NO')
+
+# m = int(input())
+# print(set.intersection(*({input() for _ in range(int(input()))} for _ in range(m))), sep="\n")
+# #
+#
+#
+# m = int(input()) # Считываем число листков M
+# print(* # Оператор разыменовывания итератора полученного пересечения множеств (блоков строчек)
+#     set.intersection( # Выводим построчно пересечение следующих множеств:
+#     * # Оператор разыменовывания итератора генерируемых множеств (блоков строчек)
+#     (
+#         # Считываем очередной блок фамилий во множество:
+#         {input() # Считываем очередную фамилию в блоке (после того, как считали количество фамилий в блоке)
+#         for _ in range(int(input())) # Считываем количество фамилий в блоке, затем итерируем N строк
+#         } # Ввод окончен
+#         for _ in range(m) # Итерируем M блоков
+#     )), sep="\n" # Наш сепаратор - перевод строки
+# )
+#
+# n = int(input())
+# result = {input() for _ in range(int(input()))}
+#
+# for _ in range(n - 1):
+#     result &= {input() for _ in range(int(input()))}
+#
+# print(*sorted(result), sep='\n')
