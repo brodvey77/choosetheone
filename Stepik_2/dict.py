@@ -203,7 +203,14 @@
 #         if letter in value:
 #             print(key * (value.index(letter) + 1), end="")
 
-
-
-
+# letters = [c for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789']
+# morse = ['.-', '-...', '-.-.', '-..', '.', '..-.', '--.', '....', '..', '.---', '-.-', '.-..', '--', '-.', '---', '.--.', '--.-', '.-.', '...', '-', '..-', '...-', '.--', '-..-', '-.--', '--..', '-----', '.----', '..---', '...--', '....-', '.....', '-....', '--...', '---..', '----.']
+# text = input()
+# # my_dict = dict(zip(letters,morse))
+# my_dict = {}
+# for i in range(len(letters)):
+#     my_dict[letters[i]] = morse[i]
+# for k in text.upper():
+#     if k in letters:
+#         print(my_dict[k], end=' ')
 
