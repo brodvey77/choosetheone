@@ -324,5 +324,6 @@ pets = [('Hatiko', 'Parker', 'Wilson', 50),
 
 result = {}
 
-for i in range(len(pets)):
-        print(pets[i])
+for k, *n in pets:
+        result.setdefault(tuple(n), []).append(k)
+
