@@ -404,3 +404,43 @@
 #     n = d[w] = d.get(w, -1) + 1
 #     res.append(f'{w}_{n}' if n > 0 else w)
 # print(*res)
+
+# n = int(input())   # input digit(quantity of sentences)
+# list_of_sentences = [input() for _ in range(n)] # create list of sentences
+# dict_of_words = {} # create empty dict
+#
+# for word in list_of_sentences:
+#     dict_of_words.setdefault(word[:word.find(':')].lower(), []).append(word[word.find(':') + 1:].lstrip())
+#
+# m = int(input())  # input digit(quantity of search words)
+#
+# for i in range(m):
+#     m_i = input().lower()
+#     if m_i in dict_of_words:
+#         print(*dict_of_words[m_i])
+#     else:
+#         print('Не найдено')
+
+# mydict = {}
+#
+# for _ in range(int(input())):
+#     key, value = input().split(': ')
+#     mydict[key.lower()] = value
+#
+# for _ in range(int(input())):
+#     print(mydict.get(input().lower(), 'Не найдено'))
+
+# a, b = input(), input()
+# a_d = {}
+# b_d = {}
+#
+# for r in a:
+#     a_d[r] = a_d.get(r, 0) + 1
+# for c in b:
+#     b_d[c] = b_d.get(c, 0) + 1
+#
+# print('YES' if a_d == b_d else "NO")
+
+
+
+
