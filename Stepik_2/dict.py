@@ -441,6 +441,68 @@
 #
 # print('YES' if a_d == b_d else "NO")
 
+# a, b = input().lower(), input().lower()
+# a_d, b_d = {}, {}
+#
+# for r in a:
+#     a_d[r.strip('.,!?:;-'' ')] = a_d.get(r, 0) + 1
+# for c in b:
+#     b_d[c.strip('.,!?:;-'' ')] = b_d.get(c, 0) + 1
+#
+# print('YES' if a_d == b_d else "NO")
 
 
+# dict_senses = {}
+# for _ in range(int(input())):
+#     key, value = input().split()
+#     dict_senses[key] = value
+#
+# word = input()
+#
+# for k,v in dict_senses.items():
+#     if k == word:
+#         print(v)
+#     elif v == word:
+#         print(k)
 
+# words = {}
+# for _ in range(int(input())):
+#     a, b = input().split()
+#     words[a], words[b] = b, a
+# print(words[input()])
+
+# a, b = input().split()
+# print(a, b)
+
+# slovar = {}
+# for _ in range(int(input())):
+#     key, value = input().split()
+#     slovar[key] = value
+#     slovar[value] = key
+# print(slovar[input()])
+
+# n = int(input())
+# cities = {}
+#
+# list_of_cities = [input().split() for _ in range(n)]
+#
+# for c in list_of_cities:
+#     cities.setdefault(c[0], c[1:])
+# print(cities)
+#
+# def my_dict(w):
+#     for k, v in cities.items():
+#         if w in v:
+#             print(k)
+#
+#
+# for i in range(int(input())):
+#     my_dict(input())
+
+
+# d = {}
+# for _ in range(int(input())):
+#     country, *cities = input().split()
+#     d.update(dict.fromkeys(cities, country))
+# for _ in range(int(input())):
+#     print(d[input()])
