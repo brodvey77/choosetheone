@@ -506,3 +506,39 @@
 #     d.update(dict.fromkeys(cities, country))
 # for _ in range(int(input())):
 #     print(d[input()])
+
+# for _ in range(int(input())):
+#     key, value = input().split(': ')
+#     mydict[key.lower()] = value
+#
+# for _ in range(int(input())):
+#     print(mydict.get(input().lower(), 'Не найдено'))
+# for i in range(m):
+#     m_i = input().lower()
+#     if m_i in dict_of_words:
+#         print(*dict_of_words[m_i])
+#     else:
+#         print('Не найдено')
+
+# list1 = [input().split() for i in range(int(input()))]
+# d = {}
+# for i in list1:
+#     d.setdefault(i[1].lower(), []).append(i[0])
+#
+# for i in range(int(input())):
+#     print(d.get(input().lower(), ['абонент не найден']))
+
+
+# dct = {}
+# for _ in range(int(input())):
+#     phone, name = input().lower().split()
+#     dct.setdefault(name, []).append(phone)
+# for _ in range(int(input())):
+#     print(*dct.get(input().lower(), ['абонент не найден']))
+
+
+
+
+
+
+
