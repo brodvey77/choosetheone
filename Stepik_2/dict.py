@@ -560,12 +560,117 @@
 #     print(d[_])
 
 
+# info = {'emp1': {'name': 'Timur', 'job': 'Teacher'},
+#         'emp2': {'name': 'Ruslan', 'job': 'Developer'},
+#         'emp3': {'name': 'Rustam', 'job': 'Tester'}}
+#
+# info = dict(emp1 = {'name': 'Timur', 'job': 'Teacher'},
+#             emp2 = {'name': 'Ruslan', 'job': 'Developer'},
+#             emp3 = {'name': 'Rustam', 'job': 'Tester'})
 
 
+# ids = ['emp1', 'emp2', 'emp3']
+#
+# emp_info = [{'name': 'Timur', 'job': 'Teacher'},
+#             {'name': 'Ruslan', 'job': 'Developer'},
+#             {'name': 'Rustam', 'job': 'Tester'}]
+#
+# info = dict(zip(ids, emp_info))
 
 
+# info = {'emp1': {'name': 'Timur', 'job': 'Teacher'},
+#         'emp2': {'name': 'Ruslan', 'job': 'Developer'},
+#         'emp3': {'name': 'Rustam', 'job': 'Tester'}}
+#
+# info['emp1']['job'] = 'Manager'
+#
+# print(info['emp1'])
+
+# info = {'emp1': {'name': 'Timur', 'job': 'Teacher'},
+#         'emp2': {'name': 'Ruslan', 'job': 'Developer'},
+#         'emp3': {'name': 'Rustam', 'job': 'Tester'}}
+#
+# for emp in info:
+#     print('Employee ID:', emp)
+#     for key in info[emp]:
+#         print(key + ':', info[emp][key])
+#     print()
+
+# info = {'emp1': {'name': 'Timur', 'job': 'Teacher'},
+#         'emp2': {'name': 'Ruslan', 'job': 'Developer'},
+#         'emp3': {'name': 'Rustam', 'job': 'Tester'}}
+#
+# for emp, inf in info.items():
+#     print('Employee ID:', emp)
+#     for key in inf:
+#         print(key + ':', inf[key])
+#     print()
+
+# ГЕНЕРАТОР СЛОВАРЕЙ
+
+# squares = {i: i**2 for i in range(6)}
+# print(squares)
+
+# {ключ: значение for переменная in последовательность}
+# где переменная — имя некоторой переменной, последовательность — последовательность значений, которые она принимает
+# (любой итерируемый объект), ключ: значение — некоторое выражение, как правило, зависящее от использованной в списочном
+# выражении переменной, которой будут заполнены элементы словаря.
+
+# dict1 = {0: 'A', 1: 'B', 2: 'C', 3: 'D', 4: 'E', 5: 'F'}
+# selected_keys = [0, 2, 5]
+#
+# dict2 = {k: dict1[k] for k in selected_keys}
+#
+# print(dict2)
+
+# squares = {i: {j: j**2 for j in range(i + 1)} for i in range(5)}
+#
+# for value in squares.values():
+#     print(value)
+
+# marks = {
+#    'class':{
+#       'student':{
+#          'name':'Rosaly',
+#          'marks':{
+#             'physics':70,
+#             'history':80
+#          }
+#       }
+#    }
+# }
+#
+# print(marks['class']['student']['marks']['history'])
 
 
+# numbers = [34, 10, -4, 6, 10, 23, -90, 100, 21, -35, -95, 1, 36, -38, -19, 1, 6, 87]
+# result = {i: numbers[i] ** 2 for i in range(len(numbers))}
+#
+# print(result)
 
 
+# favorite_numbers = {'timur': 17, 'ruslan': 7, 'larisa': 19, 'roman': 123, 'rebecca': 293, 'ronald': 76, 'dorothy': 62,
+#                     'harold': 36, 'matt': 314, 'kim': 451, 'rosaly': 18, 'rustam': 89, 'soltan': 111, 'amir': 654,
+#                     'dima': 390, 'amiran': 777, 'geor': 999, 'sveta': 75, 'rita': 909, 'kirill': 404, 'olga': 271,
+#                     'anna': 55, 'madlen': 876}
+#
+# result = {k: v for k, v in favorite_numbers.items() if 10 <= v <= 99}
+#
+# print(result)
+#
+# months = {1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June', 7: 'July', 8: 'August',
+#           9: 'September', 10: 'October', 11: 'November', 12: 'December'}
+#
+# result = {k: v for v, k in months.items()}
+#
+# print(result)
+# import time
+# start = time.time()
+# s = '1:men 2:kind 90:number 0:sun 34:book 56:mountain 87:wood 54:car 3:island 88:power 7:box 17:star 101:ice'
+#
+# # result = {int(k[:k.find(':')]): k[k.find(':')+1:] for k in s.split()}
+# # result = {int(k):v for k, v in [l.split(':') for l in s.split()]}
+# end = time.time()
+#
+# print(start - end)
 
