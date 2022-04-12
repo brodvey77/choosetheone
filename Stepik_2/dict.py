@@ -537,27 +537,27 @@
 #     print(*dct.get(input().lower(), ['абонент не найден']))
 
 
-s = input()
-n = int(input())
-word = {}
-d = {}
-
-for i in s:
-    word[i] = str(word.get(i, 0) + 1)
-
-for i in range(n):
-    letter, qty = input().split(': ')
-    d[letter] = qty
-
-new_dicts = {v: k for k,v in word.items()}
-
-for k, v in d.items():
-    d[k] = new_dicts[v]
-
-d = {v: k for k,v in word.items()}
-
-for _ in s:
-    print(d[_])
+# s = input()
+# n = int(input())
+# word = {}
+# d = {}
+#
+# for i in s:
+#     word[i] = str(word.get(i, 0) + 1)
+#
+# for i in range(n):
+#     letter, qty = input().split(': ')
+#     d[letter] = qty
+#
+# new_dicts = {v: k for k,v in word.items()}
+#
+# for k, v in d.items():
+#     d[k] = new_dicts[v]
+#
+# d = {v: k for k,v in word.items()}
+#
+# for _ in s:
+#     print(d[_])
 
 
 
