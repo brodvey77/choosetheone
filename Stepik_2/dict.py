@@ -721,3 +721,12 @@
 # result =  [{student_ids[i]:{student_names[i]:student_grades[i]}} for i in range (len(student_ids))]
 #
 # print(result)
+
+
+
+list_text = [i for i in input().split()]
+dict_text = {}
+
+for k in list_text:
+    dict_text[k] = dict_text.get(k, -1) + 1
+    print(dict_text[k], end=' ')
