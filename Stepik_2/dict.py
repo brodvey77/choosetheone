@@ -724,9 +724,33 @@
 
 
 
-list_text = [i for i in input().split()]
-dict_text = {}
+# list_text = [i for i in input().split()]
+# dict_text = {}
+#
+# for k in list_text:
+#     dict_text[k] = dict_text.get(k, -1) + 1
+#     print(dict_text[k], end=' ')
 
-for k in list_text:
-    dict_text[k] = dict_text.get(k, -1) + 1
-    print(dict_text[k], end=' ')
+
+
+# my_dict = {}
+# for _ in range(int(input())):
+#     k, v = input().split()
+#     my_dict[k] = v
+# z = input()
+# for a, b in my_dict.items():
+#     if z == b:
+#         print(a)
+#     elif z == a:
+#         print(b)
+#
+# n = int(input())
+# d = {}
+# for i in range(n):
+#     first, second = input().split()
+#     d[first] = second
+#     d[second] = first
+# print(d[input()])
+
+
+
