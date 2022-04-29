@@ -752,15 +752,15 @@
 #     d[second] = first
 # print(d[input()])
 
-my_dict = {}
-for _ in range(int(input())):
-    president, vote = input().split()
-    my_dict[president] = int(vote)
-
-result = {}
-
-for k, v in my_dict.items():
-    result[k] = my_dict.get(k, 0) + v
+# my_dict = {}
+# for _ in range(int(input())):
+#     president, vote = input().split()
+#     my_dict[president] = my_dict.get(president, 0) + int(vote)
+#
+#
+#
+# for k, v in sorted(my_dict.items()):
+#     print(k, v)
 
 
 
