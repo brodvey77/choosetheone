@@ -762,8 +762,153 @@
 # for k, v in sorted(my_dict.items()):
 #     print(k, v)
 
+# my_dict = {'C1': [10, 20, 30, 7, 6, 23, 90], 'C2': [20, 30, 40, 1, 2, 3, 90, 12], 'C3': [12, 34, 20, 21],
+#            'C4': [22, 54, 209, 21, 7], 'C5': [2, 4, 29, 21, 19], 'C6': [4, 6, 7, 10, 55], 'C7': [4, 8, 12, 23, 42],
+#            'C8': [3, 14, 15, 26, 48], 'C9': [2, 7, 18, 28, 18, 28]}
+#
+# my_dict = {k: [i for i in v if i <= 20] for k, v in my_dict.items()}
 
 
+# emails = {'nosu.edu': ['timyr', 'joseph', 'svetlana.gaeva', 'larisa.mamuk'],
+#           'gmail.com': ['ruslan.chaika', 'rustam.mini', 'stepik-best'],
+#           'msu.edu': ['apple.fruit', 'beegeek', 'beegeek.school'],
+#           'yandex.ru': ['surface', 'google'],
+#           'hse.edu': ['tomas-henders', 'cream.soda', 'zivert'],
+#           'mail.ru': ['angel.down', 'joanne', 'the.fame.moster']}
+#
+# email_list = []
+#
+# for k, v in emails.items():
+#     for i in v:
+#         email_list.append(i + '@' + k)
+#
+# print(*sorted(email_list), sep='\n')
 
 
+# dnk = input()
+# rnk = {'A': 'U', 'C': 'G', 'G': 'C', 'T': 'A'}
+#
+# for i in dnk:
+#     print(rnk[i], end='')
+#
+# d = {'ACGT'[i]: 'UGCA'[i] for i in range(4)}
+# for i in input():
+#     print(d[i], end='')
 
+# text = input().split()
+# d = {}
+#
+# for i in text:
+#     d[i] = d.get(i, 0) + 1
+#     print(d[i], end=' ')
+
+
+# d = {'A': 1, 'E': 1, 'I': 1, 'L': 1, 'N': 1, 'O': 1, 'R': 1, 'S': 1, 'T': 1, 'U': 1, 'D': 2, 'G': 2, 'B': 3, 'C': 3,
+#      'M': 3, 'P': 3, 'F': 4, 'H': 4, 'V': 4, 'W': 4, 'Y': 4, 'K': 5, 'J': 8, 'X': 8, 'Q': 10, 'Z': 10}
+# word = input()
+# counter = 0
+# for i in word:
+#     counter += d[i]
+# print(counter)
+#
+#
+# d = {
+#     1: "AEILNORSTU",
+#     2: "DG",
+#     3: "BCMP",
+#     4: "FHVWY",
+#     5: "K",
+#     8: "JX",
+#     10: "QZ"
+# }
+#
+# print(sum([k for i in input() for k, v in d.items() if i in v]))
+
+# Sample Input 1:
+#
+dict = {'name': 'timur', 'age': 28}
+# Sample Output 1:
+#
+# str = 'age=28&name=timur'
+
+# def build_query_string(params):
+#     my_list = []
+#     for k, v in sorted(params.items()):
+#         my_list. append(str(k) + '=' + str(v))
+#     return '&'.join(my_list)
+#
+# def build_query_string(params):
+#     return '&'.join([f'{k}={params[k]}' for k in sorted(params)])
+#
+#
+# print(build_query_string({'sport': 'hockey', 'game': 2, 'time': 17}))
+
+
+# Примечание 1. Следующий программный код:
+# result = merge([{'a': 1, 'b': 2}, {'b': 10, 'c': 100}, {'a': 1, 'b': 17, 'c': 50}, {'a': 5, 'd': 777}])
+# создает словарь:
+# result = {'a': {1, 5}, 'b': {2, 10, 17}, 'c': {50, 100}, 'd': {777}}
+
+# def merge(values):      # values - это список словарей
+#     result = {}
+#     for d in values:
+#         for k, v in d.items():
+#             result.setdefault(k, set()).add(v)
+#     return result
+
+
+# s = {'write': 'W', 'read': 'R','execute': 'X'}
+#
+# n = int(input())
+# files = {}
+# for i in range(n):
+#     r = input().split()
+#     f, com = r[0], r[1:]
+#     files[f] = com
+#
+# m = int(input())
+# for _ in range(m):
+#     com, f = input().split()
+#     if s[com] in files[f]:
+#         print('OK')
+#     else:
+#         print('Access denied')
+
+
+sales = {}
+
+# for i in range(int(input())):
+#     s = input().split()
+#     name, product, quantity = s[0], s[1], int(s[2])
+#     sales.setdefault(name, {})[product] = quantity
+#
+# for k, v in sorted(sales.items()):
+#     print(k, v)
+
+# for i in range(int(input())):
+#     s = input().split()
+#     name, product, quantity = s[0], s[1], int(s[2])
+#     if name not in sales.keys():
+#         sales[name] = sales.setdefault(name, {product: quantity})
+#     else:
+#         if product not in sales[name]:
+#             sales[name].update({product: quantity})
+#         else:
+#             sales[name][product] = sales[name].get(product) + quantity
+#
+# for i in sorted(sales):
+#     print(i + ':')
+#     for k, v in sorted(sales[i].items()):
+#         print(k, v)
+
+# data = {}
+#
+# for _ in range(int(input())):
+#     name, product, count = input().split()
+#     data.setdefault(name, {})
+#     data[name][product] = data[name].get(product, 0) + int(count)
+#
+# for person, products in sorted(data.items()):
+#     print(f'{person}:')
+#     for product, count in sorted(products.items()):
+#         print(product, count)
