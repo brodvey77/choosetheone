@@ -126,11 +126,16 @@
 #     print()
 
 
-from random import sample as r
+# from random import sample as r
+#
+# print(*r(range(int(1e6), int(1e7)), 100), sep='\n')
 
-print(*r(range(int(1e6), int(1e7)), 100), sep='\n')
 
+from random import shuffle as sh
 
+s = list(input())
+sh(s)
+print(''.join(s))
 
 
 
