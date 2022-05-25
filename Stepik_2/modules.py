@@ -91,3 +91,15 @@
 #
 # def generate_ip():
 #     return f'{r(256)}.{r(256)}.{r(256)}.{r(256)}'
+
+# from random import randrange as r
+# import string
+# from random import choice as ch
+#
+#
+# def generate_index():
+#     return ch(string.ascii_uppercase) + ch(string.ascii_uppercase) + str(r(100)) + '_' + str(r(100)) + ch(
+#         string.ascii_uppercase) + ch(string.ascii_uppercase)
+#
+#
+# print(generate_index())
