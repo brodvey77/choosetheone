@@ -103,3 +103,34 @@
 #
 #
 # print(generate_index())
+
+# import random
+# matrix = [[1, 2, 3, 4],
+#           [5, 6, 7, 8],
+#           [9, 10, 11, 12],
+#           [13, 14, 15, 16]]
+#
+# for i in matrix:
+#     random.shuffle(i)
+
+
+# import random
+#
+# matrix = [[int(random.randrange(10)) for i in range(7)] for _ in range(100)]
+#
+# for i in matrix:
+#     while i[0] == 0:
+#         random.shuffle(i)
+#     for j in i:
+#         print(j, end='')
+#     print()
+
+
+from random import sample as r
+
+print(*r(range(int(1e6), int(1e7)), 100), sep='\n')
+
+
+
+
+
