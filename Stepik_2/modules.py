@@ -53,3 +53,41 @@
 #     s.add(random.randint(1, 49))
 #
 # print(*sorted(s))
+
+# Приведенный ниже код:
+#
+# import string
+#
+# print(string.ascii_letters)
+# print(string.ascii_uppercase)
+# print(string.ascii_lowercase)
+# print(string.digits)
+# print(string.hexdigits)
+# print(string.octdigits)
+# print(string.punctuation)
+# print(string.printable)
+# выводит:
+#
+# abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+# ABCDEFGHIJKLMNOPQRSTUVWXYZ
+# abcdefghijklmnopqrstuvwxyz
+# 0123456789
+# 0123456789abcdefABCDEF
+# 01234567
+# !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~
+# 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~ \t\n\r\x0b\x0c
+
+# import random
+# def generate_ip():
+#     s = ''
+#     for i in range(4):
+#         s += str(random.randint(0, 255)) + '.'
+#     return s[:-1]
+#
+# print(generate_ip())
+
+
+# from random import randrange as r
+#
+# def generate_ip():
+#     return f'{r(256)}.{r(256)}.{r(256)}.{r(256)}'
