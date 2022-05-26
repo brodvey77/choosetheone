@@ -166,16 +166,47 @@
 #         print(str(matrix[i][j]).ljust(3), end='')
 #     print()
 
-from random import sample
+# from random import sample
+#
+# numbers = sample(list(range(1, 76)), 25)
+# bingo = [numbers[i:i + 5] for i in range(0, 21, 5)]
+# bingo[2][2] = 0
+#
+# for i in range(5):
+#     for j in range(5):
+#         print(str(bingo[i][j]).ljust(3), end=' ')
+#     print()
 
-numbers = sample(list(range(1, 76)), 25)
-bingo = [numbers[i:i + 5] for i in range(0, 21, 5)]
-bingo[2][2] = 0
+# import random
+#
+# n = int(input())
+# list_1 = [input() for i in range(n)]
+# list_2 = list_1.copy()
+# flag = True
+# s = 0
+# while flag:
+#     random.shuffle(list_2)
+#     for i in range(len(list_1)):
+#         if list_1[i] != list_2[i]:
+#             s += 1
+#         else:
+#             s = 0
+#     if s == len(list_1):
+#         flag = False
+#
+# for i in range(len(list_1)):
+#     print(f'{list_1[i]} - {list_2[i]}')
 
-for i in range(5):
-    for j in range(5):
-        print(str(bingo[i][j]).ljust(3), end=' ')
-    print()
-
-
+# from random import choice
+#
+# names, rel, tmp = {input() for _ in range(int(input()))}, {}, 0
+# for name in names.copy():
+#     if names == {name}:
+#         rel[tmp], rel[name] = name, rel[tmp]
+#     else:
+#         rand_name = choice(list(names - {name}))
+#         rel[name] = rand_name
+#         names -= {rand_name}
+#         tmp = name
+# [print(k, '-', v) for k, v in rel.items()]
 
