@@ -131,11 +131,51 @@
 # print(*r(range(int(1e6), int(1e7)), 100), sep='\n')
 
 
-from random import shuffle as sh
+# from random import shuffle as sh
+#
+# s = list(input())
+# sh(s)
+# print(''.join(s))
 
-s = list(input())
-sh(s)
-print(''.join(s))
+
+# import random
+#
+# matrix = [[int(random.randrange(1, 76)) for i in range(5)] for _ in range(5)]
+#
+# for i in range(5):
+#     for j in range(5):
+#         if i == j and j == 5 - i - 1:
+#             matrix[i][j] = 0
+#         print(str(matrix[i][j]).ljust(3), end='')
+#     print()
+
+# import random
+#
+# my_list = [i for i in range(1, 76)]
+# random.shuffle(my_list)
+# c = 0
+# matrix = []
+# for i in range(len(my_list)):
+#     if len(my_list[c:c + 5]) != 0:
+#         matrix.append(my_list[c:c + 5])
+#     c = c + 5
+# for i in range(5):
+#     for j in range(5):
+#         if i == j and j == 5 - i - 1:
+#             matrix[i][j] = 0
+#         print(str(matrix[i][j]).ljust(3), end='')
+#     print()
+
+from random import sample
+
+numbers = sample(list(range(1, 76)), 25)
+bingo = [numbers[i:i + 5] for i in range(0, 21, 5)]
+bingo[2][2] = 0
+
+for i in range(5):
+    for j in range(5):
+        print(str(bingo[i][j]).ljust(3), end=' ')
+    print()
 
 
 
