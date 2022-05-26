@@ -209,4 +209,31 @@
 #         names -= {rand_name}
 #         tmp = name
 # [print(k, '-', v) for k, v in rel.items()]
+import random
 
+# n, m = int(input()), int(input())
+# l_list = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+#
+# def generate_password(length):
+#     return ''.join(random.sample(l_list, length))
+#
+# def generate_passwords(count, length):
+#     for _ in range(count):
+#         print(generate_password(length))
+#
+# generate_passwords(n, m)
+#
+#
+#
+# import string, random
+#
+# def generate_password(length):
+#     symbols = string.ascii_uppercase + string.ascii_lowercase + string.digits[2:]
+#     symbols = ''.join([symbol for symbol in symbols if symbol not in "lIoO"])
+#     return ''.join(random.sample(symbols, length))
+#
+# def generate_passwords(count, length):
+#     return [generate_password(length) for _ in range(count)]
+#
+# n, m = int(input()), int(input())
+# print(*generate_passwords(n, m), sep='\n')
