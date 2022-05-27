@@ -212,7 +212,7 @@
 import random
 
 # n, m = int(input()), int(input())
-# l_list = 'abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+# l_list = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
 #
 # def generate_password(length):
 #     return ''.join(random.sample(l_list, length))
@@ -237,3 +237,50 @@ import random
 #
 # n, m = int(input()), int(input())
 # print(*generate_passwords(n, m), sep='\n')
+
+# import string
+#
+# n, m = int(input()), int(input())
+# l_list = 'abcdefghijkmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ23456789'
+# a = string.ascii_uppercase
+# b = string.ascii_lowercase
+# c = string.digits
+#
+#
+# def gen(pasw):
+#     counter = 0
+#     counter_a = 0
+#     counter_b = 0
+#     counter_c = 0
+#     for i in a:
+#         if i in pasw:
+#             counter_a += 1
+#     for i in b:
+#         if i in pasw:
+#             counter_b += 1
+#     for i in c:
+#         if i in pasw:
+#             counter_c += 1
+#     if counter_a > 0:
+#         counter_a = 1
+#     if counter_b > 0:
+#         counter_b = 1
+#     if counter_c > 0:
+#         counter_c = 1
+#     counter = counter_a + counter_b + counter_c
+#     return counter
+#
+#
+# def generate_password(length):
+#     s = ''.join(random.sample(l_list, m))
+#     while gen(s) != 3:
+#         s = ''.join(random.sample(l_list, m))
+#     return s
+#
+#
+# def generate_passwords(count, length):
+#     for _ in range(count):
+#         print(generate_password(length))
+#
+#
+# generate_passwords(n, m)
