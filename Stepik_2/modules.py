@@ -378,3 +378,14 @@ import random
 #
 # print(sum(numbers))
 # print(*sorted(numbers[:5]))
+
+from decimal import *
+
+s = input()
+number = Decimal(s)
+num = list(number.as_tuple().digits)
+if '0' in s:
+    num.append(0)
+minimum = min(num)
+maximum = max(num)
+print(minimum + maximum)
