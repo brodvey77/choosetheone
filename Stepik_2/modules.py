@@ -310,3 +310,45 @@ import random
 #         k += 1
 #
 # print((k/n)*s0)
+
+
+# BOGOSORT
+
+# import random
+#
+# def is_sort(nums):                   # отсортирован ли список?
+#     for i in range(len(nums) - 1):
+#         if nums[i] > nums[i + 1]:
+#             return False
+#     return True
+#
+# def bogosort(nums):                  # реализация алгоритма болотной сортировки
+#     while not is_sort(nums):
+#         random.shuffle(nums)
+#     return nums
+#
+# numbers = list(range(13))
+# random.shuffle(numbers)              # перемешиваем начальный список
+# print(numbers)                       # выводим начальный список
+#
+# sorted_numbers = bogosort(numbers)
+#
+# print(sorted_numbers)                # выводим отсортированный список
+
+
+# num = 0.1 + 0.1 + 0.1
+# eps = 0.000000001           # точность сравнения
+#
+# if abs(num - 0.3) < eps:    # число num отличается от числа 0.3 менее чем 0.000000001
+#     print('YES')
+# else:
+#     print('NO')
+
+# from decimal import *
+#
+# num = Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')
+#
+# if num == 0:
+#     print('YES')
+# else:
+#     print('NO')
