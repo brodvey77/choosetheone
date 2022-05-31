@@ -444,3 +444,9 @@ import random
 #
 # print(min(numbers)+max(numbers))
 # print(maximum, maximum)
+
+from fractions import Fraction as F
+
+n, m = int(input()), int(input())
+
+print(F(n)/F(m))
