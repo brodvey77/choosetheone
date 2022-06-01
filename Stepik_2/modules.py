@@ -467,3 +467,9 @@ import random
 # print(sum(lst))
 
 
+# from fractions import Fraction as F
+# from math import factorial as Fac
+# n = int(input())
+# lst = [F(1, Fac(i)) for i in range(1, n + 1)]
+#
+# print(sum(lst))
