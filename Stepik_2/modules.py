@@ -495,3 +495,17 @@ import random
 #     a -= 1
 #     b += 1
 # print(F(a, b))
+
+
+# from fractions import Fraction as F
+# import math
+# n = int(input())
+# lst = [i for i in range(1, n + 1)]
+# nums = []
+# for i in lst:
+#     for j in range(n, 1, -1):
+#         if F(i) < F(j):
+#             nums.append(F(i)/F(j))
+# a = set(nums)
+#
+# print(*sorted(a), sep='\n')
