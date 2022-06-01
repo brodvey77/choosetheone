@@ -473,3 +473,25 @@ import random
 # lst = [F(1, Fac(i)) for i in range(1, n + 1)]
 #
 # print(sum(lst))
+
+# from fractions import Fraction as F
+# import math
+# n = int(input())
+# lst = [i for i in range(1, n + 1)]
+# nums = []
+# for i in lst:
+#     for j in range(n, 1, -1):
+#         if i + j == n and math.gcd(i, j) == 1 and i < j:
+#             nums.append(F(i)/F(j))
+# print(max(nums))
+
+# from fractions import Fraction as F
+# from math import gcd
+#
+# n = int(input())
+# a = n // 2
+# b = n - a
+# while gcd(a, b) != 1:
+#     a -= 1
+#     b += 1
+# print(F(a, b))
