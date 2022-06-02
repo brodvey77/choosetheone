@@ -523,5 +523,8 @@ import random
 #     modules[abs(i)] = i
 # print(modules[max(modules)], max(modules), sep='\n')
 
-
-
+# n = int(input())
+# z1, z2 = complex(input()), complex(input())
+#
+# result = z1**n + z2**n + z1.conjugate()**(n) + z2.conjugate()**(n+1)
+# print(complex(result))
