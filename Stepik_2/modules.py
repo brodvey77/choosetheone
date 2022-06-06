@@ -528,3 +528,36 @@ import random
 #
 # result = z1**n + z2**n + z1.conjugate()**(n) + z2.conjugate()**(n+1)
 # print(complex(result))
+
+import turtle
+
+# import turtle
+#
+# turtle.Screen().addshape('rocketship.gif')  # регистрируем изображение
+# turtle.shape('rocketship.gif')              # устанавливаем изображение
+#
+#
+# for _ in range(4):
+#   turtle.forward(150)
+#   turtle.left(90)
+# for i in range(10):
+#     turtle.forward(10)
+#     for _ in range(360):
+#         turtle.left(1)
+#         turtle.forward(1)
+#     turtle.right(36)
+
+
+# def rectangle(width, height):
+#     turtle.forward(width)
+#     turtle.left(90)
+#     turtle.forward(height)
+#     turtle.left(90)
+#     turtle.forward(width)
+#     turtle.left(90)
+#     turtle.forward(height)
+#     turtle.left(90)
+#
+# w, h = int(input()), int(input())
+# rectangle(w, h)
+
