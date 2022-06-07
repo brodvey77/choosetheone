@@ -529,7 +529,7 @@ import random
 # result = z1**n + z2**n + z1.conjugate()**(n) + z2.conjugate()**(n+1)
 # print(complex(result))
 
-import turtle
+
 
 # import turtle
 #
@@ -561,3 +561,11 @@ import turtle
 # w, h = int(input()), int(input())
 # rectangle(w, h)
 
+# import turtle
+# def triangle(side):
+#     for i in range(3):
+#         turtle.forward(side)
+#         turtle.left(60)
+#
+# n = int(input('Input your side >> '))
+# triangle(n)
