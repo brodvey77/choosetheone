@@ -565,7 +565,21 @@ import random
 # def triangle(side):
 #     for i in range(3):
 #         turtle.forward(side)
-#         turtle.left(60)
+#         turtle.left(120)
 #
 # n = int(input('Input your side >> '))
 # triangle(n)
+#
+# import turtle
+#
+# def square(side):
+#     a = 10
+#     for _ in range(3):
+#         turtle.setheading(a)
+#         for i in range(4):
+#             turtle.forward(side)
+#             turtle.left(90)
+#         a += 10
+#
+# n = int(input('Input ypu side: '))
+# square(n)
