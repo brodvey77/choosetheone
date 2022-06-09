@@ -598,13 +598,26 @@ import random
 # n = int(input('Input your side: '))
 # square(n)
 
+# import turtle as t
+#
+# def hexagon(side):
+#     for i in range(6):
+#         t.forward(side)
+#         t.left(60)
+#
+#
+# l = int(input('Input your length side'))
+# hexagon(l)
+
 import turtle as t
 
 def hexagon(side):
-    for i in range(6):
+    for i in range(7):
         t.forward(side)
         t.left(60)
+    t.right(120)
 
 
 l = int(input('Input your length side'))
-hexagon(l)
+for i in range(6):
+    hexagon(l)
