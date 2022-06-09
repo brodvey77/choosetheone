@@ -583,3 +583,18 @@ import random
 #
 # n = int(input('Input ypu side: '))
 # square(n)
+
+# import turtle
+#
+# def square(side):
+#     a = 45
+#     for _ in range(8):
+#         turtle.setheading(a)
+#         for i in range(4):
+#             turtle.forward(side)
+#             turtle.left(90)
+#         a += 45
+#
+# n = int(input('Input your side: '))
+# square(n)
+
