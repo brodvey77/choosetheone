@@ -609,15 +609,29 @@ import random
 # l = int(input('Input your length side'))
 # hexagon(l)
 
+# import turtle as t
+
+# def hexagon(side):
+#     for i in range(7):
+#         t.forward(side)
+#         t.left(60)
+#     t.right(120)
+
+
+# l = int(input('Input your length side'))
+# for i in range(6):
+#     hexagon(l)
+
 import turtle as t
 
-def hexagon(side):
-    for i in range(7):
-        t.forward(side)
-        t.left(60)
-    t.right(120)
+def rectangle(width, height):
+  for i in range(2):
+    t.forward(width)
+    t.right(90)
+    t.forward(height)
+    t.right(90)
 
+a, b = int(input()), int(input())
 
-l = int(input('Input your length side'))
-for i in range(6):
-    hexagon(l)
+rectangle(a, b)
+import turtle as t

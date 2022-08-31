@@ -724,12 +724,13 @@
 
 
 
-# list_text = [i for i in input().split()]
-# dict_text = {}
-#
-# for k in list_text:
-#     dict_text[k] = dict_text.get(k, -1) + 1
-#     print(dict_text[k], end=' ')
+list_text = [i for i in input().split()]
+dict_text = {}
+
+for k in list_text:
+    dict_text[k] = dict_text.get(k, -1) + 1
+    print(dict_text[k], end=' ')
+
 
 
 
@@ -756,9 +757,9 @@
 # for _ in range(int(input())):
 #     president, vote = input().split()
 #     my_dict[president] = my_dict.get(president, 0) + int(vote)
-#
-#
-#
+
+
+
 # for k, v in sorted(my_dict.items()):
 #     print(k, v)
 
