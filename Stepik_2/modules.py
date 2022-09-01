@@ -622,16 +622,33 @@ import random
 # for i in range(6):
 #     hexagon(l)
 
+# import turtle as t
+
+# def rectangle(width, height):
+#   for i in range(2):
+#     t.forward(width)
+#     t.right(90)
+#     t.forward(height)
+#     t.right(90)
+#
+# a, b = int(input()), int(input())
+#
+# rectangle(a, b)
+# import turtle as t
+
+# import turtle as t
+# def triangle(side):
+#   for i in range(3):
+#     t.forward(side)
+#     t.left(60)
+#
+#
+# leight = int(input())
+#
+# triangle(leight)
+
 import turtle as t
+def square(side):
+  pass
 
-def rectangle(width, height):
-  for i in range(2):
-    t.forward(width)
-    t.right(90)
-    t.forward(height)
-    t.right(90)
 
-a, b = int(input()), int(input())
-
-rectangle(a, b)
-import turtle as t
