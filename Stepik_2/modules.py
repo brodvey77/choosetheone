@@ -780,3 +780,64 @@ import turtle as t
 #    turtle.dot(10)
 #    turtle.forward(side)
 #    turtle.left(90)
+
+
+# import turtle as t
+#
+# def chaos(n):
+#     t.shape('triangle')
+#     t.dot(15)
+#     for i in range(n):
+#         t.forward(100)
+#         t.stamp()
+#         t.backward(100)
+#         t.left(360 / n)
+#
+#
+# chaos(int(input()))
+
+# import turtle as t
+#
+#
+# def chaos(n):
+#     t.shape('turtle')
+#     t.stamp()
+#     for i in range(n):
+#         t.penup()
+#         t.forward(100)
+#         t.stamp()
+#         t.penup()
+#         t.backward(100)
+#         t.left(360 / n)
+#
+#
+# q = int(input())
+# chaos(q)
+
+
+# chaos(int(input()))
+
+
+# import turtle as t
+#
+# t.Screen().bgcolor(25, 160, 200)
+# def chaos(n):
+#     t.shape('turtle')
+#     t.stamp()
+#     t.pensize(5)
+#     for i in range(n):
+#         t.penup()
+#         t.forward(70)
+#         t.pendown()
+#         t.forward(15)
+#         t.penup()
+#         t.forward(15)
+#         t.stamp()
+#         t.penup()
+#         t.backward(100)
+#         t.left(360 / n)
+#
+#
+# q = int(input())
+# chaos(q)
+
