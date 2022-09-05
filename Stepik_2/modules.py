@@ -647,8 +647,102 @@ import random
 #
 # triangle(leight)
 
+# import turtle as t
+#
+# def square(side):
+#   t.left(75)
+#   for i in range(3):
+#     t.left(30)
+#     for i in range(4):
+#         t.forward(side)
+#         t.right(90)
+#
+#
+# length = int(input())
+#
+# square(length)
+
+
+
+# import turtle as t
+#
+# def square(side):
+#   for i in range(8):
+#     t.right(45)
+#     for i in range(4):
+#       t.forward(side)
+#       t.right(90)
+#
+#
+# length = int(input())
+#
+# square(length)
+
+# import turtle as t
+# def triangle(side):
+#   for i in range(6):
+#     t.forward(side)
+#     t.left(60)
+#
+#
+# leight = int(input())
+#
+# triangle(leight)
+
+# import turtle as t
+# def triangle(side):
+#   for i in range(6):
+#     t.forward(50)
+#     t.left(60)
+
+
 import turtle as t
-def square(side):
-  pass
+
+# for i in range(6):
+#   t.forward(30)
+#   t.left(60)
+# t.right(120)
+# for i in range(6):
+#   for i in range(5):
+#     t.forward(30)
+#     t.left(60)
+
+# import turtle as t
+# def romb(side):
+#   t.forward(100)
+#   t.right(60)
+#   t.forward(100)
+#   t.right(120)
+#   t.forward(100)
+#   t.right(60)
+#   t.forward(100)
+#
+# def star():
+#   for i in range(10):
+#     romb(length)
+#     t.right(85)
+#
+# length = int(input())
+#
+# star()
 
 
+# import turtle as t
+#
+# def get_line():
+#   t.forward(50)
+#   t.backward(100)
+#   t.forward(50)
+#
+#
+# for i in range(6):
+#   get_line()
+#   t.left(60)
+
+
+# import turtle as t
+#
+# def star():
+#   for i in range(5):
+#     t.right(144)
+#     t.forward(100)
