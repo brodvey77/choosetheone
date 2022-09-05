@@ -746,3 +746,17 @@ import turtle as t
 #   for i in range(5):
 #     t.right(144)
 #     t.forward(100)
+
+# s = 10
+# for _ in range(10):
+#   for i in range(4):
+#     t.forward(s)
+#     t.left(90)
+#   s += 5
+
+# s = 2
+#
+# for i in range(10):
+#   t.left(90)
+#   t.forward(s)
+#   s *=2
