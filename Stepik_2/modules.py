@@ -760,3 +760,23 @@ import turtle as t
 #   t.left(90)
 #   t.forward(s)
 #   s *=2
+#
+# t.dot(10)
+# t.forward(100)
+# t.left(90)
+# t.dot(10)
+# t.forward(60)
+# t.left(90)
+# t.dot(10)
+# t.forward(100)
+# t.left(90)
+# t.dot(10)
+# t.forward(60)
+
+# import turtle
+#
+# for _ in range(2):
+#   for side in (150, 75):
+#    turtle.dot(10)
+#    turtle.forward(side)
+#    turtle.left(90)
