@@ -851,6 +851,12 @@ import turtle as t
 #   t.forward(5+i)
 
 
-
-
-
+# import turtle as t
+#
+# colors = ('blue', 'yellow', 'green', 'purple', 'orange', 'red')
+#
+# for i in range(44):
+#     t.left(45)
+#     t.pencolor(colors[i % 6])
+#     t.pensize(i * 0.5 + 1)
+#     t.forward(i * 2.5 + 5)
