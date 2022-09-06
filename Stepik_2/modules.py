@@ -860,3 +860,17 @@ import turtle as t
 #     t.pencolor(colors[i % 6])
 #     t.pensize(i * 0.5 + 1)
 #     t.forward(i * 2.5 + 5)
+
+# import turtle
+#
+# turtle.goto(100, 150)
+# position = turtle.pos()
+# print(position)
+
+# import turtle
+#
+# turtle.goto(200, -150)
+# x = turtle.xcor()
+# y = turtle.ycor()
+# print(x)
+# print(y)
