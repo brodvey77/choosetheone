@@ -905,35 +905,56 @@ import turtle as t
 #     turtle.goto(0, 0)
 
 
-import turtle
+# import turtle
+#
+# turtle.pensize(10)
+# turtle.penup()
+# turtle.setpos(-200, 100)
+# turtle.pendown()
+# turtle.color('blue')
+# turtle.circle(80)
+# turtle.penup()
+#
+# turtle.setpos(-75, 100)
+# turtle.pendown()
+# turtle.color('black')
+# turtle.circle(80)
+# turtle.penup()
+#
+# turtle.setpos(60, 100)
+# turtle.pendown()
+# turtle.color('red')
+# turtle.circle(80)
+# turtle.penup()
+#
+# turtle.setpos(-140, 25)
+# turtle.pendown()
+# turtle.color('yellow')
+# turtle.circle(80)
+# turtle.penup()
+#
+# turtle.setpos(-5, 25)
+# turtle.pendown()
+# turtle.color('green')
+# turtle.circle(80)
 
-turtle.pensize(10)
-turtle.penup()
-turtle.setpos(-200, 100)
-turtle.pendown()
-turtle.color('blue')
-turtle.circle(80)
-turtle.penup()
-
-turtle.setpos(-75, 100)
-turtle.pendown()
-turtle.color('black')
-turtle.circle(80)
-turtle.penup()
-
-turtle.setpos(60, 100)
-turtle.pendown()
-turtle.color('red')
-turtle.circle(80)
-turtle.penup()
-
-turtle.setpos(-140, 25)
-turtle.pendown()
-turtle.color('yellow')
-turtle.circle(80)
-turtle.penup()
-
-turtle.setpos(-5, 25)
-turtle.pendown()
-turtle.color('green')
-turtle.circle(80)
+# from turtle import *
+# colors = ('dodgerblue3', 'darkgoldenrod3', 'black', 'chartreuse4', 'firebrick')
+# pensize(20), penup(), goto(-300, 0)
+# for c in range(5):
+#     pencolor(colors[c])
+#     pendown()
+#     circle(100)
+#     next_x, next_y = xcor() + 120, ycor() - 100 * (-1)**(c % 2)
+#     if c:
+#         penup()
+#         goto(xcor() - 120, ycor() - 100 * (-1)**(c % 2))
+#         pencolor(colors[c - 1])
+#         for i in range(6):
+#             penup()
+#             if c % 2 == i % 2:
+#                 pendown()
+#             circle(100, 60)
+#     penup()
+#     goto(next_x, next_y)
+# done()
