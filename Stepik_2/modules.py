@@ -874,3 +874,66 @@ import turtle as t
 # y = turtle.ycor()
 # print(x)
 # print(y)
+
+# import turtle as t
+# t.hideturtle()
+# t.penup()
+# t.goto(-150, -60)
+# t.pendown()
+# t.forward(300)
+# t.goto(0, 150)
+# t.goto(-150, -60)
+#
+# t.penup()
+# t.goto(-150, 60)
+# t.pendown()
+# t.forward(300)
+# t.goto(0, -150)
+# t.goto(-150, 60)
+
+
+# import turtle
+# x = -100
+# y = -100
+# turtle.hideturtle()
+# for i in range(10):
+#     turtle.dot(10, 'red')
+#     turtle.pencolor('lightgreen')
+#     turtle.goto(x, y)
+#     turtle.dot(10, 'blue')
+#     x += 20
+#     turtle.goto(0, 0)
+
+
+import turtle
+
+turtle.pensize(10)
+turtle.penup()
+turtle.setpos(-200, 100)
+turtle.pendown()
+turtle.color('blue')
+turtle.circle(80)
+turtle.penup()
+
+turtle.setpos(-75, 100)
+turtle.pendown()
+turtle.color('black')
+turtle.circle(80)
+turtle.penup()
+
+turtle.setpos(60, 100)
+turtle.pendown()
+turtle.color('red')
+turtle.circle(80)
+turtle.penup()
+
+turtle.setpos(-140, 25)
+turtle.pendown()
+turtle.color('yellow')
+turtle.circle(80)
+turtle.penup()
+
+turtle.setpos(-5, 25)
+turtle.pendown()
+turtle.color('green')
+turtle.circle(80)
