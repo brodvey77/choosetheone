@@ -841,3 +841,16 @@ import turtle as t
 # q = int(input())
 # chaos(q)
 
+# import turtle as t
+# t.penup()
+# t.Screen().bgcolor('lightgreen')
+# t.shape('turtle')
+# for i in range(43):
+#   t.stamp()
+#   t.right(19)
+#   t.forward(5+i)
+
+
+
+
+
