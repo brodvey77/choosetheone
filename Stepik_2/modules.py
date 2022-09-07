@@ -958,3 +958,78 @@ import turtle as t
 #     penup()
 #     goto(next_x, next_y)
 # done()
+
+
+# import turtle
+# turtle.speed(8)
+# turtle.hideturtle()
+# turtle.penup()
+# turtle.goto(0, -200)
+# turtle.pendown()
+# x = 100
+# for i in range(2):
+#     turtle.circle(x)
+#     x -= 35
+# turtle.penup()
+# turtle.goto(0, -165)
+# turtle.pendown()
+# turtle.goto(0, -110)
+# turtle.circle(10)
+# turtle.penup()
+# turtle.goto(-50, -70)
+# turtle.pendown()
+# turtle.dot(20)
+# turtle.penup()
+# turtle.goto(50, -70)
+# turtle.pendown()
+# turtle.dot(20)
+# turtle.penup()
+# turtle.goto(50, -70)
+# turtle.pendown()
+# turtle.dot(20)
+#
+# turtle.penup()
+# turtle.goto(-94, -36)
+# turtle.pendown()
+# turtle.circle(35)
+# turtle.penup()
+# turtle.goto(94, -36)
+# turtle.pendown()
+# turtle.circle(35)
+
+# import turtle
+# import random
+#
+# turtle.Screen().setup(500, 500)
+# colors = ('blue', 'yellow', 'green', 'purple', 'orange', 'red')
+# turtle.pensize(3)
+# turtle.speed(0)
+#
+# # function draw of  the snowflake
+# def get_skelet_snowflake(size):
+#     turtle.color(random.choice(colors))
+#     for j in range(6):
+#         for i in range(3):
+#             turtle.forward(size / 4)
+#             turtle.right(360 / 6)
+#             turtle.forward(size / 4)
+#             turtle.backward(size / 4)
+#             turtle.left(360 / 3)
+#             turtle.forward(size / 4)
+#             turtle.backward(size / 4)
+#             turtle.right(360 / 6)
+#             if i == 2:
+#                 turtle.forward(size/4)
+#         turtle.backward(size)
+#         turtle.right(360/6)
+#     turtle.dot(10)
+#
+# # function of penup, pendown
+# def uppen():
+#     turtle.penup()
+#     turtle.goto(random.randint(-300, 300), random.randint(-300, 300))
+#     turtle.pendown()
+#     get_skelet_snowflake(random.randint(10, 70))
+#
+# for i in range(30):
+#     uppen()
