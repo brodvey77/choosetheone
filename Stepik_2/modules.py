@@ -1055,3 +1055,42 @@ import turtle as t
 #     turtle.forward(150)
 #     turtle.left(120)
 # turtle.end_fill()
+
+
+# import turtle
+#
+# turtle.fillcolor('black')
+# turtle.begin_fill()
+# for i in range(2):
+#     turtle.forward(70)
+#     turtle.left(90)
+#     turtle.forward(150)
+#     turtle.left(90)
+# turtle.end_fill()
+#
+# turtle.penup()
+# turtle.goto(35, 105)
+# turtle.pendown()
+#
+# turtle.fillcolor('red')
+# turtle.begin_fill()
+# turtle.circle(20)
+# turtle.end_fill()
+#
+# turtle.penup()
+# turtle.goto(35, 55)
+# turtle.pendown()
+#
+# turtle.fillcolor('yellow')
+# turtle.begin_fill()
+# turtle.circle(20)
+# turtle.end_fill()
+#
+# turtle.penup()
+# turtle.goto(35, 5)
+# turtle.pendown()
+#
+# turtle.fillcolor('green')
+# turtle.begin_fill()
+# turtle.circle(20)
+# turtle.end_fill()
