@@ -1094,3 +1094,79 @@ import turtle as t
 # turtle.begin_fill()
 # turtle.circle(20)
 # turtle.end_fill()
+
+# import turtle
+# turtle.hideturtle()
+# cor = []
+# # рисуем треугольник
+# turtle.pensize(3)
+# for i in range(3):
+#     turtle.forward(300)
+#     turtle.left(120)
+#
+# cir1 = turtle.Turtle()
+# cir1.hideturtle()
+# cir1.penup()
+# cir1.goto(-10, 100)
+# cir1.pendown()
+# cir1.fillcolor('black')
+# cir1.begin_fill()
+# cir1.circle(50)
+# cir1.end_fill()
+#
+# cir2 = turtle.Turtle()
+# cir2.hideturtle()
+# cir2.penup()
+# cir2.goto(300, 100)
+# cir2.pendown()
+# cir2.fillcolor('black')
+# cir2.begin_fill()
+# cir2.circle(50)
+# cir2.end_fill()
+#
+# cir3 = turtle.Turtle()
+# cir3.hideturtle()
+# cir3.penup()
+# cir3.goto(150, -155)
+# cir3.pendown()
+# cir3.fillcolor('black')
+# cir3.begin_fill()
+# cir3.circle(50)
+# cir3.end_fill()
+#
+# turtle.penup()
+# turtle.goto(0, 150)
+# turtle.pendown()
+#
+# # рисуем обратный треугольник белый
+# turtle.pencolor('white')
+# turtle.fillcolor('white')
+# turtle.begin_fill()
+# for i in range(3):
+#     turtle.forward(300)
+#     turtle.right(120)
+# turtle.end_fill()
+
+
+
+# import turtle
+# turtle.speed(5)
+#
+# for _ in range(3):
+#     turtle.forward(90)
+#     turtle.left(120)
+#
+# turtle.penup()
+# turtle.goto(0, 60)
+#
+# turtle.color('white')
+# turtle.fillcolor('white')
+# turtle.begin_fill()
+# for _ in range(3):
+#     turtle.forward(90)
+#     turtle.color('black')
+#     turtle.dot(30)
+#     turtle.color('white')
+#     turtle.right(120)
+#
+# turtle.end_fill()
