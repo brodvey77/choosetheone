@@ -1033,3 +1033,25 @@ import turtle as t
 #
 # for i in range(30):
 #     uppen()
+
+
+# import turtle
+# turtle.fillcolor('lightblue')
+# turtle.begin_fill()
+# for i in range(4):
+#     turtle.forward(100)
+#     turtle.left(90)
+#     x = turtle.pos()
+# turtle.end_fill()
+#
+#
+# turtle.penup()
+# turtle.goto(-25, 100)
+# turtle.pendown()
+#
+# turtle.fillcolor('brown')
+# turtle.begin_fill()
+# for i in range(3):
+#     turtle.forward(150)
+#     turtle.left(120)
+# turtle.end_fill()
