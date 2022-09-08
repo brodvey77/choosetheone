@@ -1171,20 +1171,67 @@ import turtle as t
 #
 # turtle.end_fill()
 
-import turtle
+# import turtle
+#
+# colors = ("#FF0000", "#FFA600", "#FFFF00", "#62FF00", "#89F590", "#69C5FF",
+#           "#1E56FC", "#4800FF", "#CC00FF", "#FF5099")
+#
+# y = 0
+# r = 100
+#
+# for i in range(10):
+#     turtle.fillcolor(colors[i])
+#     turtle.begin_fill()
+#     turtle.circle(r - (i * 10))
+#     y += 10
+#     turtle.penup()
+#     turtle.goto(0, y)
+#     turtle.pendown()
+#     turtle.end_fill()
 
-colors = ("#FF0000", "#FFA600", "#FFFF00", "#62FF00", "#89F590", "#69C5FF",
-          "#1E56FC", "#4800FF", "#CC00FF", "#FF5099")
+# import turtle
+# turtle.pencolor('darkblue')
+# turtle.Screen().bgcolor('darkblue')
+# turtle.fillcolor('orange')
+# turtle.begin_fill()
+# turtle.circle(100)
+# turtle.end_fill()
+# turtle.penup()
+# turtle.goto(40, 0)
+# turtle.pendown()
+#
+# turtle.fillcolor('darkblue')
+# turtle.begin_fill()
+# turtle.circle(100)
+# turtle.end_fill()
 
-y = 0
-r = 100
 
-for i in range(10):
-    turtle.circle(r - (i * 10))
-    y += 10
-    turtle.penup()
-    turtle.goto(0, y)
-    turtle.pendown()
+# from turtle import *
+# bgcolor('darkblue'), penup(), speed(0)  # Настройка основных значений
+# dot(200, 'orange'), forward(200)  # Рисование луны
+# shape('circle'), shapesize(10), color('darkblue')  # Настройка вида черепашки
+# while True:  # Цикл прохода черепашки справа налево
+#     for _ in range(400):
+#         backward(1)
+#     forward(400)
 
+# import turtle
+#
+# turtle.Screen().bgcolor('DarkBlue')
+# turtle.hideturtle()
+# turtle.pencolor('orange')
+# turtle.dot(200)
+#
+# while True:
+#     da = turtle.Turtle()
+#     da.hideturtle()
+#     da.pencolor('DarkBlue')
+#     for i in range(200, -201, -1):
+#          da.penup()
+#          da.goto(i, 0)
+#          da.dot(200)
+#          da.tracer(6, 0)
+#          da.clear()
+#          da.dot(200)
 
 
