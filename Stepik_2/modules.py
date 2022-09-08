@@ -1234,4 +1234,28 @@ import turtle as t
 #          da.clear()
 #          da.dot(200)
 
-
+# import turtle
+# import random as r
+# turtle.colormode(255)
+# turtle.speed(0)
+#
+# turtle.Screen().setup(640, 480)
+# turtle.bgcolor('black')
+#
+# def get_star(size):
+#     color = (r.randrange(250), r.randrange(250), r.randrange(250))
+#     turtle.pencolor(color)
+#     turtle.penup()
+#     turtle.goto(r.randrange(-320, 321), r.randrange(-240, 241))
+#     turtle.right(r.randrange(360))
+#     turtle.pendown()
+#     turtle.fillcolor(color)
+#     turtle.begin_fill()
+#     for i in range(5):
+#         turtle.forward(size)
+#         turtle.left(144)
+#     turtle.end_fill()
+#
+#
+# for i in range(50):
+#     get_star(r.randrange(5, 100))
