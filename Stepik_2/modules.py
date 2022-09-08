@@ -1170,3 +1170,21 @@ import turtle as t
 #     turtle.right(120)
 #
 # turtle.end_fill()
+
+import turtle
+
+colors = ("#FF0000", "#FFA600", "#FFFF00", "#62FF00", "#89F590", "#69C5FF",
+          "#1E56FC", "#4800FF", "#CC00FF", "#FF5099")
+
+y = 0
+r = 100
+
+for i in range(10):
+    turtle.circle(r - (i * 10))
+    y += 10
+    turtle.penup()
+    turtle.goto(0, y)
+    turtle.pendown()
+
+
+
