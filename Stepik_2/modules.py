@@ -1259,3 +1259,7 @@ import turtle as t
 #
 # for i in range(50):
 #     get_star(r.randrange(5, 100))
+
+import turtle
+
+turtle.circle(80, steps=5)
