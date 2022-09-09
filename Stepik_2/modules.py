@@ -1260,6 +1260,32 @@ import turtle as t
 # for i in range(50):
 #     get_star(r.randrange(5, 100))
 
-import turtle
+import turtle as t
+import random as r
+t.colormode(255)
+t.Screen().setup(500, 500)
+old_f = []
+colors = []
 
-turtle.circle(80, steps=5)
+x = -400
+y = -400
+rad = 100
+while len(old_f) != 5:
+    step = r.randrange(3, 8)
+    color = (r.randrange(250), r.randrange(250), r.randrange(250))
+    if step not in old_f:
+        if color not in colors:
+            t.fillcolor(color)
+            t.begin_fill()
+            old_f.append(step)
+            colors.append(color)
+            t.penup()
+            t.goto(x, y)
+            t.pendown()
+            t.circle(rad, steps=step)
+            x += rad * 2
+            t.end_fill()
+        else:
+            continue
+    else:
+        continue
