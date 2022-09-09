@@ -1260,32 +1260,118 @@ import turtle as t
 # for i in range(50):
 #     get_star(r.randrange(5, 100))
 
-import turtle as t
-import random as r
-t.colormode(255)
-t.Screen().setup(500, 500)
-old_f = []
-colors = []
+# import turtle as t
+# import random as r
+#
+# t.colormode(255)
+# t.Screen().setup(500, 500)
+# old_f = []
+# colors = []
+#
+# rad = 50
+# a = -200
+# b = -200
+# def func_of_line_figures(x, y):
+#     while len(old_f) != 5:
+#         step = r.randrange(3, 12)
+#         color = (r.randrange(250), r.randrange(250), r.randrange(250))
+#         if step not in old_f:
+#             if color not in colors:
+#                 t.fillcolor(color)
+#                 t.begin_fill()
+#                 old_f.append(step)
+#                 colors.append(color)
+#                 t.penup()
+#                 t.goto(x, y)
+#                 t.pendown()
+#                 t.circle(rad, steps=step)
+#                 x += rad * 2
+#                 t.end_fill()
+#             else:
+#                 continue
+#         else:
+#             continue
+#     old_f.clear()
+#     colors.clear()
+#
+# for i in range(5):
+#     func_of_line_figures(a, b)
+#     b += rad * 2
 
-x = -400
-y = -400
-rad = 100
-while len(old_f) != 5:
-    step = r.randrange(3, 8)
-    color = (r.randrange(250), r.randrange(250), r.randrange(250))
-    if step not in old_f:
-        if color not in colors:
-            t.fillcolor(color)
-            t.begin_fill()
-            old_f.append(step)
-            colors.append(color)
-            t.penup()
-            t.goto(x, y)
-            t.pendown()
-            t.circle(rad, steps=step)
-            x += rad * 2
-            t.end_fill()
-        else:
-            continue
-    else:
-        continue
+# import turtle
+# import random
+# import math
+#
+# a = 70  # высота фигуры
+# colors = ['yellow', 'lightblue', 'violet', 'orange', 'red', 'blue', 'green']  # список цветов
+#
+# turtle.Screen().setup(500, 500)  # устанавливаем размеры окна 500 на 500 пикселей
+# turtle.speed(0)  # устанавливаем скорость черепашки
+#
+# x0, y0 = -200, 200  # координаты центра первой фигуры
+# turtle.penup()  # поднимаем перо
+# for i in range(5):  # счётчик рядов
+#     random.shuffle(colors)  # перемешиваем цвета
+#     for j in range(5):  # счётчик столбцов
+#         n = random.randint(3, 7)  # количество сторон многоугольника
+#         fx, fy = x0 + 100 * j, y0 - 100 * i  # координаты центра текущей фигуры
+#         f = 360 / n  # угол поворота
+#         turtle.setposition(fx, fy)  # перемещаем черепашку в точку с координатами центра текущей фигуры
+#         turtle.fillcolor(colors[j])  # устанавливаем цвет заливки, не повторяющийся для фигур в одном ряду
+#
+#         # Для многоугольников с нечётным количеством сторон (3, 5, 7) начальной точкой является центр нижней границы
+#         # Для многоугольников с чётным количеством сторон (4, 6) - крайняя левая точка, лежащая на верхней границе
+#         # Все формулы можно найти в https://ru.wikipedia.org/wiki/Правильный_многоугольник
+#
+#         if n & 1:  # проверка на нечётность через битовое 'И'
+#             R = a / (math.cos(math.pi / n) + 1)  # радиус описанной окружности (r + R = a)
+#             fa = 2 * R * math.sin(math.pi / n)  # длина стороны фигуры
+#             tx, ty = fx, fy - a / 2  # начальные координаты черепашки
+#             turtle.setheading(180 - f / 2)  # устанавливаем начальный угол для рисования фигуры
+#         else:
+#             fa = 2 * (a / 2) * math.tan(math.pi / n)
+#             tx, ty = fx - fa / 2, fy + a / 2
+#             turtle.setheading(0)  # устанавливаем значение начального угла по умолчанию для рисования фигуры
+#
+#         turtle.setposition(tx, ty)
+#         turtle.pendown()
+#
+#         turtle.begin_fill()
+#         for k in range(n):  # cчётчик сторон
+#             turtle.forward(fa)
+#             turtle.right(f)
+#         turtle.end_fill()
+#         turtle.penup()
+#
+# turtle.hideturtle()
+
+# import turtle
+#
+# colors = {1: 'black', 2: 'white'}
+# a, b = 0, 0
+# rad = 50
+# turtle.pensize(5)
+# turtle.speed(0)
+# turtle.hideturtle()
+# turtle.pencolor('white')
+# def draw_square(x, y):
+#     for i in range(5):
+#         if i % 2 == 0:
+#             turtle.fillcolor(colors[1])
+#         else:
+#             turtle.fillcolor(colors[2])
+#         turtle.begin_fill()
+#         turtle.penup()
+#         turtle.goto(x, y)
+#         turtle.pendown()
+#         for i in range(4):
+#             turtle.forward(rad)
+#             turtle.left(90)
+#         turtle.end_fill()
+#         x += 50
+#
+# for i in range(5):
+#     draw_square(a, b)
+#     b += rad
+#     colors[1], colors[2] = colors[2], colors[1]
+
