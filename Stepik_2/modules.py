@@ -1375,3 +1375,39 @@ import turtle as t
 #     b += rad
 #     colors[1], colors[2] = colors[2], colors[1]
 
+
+# import turtle
+#
+# turtle.circle(50)
+# turtle.penup()
+# turtle.goto(0, 50)
+# turtle.pendown()
+# turtle.forward(150)
+# turtle.write('Восток', False, align='right')
+# turtle.backward(300)
+# turtle.write('Запад', False, align='left')
+# turtle.forward(150)
+# turtle.left(90)
+# turtle.forward(150)
+# turtle.write('Север', False, align='center')
+# turtle.backward(300)
+# turtle.write('Юг',  False, align='right')
+
+import turtle
+
+sun = turtle.Turtle()
+mercury = turtle.Turtle()
+venera = turtle.Turtle()
+earth = turtle.Turtle()
+mars = turtle.Turtle()
+jupiter = turtle.Turtle()
+saturn = turtle.Turtle()
+uran = turtle.Turtle()
+neptun = turtle.Turtle()
+pluton = turtle.Turtle()
+
+
+sun.fillcolor('yellow')
+sun.begin_fill()
+sun.circle(100)
+sun.end_fill()
