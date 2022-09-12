@@ -1395,6 +1395,8 @@ import turtle as t
 
 import turtle
 
+turtle.Screen().setup(1024, 768)
+
 sun = turtle.Turtle()
 mercury = turtle.Turtle()
 venera = turtle.Turtle()
@@ -1406,30 +1408,151 @@ uran = turtle.Turtle()
 neptun = turtle.Turtle()
 pluton = turtle.Turtle()
 
+planets = [sun, mercury, venera, earth, mars, jupiter, saturn, uran, neptun, pluton]
+
+for i in planets:
+    i.hideturtle()
+
+gal = 100
+
 sun.penup()
-sun.goto(-300, 0)
+sun.goto(-300, 20)
+sun.pendown()
 sun.fillcolor('yellow')
 sun.begin_fill()
 sun.circle(100)
 sun.end_fill()
+sun.penup()
+sun.goto(-300, 0)
+sun.pendown()
+sun.write('Солнце', align='center')
 
 mercury.penup()
-mercury.goto(-160, 0)
+mercury.goto(-160, gal - 15)
+mercury.pendown()
 mercury.fillcolor('brown')
 mercury.begin_fill()
 mercury.circle(30)
 mercury.end_fill()
+mercury.penup()
+mercury.goto(-160, gal -35)
+mercury.pendown()
+mercury.write('Муркурий', align='center')
 
 venera.penup()
-venera.goto(-80, 0)
+venera.goto(-80, gal - 17.5)
+venera.pendown()
 venera.fillcolor('brown')
 venera.begin_fill()
 venera.circle(35)
 venera.end_fill()
+venera.penup()
+venera.goto(-80, gal -37.5)
+venera.pendown()
+venera.write('Венера', align='center')
 
 earth.penup()
-earth.goto(-10, 0)
+earth.goto(-10, gal - 14)
+earth.pendown()
 earth.fillcolor('lightgreen')
 earth.begin_fill()
 earth.circle(28)
 earth.end_fill()
+earth.penup()
+earth.goto(-10, gal -34)
+earth.pendown()
+earth.write('Земля', align='center')
+
+
+mars.penup()
+mars.goto(46, gal - 12)
+mars.pendown()
+mars.fillcolor('red')
+mars.begin_fill()
+mars.circle(24)
+mars.end_fill()
+mars.penup()
+mars.goto(46, gal -32)
+mars.pendown()
+mars.write('Марс', align='center')
+
+jupiter.penup()
+jupiter.goto(140, gal - 27)
+jupiter.pendown()
+jupiter.fillcolor('chocolate')
+jupiter.begin_fill()
+jupiter.circle(54)
+jupiter.end_fill()
+jupiter.penup()
+jupiter.goto(140, gal -47)
+jupiter.pendown()
+jupiter.write('Юпитер', align='center')
+
+saturn.penup()
+saturn.goto(280, gal - 27)
+saturn.pendown()
+saturn.fillcolor('chocolate')
+saturn.begin_fill()
+saturn.circle(54)
+saturn.end_fill()
+saturn.penup()
+saturn.goto(280, gal -47)
+saturn.pendown()
+saturn.write('Сатурн', align='center')
+
+
+import math
+turtle.speed(10)
+turtle.hideturtle()
+turtle.penup()
+turtle.goto(280, 85)
+turtle.pendown()
+a = 70
+b = 40
+dx = turtle.xcor()
+dy = turtle.ycor()
+for deg in range(361):
+    rad = math.radians(deg)
+    x = a * math.sin(rad) + dx
+    y = -b * math.cos(rad) + b + dy
+    turtle.goto(x, y)
+
+
+uran.penup()
+uran.goto(380, gal - 15)
+uran.pendown()
+uran.fillcolor('cadetblue')
+uran.begin_fill()
+uran.circle(30)
+uran.end_fill()
+uran.penup()
+uran.goto(380, gal - 35)
+uran.pendown()
+uran.write('Уран', align='center')
+
+
+neptun.penup()
+neptun.goto(450, gal - 15)
+neptun.pendown()
+neptun.fillcolor('blue')
+neptun.begin_fill()
+neptun.circle(30)
+neptun.end_fill()
+neptun.penup()
+neptun.goto(450, gal - 35)
+neptun.pendown()
+neptun.write('Нептун', align='center')
+
+
+pluton.penup()
+pluton.goto(520, gal - 7.5)
+pluton.pendown()
+pluton.fillcolor('chocolate1')
+pluton.begin_fill()
+pluton.circle(15)
+pluton.end_fill()
+pluton.penup()
+pluton.goto(520, gal - 27.5)
+pluton.pendown()
+pluton.write('Плутон', align='center')
+
