@@ -17,6 +17,12 @@
 # print(func(10, 15, *[31, 42, 5, 1], *(17, 28, 19, 100), 13, 12))
 
 # def count_args(*args):
-#     return len(args)
+# #     return len(args)
+# #
+# # print(count_args([], (''), 'a', 12, False))
+
+import math
+# def sq_sum(*args):
+#     return sum([i**2 for i in args])
 #
-# print(count_args([], (''), 'a', 12, False))
+# print(sq_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
