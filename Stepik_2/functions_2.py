@@ -49,3 +49,17 @@ import math
 
 # def greet(name, *args):
 #     return f'Hello, {" and ".join((name,) + args)}!'
+
+
+# def print_products(*args):
+#     counter = 1
+#     l = [i for i in args if type(i) == str and len(i) > 1]
+#     if len(l) > 0:
+#         for j in l:
+#             print(f'{counter}) {j}')
+#             counter += 1
+#     else:
+#         print('Нет продуктов')
+#
+#
+# print_products([4], {}, 1, 2, {'Beegeek'}, '')
