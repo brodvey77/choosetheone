@@ -1741,26 +1741,37 @@ import turtle
 
 
 
-import turtle, random
+# import turtle, random
 
-turtle.speed(0)
-turtle.Screen().bgcolor('black')
-turtle.up()
-turtle.hideturtle()
-def star(x, y):
-    turtle.goto(x, y)
-    turtle.left(random.randint(0, 360))
-    s = random.choice(['red', 'blue', 'green', 'yellow', 'purple', 'white'])
-    turtle.fillcolor(s)
-    side = random.randint(10, 40)
-    turtle.begin_fill()
-    for _ in range(5):
-        turtle.forward(side)
-        turtle.right(144)
-    turtle.end_fill()
+# turtle.speed(0)
+# turtle.Screen().bgcolor('black')
+# turtle.up()
+# turtle.hideturtle()
+# def star(x, y):
+#     turtle.goto(x, y)
+#     turtle.left(random.randint(0, 360))
+#     s = random.choice(['red', 'blue', 'green', 'yellow', 'purple', 'white'])
+#     turtle.fillcolor(s)
+#     side = random.randint(10, 40)
+#     turtle.begin_fill()
+#     for _ in range(5):
+#         turtle.forward(side)
+#         turtle.right(144)
+#     turtle.end_fill()
 
-def mouse_click(x, y):
-    star(x, y)
+# def mouse_click(x, y):
+#     star(x, y)
 
-turtle.Screen().onclick(mouse_click)
-turtle.Screen().listen()
+# turtle.Screen().onclick(mouse_click)
+# turtle.Screen().listen()
+
+
+
+import turtle
+turtle.hideturtle
+turtle.fillcolor('red')
+turtle.begin_fill
+for i in range(5):
+    turtle.forward(200)
+    turtle.right(144)
+turtle.end_fill
