@@ -136,3 +136,19 @@ import math
 # i = int(input())
 # print(funcs[i](2))
 
+# from statistics import mean
+#
+# numbers = [(10, 10, 10), (30, 45, 56), (81, 39), (1, 2, 3), (12,), (-2, -4, 100), (1, 2, 99), (89, 9, 34),
+#            (10, 20, 30, -2), (50, 40, 50), (34, 78, 65), (-5, 90, -1, -5), (1, 2, 3, 4, 5, 6),
+#            (-9, 8, 4), (90, 1, -45, -21)]
+#
+# print(min(numbers, key=mean))
+# print(max(numbers, key=mean))
+
+
+numbers = [(10, 10, 10), (30, 45, 56), (81, 39), (1, 2, 3), (12,), (-2, -4, 100), (1, 2, 99), (89, 9, 34), (10, 20, 30, -2), (50, 40, 50), (34, 78, 65), (-5, 90, -1, -5), (1, 2, 3, 4, 5, 6), (-9, 8, 4), (90, 1, -45, -21)]
+def comporant(num):
+    return sum(num) / len(num)
+print(min(numbers, key=comporant))
+print(max(numbers, key=comporant))
+
