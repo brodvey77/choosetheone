@@ -1768,6 +1768,7 @@ import turtle
 
 
 import turtle
+turtle.speed(1)
 turtle.hideturtle
 turtle.fillcolor('red')
 turtle.begin_fill
