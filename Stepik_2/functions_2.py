@@ -171,16 +171,56 @@ import math
 # numbers.sort(key=sum_min_max)
 # print(numbers)
 
-athletes = [('Дима', 10, 130, 35), ('Тимур', 11, 135, 39), ('Руслан', 9, 140, 33), ('Рустам', 10, 128, 30),
-            ('Амир', 16, 170, 70), ('Рома', 16, 188, 100), ('Матвей', 17, 168, 68), ('Петя', 15, 190, 90)]
+# athletes = [('Дима', 10, 130, 35), ('Тимур', 11, 135, 39), ('Руслан', 9, 140, 33), ('Рустам', 10, 128, 30),
+#             ('Амир', 16, 170, 70), ('Рома', 16, 188, 100), ('Матвей', 17, 168, 68), ('Петя', 15, 190, 90)]
 
 
-def choice_number(col):
-    return col[n - 1]
+# def choice_number(col):
+#     return col[n - 1]
+#
+#
+# n = int(input())
+#
+# names = sorted(athletes, key=choice_number)
+# for i in names:
+#     print(*i)
+
+# import math
+# def matematika(f, n):
+#     return f(n)
+#
+# def sq(n):
+#     return n * n
+#
+#
+# def cube(n):
+#     return n ** 3
+#
+#
+# def root(n):
+#     return n ** 0.5
+#
+#
+# def module(n):
+#     return abs(n)
+#
+#
+# def sinus(n):
+#     return math.sin(n)
+#
+#
+# a = {'квадрат': sq, 'куб': cube, 'корень': root, 'модуль': module, 'синус': sinus}
+#
+# number = int(input())
+# function = input()
+#
+# print(matematika(a[function], number))
 
 
-n = int(input())
+# from math import sin
+#
+# def math_func(n, f):
+#     return {'квадрат': n**2, 'куб': n**3, 'корень': n**0.5, 'модуль': abs(n), 'синус': sin(n)}[f]
+#
+# print(math_func(int(input()), input()))  # число, команда
 
-names = sorted(athletes, key=choice_number)
-for i in names:
-    print(*i)
