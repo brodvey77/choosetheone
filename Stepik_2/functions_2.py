@@ -224,3 +224,34 @@ import math
 #
 # print(math_func(int(input()), input()))  # число, команда
 
+
+
+# l = input().split()
+
+# def sum_of_numbers(n):
+#     f = []
+#     for el in n:
+#         f1 =[]
+#         for d in el:
+#             f1.append(int(d))
+#         f.append(sum(f1))
+#     x = sum(f)
+#     return x
+
+
+# l.sort(key=sum_of_numbers)
+
+# print(*l)
+
+
+
+def comparator(n):
+    return sum([int(i) for i in str(n)])
+
+numbers = [int(i) for i in input().split()]
+
+print(*sorted(numbers, key=comparator))
+    
+
+
+        
