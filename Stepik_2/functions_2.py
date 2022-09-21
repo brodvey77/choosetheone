@@ -225,3 +225,45 @@ import math
 # print(math_func(int(input()), input()))  # число, команда
 
 
+
+# l = input().split()
+
+# def sum_of_numbers(n):
+#     f = []
+#     for el in n:
+#         f1 =[]
+#         for d in el:
+#             f1.append(int(d))
+#         f.append(sum(f1))
+#     x = sum(f)
+#     return x
+
+
+# l.sort(key=sum_of_numbers)
+
+# print(*l)
+
+
+
+# def comparator(n):
+#     return sum([int(i) for i in str(n)])
+#
+# numbers = sorted([int(i) for i in input().split()])
+#
+# print(*sorted(numbers, key=comparator))
+    
+
+def filter(function, items):
+    result = []
+    for item in items:
+        if function(item):
+            result.append(item)
+    return result
+
+def predicate(word):
+    return word == word[::-1]
+
+
+words = ['abba', 'qwerty', 'python', 'a', 'deed', 'nun', 'level', 'language', 'deified', 'bbbbb', 'mother', 'sister', 'surface', '1234321']
+filtered = filter(predicate, words)
+print(len(filtered))
