@@ -224,3 +224,4 @@ import math
 #
 # print(math_func(int(input()), input()))  # число, команда
 
+
