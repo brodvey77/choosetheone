@@ -420,3 +420,19 @@
 # print(func_apply(mul7, [1, 2, 3, 4, 5, 6]))
 # print(func_apply(add3, [1, 2, 3, 4, 5, 6]))
 # print(func_apply(str, [1, 2, 3, 4, 5, 6]))
+
+# list1 = list(map(len, ['this', 'is', 'a', 'test']))
+# list2 = [len(word) for word in ['this', 'is', 'a', 'test']]
+#
+# print(list1 == list2)
+
+
+def filter_vowels(letter):
+    return letter in 'aeiou'
+
+
+letters = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
+
+filtered_vowels = filter(filter_vowels, letters)
+
+print(*filtered_vowels)
