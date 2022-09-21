@@ -253,17 +253,46 @@ import math
 # print(*sorted(numbers, key=comparator))
     
 
-def filter(function, items):
-    result = []
-    for item in items:
-        if function(item):
-            result.append(item)
-    return result
+# def filter(function, items):
+#     result = []
+#     for item in items:
+#         if function(item):
+#             result.append(item)
+#     return result
+#
+# def predicate(word):
+#     return word == word[::-1]
+#
+#
+# words = ['abba', 'qwerty', 'python', 'a', 'deed', 'nun', 'level', 'language', 'deified', 'bbbbb', 'mother', 'sister', 'surface', '1234321']
+# filtered = filter(predicate, words)
+# print(len(filtered))
 
-def predicate(word):
-    return word == word[::-1]
+
+# def map(function, items):
+#     result = []
+#     for item in items:
+#         result.append(function(item))
+#     return result
+#
+# numbers = [-2, 45, 45, -7, -45, 37, -42, 27, -58, -58, -12, -27, -49, -27, -56, 4, -99, -11, 86]
+#
+# var1 = max(numbers, key=abs)
+# var2 = min(map(abs, numbers))
+#
+# print(var1 + var2)
+
+# def map(function, items):
+#     result = []
+#     for item in items:
+#         result.append(function(item))
+#     return result
+#
+# def round_(x):
+#     return round(x, 2)
+#
+# numbers = [3.56773, 5.57668, 4.00914, 56.24241, 9.01344, 32.12013, 23.22222, 90.09873, 45.45, 314.1528, 2.71828, 1.41546]
+#
+# print(*map(round_, numbers), sep='\n')
 
 
-words = ['abba', 'qwerty', 'python', 'a', 'deed', 'nun', 'level', 'language', 'deified', 'bbbbb', 'mother', 'sister', 'surface', '1234321']
-filtered = filter(predicate, words)
-print(len(filtered))
