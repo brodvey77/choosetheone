@@ -461,8 +461,25 @@
 # result = list(map(mul, ['a', 'b', 'c'], [1, 2, 3]))
 # print(result)
 
-from operator import add
-from functools import reduce
+# from operator import add
+# from functools import reduce
 
-result = reduce(add, [[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+# result = reduce(add, [[1, 2, 3], [4,  -, 6], [7, 8, 9]])
+# print(result)
+
+# funcs = [lambda x: x ** 0.5, lambda x: x ** 2, lambda x: x ** 3]
+# print(funcs[1](9))
+
+# from functools import reduce
+
+# numbers = range(10)
+# obj = map(lambda x: x + 1, numbers)
+# obj = list(filter(lambda x: x % 2 == 1, obj))
+# result = reduce(lambda x, y: x + y, obj, 0)
+
+# print(result)
+high_ord_func = lambda x, func: x + func(x)
+
+result = high_ord_func(2, lambda x: x * x) + high_ord_func(5, lambda x: x + 3)
+
 print(result)
