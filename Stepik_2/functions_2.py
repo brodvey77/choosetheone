@@ -478,8 +478,33 @@
 # result = reduce(lambda x, y: x + y, obj, 0)
 
 # print(result)
-high_ord_func = lambda x, func: x + func(x)
+# high_ord_func = lambda x, func: x + func(x)
 
-result = high_ord_func(2, lambda x: x * x) + high_ord_func(5, lambda x: x + 3)
+# result = high_ord_func(2, lambda x: x * x) + high_ord_func(5, lambda x: x + 3)
+# print(high_ord_func(5, lambda x: x + 3))
 
-print(result)
+# print(result)
+
+
+# dict1 = {'x': 1}
+# dict2 = {'y': 2}
+# dict3 = {'x': 3, 'y': 4}
+
+# result = list(filter(lambda d: 'x' in d.keys(), [dict1, dict2, dict3]))
+
+# print(result)
+
+from functools import reduce 
+
+floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59, 34.23, 12.12, 4.67, 2.45, 9.32]
+words = ['racecar', 'akinremi', 'deed', 'temidayo', 'omoseun', 'civic', 'TATTARRATTAT', 'malayalam', 'nun']
+numbers = [4, 6, 9, 23, 5]
+
+# Исправьте этот код
+map_result = list(map(lambda num: num, floats))
+filter_result = list(filter(lambda name: name, words))
+reduce_result = reduce(lambda num1, num2: num1 * num2, numbers, 1)
+
+print(map_result)
+print(filter_result)
+print(reduce_result)
