@@ -548,3 +548,21 @@
 
 # full_name = lambda first, last: f'Full name: {first.title()} {last.title()}'
 # print(full_name('ben', 'affleck'))
+
+# func = lambda x: x % 19 == 0 or x % 13 == 0
+#
+#
+# print(func(19))
+# print(func(13))
+# print(func(20))
+# print(func(15))
+# print(func(247))
+
+# func = lambda text: text[0].lower() == 'a' and text[-1].lower() == 'a'
+#
+# print(func('abcd'))
+# print(func('bcda'))
+# print(func('abcda'))
+# print(func('Abcd'))
+# print(func('bcdA'))
+# print(func('abcdA'))
