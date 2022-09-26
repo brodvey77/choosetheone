@@ -490,22 +490,61 @@
 
 # print(result)
 
-from functools import reduce 
+# from functools import reduce
+#
+# floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59, 34.23, 12.12, 4.67, 2.45, 9.32]
+# words = ['racecar', 'akinremi', 'deed', 'temidayo', 'omoseun', 'civic', 'TATTARRATTAT', 'malayalam', 'nun']
+# numbers = [4, 6, 9, 23, 5]
+#
+# # Исправьте этот код
+# map_result_1 = list(map(lambda num: num**2, floats))
+# map_result = list(map(lambda num: round(num, 1), map_result_1))
+#
+# filter_result_1 = list(filter(lambda name: len(name) > 4, words))
+# filter_result = list(filter(lambda name: name == name[::-1], filter_result_1))
+#
+# reduce_result = reduce(lambda num1, num2: num1 * num2, numbers, 1)
+#
+# print(map_result)
+# print(filter_result)
+# print(reduce_result)
 
-floats = [4.35, 6.09, 3.25, 9.77, 2.16, 8.88, 4.59, 34.23, 12.12, 4.67, 2.45, 9.32]
-words = ['racecar', 'akinremi', 'deed', 'temidayo', 'omoseun', 'civic', 'TATTARRATTAT', 'malayalam', 'nun']
-numbers = [4, 6, 9, 23, 5]
 
-# Исправьте этот код
-map_result_1 = list(map(lambda num: num**2, floats))
-map_result = list(map(lambda num: round(num, 1), map_result_1))
+# from functools import reduce
+#
+# data = [['Tokyo', 35676000, 'primary'],
+#         ['New York', 19354922, 'nan'],
+#         ['Mexico City', 19028000, 'primary'],
+#         ['Mumbai', 18978000, 'admin'],
+#         ['Sao Paulo', 18845000, 'admin'],
+#         ['Delhi', 15926000, 'admin'],
+#         ['Shanghai', 14987000, 'admin'],
+#         ['Kolkata', 14787000, 'admin'],
+#         ['Los Angeles', 12815475, 'nan'],
+#         ['Dhaka', 12797394, 'primary'],
+#         ['Buenos Aires', 12795000, 'primary'],
+#         ['Karachi', 12130000, 'admin'],
+#         ['Cairo', 11893000, 'primary'],
+#         ['Rio de Janeiro', 11748000, 'admin'],
+#         ['Osaka', 11294000, 'admin'],
+#         ['Beijing', 11106000, 'primary'],
+#         ['Manila', 11100000, 'primary'],
+#         ['Moscow', 10452000, 'primary'],
+#         ['Istanbul', 10061000, 'admin'],
+#         ['Paris', 9904000, 'primary']]
+#
+# final_list = list(map(lambda c: c[0], sorted(list(filter(lambda z: z[1] > 10000000 and z[2] == 'primary', data)))))
+#
+# print(reduce(lambda x, y: f'{x} {y},', final_list, 'Cities:').strip(','))
 
-filter_result_1 = list(filter(lambda name: len(name) > 4, words))
-filter_result = list(filter(lambda name: name == name[::-1], filter_result_1))
 
-reduce_result = reduce(lambda num1, num2: num1 * num2, numbers, 1)
+# numbers = [1, 2, 5, 3, 4]
+# numbers.sort(key=lambda x: -x)
+# print(numbers)
 
-print(map_result)
-print(filter_result)
-print(reduce_result)
+# primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+# result = list(filter(lambda x: True, primes))
+# print(result)
 
+# full_name = lambda first, last: f'Full name: {first.title()} {last.title()}'
+# print(full_name('ben', 'affleck'))
