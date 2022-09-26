@@ -427,12 +427,13 @@
 # print(list1 == list2)
 
 
-def filter_vowels(letter):
-    return letter in 'aeiou'
+# def filter_vowels(letter):
+#     return letter in 'aeiou'
+#
+#
+# letters = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
+#
+# filtered_vowels = filter(filter_vowels, letters)
+#
+# print(*filtered_vowels)
 
-
-letters = ['a', 'b', 'd', 'e', 'i', 'j', 'o']
-
-filtered_vowels = filter(filter_vowels, letters)
-
-print(*filtered_vowels)
