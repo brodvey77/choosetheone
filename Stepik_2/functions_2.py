@@ -656,3 +656,6 @@ from functools import reduce
 # print(*sorted(mixed_list, key=lambda x: (isinstance(x, str), x)))
 
 
+# a = list(map(lambda x: 255-int(x), input().split()))
+
+# print(*map(lambda x: 255-int(x), input().split()))
