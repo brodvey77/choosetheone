@@ -659,3 +659,18 @@ from functools import reduce
 # a = list(map(lambda x: 255-int(x), input().split()))
 
 # print(*map(lambda x: 255-int(x), input().split()))
+
+# def evaluate(coefficients, x):
+#     stepen = [int(i) for i in range(len(coefficients) - 1, -1, -1)]
+#     return sum(map(lambda n, k: int(n) * x ** k, coefficients, stepen))
+#
+#
+# print(evaluate(input().split(), int(input())))
+
+#
+# coof = [2, 4, 3]
+# koof = [2, 1, 0]
+# x = 10
+#
+# a = list(map(lambda n, k: n*10**k, coof, koof))
+# print(a)
