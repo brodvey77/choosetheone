@@ -674,3 +674,26 @@ from functools import reduce
 #
 # a = list(map(lambda n, k: n*10**k, coof, koof))
 # print(a)
+
+
+# def ignore_command(command):
+#     ignore = ['alias', 'configuration', 'ip', 'sql', 'select', 'update', 'exec', 'del', 'truncate']
+#     return any(map(lambda x: x in command, ignore))
+#
+#
+# print(ignore_command('get ip'))
+# print(ignore_command('select all'))
+# print(ignore_command('delete'))
+# print(ignore_command('trancate'))
+
+# <capital> is the capital of <country>, population equal <population> people.
+
+# countries = ['Russia', 'USA', 'UK', 'Germany', 'France', 'India']
+# capitals = ['Moscow', 'Washington', 'London', 'Berlin', 'Paris', 'Delhi']
+# population = [145_934_462, 331_002_651, 80_345_321, 67_886_011, 65_273_511, 1_380_004_385]
+#
+# for i in list(zip(countries, capitals, population)):
+#     print(f'{i[1]} is the capital of {i[0]}, population equal {i[2]} people.')
+
+# for country, capital, people in zip(countries, capitals, population):
+#     print(f'{capital} is the capital of {country}, population equal {people} people.')
