@@ -697,3 +697,13 @@ from functools import reduce
 
 # for country, capital, people in zip(countries, capitals, population):
 #     print(f'{capital} is the capital of {country}, population equal {people} people.')
+
+# abscissas = [float(i) for i in input().split()]
+# ordinates = [float(i) for i in input().split()]
+# applicates = [float(i) for i in input().split()]
+#
+# cor = zip(abscissas, ordinates, applicates)
+
+# print(all(map(lambda x, y, z: (x**2 + y**2 + z**2) <= 4, abscissas, ordinates, applicates)))
+# print(all(x**2 + y**2 + z**2 <= 4 for x, y, z in zip(abscissas, ordinates, applicates)))
+
