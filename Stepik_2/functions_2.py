@@ -720,7 +720,7 @@ from functools import reduce
 #         num_range.append(i)
 # f_list = []
 #
-# for i in l:
+# for i in num_range:
 #     if all(i % int(x) == 0 for x in str(i)):
 #         f_list.append(i)
 # print(*f_list)
@@ -732,3 +732,31 @@ from functools import reduce
 # a, b = int(input()), int(input())
 # seq = range(a, b + 1)
 # print(*list(filter(lambda x: check(x), seq)))
+
+#
+# text = input()
+#
+# a = any(map(lambda x: x.isdigit(), text))
+# b = any(map(lambda x: x.islower(), text))
+# c = any(map(lambda x: x.isupper(), text))
+#
+# if all([len(text) >= 7, a, b, c]):
+#     print('YES')
+# else:
+#     print('NO')
+#
+# s = input()
+# print(('YES', 'NO')[any([len(s) < 7, s.islower(), s.isupper(),s.isalpha(), s.isdigit()])])
+
+
+# if len(text) >= 7:
+#     pass
+# for i in text:
+#     if i.isdigit():
+#         pass
+# for i in text:
+#     if i.isupper():
+#         pass
+# for i in text:
+#     if i.islower():
+#         pass
