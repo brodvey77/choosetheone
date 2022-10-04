@@ -707,3 +707,7 @@ from functools import reduce
 # print(all(map(lambda x, y, z: (x**2 + y**2 + z**2) <= 4, abscissas, ordinates, applicates)))
 # print(all(x**2 + y**2 + z**2 <= 4 for x, y, z in zip(abscissas, ordinates, applicates)))
 
+# a = input().split('.')
+# result = all(map(lambda x: x.isdigit() and 255 >= int(x) >= 0, a))
+# print(result)
+# print(all(map(lambda n: n.isdigit() and 0 <= int(n) <= 255, input().split('.'))))
