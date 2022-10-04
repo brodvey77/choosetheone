@@ -711,3 +711,24 @@ from functools import reduce
 # result = all(map(lambda x: x.isdigit() and 255 >= int(x) >= 0, a))
 # print(result)
 # print(all(map(lambda n: n.isdigit() and 0 <= int(n) <= 255, input().split('.'))))
+
+
+# a, b = input(), input()
+# num_range = []
+# for i in range(int(a), int(b) + 1):
+#     if '0' not in str(i):
+#         num_range.append(i)
+# f_list = []
+#
+# for i in l:
+#     if all(i % int(x) == 0 for x in str(i)):
+#         f_list.append(i)
+# print(*f_list)
+
+
+# def check(num):
+#     return all(map(lambda x: int(x) and num % int(x) == 0, str(num)))
+#
+# a, b = int(input()), int(input())
+# seq = range(a, b + 1)
+# print(*list(filter(lambda x: check(x), seq)))
