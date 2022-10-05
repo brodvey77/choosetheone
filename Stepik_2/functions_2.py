@@ -748,15 +748,26 @@ from functools import reduce
 # s = input()
 # print(('YES', 'NO')[any([len(s) < 7, s.islower(), s.isupper(),s.isalpha(), s.isdigit()])])
 
+# n = int(input())
+# res = []
+# for _ in range(n):
+#     tmp = any([int(input()[-1]) == 5 for _ in range(int(input()))])
+#     res.append(tmp)
+#
+# if all(res):
+#     print('YES')
+# else:
+#     print('NO')
 
-# if len(text) >= 7:
-#     pass
-# for i in text:
-#     if i.isdigit():
-#         pass
-# for i in text:
-#     if i.isupper():
-#         pass
-# for i in text:
-#     if i.islower():
-#         pass
+# n = int(input())
+# students = []
+# for _ in range(n):
+#     m = int(input())
+#     temp = []
+#     for _ in range(m):
+#         surname, mark = input().split()
+#         temp.append((surname, int(mark)))
+#     students.append(temp)
+#
+# result = all(map(lambda x: any(map(lambda y: y[1] == 5, x)), students))
+# print('YES' if result else 'NO')
