@@ -50,5 +50,16 @@ films = {'Spider-Man: No Way Home': {'imdb': 8.8, 'kinopoisk': 8.3},
 # result = min(films, key=lambda x: sum(films[x].values()))
 # print(result)
 
+# def non_negative_even(numbers):
+#     return all(map(lambda x: x >= 0 and x % 2 == 0, numbers))
+#
+# print(non_negative_even([0, 2, 4, 8, 16]))
 
 
+# def is_greater(lists, number):
+#     return any(map(lambda x: sum(x) > number, lists))
+#
+#
+# data = [[0, 1, 2], [0, 3], [1, 1, 1], [3]]
+#
+# print(is_greater(data, 3))
