@@ -166,3 +166,27 @@
 #
 # print(d[f](n))
 
+# def comparator(n):
+#     return sum([int(i) for i in str(n)])
+#
+# numbers = [int(i) for i in input().split()]
+#
+# print(*sorted(numbers, key=comparator))
+
+
+# def comparator(n):
+#     return sum([int(i) for i in n])
+#
+# numbers = [i for i in input().split()]
+#
+# print(*sorted(numbers, key=comparator))
+
+
+#
+# def comparator(n):
+#     return sum([int(i) for i in str(n)])
+#
+# numbers = sorted([int(i) for i in input().split()])
+#
+# print(*sorted(numbers, key=comparator))
+
