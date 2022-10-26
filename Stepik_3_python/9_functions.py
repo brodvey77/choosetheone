@@ -63,3 +63,5 @@ films = {'Spider-Man: No Way Home': {'imdb': 8.8, 'kinopoisk': 8.3},
 # data = [[0, 1, 2], [0, 3], [1, 1, 1], [3]]
 #
 # print(is_greater(data, 3))
+
+
