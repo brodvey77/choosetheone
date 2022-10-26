@@ -86,6 +86,83 @@
 #
 # info_kwargs(first_name='Timur', last_name='Guev', age=28, job='teacher')
 
+# def start():
+#     # тело функции start
+#
+#
+# def stop():
+#     # тело функции stop
+#
+#
+# def pause():
+#     # тело функции pause
+#
+#
+# commands = {'start': start, 'stop': stop, 'pause': pause}  # словарь соответствия команда → функция
+#
+# command = input()        # считываем название команды
+#
+# commands[command]()      # вызываем нужную функцию через словарь по ключу
+
+# numbers = [(10, 10, 10), (30, 45, 56), (81, 39), (1, 2, 3), (12,), (-2, -4, 100), (1, 2, 99), (89, 9, 34),
+#            (10, 20, 30, -2), (50, 40, 50), (34, 78, 65), (-5, 90, -1, -5), (1, 2, 3, 4, 5, 6), (-9, 8, 4),
+#            (90, 1, -45, -21)]
+#
+# def comparator(num):
+#     return sum(num)/len(num)
+#
+# print(min(numbers, key=comparator))
+# print(max(numbers, key=comparator))
+
+# from statistics import mean
+# numbers = [(10, 10, 10), (30, 45, 56), (81, 39), (1, 2, 3), (12,), (-2, -4, 100), (1, 2, 99), (89, 9, 34), (10, 20, 30, -2), (50, 40, 50), (34, 78, 65), (-5, 90, -1, -5), (1, 2, 3, 4, 5, 6), (-9, 8, 4), (90, 1, -45, -21)]
+#
+# print(min(numbers, key=mean))
+# print(max(numbers, key=mean))
+
+#
+# points = [(-1, 1), (5, 6), (12, 0), (4, 3), (0, 1), (-3, 2), (0, 0), (-1, 3), (2, 0), (3, 0), (-9, 1), (3, 6), (8, 8)]
+#
+#
+# def comparator(num):
+#     return (num[0] ** 2 + num[1] ** 2) ** 0.5
 
 
+# points.sort(key=comparator)
+
+# print(sorted(points, key=comparator))
+
+
+
+# numbers = [(10, 10, 10), (30, 45, 56), (81, 80, 39), (1, 2, 3), (12, 45, 67), (-2, -4, 100), (1, 2, 99),
+#            (89, 90, 34), (10, 20, 30), (50, 40, 50), (34, 78, 65), (-5, 90, -1)]
+#
+# def comparator(num):
+#     return max(num) + min(num)
+#
+# print(sorted(numbers, key=comparator))
+
+
+# athletes = [('Дима', 10, 130, 35), ('Тимур', 11, 135, 39), ('Руслан', 9, 140, 33), ('Рустам', 10, 128, 30),
+#             ('Амир', 16, 170, 70), ('Рома', 16, 188, 100), ('Матвей', 17, 168, 68), ('Петя', 15, 190, 90)]
+#
+# def comparator(data):
+#     return data[n-1]
+#
+#
+# n = int(input())
+# athletes.sort(key=comparator)
+# for i in athletes:
+#     print(*i)
+
+
+
+# from math import sin
+# n = int(input())
+# f = input()
+#
+# d = {'квадрат': lambda x: x**2, 'куб': lambda x: x**3, 'корень': lambda x: x**0.5, 'модуль': lambda x: abs(x),
+#      'синус': lambda x: sin(x)}
+#
+# print(d[f](n))
 
