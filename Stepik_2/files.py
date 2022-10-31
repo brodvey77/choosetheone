@@ -65,3 +65,16 @@
 # import random
 # content = open('lines.txt', 'r', encoding='utf-8')
 # print(random.choice(content.readlines()))
+
+from functools import reduce
+# text = open('numbers.txt', 'r', encoding='utf-8')
+# a = 0
+# for line in text:
+#     a += int(line.rstrip())
+# print(a)
+
+# file = open('numbers.txt')
+#
+# print(sum(map(int, file)))
+#
+# file.close()
