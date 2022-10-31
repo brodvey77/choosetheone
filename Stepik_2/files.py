@@ -56,8 +56,12 @@
 #
 # file.close()
 
+# import random
+# file = open('lines.txt', 'r', encoding='utf-8')
+# d = file.readlines()
+# print(d[random.choice(range(0, len(d)))])
+# file.close()
 
-a = input()
-file = open(a, 'r')
-print(file.readlines()[-2])
-file.close()
+# import random
+# content = open('lines.txt', 'r', encoding='utf-8')
+# print(random.choice(content.readlines()))
