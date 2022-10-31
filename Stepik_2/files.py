@@ -96,5 +96,26 @@ from functools import reduce
 #
 # file.close()
 
+# file = open('prices.txt', encoding='utf-8')
+# line = file.readline()
+# x = 0
+# while line != '':
+#     z = line.strip().split()
+#     x += int(z[1]) * int(z[2])
+#     line = file.readline()
+# print(x)
+# file.close()
+
+# file = open('prices.txt')
+# lines = map(str.split, file)
+# print(sum(map(lambda line: int(line[1]) * int(line[2]), lines)))
+# file.close()
+
+
+# with open('languages.txt', 'r', encoding='utf-8') as file:
+#     for line in file:
+#         print(line)
+#                           # автоматическое закрытие файла
+# print('Файл закрыт')
 
 
