@@ -73,8 +73,28 @@ from functools import reduce
 #     a += int(line.rstrip())
 # print(a)
 
-# file = open('numbers.txt')
+# file = open('nums.txt')
 #
 # print(sum(map(int, file)))
 #
 # file.close()
+
+# text = open('nums.txt', 'r', encoding='utf-8').readlines()
+# a = 0
+#
+# for line in text:
+#     if line.strip().isdigit():
+#         a += int(line.strip())
+#
+# print(a)
+#
+# text.close()
+
+# file = open('nums.txt')
+#
+# print(sum(map(int, file.read().split())))
+#
+# file.close()
+
+
+
