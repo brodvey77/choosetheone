@@ -66,7 +66,7 @@
 # content = open('lines.txt', 'r', encoding='utf-8')
 # print(random.choice(content.readlines()))
 
-from functools import reduce
+
 # text = open('numbers.txt', 'r', encoding='utf-8')
 # a = 0
 # for line in text:
@@ -134,6 +134,13 @@ from functools import reduce
 #     for line in l[::-1]:
 #         print(line.strip())
 
-with open('test.txt', encoding='utf-8') as file:
-    for line in file:
-        print(line)
+# with open('lines.txt', encoding='utf-8') as file:
+#     l = list(map(lambda x: x.strip(), file.readlines()))
+#     maximuim = len(max(l, key=len))
+#     for line in l:
+#         if len(line) == maximuim:
+#             print(line)
+
+
+
+
