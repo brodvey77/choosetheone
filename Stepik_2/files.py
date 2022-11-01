@@ -125,5 +125,15 @@ from functools import reduce
 #         print(line.strip() + '!')
 
 
-with open('text.txt', encoding='utf-8') as file:
-    print(file.read()[::-1])
+# with open('text.txt', encoding='utf-8') as file:
+#     print(file.read()[::-1])
+
+
+# with open('data.txt', encoding='utf-8') as file:
+#     l = file.readlines()
+#     for line in l[::-1]:
+#         print(line.strip())
+
+with open('test.txt', encoding='utf-8') as file:
+    for line in file:
+        print(line)
