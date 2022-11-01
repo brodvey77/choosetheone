@@ -154,3 +154,31 @@
 # with open('numbers.txt') as f:
 #     for line in f:
 #         print(sum(map(int, line.split())))
+
+
+# with open('nums.txt', encoding='utf-8') as file:
+#     l = []
+#     for line in file.read():
+#         if line.isdigit():
+#             l.append(line)
+#         else:
+#             l.append(line.replace(line, ' '))
+#     s = ''.join(l)
+#     print(sum(map(int, s.split())))
+
+
+# with open('nums.txt') as file:
+#     number = '0'
+#     total = 0
+#     for char in file.read():
+#         if char.isdigit():
+#             number += char
+#         else:
+#             total += int(number)
+#             number = '0'
+#     print(total)
+
+
+
+
+
