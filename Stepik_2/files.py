@@ -142,5 +142,15 @@
 #             print(line)
 
 
+# with open('numbers.txt') as file:
+#     line = file.readline().split()
+#     while line != []:
+#         print(sum(map(int, line)))
+#         line = file.readline().split()
 
 
+
+
+# with open('numbers.txt') as f:
+#     for line in f:
+#         print(sum(map(int, line.split())))
