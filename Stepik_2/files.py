@@ -209,10 +209,23 @@
 
 
 
+# with open('population.txt', encoding='utf-8') as file:
+#     l = []
+#     line = file.readline().split()
+#     while line != []:
+#         l.append(line)
+#         line = file.readline().split()
+#
+#
+#     for i in list(filter(lambda x: x[0][0] == 'G' and int(x[-1]) > 500000, l)):
+#         print(i[0])
 
 
-
-
+# with open('population.txt') as f:
+#     for line in f:
+#         n, p = line.split('\t')
+#         if n.startswith('G') and int(p) > 500000:
+#             print(n)
 
 
 
