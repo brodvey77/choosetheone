@@ -228,6 +228,11 @@
 #             print(n)
 
 
-
-
+# def read_csv(data):
+#     import csv
+#     with open(data, newline='') as csvfile:
+#         reader = list(csv.DictReader(csvfile))
+#         return reader
+#
+# print(read_csv('data.csv'))
 
