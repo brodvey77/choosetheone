@@ -199,7 +199,13 @@
 #                 c_digits += 1
 #     print(f'Input file contains:\n{c_digits} letters\n{c_words} words\n{c_lines} lines ')
 
-
+# import random
+# with open('first_names.txt', encoding='utf-8') as first, open('last_names.txt', encoding='utf-8') as last:
+#     a = first.read().strip().split()
+#     b = last.read().strip().split()
+#
+#     for i in range(3):
+#         print(f'{random.choice(a)} {random.choice(b)}')
 
 
 
