@@ -236,3 +236,6 @@
 #
 # print(read_csv('data.csv'))
 
+
+# with open('data.csv') as file:
+#     name_table = file.readline()
