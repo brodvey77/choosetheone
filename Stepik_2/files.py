@@ -179,6 +179,30 @@
 #     print(total)
 
 
+# Input file contains:
+# 108 letters
+# 20 words
+# 4 lines
+
+
+# with open('file.txt', encoding='utf-8') as file:
+#     l = file.read().split()
+#     c_words = len(l)
+#     file.seek(0)
+#     c_lines = 0
+#     for i in file:
+#         c_lines += 1
+#     c_digits = 0
+#     for i in l:
+#         for j in i:
+#             if j.isalpha():
+#                 c_digits += 1
+#     print(f'Input file contains:\n{c_digits} letters\n{c_words} words\n{c_lines} lines ')
+
+
+
+
+
 
 
 
