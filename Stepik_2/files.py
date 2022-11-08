@@ -261,3 +261,17 @@
 # s = input()
 # with open('test.txt', 'w', encoding='utf-8') as file:
 #     file.write(s)
+
+
+# with open('test.txt', 'w', encoding='utf-8') as output:
+#     import random
+#     for i in range(25):
+#         print(random.randrange(111, 778), file=output)
+
+
+# with open('test.txt', 'w', encoding='utf-8') as file:
+#     import random
+#     for i in range(25):
+#         file.write(str(random.randrange(111, 778)) + '\n')
+
+
