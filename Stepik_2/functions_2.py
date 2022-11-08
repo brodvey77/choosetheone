@@ -771,3 +771,11 @@ from functools import reduce
 #
 # result = all(map(lambda x: any(map(lambda y: y[1] == 5, x)), students))
 # print('YES' if result else 'NO')
+
+# Гематрия слова
+# def gem(word):
+#     return sum(map(lambda c: ord(c.upper()) - ord('A'), word)), word
+#
+# words = [input() for _ in range(int(input()))]
+#
+# print(*sorted(words, key=gem), sep='\n')
