@@ -254,6 +254,10 @@
 #     print('stepik', 'beegeek', 'iq-option', sep='*', end='+\n', file=output)
 #     print('python', file=output)
 
-with open('test.txt', 'w', encoding='utf-8') as file:
-    file.writelines(['Добро пожаловать в Beegeek!\n', 'Наши курсы самые лучшие! '])
-    file.write('Позвоните нам: (916) 928-92xx')
+# with open('test.txt', 'w', encoding='utf-8') as file:
+#     file.writelines(['Добро пожаловать в Beegeek!\n', 'Наши курсы самые лучшие! '])
+#     file.write('Позвоните нам: (916) 928-92xx')
+
+# s = input()
+# with open('test.txt', 'w', encoding='utf-8') as file:
+#     file.write(s)
