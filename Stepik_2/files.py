@@ -239,3 +239,21 @@
 
 # with open('data.csv') as file:
 #     name_table = file.readline()
+
+
+# with open('test.txt', 'a') as file:
+#     file.write('\n')
+#     file.write('Michael\n')
+#     file.write('Alexander')
+
+# with open('test.txt', 'r+') as file:
+#     file.write('Mick Jagger\n')
+#     file.write('Ace Canon\n')
+
+# with open('test.txt', 'w') as output:
+#     print('stepik', 'beegeek', 'iq-option', sep='*', end='+\n', file=output)
+#     print('python', file=output)
+
+with open('test.txt', 'w', encoding='utf-8') as file:
+    file.writelines(['Добро пожаловать в Beegeek!\n', 'Наши курсы самые лучшие! '])
+    file.write('Позвоните нам: (916) 928-92xx')
