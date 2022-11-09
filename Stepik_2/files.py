@@ -304,3 +304,14 @@
 #             score = 100
 #         print(name, score, file=new_scores)
 
+# , open('answer.txt', 'w', encoding='utf-8') as new_data
+
+with open('test.txt', encoding='utf-8') as data:
+    colors = []
+    line = data.readline()
+    while line != 'GOATS\n':
+        colors.append(line)
+        line = data.readline()
+    colors.remove('COLOURS\n')
+    goats = data.readlines()
+    pcs = len(goats)
