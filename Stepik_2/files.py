@@ -285,3 +285,22 @@
 # with open('input.txt') as inp, open('output.txt', 'w') as out:
 #     for i, j in enumerate(inp, start=1):
 #         print(f'{i}) {j}', end='', file=out)
+
+# with open('test.txt', encoding='utf-8') as data, open('new_scores.txt', 'w', encoding='utf-8') as output:
+#     line = data.readline().split()
+#     while line != []:
+#         x = int(line[1]) + 5
+#         if x > 100:
+#             x = 100
+#         print(f'{line[0]} {x}', file=output)
+#         line = data.readline().split()
+#
+#
+# with open('class_scores.txt') as class_scores, open('new_scores.txt', 'w') as new_scores:
+#     for line in class_scores:
+#         name, score = line.split()
+#         score = int(score) + 5
+#         if score > 100:
+#             score = 100
+#         print(name, score, file=new_scores)
+
