@@ -304,14 +304,29 @@
 #             score = 100
 #         print(name, score, file=new_scores)
 
-# , open('answer.txt', 'w', encoding='utf-8') as new_data
+#
 
-with open('test.txt', encoding='utf-8') as data:
-    colors = []
-    line = data.readline()
-    while line != 'GOATS\n':
-        colors.append(line)
-        line = data.readline()
-    colors.remove('COLOURS\n')
-    goats = data.readlines()
-    pcs = len(goats)
+# with open('goats.txt', encoding='utf-8') as data, open('answer.txt', 'w', encoding='utf-8') as new_data:
+#     colors = []
+#     line = data.readline()
+#     while line != 'GOATS\n':
+#         colors.append(line)
+#         line = data.readline()
+#     colors.remove('COLOURS\n')
+#     colors = list(map(lambda x: x.replace('\n', ''), colors))
+#     goats = list(map(lambda x: x.replace('\n', ''), data.readlines()))
+#     pcs = len(goats)
+#
+#     d = {}
+#     for i in goats:
+#         d[i] = d.get(i, 0) + 1
+#
+#     for k, v in sorted(d.items()):
+#         if v > pcs*0.07:
+#             print(k, end='\n', file=new_data)
+#
+
+# with open('goats.txt') as f1, open('answer.txt', 'w') as f2:
+#     cont = f1.read().split('\n')
+#     colors, goats = cont[1:cont.index('GOATS')], cont[cont.index('GOATS')+1:]
+#     print(*sorted(filter(lambda x: goats.count(x) / len(goats) > 0.07, colors)), sep='\n', file=f2)
