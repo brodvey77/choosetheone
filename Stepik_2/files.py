@@ -275,3 +275,13 @@
 #         file.write(str(random.randrange(111, 778)) + '\n')
 
 
+# with open('input.txt', 'r', encoding='utf-8') as file1:
+#     l = file1.readlines()
+#     with open('output.txt', 'w', encoding='utf-8') as file2:
+#         for num, line in enumerate(l, start=1):
+#             file2.write(str(num) + ')' + ' ' + line)
+
+
+# with open('input.txt') as inp, open('output.txt', 'w') as out:
+#     for i, j in enumerate(inp, start=1):
+#         print(f'{i}) {j}', end='', file=out)
