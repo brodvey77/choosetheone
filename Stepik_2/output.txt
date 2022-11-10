@@ -1,1 +1,274 @@
-['COLOURS\nPink goat\nGreen goat\nBlack goat\nGOATS\nPink goat\nPink goat\nBlack goat\nPink goat\nPink goat\nBlack goat\nGreen goat\nPink goat\nBlack goat\nBlack goat\nPink goat\nPink goat\nBlack goat\nBlack goat\nPink goat', 'Read secret_message.txt and print out the first letter of each line.', 'телефон\t4\t12500\nбургер\t1\t500\nкурс\t1\t1400\nподписка\t40\t9500\nнаушники\t2\t22450\nтелефон\t2\t2500\nноутбук\t5\t155000\nдиван\t100\t300\n', 'China\t1368050000\nIndia\t1266480000\nUnited States\t320341000\nIndonesia\t255461700\nBrazil\t203841000\nPakistan\t188894000\nNigeria\t183523000\nBangladesh\t157784000\nRussia\t146270033\nJapan\t127020000\nMexico\t121005815\nPhilippines\t100959800\nVietnam\t90730000\nEthiopia\t90076012\nEgypt\t87965900\nGermany\t80767000\nIran\t78096500\nTurkey\t77695904\nDemocratic Republic of the Congo\t71246000\nFrance\t66092000\nThailand\t64871000\nUnited Kingdom\t64105654\nItaly\t60782897\nSouth Africa\t54002000\nBurma\t51419420\nSouth Korea\t50423955\nColombia\t47984800\nTanzania\t47421786\nKenya\t46749000\nSpain\t46464053\nArgentina\t43131966\nUkraine\t42953889\nAlgeria\t39500000\nPoland\t38496000\nSudan\t38435252\nIraq\t36004552\nCanada\t35675834\nUganda\t34856813\nMorocco\t33516100\nSaudi Arabia\t31521418\nPeru\t31151643\nVenezuela\t30620404\nUzbekistan\t30492800\nMalaysia\t30483800\nNepal\t28037904\nGhana\t27043093\nAfghanistan\t26556800\nYemen\t25956000\nMozambique\t25727911\nNorth Korea\t25155000\nAngola\t24383301\nAustralia\t23735500\nTaiwan\t23433753\nIvory Coast\t22671331\nSyria\t22265000\nMadagascar\t21842167\nCameroon\t21143237\nSri Lanka\t20359439\nRomania\t19942642\nNiger\t19268000\nChile\t18006407\nKazakhstan\t17397200\nBurkina Faso\t17322796\nNetherlands\t16888500\nMalawi\t16310431\nMali\t16259000\nEcuador\t15925700\nGuatemala\t15806675\nZambia\t15473905\nCambodia\t15405157\nChad\t13606000\nSenegal\t13508715\nZimbabwe\t13061239\nSouth Sudan\t11892934\nBolivia\t11410651\nBelgium\t11233192\nCuba\t11210064\nSomalia\t11123000\nRwanda\t10996891\nGreece\t10992589\nTunisia\t10982754\nHaiti\t10911819\nGuinea\t10628972\nCzech Republic\t10521600\nPortugal\t10477800\nDominican Republic\t10378267\nBenin\t10315244\nHungary\t9879000\nBurundi\t9823827\nSweden\t9743087\nAzerbaijan\t9583200\nUnited Arab Emirates\t9577000\nBelarus\t9481000\nHonduras\t8725111\nAustria\t8572895\nIsrael\t8296000\nSwitzerland\t8211700\nTajikistan\t8161000\nPapua New Guinea\t7398500\nBulgaria\t7245677\nHong Kong (China)\t7234800\nTogo\t7171000\nSerbia\t7146759\nParaguay\t6893727\nLaos\t6802000\nEritrea\t6738000\nJordan\t6687470\nEl Salvador\t6401240\nSierra Leone\t6319000\nLibya\t6317000\nNicaragua\t6134270\nTurkmenistan\t5888000\nKyrgyzstan\t5874100\nDenmark\t5655750\nFinland\t5475526\nSingapore\t5469700\nSlovakia\t5421034\nNorway\t5156450\nCentral African Republic\t4803000\nCosta Rica\t4773130\nRepublic of the Congo\t4671000\nIreland\t4609600\nNew Zealand\t4559890\nPalestine\t4550368\nLiberia\t4503000\nGeorgia\t4490500\nCroatia\t4267558\nLebanon\t4104000\nOman\t4099904\nBosnia and Herzegovina\t3791622\nPanama\t3713312\nMoldova\t3557600\nPuerto Rico (U.S.)\t3548397\nMauritania\t3545620\nUruguay\t3404189\nKuwait\t3268431\nArmenia\t3013900\nMongolia\t3000000\nLithuania\t2921920\nAlbania\t2895947\nJamaica\t2717991\nQatar\t2235431\nLesotho\t2120000\nNamibia\t2113077\nMacedonia\t2065769\nSlovenia\t2065549\nBotswana\t2024904\nLatvia\t1988400\nThe Gambia\t1882450\nKosovo\t1816891\nGuinea-Bissau\t1788000\nGabon\t1751000\nEquatorial Guinea\t1430000\nTrinidad and Tobago\t1328019\nBahrain\t1316500\nEstonia\t1312252\nMauritius\t1261208\nEast Timor\t1212107\nSwaziland\t1106189\nDjibouti\t900000\nFiji\t859178\nCyprus\t858000\nReunion (France)\t840974\nComoros\t763952\nBhutan\t756940\nGuyana\t746900\nMacau (China)\t631000\nMontenegro\t620029\nWestern Sahara\t604000\nSolomon Islands\t581344\nLuxembourg\t549700\nSuriname\t534189\nCape Verde\t518467\nTransnistria\t505153\nMalta\t416055\nGuadeloupe (France)\t405739\nBrunei\t393372\nMartinique (France)\t386486\nThe Bahamas\t368390\nBelize\t349728\nMaldives\t341256\nIceland\t328170\nNorthern Cyprus\t294906\nBarbados\t285000\nNew Caledonia (France)\t268767\nFrench Polynesia (France)\t268270\nVanuatu\t264652\nAbkhazia\t240705\nFrench Guiana (France)\t239648\nMayotte (France)\t212645\nSamoa\t187820\nSao Tome and Principe\t187356\nSaint Lucia\t185000\nGuam (U.S.)\t159358\nCuracao (Netherlands)\t154843\nSaint Vincent and the Grenadines\t109000\nAruba (Netherlands)\t107394\nKiribati\t106461\nUnited States Virgin Islands (U.S.)\t106405\nGrenada\t103328\nTonga\t103252\nFederated States of Micronesia\t101351\nJersey (UK)\t99000\nSeychelles\t89949\nAntigua and Barbuda\t86295\nIsle of Man (UK)\t84497\nAndorra\t76949\nDominica\t71293\nBermuda (UK)\t64237\nGuernsey (UK)\t63085\nGreenland (Denmark)\t56295\nMarshall Islands\t56086\nCayman Islands (UK)\t55691\nAmerican Samoa (U.S.)\t55519\nSaint Kitts and Nevis\t55000\nNorthern Mariana Islands (U.S.)\t53883\nSouth Ossetia[24]\t51547\nFaroe Islands (Denmark)\t48605\nSint Maarten (Netherlands)\t37429\nLiechtenstein\t37132\nMonaco\t36950\nCollectivity of Saint Martin (France)\t35742\nSan Marino\t32777\nTurks and Caicos Islands (UK)\t31458\nGibraltar (UK)\t30001\nAland Islands (Finland)\t28875\nBritish Virgin Islands (UK)\t28054\nCaribbean Netherlands (Netherlands)\t23296\nPalau\t20901\nCook Islands (New Zealand)\t14974\nAnguilla (UK)\t13452\nWallis and Futuna (France)\t13135\nTuvalu\t11323\nNauru\t10084\nSaint Barthelemy (France)\t9131\nSaint Pierre and Miquelon (France)\t6069\nMontserrat (UK)\t4922\nSaint Helena, Ascension and Tristan da Cunha (UK)\t4000\nFalkland Islands (UK)\t3000\nSvalbard and Jan Mayen (Norway)\t2562\nNorfolk Island (Australia)\t2302\nChristmas Island (Australia)\t2072\nNiue (New Zealand)\t1613\nTokelau (NZ)\t1411\nVatican City\t839\nCocos (Keeling) Islands (Australia)\t550\nPitcairn Islands (UK)\t56\n']
+COLOURS
+Pink goat
+Green goat
+Black goat
+GOATS
+Pink goat
+Pink goat
+Black goat
+Pink goat
+Pink goat
+Black goat
+Green goat
+Pink goat
+Black goat
+Black goat
+Pink goat
+Pink goat
+Black goat
+Black goat
+Pink goatRead secret_message.txt and print out the first letter of each line.телефон	4	12500
+бургер	1	500
+курс	1	1400
+подписка	40	9500
+наушники	2	22450
+телефон	2	2500
+ноутбук	5	155000
+диван	100	300
+China	1368050000
+India	1266480000
+United States	320341000
+Indonesia	255461700
+Brazil	203841000
+Pakistan	188894000
+Nigeria	183523000
+Bangladesh	157784000
+Russia	146270033
+Japan	127020000
+Mexico	121005815
+Philippines	100959800
+Vietnam	90730000
+Ethiopia	90076012
+Egypt	87965900
+Germany	80767000
+Iran	78096500
+Turkey	77695904
+Democratic Republic of the Congo	71246000
+France	66092000
+Thailand	64871000
+United Kingdom	64105654
+Italy	60782897
+South Africa	54002000
+Burma	51419420
+South Korea	50423955
+Colombia	47984800
+Tanzania	47421786
+Kenya	46749000
+Spain	46464053
+Argentina	43131966
+Ukraine	42953889
+Algeria	39500000
+Poland	38496000
+Sudan	38435252
+Iraq	36004552
+Canada	35675834
+Uganda	34856813
+Morocco	33516100
+Saudi Arabia	31521418
+Peru	31151643
+Venezuela	30620404
+Uzbekistan	30492800
+Malaysia	30483800
+Nepal	28037904
+Ghana	27043093
+Afghanistan	26556800
+Yemen	25956000
+Mozambique	25727911
+North Korea	25155000
+Angola	24383301
+Australia	23735500
+Taiwan	23433753
+Ivory Coast	22671331
+Syria	22265000
+Madagascar	21842167
+Cameroon	21143237
+Sri Lanka	20359439
+Romania	19942642
+Niger	19268000
+Chile	18006407
+Kazakhstan	17397200
+Burkina Faso	17322796
+Netherlands	16888500
+Malawi	16310431
+Mali	16259000
+Ecuador	15925700
+Guatemala	15806675
+Zambia	15473905
+Cambodia	15405157
+Chad	13606000
+Senegal	13508715
+Zimbabwe	13061239
+South Sudan	11892934
+Bolivia	11410651
+Belgium	11233192
+Cuba	11210064
+Somalia	11123000
+Rwanda	10996891
+Greece	10992589
+Tunisia	10982754
+Haiti	10911819
+Guinea	10628972
+Czech Republic	10521600
+Portugal	10477800
+Dominican Republic	10378267
+Benin	10315244
+Hungary	9879000
+Burundi	9823827
+Sweden	9743087
+Azerbaijan	9583200
+United Arab Emirates	9577000
+Belarus	9481000
+Honduras	8725111
+Austria	8572895
+Israel	8296000
+Switzerland	8211700
+Tajikistan	8161000
+Papua New Guinea	7398500
+Bulgaria	7245677
+Hong Kong (China)	7234800
+Togo	7171000
+Serbia	7146759
+Paraguay	6893727
+Laos	6802000
+Eritrea	6738000
+Jordan	6687470
+El Salvador	6401240
+Sierra Leone	6319000
+Libya	6317000
+Nicaragua	6134270
+Turkmenistan	5888000
+Kyrgyzstan	5874100
+Denmark	5655750
+Finland	5475526
+Singapore	5469700
+Slovakia	5421034
+Norway	5156450
+Central African Republic	4803000
+Costa Rica	4773130
+Republic of the Congo	4671000
+Ireland	4609600
+New Zealand	4559890
+Palestine	4550368
+Liberia	4503000
+Georgia	4490500
+Croatia	4267558
+Lebanon	4104000
+Oman	4099904
+Bosnia and Herzegovina	3791622
+Panama	3713312
+Moldova	3557600
+Puerto Rico (U.S.)	3548397
+Mauritania	3545620
+Uruguay	3404189
+Kuwait	3268431
+Armenia	3013900
+Mongolia	3000000
+Lithuania	2921920
+Albania	2895947
+Jamaica	2717991
+Qatar	2235431
+Lesotho	2120000
+Namibia	2113077
+Macedonia	2065769
+Slovenia	2065549
+Botswana	2024904
+Latvia	1988400
+The Gambia	1882450
+Kosovo	1816891
+Guinea-Bissau	1788000
+Gabon	1751000
+Equatorial Guinea	1430000
+Trinidad and Tobago	1328019
+Bahrain	1316500
+Estonia	1312252
+Mauritius	1261208
+East Timor	1212107
+Swaziland	1106189
+Djibouti	900000
+Fiji	859178
+Cyprus	858000
+Reunion (France)	840974
+Comoros	763952
+Bhutan	756940
+Guyana	746900
+Macau (China)	631000
+Montenegro	620029
+Western Sahara	604000
+Solomon Islands	581344
+Luxembourg	549700
+Suriname	534189
+Cape Verde	518467
+Transnistria	505153
+Malta	416055
+Guadeloupe (France)	405739
+Brunei	393372
+Martinique (France)	386486
+The Bahamas	368390
+Belize	349728
+Maldives	341256
+Iceland	328170
+Northern Cyprus	294906
+Barbados	285000
+New Caledonia (France)	268767
+French Polynesia (France)	268270
+Vanuatu	264652
+Abkhazia	240705
+French Guiana (France)	239648
+Mayotte (France)	212645
+Samoa	187820
+Sao Tome and Principe	187356
+Saint Lucia	185000
+Guam (U.S.)	159358
+Curacao (Netherlands)	154843
+Saint Vincent and the Grenadines	109000
+Aruba (Netherlands)	107394
+Kiribati	106461
+United States Virgin Islands (U.S.)	106405
+Grenada	103328
+Tonga	103252
+Federated States of Micronesia	101351
+Jersey (UK)	99000
+Seychelles	89949
+Antigua and Barbuda	86295
+Isle of Man (UK)	84497
+Andorra	76949
+Dominica	71293
+Bermuda (UK)	64237
+Guernsey (UK)	63085
+Greenland (Denmark)	56295
+Marshall Islands	56086
+Cayman Islands (UK)	55691
+American Samoa (U.S.)	55519
+Saint Kitts and Nevis	55000
+Northern Mariana Islands (U.S.)	53883
+South Ossetia[24]	51547
+Faroe Islands (Denmark)	48605
+Sint Maarten (Netherlands)	37429
+Liechtenstein	37132
+Monaco	36950
+Collectivity of Saint Martin (France)	35742
+San Marino	32777
+Turks and Caicos Islands (UK)	31458
+Gibraltar (UK)	30001
+Aland Islands (Finland)	28875
+British Virgin Islands (UK)	28054
+Caribbean Netherlands (Netherlands)	23296
+Palau	20901
+Cook Islands (New Zealand)	14974
+Anguilla (UK)	13452
+Wallis and Futuna (France)	13135
+Tuvalu	11323
+Nauru	10084
+Saint Barthelemy (France)	9131
+Saint Pierre and Miquelon (France)	6069
+Montserrat (UK)	4922
+Saint Helena, Ascension and Tristan da Cunha (UK)	4000
+Falkland Islands (UK)	3000
+Svalbard and Jan Mayen (Norway)	2562
+Norfolk Island (Australia)	2302
+Christmas Island (Australia)	2072
+Niue (New Zealand)	1613
+Tokelau (NZ)	1411
+Vatican City	839
+Cocos (Keeling) Islands (Australia)	550
+Pitcairn Islands (UK)	56

@@ -332,12 +332,19 @@
 #     print(*sorted(filter(lambda x: goats.count(x) / len(goats) > 0.07, colors)), sep='\n', file=f2)
 
 
-n = 4
-l = ['test.txt', 'text.txt', 'prices.txt', 'population.txt']
-s = []
-for i in l:
-    with open(i, encoding='utf-8') as file:
-        s.append(file.read())
-with open('output.txt', 'w', encoding='utf-8') as output:
-    print(s, file=output)
+# n = 4
+# l = ['test.txt', 'text.txt', 'prices.txt', 'population.txt']
+# s = []
+# for i in l:
+#     with open(i, encoding='utf-8') as file:
+#         s.append(file.read())
+#
+#
+# with open('output.txt', 'w', encoding='utf-8') as output:
+#     output.writelines(s)
 
+
+# with open('output.txt', 'w') as out:
+#     for i in range(int(input())):
+#         with open(input()) as f:
+#             out.write(f.read())
