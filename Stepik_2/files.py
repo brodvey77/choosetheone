@@ -343,6 +343,17 @@
 # with open('output.txt', 'w', encoding='utf-8') as output:
 #     output.writelines(s)
 
+# def minutes(x):
+#     res=[int(i) for i in x.split(':')]
+#     return res[0]*60+res[1]
+#
+# with open('logfile.txt', encoding='utf-8') as file, open('output.txt', 'w', encoding='utf-8') as output:
+#     log = file.readline().split(',')
+#     while log != ['']:
+#         if minutes(log[2]) - minutes(log[1]) >= 60:
+#             print(log[0], file=output)
+#         log = file.readline().split(',')
+
 
 
 
@@ -350,3 +361,10 @@
 #     for i in range(int(input())):
 #         with open(input()) as f:
 #             out.write(f.read())
+
+
+# with open('logfile.txt',encoding='utf-8') as fr, open('output.txt','a',encoding='utf-8') as fw:
+#     for line in fr:
+#          name, st, en = line.split(', ')
+#          if int(en.replace(':','')) - int(st.replace(':','')) >= 100:
+#             print(name,file = fw)
