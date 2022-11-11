@@ -7,4 +7,8 @@
 # for i in pattern1.findall(text):
 #     print(i)
 #
-
+# s = 'Beegek beegeek BEEGEEK bEeGeEk beegeek'
+#
+# regex = r'beegeek'
+#
+# print(regex)
