@@ -12,3 +12,8 @@
 # regex = r'beegeek'
 #
 # print(regex)
+# import re
+# s = 'car cat cab'
+# pattern1 = re.compile('car|cat|cab')
+# for i in pattern1.findall(s):
+#     print(i)
