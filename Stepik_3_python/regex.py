@@ -55,8 +55,8 @@
 # \b - граница слова
 
 
-import re
-s = 'a4:44, ba:oa, 13-33, 18:57, 181:57, 18:571'
-pattern1 = re.compile('[0-1]\d:[0-5]\d|2[0-3]:[0-5]\d')
-for i in pattern1.findall(s):
-    print(i)
+# import re
+# s = 'a4:44, ba:oa, 13-33, 18:57, 181:57, 18:571'
+# pattern1 = re.compile('[0-1]\d:[0-5]\d|2[0-3]:[0-5]\d')
+# for i in pattern1.findall(s):
+#     print(i)
