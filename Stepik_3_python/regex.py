@@ -175,3 +175,19 @@
 # for line in sys.stdin:
 #     match = fullmatch('_\d+[a-zA-Z]*_?', line.strip('\n'))
 #     print(bool(match))
+
+
+# import sys
+# from re import search
+# c1 = 00
+# c2 = 0
+
+# for line in sys.stdin:
+#     match_1 = search(r'.*bee.*bee.*', line.strip('\n'))
+#     if match_1:
+#         c1 += 1
+#     match_2 = search(r'\bgeek\b', line.strip('\n'))
+#     if match_2:
+#         c2 += 1
+# print(c1, c2, sep='\n')
+    
