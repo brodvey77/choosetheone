@@ -176,6 +176,24 @@
 #     match = fullmatch('_\d+[a-zA-Z]*_?', line.strip('\n'))
 #     print(bool(match))
 
+# import sys
+# from re import fullmatch
+#
+# for line in sys.stdin:
+#     match = fullmatch(r'(\w+)\1', line.strip('\n'))
+#     if match:
+#         print(match.group())
+#     else:
+#         continue
+#
+# import sys
+# from re import search
+#
+# for line in sys.stdin:
+#     print(line)
+#     match = search(r'\b(geek)\b', line)
+#     print(match)
+
 
 # import sys
 # from re import search
@@ -190,4 +208,32 @@
 #     if match_2:
 #         c2 += 1
 # print(c1, c2, sep='\n')
-    
+
+# import sys
+# from re import fullmatch, search
+#
+# counter = 0
+#
+# for line in sys.stdin:
+#     match1 = fullmatch(r"^(beegeek).*\1$", line.strip('\n'))
+#     match2 = search(r"^(beegeek).+[^k]$|^[^b].+(beegeek)$", line.strip('\n'))
+#     match3 = search(r"^[^b].+beegeek.", line.strip('\n'))
+#     match5 = fullmatch(r"^beegeek$", line.strip('\n'))
+#     if match1:
+#         counter += 3
+#     if match2:
+#         counter += 2
+#     if match3:
+#         counter += 1
+#     if match5:
+#         counter += 2
+#     print(counter)
+#
+# print(counter)
+#
+# patterns = [
+#     r"^beegeek.*beegeek$",
+#     r"^beegeek.*|.*beegeek$",
+#     r".*beegeek.*"
+# ]
+
