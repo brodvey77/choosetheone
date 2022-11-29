@@ -237,3 +237,10 @@
 #     r".*beegeek.*"
 # ]
 
+import sys
+import re
+
+kind_words = ['^Здравствуйте.*', '^Доброе утро.*', '^Добрый день.*', '^Добрый вечер.*']
+
+for line in sys.stdin:
+    match = re.search('^Здравствуйте.*', line)
