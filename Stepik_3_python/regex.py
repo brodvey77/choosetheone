@@ -237,10 +237,39 @@
 #     r".*beegeek.*"
 # ]
 
-import sys
-import re
 
-kind_words = ['^Здравствуйте.*', '^Доброе утро.*', '^Добрый день.*', '^Добрый вечер.*']
 
-for line in sys.stdin:
-    match = re.search('^Здравствуйте.*', line)
+# from re import fullmatch, IGNORECASE
+#
+# match1 = fullmatch('beegeek', 'BeeGeek', flags=IGNORECASE)
+#
+# print(match1.group() if match1 else None)
+
+# from re import fullmatch, DOTALL
+#
+# match1 = fullmatch('.+', 'beegeek\npython\nstepik', flags=DOTALL)
+#
+# print(match1.group() if match1 else None)
+
+# from re import search, MULTILINE, IGNORECASE
+#
+# text = '''Flat is better than nested.
+# Now is better than never.
+# Readability counts.'''
+#
+# match1 = search('^read', text, flags=MULTILINE | IGNORECASE)
+#
+# print(match1.group() if match1 else None)
+
+#
+# from re import escape
+#
+# print(escape(r'\\'))
+# print(escape('\\'))
+# import sys
+# import re
+#
+# kind_words = ['^Здравствуйте.*', '^Доброе утро.*', '^Добрый день.*', '^Добрый вечер.*']
+#
+# for line in sys.stdin:
+#     match = re.search('^Здравствуйте.*', line)
