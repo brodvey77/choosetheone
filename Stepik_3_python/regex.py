@@ -349,4 +349,15 @@
 # result2 = re.findall(r'.*\.\.\.$|.*!$', article, re.I|re.M)
 # print(len(result1), len(result2), sep='\n')
 
+import re
+text = input()
+podtext = f'\B{input()}\B'
+
+result = re.finditer(podtext, text)
+
+print(len(list(result)))
+
+
+
+
 
