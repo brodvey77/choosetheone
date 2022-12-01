@@ -393,3 +393,17 @@
 #
 # result = re.findall(word, text)
 # print(len(result))
+
+# import re
+# def abbreviate(phrase):
+#     abv = re.findall(r'\b\w|[A-Z]', str(phrase))
+#     return ''.join(abv).upper()
+#
+# text = input()
+# print(abbreviate(re.findall(r'\'([A-Za-z\s]+)\'', text)))
+#
+#
+# import re
+#
+# def abbreviate(phrase):
+#     return ''.join(re.findall(r'[A-Z]|\b\w',phrase)).upper()
