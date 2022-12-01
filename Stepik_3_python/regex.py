@@ -370,6 +370,26 @@
 # s, word = input(), input()
 # print(len(re.findall(r'\b'+word+r'\b', s)))
 
+# import re
+#
+# word = input()
+# word = rf'\b+{word[:-2]}+[zs]+e'
+# text = input()
+#
+# print(word[:-2])
+# result = re.findall(word, text)
+#
+# print(len(result))
 
+# gthese
+# gthsese Gthese gthese ggthese ggtheze gtheze
 
-
+#
+# import re
+#
+# word = input()
+# word = rf'\b{word[:-2]}u?r\b'
+# text = input()
+#
+# result = re.findall(word, text)
+# print(len(result))
