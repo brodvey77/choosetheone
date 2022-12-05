@@ -407,3 +407,35 @@
 #
 # def abbreviate(phrase):
 #     return ''.join(re.findall(r'[A-Z]|\b\w',phrase)).upper()
+
+
+# import re
+# import sys
+#
+# for text in sys.stdin:
+#     l1 = []
+#     l2 = []
+#     a = re.findall(r'<a>?(.+)</a>', text)
+#     for i in a:
+#         link1 = re.findall(r'\"(.+)\"', i)
+#         l1.append(*link1)
+#
+#     for i in a:
+#         link2 = re.findall(r'>(.+)$', i)
+#         l2.append(*link2)
+#
+#     result = [f'{i}, {j}' for i, j in zip(l1, l2)]
+#
+#     for i in result:
+#         print(i)
+#
+
+
+# import sys
+# import re
+#
+# text = sys.stdin.read()
+# pattern = r'<a href="(.+)">(.+)</a>'
+#
+# for address, pointer in re.findall(pattern, text):
+#     print(f'{address}, {pointer}')
