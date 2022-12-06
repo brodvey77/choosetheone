@@ -371,3 +371,134 @@
 
 
 
+# text = 'file_0.txt'
+#
+# with open(text, encoding='utf-8')  as file:
+#     line = file.readlines()
+#     print(len(line))
+
+# counter = 0
+# with open('data.txt', encoding='utf-8') as file:
+#     text = file.readlines()
+#     for i in text:
+#         counter += int(i.strip('$\n'))
+#     print(f'${counter}')
+
+
+# with open('data.txt', encoding='utf-8') as file:
+#     counter = 0
+#     text = file.readlines()
+#     for word in text:
+#         if int(word.split()[1]) >= 65 and int(word.split()[2]) >= 65 and int(word.split()[3]) >= 65:
+#             counter+=1
+#         else:
+#             continue
+# print(counter)
+#
+# with open('grades.txt') as f:
+#     n = 0
+#
+#     for line in f:
+#         n += 1 if all(int(x) >= 65 for x in line.strip().split()[1:]) else 0
+#
+#     print(n)
+
+# with open('data.txt', encoding='utf-8') as file:
+#     d = {}
+#     for i in file.read().split():
+#         d[i] = len(i)
+#     maximum = max(d.values())
+#     print(filter(d, maximum))
+
+# with open('data.txt', encoding='utf-8') as file:
+#     l = file.read().split()
+#     maximuim = len(max(l, key=len))
+#     for line in l:
+#         if len(line) == maximuim:
+#             print(line)
+
+# with open('data.txt', encoding='utf-8') as file:
+#     text = file.readlines()
+#     if len(text) >= 10:
+#         for i in range(len(text)-10, len(text)):
+#             print(text[i].strip('\n'))
+#     else:
+#         for i in text:
+#             print(i.strip())
+#
+# with open(input()) as file:
+#     print(*file.readlines()[-10:], sep='')
+
+
+# my_dict = {
+#     'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e',
+#     'ё': 'jo', 'ж': 'zh', 'з': 'z', 'и': 'i', 'й': 'j', 'к': 'k',
+#     'л': 'l', 'м': 'm', 'н': 'n', 'о': 'o', 'п': 'p', 'р': 'r',
+#     'с': 's', 'т': 't', 'у': 'u', 'ф': 'f', 'х': 'h', 'ц': 'c',
+#     'ч': 'ch', 'ш': 'sh', 'щ': 'shh', 'ъ': '*', 'ы': 'y', 'ь': '\'',
+#     'э': 'je', 'ю': 'ju', 'я': 'ya',
+#
+#     'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D', 'Е': 'E',
+#     'Ё': 'Jo', 'Ж': 'Zh', 'З': 'Z', 'И': 'I', 'Й': 'J', 'К': 'K',
+#     'Л': 'L', 'М': 'M', 'Н': 'N', 'О': 'O', 'П': 'P', 'Р': 'R',
+#     'С': 'S', 'Т': 'T', 'У': 'U', 'Ф': 'F', 'Х': 'H', 'Ц': 'C',
+#     'Ч': 'Ch', 'Ш': 'Sh', 'Щ': 'Shh', 'Ъ': '*', 'Ы': 'y', 'Ь': '\'',
+#     'Э': 'Je', 'Ю': 'Ju', 'Я': 'Ya'
+# }
+#
+# with open('data.txt', 'r', encoding='utf-8') as file, open('cyrillic.txt', 'w', encoding='utf-8') as output:
+#     text = file.read()
+#     for i in text:
+#         if i in my_dict:
+#             text = text.replace(i, my_dict[i])
+#     print(text, file=output)
+
+# import re
+# with open('data.txt', 'r', encoding='utf-8') as file:
+#     text = file.read()
+#     match_1 = re.findall(r'# .+\ndef (\w+_?\w+)\(+', text)
+#     match_all = re.findall(r'def (\w+_?\w+)\(+', text)
+#     if len(match_1) == len(match_all):
+#         print('Best Programming Team')
+#     else:
+#         for i in match_all:
+#             if i not in match_1:
+#                 print(i)
+#
+# with open(input(), encoding='utf-8') as inf:
+# 	not_commented_funcs, preline = [], ''
+# 	for line in inf:
+# 		if not preline.startswith('#') and line.startswith('def '):
+# 			not_commented_funcs.append(line[4:line.find('(')])
+# 		preline = line
+# 	print('\n'.join(not_commented_funcs) if not_commented_funcs else 'Best Programming Team')
+
+
+# import re
+#
+# with open('forbidden_words.txt', encoding='utf-8') as fw:
+#     forbidden_words = fw.read().split(' ')
+#
+# with open(input(), encoding='utf-8') as rw:
+#     my_string = rw.read()
+#
+#
+# def change(forbidden_words, text):
+#     out = text
+#     for w in forbidden_words:
+#         out = re.sub(w, "*" * len(w), out, flags=re.I | re.M)
+#     return out
+#
+#
+# print(change(forbidden_words, my_string))
+
+
+# with open("forbidden_words.txt", encoding="utf-8") as file, open(input()) as infile:
+#     text = infile.read()
+#     for f in file.read().strip("\n").split():
+#         pos = text.lower().find(f)
+#         while pos > -1:
+#             text = text[:pos] + "*" * len(f) + text[pos+len(f):]
+#             pos = text.lower().find(f)
+# print(text)
+
