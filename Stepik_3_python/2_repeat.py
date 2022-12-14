@@ -27,12 +27,31 @@
 
 
 
-def print_given(*args, **kwargs):
-    for i in args:
-        print(i, type(i))
-    for k,v in sorted(kwargs.items()):
-        print(k, v, type(v))
+# def print_given(*args, **kwargs):
+#     for i in args:
+#         print(i, type(i))
+#     for k,v in sorted(kwargs.items()):
+#         print(k, v, type(v))
 
-print_given()
+# print_given()
+
+def convert(string):
+    c1 = 0
+    c2 = 0
+    for i in string:
+        if i in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+            c1 += 1
+        if i in 'abcdefghijklmnopqrstuvwxyz':
+            c2 += 1
+    if c2 > c1:
+        return string.lower()
+    if c1 > c2:
+        return string.upper()
+    else:
+        return string.lower()
 
 
+
+print(convert('BEEgeek'))
+print(convert('pyTHON'))
+print(convert('pi31415!'))
