@@ -70,15 +70,44 @@
 
 
 
-def filter_anagrams(word,words):
-    fl = []
-    for i in words:
-        if sorted(list(i)) == sorted(list(word)):
-            fl.append(i)
-    return(fl)
+# def filter_anagrams(word,words):
+#     fl = []
+#     for i in words:
+#         if sorted(list(i)) == sorted(list(word)):
+#             fl.append(i)
+#     return(fl)
+
+
+# def filter_anagrams(word, anagrams):
+#     return(list(filter(lambda x: sorted(x) == sorted(word), anagrams))) 
+
+
+# print(filter_anagrams('отсечка', ['сеточка', 'стоечка', 'тесачок', 'чесотка']))
+
+
+
+def likes(names):
+    if len(names) == 0:
+        return 'Никто не оценил данную запись'
+    if len(names) == 1:
+        return names[0] + ' оценил(а) данную запись'
+    if len(names) == 2:
+        return names[0]+ ', ' + names[1] + ' оценили данную запись'
+    if len(names) == 3:
+        return names[0]+ ', ' + names[1]+ ' и ' + names[2] + ' оценили данную запись'
+    if len(names) > 3:
+        c = len(names) - 2
+        return f'{names[0]}, {names[1]} и {c} других оценили данную запись'
+
+        
 
 
 
 
-
-print(filter_anagrams('отсечка', ['сеточка', 'стоечка', 'тесачок', 'чесотка']))
+print(likes([]))
+print(likes(['Тимур']))
+print(likes(['Тимур', 'Артур']))
+print(likes(['Тимур', 'Артур', 'Руслан']))
+print(likes(['Тимур', 'Артур', 'Руслан', 'Анри']))
+print(likes(['Тимур', 'Артур', 'Руслан', 'Анри', 'Дима']))
+print(likes(['Тимур', 'Артур', 'Руслан', 'Анри', 'Дима', 'Рома', 'Гвидо', 'Марк']))
