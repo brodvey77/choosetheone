@@ -14,14 +14,25 @@
 
 
 
-def same_parity(numbers):
-    if numbers == []:
-        new_numbers = []
-    if numbers[0] % 2 == 0:
-        new_numbers = filter(lambda x: x % 2 == 0, numbers)
-    else:
-        new_numbers = filter(lambda x: x % 2 != 0, numbers)
-    return list(new_numbers)
+# def same_parity(numbers):
+#     if numbers == []:
+#         new_numbers = []
+#     if numbers[0] % 2 == 0:
+#         new_numbers = filter(lambda x: x % 2 == 0, numbers)
+#     else:
+#         new_numbers = filter(lambda x: x % 2 != 0, numbers)
+#     return list(new_numbers)
 
-print(same_parity([6, 0, 67, -7, 10, -20]))
+# print(same_parity([6, 0, 67, -7, 10, -20]))
+
+
+
+def print_given(*args, **kwargs):
+    for i in args:
+        print(i, type(i))
+    for k,v in sorted(kwargs.items()):
+        print(k, v, type(v))
+
+print_given()
+
 
