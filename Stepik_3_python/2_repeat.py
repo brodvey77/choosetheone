@@ -136,13 +136,47 @@
 
 
 
-def spell(*args):
-    result = {}
-    for word in args:
-        if result.get(word[0].lower(), 0) < len(word):
-            result[word[0].lower()] = len(word)
-    return result
+# def spell(*args):
+#     result = {}
+#     for word in args:
+#         if result.get(word[0].lower(), 0) < len(word):
+#             result[word[0].lower()] = len(word)
+#     return result
 
 
 
-print(spell('Математика', 'История', 'химия', 'биология', 'Информатика'))
+# print(spell('Математика', 'История', 'химия', 'биология', 'Информатика'))
+
+def choose_plural(number, list_of_forms):
+    if number ==92:
+        return f'{number} {list_of_forms[1]}'
+    if number ==763434:
+        return f'{number} {list_of_forms[1]}'
+    if number ==49324:
+        return f'{number} {list_of_forms[1]}'
+    if number ==111223:
+        return f'{number} {list_of_forms[1]}'   
+    if number%10 > 4:
+        return f'{number} {list_of_forms[2]}'
+    if number%10 == 1 and number != 11:
+        return f'{number} {list_of_forms[0]}'
+    if 2<=number%10<=4 and not (number in [12, 13, 14]):
+        return f'{number} {list_of_forms[2]}'
+    return f'{number} {list_of_forms[2]}'
+
+
+
+print(choose_plural(21, ('пример', 'примера', 'примеров')))
+print(choose_plural(92, ('гвоздь', 'гвоздя', 'гвоздей')))
+print(choose_plural(8, ('яблоко', 'яблока', 'яблок')))
+print(choose_plural(111223, ('копейка', 'копейки', 'копеек')))
+print(choose_plural(763434, ('рубль', 'рубля', 'рублей')))
+print(choose_plural(512312, ('цент', 'цента', 'центов')))
+print(choose_plural(59, ('помидор', 'помидора', 'помидоров')))
+print(choose_plural(23424157, ('огурец', 'огурца', 'огурцов')))
+print(choose_plural(240, ('курица', 'курицы', 'куриц')))
+print(choose_plural(49324, ('плюмбус', 'плюмбуса', 'плюмбусов')))
+print(choose_plural(505, ('утка', 'утки', 'уток')))
+print(choose_plural(666, ('шкаф', 'шкафа', 'шкафов')))
+print(choose_plural(11, ('стул', 'стула', 'стульев')))
+print(choose_plural(3458438435812, ('доллар', 'доллара', 'долларов')))
