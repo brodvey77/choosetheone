@@ -147,36 +147,74 @@
 
 # print(spell('Математика', 'История', 'химия', 'биология', 'Информатика'))
 
-def choose_plural(number, list_of_forms):
-    if number ==92:
-        return f'{number} {list_of_forms[1]}'
-    if number ==763434:
-        return f'{number} {list_of_forms[1]}'
-    if number ==49324:
-        return f'{number} {list_of_forms[1]}'
-    if number ==111223:
-        return f'{number} {list_of_forms[1]}'   
-    if number%10 > 4:
-        return f'{number} {list_of_forms[2]}'
-    if number%10 == 1 and number != 11:
-        return f'{number} {list_of_forms[0]}'
-    if 2<=number%10<=4 and not (number in [12, 13, 14]):
-        return f'{number} {list_of_forms[2]}'
-    return f'{number} {list_of_forms[2]}'
+# def choose_plural(number, list_of_forms):
+#     if number ==92:
+#         return f'{number} {list_of_forms[1]}'
+#     if number ==763434:
+#         return f'{number} {list_of_forms[1]}'
+#     if number ==49324:
+#         return f'{number} {list_of_forms[1]}'
+#     if number ==111223:
+#         return f'{number} {list_of_forms[1]}'
+#     if number%10 > 4:
+#         return f'{number} {list_of_forms[2]}'
+#     if number%10 == 1 and number != 11:
+#         return f'{number} {list_of_forms[0]}'
+#     if 2<=number%10<=4 and not (number in [12, 13, 14]):
+#         return f'{number} {list_of_forms[2]}'
+#     return f'{number} {list_of_forms[2]}'
 
 
 
-print(choose_plural(21, ('пример', 'примера', 'примеров')))
-print(choose_plural(92, ('гвоздь', 'гвоздя', 'гвоздей')))
-print(choose_plural(8, ('яблоко', 'яблока', 'яблок')))
-print(choose_plural(111223, ('копейка', 'копейки', 'копеек')))
-print(choose_plural(763434, ('рубль', 'рубля', 'рублей')))
-print(choose_plural(512312, ('цент', 'цента', 'центов')))
-print(choose_plural(59, ('помидор', 'помидора', 'помидоров')))
-print(choose_plural(23424157, ('огурец', 'огурца', 'огурцов')))
-print(choose_plural(240, ('курица', 'курицы', 'куриц')))
-print(choose_plural(49324, ('плюмбус', 'плюмбуса', 'плюмбусов')))
-print(choose_plural(505, ('утка', 'утки', 'уток')))
-print(choose_plural(666, ('шкаф', 'шкафа', 'шкафов')))
-print(choose_plural(11, ('стул', 'стула', 'стульев')))
-print(choose_plural(3458438435812, ('доллар', 'доллара', 'долларов')))
+# print(choose_plural(21, ('пример', 'примера', 'примеров')))
+# print(choose_plural(92, ('гвоздь', 'гвоздя', 'гвоздей')))
+# print(choose_plural(8, ('яблоко', 'яблока', 'яблок')))
+# print(choose_plural(111223, ('копейка', 'копейки', 'копеек')))
+# print(choose_plural(763434, ('рубль', 'рубля', 'рублей')))
+# print(choose_plural(512312, ('цент', 'цента', 'центов')))
+# print(choose_plural(59, ('помидор', 'помидора', 'помидоров')))
+# print(choose_plural(23424157, ('огурец', 'огурца', 'огурцов')))
+# print(choose_plural(240, ('курица', 'курицы', 'куриц')))
+# print(choose_plural(49324, ('плюмбус', 'плюмбуса', 'плюмбусов')))
+# print(choose_plural(505, ('утка', 'утки', 'уток')))
+# print(choose_plural(666, ('шкаф', 'шкафа', 'шкафов')))
+# print(choose_plural(11, ('стул', 'стула', 'стульев')))
+# print(choose_plural(3458438435812, ('доллар', 'доллара', 'долларов')))
+
+# 1 находим длину самого длинного числа в списке
+# 2 сортируем список, по убыванию, через ключ str(x) * на 1 пункт
+# 3 склеиваем все элементы списка
+# 4 выводим как число
+
+# def get_biggest(numbers):
+#     if len(numbers) == 0:
+#         return -1
+#     else:
+#         c = len(max(map(lambda x: str(x), numbers), key=len))
+#         numbers = sorted(numbers, key=lambda x: str(x) * c, reverse=True)
+#         numbers = map(str, numbers)
+#         return int(''.join(numbers))
+#
+#
+# def get_biggest(numbers):
+#     if not numbers:
+#         return -1
+#
+#     li = [str(i) for i in numbers]
+#     lenght = len(li)
+#
+#     for i in range(lenght):
+#         index = i
+#         for j in range(i + 1, lenght):
+#             if li[j] + li[index] > li[index] + li[j]:
+#                 index = j
+#         li[i], li[index] = li[index], li[i]
+#
+#     return int(''.join(li))
+#
+#
+#
+# print(get_biggest(
+#     ['998', '9686', '9842', '9721', '9603', '9811', '9719', '9845', '9627', '9859', '9705', '9784', '9662', '9622',
+#      '9926', '9777', '9866', '9811', '96', '9664', '9766', '9788', '9826', '9745', '9693', '9880', '9621', '96', '9671',
+#      '975', '9623']))
