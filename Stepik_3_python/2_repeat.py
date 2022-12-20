@@ -231,3 +231,32 @@
 # l = [a, b, c, d]
 #
 # print(min(l))
+
+
+# e = 'AaBCcEeHKMOoPpTXxy'
+# r = 'АаВСсЕеНКМОоРрТХху'
+#
+# l = [input() for i in range(3)]
+# ce = 0
+# cr = 0
+# for i in l:
+#     if i in e:
+#         ce += 1
+#     if i in r:
+#         cr += 1
+# if ce == 3:
+#     print('en')
+# if cr == 3:
+#     print('ru')
+# if ce != 3 and cr !=3:
+#     print('mix')
+#
+
+
+# letters = [input() for _ in range(3)]
+# if all(map(lambda x: x in 'АаВСсЕеНКМОоРрТХху', letters)):
+#     print('ru')
+# elif all(map(lambda x: x in 'AaBCcEeHKMOoPpTXxy', letters)):
+#     print('en')
+# else:
+#     print('mix')
