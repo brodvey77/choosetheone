@@ -260,3 +260,11 @@
 #     print('en')
 # else:
 #     print('mix')
+
+# a = set([input() for _ in range(3)])
+# if a.issubset(set("AaBCcEeHKMOoPpTXxy")):
+#     print('en')
+# elif a.issubset(set("АаВСсЕеНКМОоРрТХху")):
+#     print('ru')
+# else:
+#     print('mix')
