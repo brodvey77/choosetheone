@@ -271,7 +271,7 @@
 
 # n, x, y, a, b = map(int, input().split())
 #
-# # numbers = [i for i in input().split()]
+# numbers = [i for i in input().split()]
 # numbers = [9, 3, 6, 5, 8]
 # numbers_2 = [i for i in range(1, 10)]
 # numbers_2[x:y] = numbers_2[x:y][::-1]
@@ -279,4 +279,15 @@
 #
 # print(numbers_2)
 
-
+# numbers = [int(i) for i in input().split()]
+# d = {}
+#
+# for i in numbers:
+#     d[i] = d.get(i, 0)+1
+#
+# for k,v in sorted(d.items()):
+#     if v > 1:
+#         print(k, end=' ')
+#
+# nums = [int(i) for i in input().split()]
+# print(*sorted(filter(lambda i: nums.count(i) > 1, set(nums))))
