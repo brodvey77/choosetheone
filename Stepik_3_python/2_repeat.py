@@ -268,3 +268,15 @@
 #     print('ru')
 # else:
 #     print('mix')
+
+# n, x, y, a, b = map(int, input().split())
+#
+# # numbers = [i for i in input().split()]
+# numbers = [9, 3, 6, 5, 8]
+# numbers_2 = [i for i in range(1, 10)]
+# numbers_2[x:y] = numbers_2[x:y][::-1]
+# numbers_2[a:b] = numbers_2[a:b][::-1]
+#
+# print(numbers_2)
+
+
