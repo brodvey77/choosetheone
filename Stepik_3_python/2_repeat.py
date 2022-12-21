@@ -291,3 +291,23 @@
 #
 # nums = [int(i) for i in input().split()]
 # print(*sorted(filter(lambda i: nums.count(i) > 1, set(nums))))
+
+
+
+# numbers = list(map(lambda x: sum(map(int, str(x))), [i for i in range(1, int(input()) + 1)]))
+#
+# d = {}
+# for i in numbers:
+#     d[i] = d.get(i, 0) + 1
+#
+# print(max(d.values()))
+#
+#
+# data = {}
+#
+# for i in range(1, int(input()) + 1):
+#     sum_of_digits = sum(map(lambda d: int(d), str(i)))
+#     data[sum_of_digits] = data.get(sum_of_digits, 0) + 1
+#
+# print(max(data.values()))
+
