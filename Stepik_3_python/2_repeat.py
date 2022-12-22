@@ -311,3 +311,25 @@
 #
 # print(max(data.values()))
 
+# n = int(input())
+#
+# l = [set(input().split(', ')) for i in range(n)]
+# l = sorted(l[0].intersection(*l))
+#
+# if len(l) == 0:
+#     print('Сериал снять не удастся')
+# else:
+#     print(*l, sep=', ')
+
+
+# n = int(input())
+# langs = set(input().split(', '))
+#
+# for _ in range(n - 1):
+#     langs &= set(input().split(', '))
+#
+# if langs:
+#     print(*sorted(langs), sep=', ')
+# else:
+#     print('Фильм снять не удастся')
+
