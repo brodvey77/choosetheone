@@ -369,3 +369,12 @@
 #     word = input()
 #     if [i for i, c in enumerate(word) if c in vowels] == pattern:
 #         print(word)
+
+# a = input()
+# a_lst = [i for i in range(len(a)) if a[i] in 'ауоыиэяюёе']
+# n = int(input())
+# for i in range(n):
+#     b = input()
+#     b_lst = [i for i in range(len(b)) if b[i] in 'ауоыиэяюёе']
+#     if a_lst == b_lst:
+#         print(b)
