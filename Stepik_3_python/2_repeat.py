@@ -333,3 +333,39 @@
 # else:
 #     print('Фильм снять не удастся')
 
+
+# import re
+# text = input()
+# n = int(input())
+#
+#
+# template = ''
+#
+# for i in text:
+#     if i in 'ауоыиэяюёе':
+#         template += '[ауоыиэяюёе]'
+#     else:
+#         template += '\w'
+#
+# while template[-1] != ']':
+#     template = template[:-2]
+#
+# if template[-1] == ']':
+#     template += '\w*'
+#
+#
+# for i in range(n):
+#     word = input()
+#     if word[0] in 'ауоыиэяюёе':
+#         continue
+#     if re.fullmatch(template, word):
+#         print(word)
+
+
+# vowels = ('а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е')
+# pattern = [i for i, c in enumerate(input()) if c in vowels]
+#
+# for _ in range(int(input())):
+#     word = input()
+#     if [i for i, c in enumerate(word) if c in vowels] == pattern:
+#         print(word)
