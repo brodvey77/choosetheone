@@ -378,3 +378,27 @@
 #     b_lst = [i for i in range(len(b)) if b[i] in 'ауоыиэяюёе']
 #     if a_lst == b_lst:
 #         print(b)
+
+n = int(input())
+
+emails = [input() for _ in range(n)]
+old_names = list(map(lambda x: x[:x.index('@')], emails))
+new_emails = [input() for _ in range(int(input()))]
+def change_name(text, c):
+    return text + str(c)
+
+
+for n_name in new_emails:
+    counter = 1
+    while n_name in old_names:
+        n_name = change_name(n_name, counter)
+        counter += 1
+        print n_name
+    if n_name not in old_names:
+        old_names.append(n_name)
+    print(n_name)
+
+
+
+
+
