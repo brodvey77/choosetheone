@@ -379,28 +379,35 @@
 #     if a_lst == b_lst:
 #         print(b)
 
-n = int(input())
+# n = int(input())
 
-emails = [input() for _ in range(n)]
-old_names = list(map(lambda x: x[:x.index('@')], emails))
-new_emails = [input() for _ in range(int(input()))]
+# emails = [input() for _ in range(n)]
+# old_names = list(map(lambda x: x[:x.index('@')], emails))
 
-def change_name(text, c):
-    while text[-1] == type(int):
-        text = text[:-1]
-    return text + str(c)
+# post = list(map(lambda x: x[x.index('@'):], emails))
+
+# new_emails = [input() for _ in range(int(input()))]
+
+# def change_name(text, c):
+#     while text[-1].isdigit():
+#         text = text[:-1]
+#     return text + str(c)
 
 
-for n_name in new_emails:
-    counter = 1
-    while n_name in old_names:
-        n_name = change_name(n_name, counter)
-        counter += 1
-    if n_name not in old_names:
-        old_names.append(n_name)
-        counter = 1
-    print(n_name)
+# for n_name in new_emails:
+#     counter = 1
+#     while n_name in old_names:
+#         n_name = change_name(n_name, counter)
+#         counter += 1
+#     if n_name not in old_names:
+#         old_names.append(n_name)
+#         counter = 1
+#     print(n_name + post[0])
 
+
+with open('files.txt', encoding="utf-8") as file:
+    t = file.readlines()
+    print(t)
 
 
 
