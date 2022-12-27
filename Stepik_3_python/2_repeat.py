@@ -405,8 +405,8 @@
 #     print(n_name + post[0])
 
 
-with open('files.txt', encoding="utf-8") as file:
-    t = file.readlines()
+with open('files_5.txt', encoding="utf-8") as file:
+    t = file.read().strip('\n')
     print(t)
 
 
