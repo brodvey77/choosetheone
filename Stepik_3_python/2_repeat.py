@@ -404,11 +404,24 @@
 #         counter = 1
 #     print(n_name + post[0])
 
+# import re
+#
+# with open('file.txt', encoding="utf-8") as file:
+#     t = file.readlines()
+#     d = {}
+#     for i in t:
+#         d[i[:i.index('.')]] = re.findall(r'\.(\w+) ', i)
+#
+#     for k,v in sorted(d.items(), key=lambda x: x[1]):
+#         print(k,*v)
 
-with open('files_5.txt', encoding="utf-8") as file:
-    t = file.read().strip('\n')
-    print(t)
 
+def get_size(number, name):
+    if number > 1023:
+        kb = round(number / 1024)
+    if kb > 1023:
+        mb = round(kb / 1024)
+    if mb > 1023:
+        gb = round(mb / 1024)
 
-
-
+print(get_size(252, 'mb'))
