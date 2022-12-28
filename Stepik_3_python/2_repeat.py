@@ -404,24 +404,85 @@
 #         counter = 1
 #     print(n_name + post[0])
 
-# import re
+
+import re
+# def get_b(number, name):
+#     size_file = {'B': 1, 'KB': 1024, 'MB': 1048576, 'GB': 1073741824}
+#     return size_file[name] * number
 #
-# with open('file.txt', encoding="utf-8") as file:
-#     t = file.readlines()
-#     d = {}
-#     for i in t:
-#         d[i[:i.index('.')]] = re.findall(r'\.(\w+) ', i)
+# def get_size(number):
+#     if number < 1024:
+#         return str(number)+'B'
+#     if 1048576 > number > 1023:
+#         return str(round(number / 1024))+'KB'
+#     if 1073741824 > number > 1048576:
+#         return str(round(number / 1048576))+'MB'
+#     if number > 1073741824:
+#         return str(round(number / 1073741824)) + 'GB'
 #
-#     for k,v in sorted(d.items(), key=lambda x: x[1]):
-#         print(k,*v)
+#
+# with open('files_5.txt', encoding="utf-8") as file:
+#     l = [i.replace('\n', '') for i in file.readlines()]
+#     a = list(map(lambda x: x[:x.index('.')], l))
+#     b = list(map(lambda x: x[x.index('.')+1:x.index(' ')], l))
+#     c = list(map(lambda z: int(z.strip()), map(lambda x: x[x.index(' ')+1:-3], l)))
+#     d = list(map(lambda z: z.strip(), map(lambda x: x[-2:], l)))
+#     c_in_b = [get_b(num[0], num[1]) for num in list(zip(c, d))]
+#
+#
+#     sorted_list = sorted(list(zip(a, b, c_in_b)), key=lambda x: x[1])
+#
+#     total = 0
+#     flag = sorted_list[0][1]
+#     counter = 0
+#     for i in sorted_list:
+#         print(f'{i[0]}.{i[1]}')
+#         total += i[2]
+#         counter += 1
+#         if counter == len(sorted_list):
+#             counter -= 1
+#         if sorted_list[counter][1] != i[1] or i[0] == sorted_list[-1][0]:
+#             print('-' * 10)
+#             print(f'Summary: {get_size(total)} ')
+#             print()
+#             total = 0
+#             flag = i[1]
 
 
-def get_size(number, name):
-    if number > 1023:
-        kb = round(number / 1024)
-    if kb > 1023:
-        mb = round(kb / 1024)
-    if mb > 1023:
-        gb = round(mb / 1024)
+# dict_names = {}
+# dict_size = {}
+# dict_dimension = {'B': 1, 'KB': 1024, 'MB': 1048576, 'GB': 1073741824}
+# with open("files.txt", 'r', encoding='utf-8') as file:
+#     for line in file.readlines():
+#         # разделяем на нужные нам слова
+#         name, size, dimension = line.split()
+#         name, extension = name.split('.')
+#         # заполняем словарь с именами по расширениям
+#         dict_names[extension] = (dict_names.get(extension, []) +
+#                                  [name + '.' + extension])
+#         # заполняем словарь с размерами по расширениям
+#         dict_size[extension] = (dict_size.get(extension, 0) +
+#                                  dict_dimension[dimension] * int(size))
+#
+#     for extension in sorted(dict_names):
+#         print(*sorted(dict_names[extension]), sep='\n')
+#         print('----------')
+#         for key in dict_dimension:
+#             result = dict_size[extension] / dict_dimension[key]
+#             if result <= 1024:
+#                 break
+#         print('Summary:', round(result), key)
+#         print()
 
-print(get_size(252, 'mb'))
+
+
+
+
+
+
+
+
+
+
+
+
