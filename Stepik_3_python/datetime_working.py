@@ -22,10 +22,10 @@
 
 
 # импортируем тип date из модуля datetime
-from ____ import ____
+from datetime import date
 
 # создаем объект, соответсвующий дате урагана
-hurricane_andrew = ____
+hurricane_andrew = date(1992,8,24)
 
 # выводим день недели
-print(hurricane_andrew.____)
+print(hurricane_andrew.weekday())
