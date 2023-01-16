@@ -70,3 +70,29 @@
 #
 # print(get_min_max(dates))
 # print(get_min_max([]))
+
+
+
+# from datetime import date
+# def get_date_range(start, end):
+#     c = date.toordinal(end) - date.toordinal(start)
+#     l = []
+#     for i in range(c + 1):
+#         a = date.toordinal(start)
+#         a += i
+#         l.append(date.fromordinal(a))
+#     return l
+#
+#
+#
+#
+#
+# date1 = date(2019, 6, 7)
+# date2 = date(2019, 6, 5)
+#
+# print(get_date_range(date1, date2))
+#
+#
+#
+# def get_date_range(start, end):
+#     return [date.fromordinal(i) for i in range(start.toordinal(), end.toordinal() + 1)]
