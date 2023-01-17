@@ -96,3 +96,17 @@
 #
 # def get_date_range(start, end):
 #     return [date.fromordinal(i) for i in range(start.toordinal(), end.toordinal() + 1)]
+
+# from datetime import date
+#
+# def saturdays_between_two_dates(a, b):
+#     if a > b:
+#         a, b = b, a
+#     l = [date.weekday(date.fromordinal(i)) for i in range(a.toordinal(), b.toordinal() + 1)]
+#     return l.count(5)
+#
+#
+# date1 = date(2021, 11, 1)
+# date2 = date(2021, 11, 22)
+#
+# print(saturdays_between_two_dates(date1, date2))
