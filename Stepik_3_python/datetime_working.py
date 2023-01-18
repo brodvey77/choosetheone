@@ -110,3 +110,55 @@
 # date2 = date(2021, 11, 22)
 #
 # print(saturdays_between_two_dates(date1, date2))
+
+# from datetime import date
+#
+# my_date = date(2019, 2, 4)
+#
+# print(my_date)
+
+# from datetime import time
+#
+# my_time = time(8, 20, 15)
+#
+# print(my_time)
+
+# from datetime import date
+#
+# my_date = date(2021, 12, 31)
+#
+# print(my_date.strftime('%d %B %Y'))
+
+
+# from datetime import time
+#
+# alarm = time(7, 30, 25)
+#
+# print('Часы:', alarm.strftime('%H'))
+# print('Минуты:', alarm.strftime('%M'))
+# print('Секунды:', alarm.strftime('%S'))
+
+
+# from datetime import date
+#
+# birthday = date(1992, 10, 6)
+#
+# print('Название месяца:', birthday.strftime('%B'))
+# print('Название дня недели:', birthday.strftime('%A'))
+# print('Год:', birthday.strftime('%Y'))
+# print('Месяц:', birthday.strftime('%m'))
+# print('День:', birthday.strftime('%d'))
+
+
+# from datetime import date
+# # присваиваем самую раннюю дату урагана в переменную first_date
+# first_date = date(2022, 12, 5)
+#
+# # конвертируем дату в ISO и RU формат
+# iso = 'Дата первого урагана в ISO формате: ' + first_date.isoformat()
+# ru = 'Дата первого урагана в RU формате: ' + first_date.strftime('%d.%m.%Y')
+# us = 'Дата первого урагана в US формате: ' + first_date.strftime('%m/%d/%Y')
+#
+# print(iso)
+# print(ru)
+# print(us)
