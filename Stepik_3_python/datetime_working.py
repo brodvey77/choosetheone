@@ -193,3 +193,11 @@
 # a, b = date.fromisoformat(input()), date.fromisoformat(input())
 # print(min(a, b).strftime('%d-%m (%Y)'))
 
+from datetime import date
+
+
+
+# from datetime import date
+# l = list(map(lambda x: x.strftime('%d/%m/%Y'),sorted([date.fromisoformat(input()) for i in range(int(input()))])))
+# print(*l)
+
