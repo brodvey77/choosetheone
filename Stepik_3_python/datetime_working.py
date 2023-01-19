@@ -171,3 +171,25 @@
 # print(andrew.strftime('%Y-%m'))   # выводим дату в формате YYYY-MM
 # print(andrew.strftime('%B(%Y)'))   # выводим дату в формате month_name (YYYY)
 # print(andrew.strftime('%Y-%j'))   # выводим дату в формате YYYY-day_number
+
+
+# n = 'python'
+#
+# try:
+#     n = int(n)
+#     print(n * 2)
+# except ValueError:
+#     print('Произошла ошибка')
+
+# try:
+#     names = ['Tim', 'Tom', 'Jerry', 'Alvin', 'Wall-e']
+#     print(names[-5])
+#     print(names[5])
+# except:
+#     print('IndexError')
+
+# from datetime import date
+#
+# a, b = date.fromisoformat(input()), date.fromisoformat(input())
+# print(min(a, b).strftime('%d-%m (%Y)'))
+

@@ -260,3 +260,34 @@ import locale
 locale.setlocale(locale.LC_ALL, 'en_EN.UTF-8')
 Почитать подробнее о модуле locale можно в официальной документации тут (английский язык) или тут (русский язык).
 
+
+
+from datetime import date, time
+
+day, month, year = input('Введите дату в формате ДД.ММ.ГГГГ').split('.')
+hour, minute, second = input('Введите время в формате ЧЧ:ММ:СС').split(':')
+
+my_date = date(int(year), int(month), int(day))        # создаем объект типа date
+my_time = time(int(hour), int(minute), int(second))    # создаем объект типа time
+
+print(my_date)
+print(my_time)
+
+
+
+from datetime import date, time
+
+while True:
+    try:
+        day, month, year = input('Введите дату в формате ДД.ММ.ГГГГ').split('.')
+
+        my_date = date(int(year), int(month), int(day))
+
+        print('Введена корректная дата:', my_date)
+        break
+    except:      # перехватываем любую ошибку
+        print('Введенная дата не является корректной, попробуйте еще раз')
+
+
+
+
