@@ -201,3 +201,45 @@ from datetime import date
 # l = list(map(lambda x: x.strftime('%d/%m/%Y'),sorted([date.fromisoformat(input()) for i in range(int(input()))])))
 # print(*l)
 
+
+from datetime import date
+
+# определяем функцию, печатающую красивую дату
+# def print_good_dates(dates):
+#     l = []
+#     for i in dates:
+#         if i.strftime('%Y') == '1992' and int(i.strftime('%d')) + int(i.strftime('%m')) == 29:
+#             l.append(i)
+#     s = sorted(l)
+#     for i in s:
+#         print(i.strftime('%B %d, %Y'))
+#
+#
+# dates = []
+# print_good_dates(dates)
+#
+#
+# def print_good_dates(dates):
+#     for d in sorted(filter(lambda d: d.year == 1992 and d.month + d.day == 29, dates)):
+#         print(d.strftime('%B %d, %Y'))
+
+# from datetime import date
+#
+# def is_correct(d, m, y):
+#     try:
+#         if date(day=d, month=m, year=y):
+#             return True
+#     except:
+#         return False
+#
+#
+#
+# def is_correct(day, month, year):
+#     try:
+#         date(year, month, day)
+#         return True
+#     except:
+#         return False
+
+
+print(is_correct(31, 13, 2021))
