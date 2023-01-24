@@ -268,4 +268,46 @@ from datetime import date
 # print(counter)
 
 
+# from datetime import datetime
+#
+# birthday = datetime(1992, 10, 6, 9, 48, 17)
+#
+# birthday.replace(year=9999, month=11)
+#
+# print(birthday)
 
+
+# from datetime import datetime
+#
+# datetimes = [datetime(2022, 6, 11, 13, 26),
+#              datetime(2000, 12, 31, 23, 59),
+#              datetime(2077, 1, 1, 12),
+#              datetime(2042, 7, 29)]
+#
+# print(min(datetimes, key=lambda dt: dt.hour))
+# print(max(datetimes, key=lambda dt: dt.year))
+
+
+# from datetime import date, time, datetime
+#
+# dt = datetime.combine(date(2022, 6, 10), time(13, 50, 59))
+#
+# print(dt.day + dt.second)
+
+
+# from datetime import datetime
+#
+# text = 'Experiment Date 01/28/2005; Time 23::50::13'
+#
+# dt = datetime.strptime(text, 'Experiment Date %m/%d/%Y, Time %H:%M:%S')
+#
+# print(dt)
+
+# from datetime import datetime
+#
+# text = 'Дорогой дневник, 11.02.2021 произошло нечто невероятное. На часах было 18:09..'
+# pattern = 'Дорогой дневник, %d.%m.%Y произошло нечто невероятное. На часах было %H:%M..'
+#
+# dt = datetime.strptime(text, pattern)
+#
+# print(dt)
