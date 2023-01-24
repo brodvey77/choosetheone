@@ -245,15 +245,27 @@ from datetime import date
 # print(is_correct(31, 13, 2021))
 
 
-from datetime import date
-
-def is_correct(day, month, year):
-    try:
-        date(year, month, day)
-        return True
-    except:
-        return False
-
+# from datetime import date
+#
+# def is_correct(year, month, day):
+#     try:
+#         date(int(year), int(month), int(day))
+#         return True
+#     except:
+#         return False
+#
+#
+# text = input()
+# counter = 0
+# while text != 'end':
+#     day, month, year = text.split('.')
+#     if is_correct(year, month, day):
+#         print('Корректная')
+#         counter += 1
+#     else:
+#         print('Некорректная')
+#     text = input()
+# print(counter)
 
 
 
