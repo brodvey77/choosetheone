@@ -319,3 +319,13 @@ from datetime import date
 # dt = datetime.strptime(text, 'Уважаемый пациент, доктор готов принять Вас %d.%m.%Y в %H:%M')
 #
 # print(dt)
+
+
+
+# from datetime import datetime
+#
+# seconds = 2483228800
+# dt = datetime(2011, 11, 4)
+#
+# print(datetime.fromtimestamp(seconds))
+# print(dt.timestamp())
