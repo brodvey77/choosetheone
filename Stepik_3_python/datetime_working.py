@@ -398,3 +398,35 @@ times_of_purchases = [datetime(2017, 10, 1, 12, 23, 25), datetime(2017, 10, 1, 1
 # datetimes = [datetime.combine(d, t) for d, t in zip(dates, times)]
 #
 # print(*sorted(datetimes, key=lambda dt: dt.second), sep='\n')
+
+
+
+# from datetime import datetime
+#
+# data = {'Дима': ('03.11.2021 09:31:18', '03.11.2021 11:41:28'),
+#         'Геор': ('01.11.2021 09:03:04', '01.11.2021 12:40:35'),
+#         'Анна': ('02.11.2021 04:41:54', '02.11.2021 05:39:40'),
+#         'Илина': ('02.11.2021 01:36:40', '02.11.2021 04:48:27'),
+#         'Герман': ('04.11.2021 07:51:19', '04.11.2021 09:53:53'),
+#         'Руслан': ('01.11.2021 11:26:06', '01.11.2021 12:56:24'),
+#         'Лера': ('03.11.2021 11:09:41', '03.11.2021 14:37:41'),
+#         'Егор': ('03.11.2021 05:29:38', '03.11.2021 06:01:59'),
+#         'Максим': ('05.11.2021 13:05:03', '05.11.2021 14:27:41'),
+#         'Саша': ('03.11.2021 04:14:26', '03.11.2021 05:10:58'),
+#         'Марина': ('05.11.2021 15:21:06', '05.11.2021 18:33:46')}
+#
+# d = {}
+# for k, v in data.items():
+#     s = datetime.timestamp(datetime.strptime(v[1], '%d.%m.%Y %H:%M:%S')) - datetime.timestamp(datetime.strptime(v[0], '%d.%m.%Y %H:%M:%S'))
+#     d[s] = k
+#
+# print(d[min(d.keys())])
+#
+# for key, value in data.items():
+#     dt1 = datetime.strptime(value[0], '%d.%m.%Y %H:%M:%S').timestamp()
+#     dt2 = datetime.strptime(value[1], '%d.%m.%Y %H:%M:%S').timestamp()
+#     data[key] = dt2 - dt1
+#
+# print(min(data, key=data.get))
+
+
