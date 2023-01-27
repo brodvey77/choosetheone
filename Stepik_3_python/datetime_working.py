@@ -429,22 +429,20 @@ from datetime import date
 #
 # print(min(data, key=data.get))
 
-from datetime import datetime
-
-with open('diary.txt', encoding='utf-8') as file, open('test_1.txt', 'w', encoding='utf-8') as output:
-    line = file.read().split('\n\n')
-    d = {}
-    for text in line:
-        s = datetime.strptime(text[:17], '%d.%m.%Y; %H:%M')
-        d[s] = text[18:]+'\n'
-    c = []
-    for k, v in sorted(d.items()):
-        print(k.strftime('%d.%m.%Y; %H:%M'), file=output)
-        if sorted(d.values())[-1] == v:
-            print('No')
-            print(v)
-            print(v[:-1]+'\n', file=output)
-        else:
-            print(v, file=output)
+# from datetime import datetime
+#
+# with open('diary.txt', encoding='utf-8') as file, open('test_1.txt', 'w', encoding='utf-8') as output:
+#     line = file.read().split('\n\n')
+#     d = {}
+#     for text in line:
+#         s = datetime.strptime(text[:17], '%d.%m.%Y; %H:%M')
+#         d[s] = text[18:]
+#     c = []
+#     for k, v in sorted(d.items()):
+#         print(k.strftime('%d.%m.%Y; %H:%M'))
+#         if sorted(d.keys())[-1] != k:
+#             print(v+'\n')
+#         else:
+#             print(v)
 
 
