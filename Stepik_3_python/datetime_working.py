@@ -6,7 +6,7 @@
 # min_date = min(dates)
 #
 # print(max_date.year + min_date.day)
-
+import datetime
 # from datetime import date
 #
 # dates = [date(2023, 1, 1), date(2020, 7, 20), date(2021, 9, 17), date(2022, 6, 10)]
@@ -446,14 +446,38 @@ from datetime import date
 #             print(v)
 
 
+from datetime import date, datetime
+def is_correct(o):
+    try:
+        day, month, year = o.split('.')
+        date(int(year), int(month), int(day))
+        return True
+    except:
+        return False
+
+def div_period(period):
+    lst_of_dates = list(map(lambda x: datetime.strptime(x, '%d.%m.%Y'), period.split('-')))
+    return lst_of_dates
+
+
 def is_available_date(booked_dates, date_for_booking):
-    l = []
-    for i in booked_dates:
+    for d in booked_dates:
+        if is_correct(day, month, year):
+            return True
+        else:
+            if div_period(d)[0] >= date_for_booking <= div_period(d)[1]:
+                return False
+            else:
+                return True
+
 
 
 
 dates = ['04.11.2021', '05.11.2021-09.11.2021']
 some_date = '01.11.2021'
 print(is_available_date(dates, some_date))
+
+
+
 
 
