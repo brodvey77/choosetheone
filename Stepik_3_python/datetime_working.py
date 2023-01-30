@@ -461,20 +461,25 @@ def div_period(period):
 
 
 def is_available_date(booked_dates, date_for_booking):
+    flag = []
     for d in booked_dates:
-        if is_correct(day, month, year):
-            return True
-        else:
-            if div_period(d)[0] >= date_for_booking <= div_period(d)[1]:
-                return False
+        if is_correct(d):
+            if datetime.strptime(d, '%d.%m.%Y') == datetime.strptime(date_for_booking, '%d.%m.%Y'):
+                flag.append(False)
             else:
-                return True
+                flag.append(True)
+        else:
+            if div_period(d)[0] <= datetime.strptime(date_for_booking, '%d.%m.%Y') <= div_period(d)[1]:
+                flag.append(False)
+            else:
+                flag.append(True)
+    print(flag)
 
 
 
 
 dates = ['04.11.2021', '05.11.2021-09.11.2021']
-some_date = '01.11.2021'
+some_date = '01.11.2021-04.11.2021'
 print(is_available_date(dates, some_date))
 
 
