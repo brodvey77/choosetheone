@@ -445,44 +445,63 @@ from datetime import date
 #         else:
 #             print(v)
 
+# from datetime import datetime
+# import pandas as pd
+#
+#
+# def is_available_date(dates, booking):
+#     booked_dates = set()
+#     for date in dates:
+#         date_range = date.split("-")
+#         start_date = datetime.strptime(date_range[0], "%d.%m.%Y")
+#         end_date = start_date if len(date_range) == 1 else datetime.strptime(date_range[1], "%d.%m.%Y")
+#         booked_dates.update(
+#             pd.date_range(min(start_date, end_date), max(start_date, end_date)).strftime("%d.%m.%Y").to_list())
+#
+#     booking_list = booking.split("-")
+#     start_date = datetime.strptime(booking_list[0], "%d.%m.%Y")
+#     end_date = start_date if len(booking_list) == 1 else datetime.strptime(booking_list[1], "%d.%m.%Y")
+#     check_in_dates = set(
+#         pd.date_range(min(start_date, end_date), max(start_date, end_date)).strftime("%d.%m.%Y").to_list())
+#
+#     if booked_dates.intersection(check_in_dates):
+#         return False
+#     else:
+#         return True
 
-from datetime import date, datetime
-def is_correct(o):
-    try:
-        day, month, year = o.split('.')
-        date(int(year), int(month), int(day))
-        return True
-    except:
-        return False
-
-def div_period(period):
-    lst_of_dates = list(map(lambda x: datetime.strptime(x, '%d.%m.%Y'), period.split('-')))
-    return lst_of_dates
-
-
-def is_available_date(booked_dates, date_for_booking):
-    flag = []
-    for d in booked_dates:
-        if is_correct(d):
-            if datetime.strptime(d, '%d.%m.%Y') == datetime.strptime(date_for_booking, '%d.%m.%Y'):
-                flag.append(False)
-            else:
-                flag.append(True)
-        else:
-            if div_period(d)[0] <= datetime.strptime(date_for_booking, '%d.%m.%Y') <= div_period(d)[1]:
-                flag.append(False)
-            else:
-                flag.append(True)
-    print(flag)
+# dates = ['04.11.2021', '05.11.2021-09.11.2021']
+# some_date = '06.11.2021'
+# print(is_available_date(dates, some_date))
 
 
+# from datetime import datetime
+# def is_available_date(booked_dates, date_for_booking):
+#     ord_booked_dates = []
+#     for d in booked_dates:
+#         dates = [datetime.strptime(i, '%d.%m.%Y').toordinal() for i in d.split('-')]
+#         ord_booked_dates.extend(range(dates[0], dates[-1] + 1))
+#     dt = [datetime.strptime(i, '%d.%m.%Y').toordinal() for i in date_for_booking.split('-')]
+#     date_f_b = range(dt[0], dt[-1] + 1)
+#     return(all([i not in ord_booked_dates for i in date_f_b]))
 
 
-dates = ['04.11.2021', '05.11.2021-09.11.2021']
-some_date = '01.11.2021-04.11.2021'
-print(is_available_date(dates, some_date))
+# from datetime import datetime
+# def sd(s): # функция превращает строку в дату
+#     return datetime.strptime(s, '%d.%m.%Y')
+# def dk(spd): # функция превращает строку c датой или интервалом дат в кортеж из 2 дат
+#     return (sd(spd[:10]), sd(spd[11:])) if '-' in spd else (sd(spd), sd(spd))
+# def is_available_date(sp, d):
+#     for x in sp: # проверяем, пересекаются ли кортежи дат гостя и отеля
+#         if not(dk(x)[1] < dk(d)[0] or dk(x)[0] > dk(d)[1]):
+#             return False # если пересекаются, то выводим False
+#     return True  # а если нет, то True
 
 
-
-
-
+# from datetime import date, datetime as dt
+#
+# def is_available_date(dates, some_date):
+#     def setGen(dateRange):
+#         d=list(map(lambda d: dt.strptime(d, '%d.%m.%Y').date().toordinal(), dateRange.split('-')))
+#         if len(d)>1: return set([x for x in range(d[0], d[1]+1)])
+#         else: return set(d)
+#     return not any([bool(setGen(some_date).intersection(setGen(day))) for day in dates])
