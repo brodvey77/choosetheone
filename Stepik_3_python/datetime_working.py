@@ -505,3 +505,16 @@ from datetime import date
 #         if len(d)>1: return set([x for x in range(d[0], d[1]+1)])
 #         else: return set(d)
 #     return not any([bool(setGen(some_date).intersection(setGen(day))) for day in dates])
+
+# from datetime import timedelta
+#
+# def hours_minutes(td):
+#     return td.seconds // 3600, (td.seconds // 60) % 60
+#
+# delta = timedelta(days=7, seconds=125, minutes=10, hours=8, weeks=2)
+#
+# hours, minutes = hours_minutes(delta)
+#
+# print(delta)
+# print(hours)
+# print(minutes)

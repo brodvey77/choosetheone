@@ -522,4 +522,119 @@ strptime - это парсер, который превращает произв
 strftime - это форматтер, который превращает объект datetime в строку произвольного (заданного) формата
 
 
+Тип данных timedelta
+Тип данных timedelta представляет из себя временной интервал (разница между двумя объектами datetime или date) и используется для удобного выполнения различных манипуляций над типами datetime или date.
+
+При создании объекта timedelta можно указать следующие аргументы:
+
+недели (weeks)
+дни (days)
+часы (hours)
+минуты (minutes)
+секунды (seconds)
+микросекунды (microseconds)
+миллисекунды (milliseconds)
+Мы можем выбрать любые их сочетания для задания временного интервала, при этом все аргументы являются необязательными и по умолчанию равны 0.
+
+
+from datetime import timedelta
+
+delta = timedelta(days=7, hours=20, minutes=7, seconds=17)
+
+print(delta)
+print(type(delta))
+
+Аргументы могут быть целыми числами или числами с плавающей запятой, а также могут быть как положительными, так и
+отрицательными. Используйте именованные аргументы, вместо позиционных, чтобы избежать ошибок.
+
+Тип timedelta внутренне хранит только сочетание days, seconds, microseconds, а остальные переданные в конструктор аргументы конвертируются в эти единицы:
+
+millisecond преобразуется в
+1000
+1000 microseconds
+minutes преобразуется в
+60
+60 seconds
+hours преобразуется в
+3600
+3600 seconds
+weeks преобразуется в
+7
+7 days
+Атрибуты days, seconds и microseconds затем нормализуются так, чтобы представление было уникальным:
+
+0 <= microseconds < 1000000
+0 <= seconds < 3600*24 (количество секунд в одном дне)
+-999999999 <= days <= 999999999
+
+В следующем примере показано, как любые аргументы, кроме days, seconds, microseconds, объединяются и нормализуются в три результирующих сочетания.
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta1 = timedelta(days=50, seconds=27, microseconds=10, milliseconds=29000, minutes=5, hours=8, weeks=2)
+delta2 = timedelta(weeks=1, hours=23, minutes=61)
+delta3 = timedelta(hours=25)
+delta4 = timedelta(minutes=300)
+
+print(delta1, delta2, delta3, delta4, sep='\n')
+выводит:
+
+64 days, 8:05:56.000010
+8 days, 0:01:00
+1 day, 1:00:00
+5:00:00
+
+
+Атрибуты days, seconds, microseconds и метод total_seconds()
+Как уже было сказано, тип timedelta внутренне хранит только сочетание days, seconds, microseconds, которые можно получить с помощью одноименных атрибутов.
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta = timedelta(days=50, seconds=27, microseconds=10, milliseconds=29000, minutes=5, hours=8, weeks=2)
+
+print('Количество дней =', delta.days)
+print('Количество секунд =', delta.seconds)
+print('Количество микросекунд =', delta.microseconds)
+
+print('Общее количество секунд =', delta.total_seconds())
+выводит:
+
+Количество дней = 64
+Количество секунд = 29156
+Количество микросекунд = 10
+Общее количество секунд = 5558756.00001
+Метод total_seconds() возвращает общее количество секунд, содержащееся во временном интервалеtimedelta.
+
+Обратите внимание на то, что у типа timedelta нет атрибутов hours и minutes, позволяющих получить количество часов и минут соответственно. Достать часы и минуты можно так:
+
+def hours_minutes(td):
+    return td.seconds // 3600, (td.seconds // 60) % 60
+Приведенный ниже код:
+
+from datetime import timedelta
+
+def hours_minutes(td):
+    return td.seconds // 3600, (td.seconds // 60) % 60
+
+delta = timedelta(days=7, seconds=125, minutes=10, hours=8, weeks=2)
+
+hours, minutes = hours_minutes(delta)
+
+print(delta)
+print(hours)
+print(minutes)
+выводит:
+
+21 days, 8:12:05
+8
+12
+
+
+
+
+
 
