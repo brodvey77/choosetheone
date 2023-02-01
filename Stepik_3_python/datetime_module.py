@@ -634,6 +634,220 @@ print(minutes)
 12
 
 
+Операции над временными интервалами timedelta
+Тип данных timedelta поддерживает многие математические операции. Допустимо:
+
+сложение временных интервалов
+вычитание временных интервалов
+умножение временного интервала на число
+деление временного интервала на число
+деление временного интервала на временной интервал
+Сумма и разность временных интервалов
+С помощью операторов + и - мы можем находить сумму и разность временных интервалов (тип timedelta).
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta1 = timedelta(days=5) + timedelta(seconds=3600)  # 5 дней + 1 час
+delta2 = timedelta(days=5) - timedelta(seconds=3600)  # 5 дней - 1 час
+
+print(delta1)
+print(delta2)
+выводит:
+
+5 days, 1:00:00
+4 days, 23:00:00
+Умножение временного интервала на число
+С помощью оператора * мы можем умножать временной интервал (тип timedelta) на целое или вещественное число (типы int и float).
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta1 = 48 * timedelta(hours=1)
+delta2 = timedelta(weeks=1) * (3/7)
+
+print(delta1)
+print(delta2)
+выводит:
+
+2 days, 0:00:00
+3 days, 0:00:00
+Будьте осторожны с умножением временного интервала на вещественное число (тип float), так как может возникнуть округление.
+
+Деление временных интервалов на число
+С помощью операторов / и // мы можем делить временной интервал (тип timedelta) на целое или вещественное число (типы int и float).
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta = timedelta(hours=1, minutes=6)
+delta1 = delta / 2
+delta2 = delta // 5
+
+print(delta1)
+print(delta2)
+выводит:
+
+0:33:00
+0:13:12
+Деление временного интервала на временной интервал
+С помощью операторов / и // мы также можем делить один временной интервал (тип timedelta) на другой. По сути происходит деление общей длительности одного интервала на общую длительность другого интервала.
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta1 = timedelta(weeks=1) / timedelta(hours=5)       # обычное деление, результат float
+delta2 = timedelta(weeks=1) // timedelta(hours=5)      # целочисленное деление, результат int
+
+print(delta1)
+print(delta2)
+выводит:
+
+33.6
+33
+   Общая длительность временного интервала вычисляется с помощью метода total_seconds().
+
+Мы также можем использовать оператор нахождения остатка от деления %, при этом остаток вычисляется как объект timedelta.
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta1 = timedelta(weeks=1) % timedelta(hours=5)         # 3 часа
+delta2 = timedelta(hours=1) % timedelta(minutes=7)       # 4 минуты
+
+print(delta1)
+print(delta2)
+выводит:
+
+3:00:00
+0:04:00
+Рассмотрим следующую задачу: рабочая смена длится
+7
+7 часов
+30
+30 минут, сколько полных смен в
+3
+3-х сутках?
+
+Решение. Приведенный ниже код решает поставленную задачу:
+
+from datetime import timedelta
+
+all_time = timedelta(days=3)
+smena = timedelta(hours=7, minutes=30)
+
+print(all_time // smena)
+print(all_time % smena)
+и выводит:
+
+9
+4:30:00
+Таким образом, в
+3
+3-х сутках помещается
+9
+9 полных смен и еще останется
+4
+4 часа
+30
+30 минут.
+
+Операции над datetime и date
+
+
+Операции над datetime и date
+К объектам типа datetime и date можно прибавлять (вычитать) временные интервалы (тип timedelta), тем самым формируя новые объекты.
+
+Приведенный ниже код:
+
+from datetime import datetime, date, timedelta
+
+my_datetime1 = datetime(2021, 1, 1, 12, 15, 20) + timedelta(weeks=1, hours=25)
+my_datetime2 = datetime(2021, 1, 1, 12, 15, 20) - timedelta(weeks=1, hours=25)
+
+my_date1 = date(2021, 1, 1) + timedelta(hours=49)
+my_date2 = date(2021, 1, 1) - timedelta(hours=49)
+
+print(my_datetime1, my_datetime2, my_date1, my_date2, sep='\n')
+выводит:
+
+2021-01-09 13:15:20
+2020-12-24 11:15:20
+2021-01-03
+2020-12-30
+   Обратите внимание на то, что при прибавлении временного интервала к дате (тип date) неполные сутки отбрасываются.
+
+Объект типа timedelta также возникает при вычитании двух дат (тип date) или дат-времён (тип datetime).
+
+Приведенный ниже код:
+
+from datetime import datetime, date, timedelta
+
+delta1 = datetime(2021, 1, 1, 12, 15, 20) - datetime(2020, 5, 1, 10, 5, 10)
+delta2 = date(2020, 2, 29) - date(2019, 9, 1)
+delta3 = date(2019, 9, 1) - date(2020, 2, 29)
+
+print(delta1)
+print(delta2)
+print(delta3)
+выводит:
+
+245 days, 2:10:10
+181 days, 0:00:00
+-181 days, 0:00:00
+Примечания
+Примечание 1. Мы можем использовать встроенные функции str() и repr() для преобразования объектов типа timedelta к строковому типу.
+
+Приведенный ниже код:
+
+from datetime import timedelta
+
+delta1 = timedelta(weeks=1, hours=23, minutes=61)
+delta2 = timedelta(minutes=-300)
+
+print(str(delta1), str(delta2), sep='\n')
+print(repr(delta1), repr(delta2), sep='\n')
+выводит:
+
+8 days, 0:01:00
+-1 day, 19:00:00
+datetime.timedelta(days=8, seconds=60)
+datetime.timedelta(days=-1, seconds=68400)
+Обратите внимание на то, что при печати значения объекта timedelta с помощью функции print() функция str() вызывается автоматически.
+
+Примечание 2. При работе с типом timedelta мы можем использовать встроенную функцию abs(). Функция возвращает объект timedelta с положительным значением всех атрибутов.
+
+ Приведенный ниже код:
+
+from datetime import timedelta
+
+delta = timedelta(days=-2, minutes=-300)
+abs_delta = abs(delta)
+
+print('Исходная:', delta.days, delta.seconds, delta, sep='\n')
+print('С модулем:', abs_delta.days, abs_delta.seconds, abs_delta, sep='\n')
+выводит:
+
+Исходная:
+-3
+68400
+-3 days, 19:00:00
+С модулем:
+2
+18000
+2 days, 5:00:00
+Примечание 3. Тип данных timedelta является неизменяемым.
+
+Примечание 4. Документация по модулю datetime доступна по ссылке.
+
+
+
+
 
 
 

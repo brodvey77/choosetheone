@@ -518,3 +518,60 @@ from datetime import date
 # print(delta)
 # print(hours)
 # print(minutes)
+
+# from datetime import timedelta
+#
+# td = timedelta(minutes=61)
+#
+# print(td.hours)
+
+
+# from datetime import timedelta
+#
+# td = timedelta(weeks=-3, hours=-12)
+#
+# print(td)
+
+
+
+# from datetime import timedelta
+#
+# td1 = timedelta(days=2, hours=1, minutes=1)
+# td2 = timedelta(hours=49, seconds=60)
+#
+# print(td1 == td2)
+# print(td1 > td2)
+
+
+# from datetime import timedelta
+#
+# td1 = timedelta(days=2, hours=1, minutes=1)
+# td2 = timedelta(hours=49, seconds=60)
+# print(td1)
+# print(td2)
+# print(td1 == td2)
+# print(td1 > td2)
+
+
+# from datetime import datetime
+#
+# release = datetime(2022, 7, 15)
+# today = datetime(2022, 11, 6)
+#
+# print(type(release - today))
+
+
+# from datetime import timedelta
+#
+# td = timedelta(weeks=-1, hours=-20, minutes=-120)
+# abs_td = abs(td)
+#
+# print(td)
+# print(abs_td)
+
+
+
+# from datetime import datetime, timedelta
+#
+# dt = datetime(2021, 11, 4, 13, 6) + timedelta(weeks=1, hours=12)
+# print(dt.strftime('%d.%m.%Y %H:%M:%S'))
