@@ -585,3 +585,19 @@ from datetime import date
 # days = (birthday - today).days
 #
 # print(days)
+
+
+# from datetime import timedelta, datetime, date
+#
+# a = '04.11.2021'
+# def t_a(x):
+#     return datetime.strptime(x, '%d.%m.%Y')
+#
+# def d_d(x):
+#     return date.strftime(x, '%d.%m.%Y')
+#
+# p_d = t_a(a) - timedelta(days=1)
+# n_d = t_a(a) + timedelta(days=1)
+#
+# print(d_d(p_d), d_d(n_d), sep='\n')
+
