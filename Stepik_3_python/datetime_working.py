@@ -601,3 +601,15 @@ from datetime import date
 #
 # print(d_d(p_d), d_d(n_d), sep='\n')
 
+# from datetime import timedelta
+#
+# x = input()
+# begin = timedelta(hours=0, minutes=0, seconds=0)
+# last = timedelta(hours=int(x[0:2]), minutes=int(x[3:5]), seconds=int(x[6:]))
+# result = int(timedelta.total_seconds(last - begin))
+# print(result)
+#
+# from datetime import datetime, timedelta
+# h, m, s = map(int, input().split(':'))
+# td = timedelta(hours=h, minutes=m, seconds=s)
+# print(int(td.total_seconds()))
