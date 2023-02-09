@@ -648,3 +648,26 @@ from datetime import date
 # dt = datetime.strptime(input(), pattern) + timedelta(seconds=int(input()))
 #
 # print(dt.strftime(pattern))
+
+
+# from datetime import date, datetime
+# def saturdays_between_two_dates(a, b):
+#     if a < b:
+#         l = [date.weekday(date.fromordinal(i)) for i in range(a.toordinal(), b.toordinal() + 1)]
+#     else:
+#         l = [date.weekday(date.fromordinal(i)) for i in range(b.toordinal(), a.toordinal() + 1)]
+#     return l.count(5)
+
+# def num_of_sundays(y):
+#     first_date = datetime(year=y, month=1, day=1)
+#     last_date = datetime(year=y, month=12, day=31)
+#     l = [date.weekday(date.fromordinal(i)) for i in range(first_date.toordinal(), last_date.toordinal() + 1)]
+#     return l.count(6)
+#
+# print(num_of_sundays(2021))
+
+# from datetime import datetime
+#
+# def num_of_sundays(year):
+#     dt = datetime(year, 12, 31)
+#     return int(dt.strftime('%U'))
