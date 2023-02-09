@@ -613,3 +613,38 @@ from datetime import date
 # h, m, s = map(int, input().split(':'))
 # td = timedelta(hours=h, minutes=m, seconds=s)
 # print(int(td.total_seconds()))
+
+# from datetime import timedelta, datetime
+#
+# def hours_minutes(td):
+#     return td.seconds // 3600
+#
+#
+# h, m, s = map(int, input().split(':'))
+# time_now = timedelta(hours=h, minutes=m, seconds=s)
+# alarm = timedelta(seconds=int(input()))
+#
+# wake_up = time_now + alarm
+#
+# if len(str(wake_up)) >= 8:
+#     hh = str(hours_minutes(wake_up))
+#     if len(hh) == 1:
+#         hh = '0' + hh
+#     wake_up = str(wake_up)
+#     print(f'{hh}:{str(wake_up[-5:])}')
+# else:
+#     wake = str(wake_up)
+#     if len(wake) < 8:
+#         print('0' + wake)
+#     else:
+#         print(wake)
+
+
+
+
+# from datetime import datetime, timedelta
+#
+# pattern = '%H:%M:%S'
+# dt = datetime.strptime(input(), pattern) + timedelta(seconds=int(input()))
+#
+# print(dt.strftime(pattern))
