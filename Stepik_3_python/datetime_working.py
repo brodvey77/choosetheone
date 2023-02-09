@@ -671,3 +671,16 @@ from datetime import date
 # def num_of_sundays(year):
 #     dt = datetime(year, 12, 31)
 #     return int(dt.strftime('%U'))
+
+
+# from datetime import date, time, datetime, timedelta
+#
+# d, m, y = map(int, input().split('.'))
+# f_d = datetime(year=y, month=m, day=d)
+#
+# for i in range(1, 11):
+#     print(f_d.strftime('%d.%m.%Y'))
+#     f_d += timedelta(days=1 + i)
+
+
+
