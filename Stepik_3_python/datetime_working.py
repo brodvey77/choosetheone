@@ -683,4 +683,13 @@ from datetime import date
 #     f_d += timedelta(days=1 + i)
 
 
+from datetime import datetime, timedelta
+
+# pattern = '%d.%m.%Y'
+# dt = datetime.strptime(input(), pattern) - timedelta(days=1)
+#
+# for i in range(1, 11):
+#     dt += timedelta(days=i)
+#     print(dt.strftime(pattern))
+
 
