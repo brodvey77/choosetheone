@@ -693,3 +693,18 @@ from datetime import datetime, timedelta
 #     print(dt.strftime(pattern))
 
 
+# from datetime import datetime, date, timedelta
+#
+# pattern = '%d.%m.%Y'
+# l = [datetime.strptime(i, pattern) for i in input().split(' ')]
+#
+# result = []
+# for i in range(len(l)-1):
+#     a = abs(l[i] - l[i+1])
+#     result.append(a.days)
+#
+# print(result)
+
+
+
+
