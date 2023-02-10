@@ -683,7 +683,7 @@ from datetime import date
 #     f_d += timedelta(days=1 + i)
 
 
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 
 # pattern = '%d.%m.%Y'
 # dt = datetime.strptime(input(), pattern) - timedelta(days=1)
@@ -713,6 +713,25 @@ from datetime import datetime, timedelta
 #
 # print(diffs)
 
+from datetime import datetime, timedelta
+
+def fill_up_missing_dates(dates):
+    new_dates = []
+    pattern = '%d.%m.%Y'
+    d = [datetime.strptime(dt, pattern) for dt in dates]
+    minimum, maximum = min(d), max(d)
+    for i in range(datetime.toordinal(minimum), datetime.toordinal(maximum)):
+        x = datetime.fromordinal(i)
+        new_dates.append(datetime.strftime(x, pattern))
+    new_dates.append(datetime.strftime(maximum, pattern))
+    return new_dates
+
+
+
+
+dates = ['01.11.2021', '07.11.2021', '04.11.2021', '03.11.2021']
+
+print(fill_up_missing_dates(dates))
 
 
 
