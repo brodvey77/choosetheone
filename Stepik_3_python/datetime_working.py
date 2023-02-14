@@ -713,34 +713,46 @@ from datetime import date
 #
 # print(diffs)
 
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
+#
+# def fill_up_missing_dates(dates):
+#     new_dates = []
+#     pattern = '%d.%m.%Y'
+#     d = [datetime.strptime(dt, pattern) for dt in dates]
+#     minimum, maximum = min(d), max(d)
+#     for i in range(datetime.toordinal(minimum), datetime.toordinal(maximum)):
+#         x = datetime.fromordinal(i)
+#         new_dates.append(datetime.strftime(x, pattern))
+#     new_dates.append(datetime.strftime(maximum, pattern))
+#     return new_dates
+#
+#
+#
+#
+# dates = ['01.11.2021', '07.11.2021', '04.11.2021', '03.11.2021']
+#
+# print(fill_up_missing_dates(dates))
 
-def fill_up_missing_dates(dates):
-    new_dates = []
-    pattern = '%d.%m.%Y'
-    d = [datetime.strptime(dt, pattern) for dt in dates]
-    minimum, maximum = min(d), max(d)
-    for i in range(datetime.toordinal(minimum), datetime.toordinal(maximum)):
-        x = datetime.fromordinal(i)
-        new_dates.append(datetime.strftime(x, pattern))
-    new_dates.append(datetime.strftime(maximum, pattern))
-    return new_dates
+# from datetime import datetime, timedelta
+#
+# pattern = '%H:%M'
+# start, end = datetime.strptime(input(), pattern), datetime.strptime(input(), pattern)
+# lesson, pause = timedelta(minutes=45), timedelta(minutes=10)
+# l = []
+# while (end - start) >= lesson:
+#     print(f'{datetime.strftime(start, pattern)} - {datetime.strftime(start + lesson, pattern)}')
+#     start = start+lesson+pause
+#
+#
+#
+# from datetime import datetime, timedelta
+# f = '%H:%M'
+# start, stop = (datetime.strptime(input(), f) for i in '__')
+# while start <= (stop - timedelta(minutes=45)):
+#     print(start.strftime(f), '-', (start + timedelta(minutes=45)).strftime(f))
+#     start += timedelta(minutes=55)
 
 
-
-
-dates = ['01.11.2021', '07.11.2021', '04.11.2021', '03.11.2021']
-
-print(fill_up_missing_dates(dates))
-
-from datetime import datetime, timedelta
-def fill_up_missing_dates(x):
-    return x
-
-
-dates = ['01.11.2021', '07.11.2021', '04.11.2021', '03.11.2021']
-
-print(fill_up_missing_dates(dates))
 
 
 
