@@ -790,4 +790,23 @@ from datetime import date
 #     start, end = [datetime.strptime(x, '%H:%M') for x in tup]
 #     seconds += (end - start).total_seconds()
 #
-# print(int(seconds // 60))
+# print(int(seconds // 60))``
+
+from datetime import datetime, timedelta, date
+
+d = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+for y in range(1, 10000):
+    for m in range(1, 13):
+        third_day = date(y, m, 13)
+        key = third_day.weekday()
+        if key in d.keys():
+            d[key] = d[key] + 1
+        else:
+            d[key] = 0
+
+
+print(*d.values(), sep='\n')
+
+
+
+
