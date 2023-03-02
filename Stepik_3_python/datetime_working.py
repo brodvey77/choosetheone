@@ -808,3 +808,37 @@ from datetime import date
 # def say_something(number: int, word: str) -> str:
 #     word = word.capitalize()
 #     return word * number
+
+# from datetime import timedelta, datetime, time
+#
+# now = '01.11.2021 20:45'  # ответ 15
+# pattern = '%d.%m.%Y %H:%M'
+# date_now = datetime.strptime(now, pattern)
+#
+# schedule = {
+#     0: {'start': datetime.combine(date_now.date(), time(9, 0, 0)),
+#         'end': datetime.combine(date_now.date(), time(21, 0, 0))},
+#     1: {'start': datetime.combine(date_now.date(), time(9, 0, 0)),
+#         'end': datetime.combine(date_now.date(), time(21, 0, 0))},
+#     2: {'start': datetime.combine(date_now.date(), time(9, 0, 0)),
+#         'end': datetime.combine(date_now.date(), time(21, 0, 0))},
+#     3: {'start': datetime.combine(date_now.date(), time(9, 0, 0)),
+#         'end': datetime.combine(date_now.date(), time(21, 0, 0))},
+#     4: {'start': datetime.combine(date_now.date(), time(9, 0, 0)),
+#         'end': datetime.combine(date_now.date(), time(21, 0, 0))},
+#     5: {'start': datetime.combine(date_now.date(), time(10, 0, 0)),
+#         'end': datetime.combine(date_now.date(), time(18, 0, 0))},
+#     6: {'start': datetime.combine(date_now.date(), time(10, 0, 0)),
+#         'end': datetime.combine(date_now.date(), time(18, 0, 0))}
+# }
+#
+#
+# if schedule[date_now.weekday()]['end'] >= date_now >= schedule[date_now.weekday()]['start']:
+#     m = (schedule[date_now.weekday()]['end'] - date_now).seconds // 60
+#     print(m)
+# else:
+#     print("Магазин не работает")
+
+
+
+
