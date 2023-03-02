@@ -72,7 +72,6 @@ import datetime
 # print(get_min_max([]))
 
 
-
 # from datetime import date
 # def get_date_range(start, end):
 #     c = date.toordinal(end) - date.toordinal(start)
@@ -195,14 +194,13 @@ import datetime
 
 from datetime import date
 
-
-
 # from datetime import date
 # l = list(map(lambda x: x.strftime('%d/%m/%Y'),sorted([date.fromisoformat(input()) for i in range(int(input()))])))
 # print(*l)
 
 
 from datetime import date
+
 
 # определяем функцию, печатающую красивую дату
 # def print_good_dates(dates):
@@ -321,7 +319,6 @@ from datetime import date
 # print(dt)
 
 
-
 # from datetime import datetime
 #
 # seconds = 2483228800
@@ -398,7 +395,6 @@ from datetime import date
 # datetimes = [datetime.combine(d, t) for d, t in zip(dates, times)]
 #
 # print(*sorted(datetimes, key=lambda dt: dt.second), sep='\n')
-
 
 
 # from datetime import datetime
@@ -533,7 +529,6 @@ from datetime import date
 # print(td)
 
 
-
 # from datetime import timedelta
 #
 # td1 = timedelta(days=2, hours=1, minutes=1)
@@ -568,7 +563,6 @@ from datetime import date
 #
 # print(td)
 # print(abs_td)
-
 
 
 # from datetime import datetime, timedelta
@@ -638,8 +632,6 @@ from datetime import date
 #         print('0' + wake)
 #     else:
 #         print(wake)
-
-
 
 
 # from datetime import datetime, timedelta
@@ -753,7 +745,6 @@ from datetime import date
 #     start += timedelta(minutes=55)
 
 
-
 # from datetime import date, time, datetime, timedelta
 # from functools import reduce
 #
@@ -792,21 +783,28 @@ from datetime import date
 #
 # print(int(seconds // 60))``
 
-from datetime import datetime, timedelta, date
+# from datetime import datetime, timedelta, date
+#
+# d = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+# for y in range(1, 10000):
+#     for m in range(1, 13):
+#         third_day = date(y, m, 13)
+#         key = third_day.weekday()
+#         if key in d.keys():
+#             d[key] = d[key] + 1
+#         else:
+#             d[key] = 0
+#
+#
+# print(*d.values(), sep='\n')
 
-d = {0: 0, 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
-for y in range(1, 10000):
-    for m in range(1, 13):
-        third_day = date(y, m, 13)
-        key = third_day.weekday()
-        if key in d.keys():
-            d[key] = d[key] + 1
-        else:
-            d[key] = 0
+# def get_string(string: str, times: int, sep: str='') -> str:
+#     return sep.join([string] * times)
+#
+#
+# print(get_string('hi', 5))
 
 
-print(*d.values(), sep='\n')
-
-
-
-
+# def say_something(number: int, word: str) -> str:
+#     word = word.capitalize()
+#     return word * number
