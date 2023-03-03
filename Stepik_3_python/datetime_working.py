@@ -866,5 +866,34 @@ from datetime import date
 # else:
 #     print('Магазин не работает')
 
+# from datetime import date, datetime
+#
+# a, b = '30.04.2021', '10.05.2021'
+#
+# l = []
+#
+# for d in range(datetime.toordinal(datetime.strptime(a, '%d.%m.%Y')),
+#                datetime.toordinal(datetime.strptime(b, '%d.%m.%Y')) + 1):
+#     l.append(date.fromordinal(d))
+#
+# def check_first(d: list) -> list:
+#     counter = 0
+#     nl = []
+#     fd = date.strftime(d[0], '%d.%m.%Y').split('.')
+#     while (int(fd[0]) + int(fd[1])) % 2 == 0:
+#         counter += 1
+#         fd = date.strftime(d[counter], '%d.%m.%Y').split('.')
+#     l = d[counter:]
+#     return l
+#
+#
+#
+# for i in range(0, len(check_first(l)) + 1, 3):
+#     if i < len(check_first(l)):
+#         if check_first(l)[i].weekday() not in [0, 3]:
+#             print(date.strftime(check_first(l)[i], '%d.%m.%Y'))
+#     else:
+#         break
+
 
 
