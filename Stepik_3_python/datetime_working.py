@@ -897,3 +897,16 @@ from datetime import date
 
 
 
+# from datetime import datetime, date, timedelta
+# pattern = '%d.%m.%Y'
+# start, end = [datetime.strptime(input(), pattern) for _ in range(2)]
+# while (start.day + start.month) % 2 == 0:
+#     start += timedelta(days=1)
+#
+# while start <= end:
+#     if start.weekday() not in [0, 3]:
+#         print(start.strftime(pattern))
+#     start += timedelta(days=3)
+
+
+
