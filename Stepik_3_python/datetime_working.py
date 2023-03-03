@@ -909,4 +909,11 @@ from datetime import date
 #     start += timedelta(days=3)
 
 
-
+# from datetime import datetime, date
+#
+# data = [i for i in range(datetime.strptime(input(), '%d.%m.%Y').toordinal(),
+#                          datetime.strptime(input(), '%d.%m.%Y').toordinal() + 1)]
+# start = list(filter(lambda x: (date.fromordinal(x).day + date.fromordinal(x).month) % 2 != 0, data))[0]
+# for j in range(start, max(data)+1, 3):
+#     if date.fromordinal(j).strftime('%w') != '1' and date.fromordinal(j).strftime('%w') != '4':
+#         print(date.fromordinal(j).strftime('%d.%m.%Y'))
