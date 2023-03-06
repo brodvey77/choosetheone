@@ -937,4 +937,25 @@ from datetime import date
 #     break
 
 
+# from datetime import datetime, timedelta
+#
+# data = {}
+# youngest = datetime.max
+# pattern = '%d.%m.%Y'
+#
+# for _ in range(int(input())):
+#     *name, birthday = input().split()
+#     name, birthday = ' '.join(name), datetime.strptime(birthday, pattern)
+#     if birthday < youngest:
+#         youngest = birthday
+#     data[name] = birthday
+#
+# oldest = [name for name, bd in data.items() if bd == youngest]
+#
+# if len(oldest) > 1:
+#     print(youngest.strftime(pattern), len(oldest))
+# else:
+#     print(youngest.strftime(pattern), oldest[0])
+
+
 
