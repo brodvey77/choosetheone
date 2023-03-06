@@ -958,4 +958,41 @@ from datetime import date
 #     print(youngest.strftime(pattern), oldest[0])
 
 
-
+# from datetime import datetime
+#
+# n: int = int(input())
+# staff = [tuple(input().split()) for i in range(n)]
+# my_dict = {}
+#
+# for s in staff:
+#     my_dict.setdefault(datetime.strptime(s[-1], '%d.%m.%Y'), []).append(s[0] + ' ' + s[1])
+#
+# s_d = {k: v for k, v in sorted(my_dict.items(), key=lambda x: len(x[1]), reverse=True)}
+# max_value = len(max(s_d.values(), key=len))
+# l = []
+# for k,v in s_d.items():
+#     if len(v) == max_value:
+#         l.append(k)
+# s_l = sorted(l)
+# for i in s_l:
+#     print(datetime.strftime(i, '%d.%m.%Y'))
+#
+#
+#
+# from datetime import datetime
+#
+# dates = {}
+# pattern = '%d.%m.%Y'
+# counter = 0
+#
+# for _ in range(int(input())):
+#     *_, birthday = input().split()
+#     birthday = datetime.strptime(birthday, pattern)
+#     dates[birthday] = dates.get(birthday, 0) + 1
+#     if dates[birthday] > counter:
+#         counter = dates[birthday]
+#
+# frequent_dates = [dt for dt, amount in dates.items() if amount == counter]
+#
+# for dt in sorted(frequent_dates):
+#     print(dt.strftime(pattern))
