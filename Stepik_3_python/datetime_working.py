@@ -917,3 +917,24 @@ from datetime import date
 # for j in range(start, max(data)+1, 3):
 #     if date.fromordinal(j).strftime('%w') != '1' and date.fromordinal(j).strftime('%w') != '4':
 #         print(date.fromordinal(j).strftime('%d.%m.%Y'))
+
+
+# from datetime import datetime
+#
+# n: int = int(input())
+# staff = [tuple(input().split()) for i in range(n)]
+# my_dict = {}
+#
+# for s in staff:
+#     my_dict.setdefault(datetime.strptime(s[-1], '%d.%m.%Y'), []).append(s[0] + ' ' + s[1])
+# s_d = sorted(my_dict.items(), reverse=True)
+#
+# for k, v in dict(s_d).items():
+#     if len(v) <= 1:
+#         print(k, v)
+#     else:
+#         print(k, len(v))
+#     break
+
+
+
