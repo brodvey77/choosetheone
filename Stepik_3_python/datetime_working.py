@@ -996,3 +996,32 @@ from datetime import date
 #
 # for dt in sorted(frequent_dates):
 #     print(dt.strftime(pattern))
+
+# from datetime import date, datetime, timedelta
+#
+# current_date = datetime.strptime(input(), '%d.%m.%Y')
+# n: int = int(input())
+# staff = [tuple(input().split()) for i in range(n)]
+# dates = [datetime.fromordinal(i) for i in range(datetime.toordinal(current_date) + 1,
+#                                                 datetime.toordinal(current_date) + 8)]
+# dates_2 = list(map(lambda x: (x.day, x.month), dates))
+#
+#
+#
+# dict_of_staff_birthday = {}
+# for s in staff:
+#     dict_of_staff_birthday.setdefault(datetime.strptime(s[-1], '%d.%m.%Y'), []).append(s[0] + ' ' + s[1])
+#
+# s_d = dict(sorted(dict_of_staff_birthday.items(), reverse=True))
+#
+# l = []
+# for k, v in s_d.items():
+#     t = k.day, k.month
+#     if t in dates_2:
+#         l.append(k)
+#
+# if len(l) < 1:
+#     print('Дни рождения не планируются')
+# else:
+#     print(dict_of_staff_birthday[l[0]])
+
