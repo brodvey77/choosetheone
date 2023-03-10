@@ -133,4 +133,20 @@
 # for _ in range(int(input())):
 #     print(isleap(int(input())))
 
+# from calendar import month, month_abbr
+#
+# d = dict(zip(month_abbr, [i for i in range(13)]))
+# a = '2021 Dec'
+# y, m = a.split(' ')
+#
+# print(month(int(y), d[m]))
+#
+#
+# from calendar import prmonth
+# from datetime import datetime
+#
+# dt = datetime.strptime(input(), '%Y %b')
+#
+# prmonth(dt.year, dt.month)
+
 
