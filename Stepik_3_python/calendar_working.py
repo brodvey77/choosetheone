@@ -149,4 +149,9 @@
 #
 # prmonth(dt.year, dt.month)
 
-
+# import calendar
+# from datetime import datetime
+#
+# a = datetime.strptime(input(), '%Y-%m-%d').weekday()
+#
+# print(calendar.day_name[a])
