@@ -7,6 +7,7 @@
 #
 # print(max_date.year + min_date.day)
 import datetime
+import math
 # from datetime import date
 #
 # dates = [date(2023, 1, 1), date(2020, 7, 20), date(2021, 9, 17), date(2022, 6, 10)]
@@ -1025,3 +1026,110 @@ from datetime import date
 # else:
 #     print(dict_of_staff_birthday[l[0]])
 
+
+
+from math import factorial                   # функция из модуля math
+import time
+
+# def factorial_recurrent(n):                  # рекурсивная функция
+#     if n == 0:
+#         return 1
+#     return n * factorial_recurrent(n - 1)
+#
+#
+# def factorial_classic(n):                    # итеративная функция
+#     f = 1
+#     for i in range(2, n + 1):
+#         f *= i
+#     return f
+
+
+# def get_time_func(l: list, number: int):
+#     lst = {}
+#     for func in l:
+#         start_time = time.perf_counter_ns()
+#         func(number)
+#         end_time = time.perf_counter_ns()
+#         elapsed_time = end_time - start_time
+#         lst[func] = elapsed_time
+#     return lst
+
+# def get_the_fastest_func(funcs: list):
+#     l = []
+#     for c in funcs:
+#         start_time = time.monotonic_ns()
+#         result = c()
+#         end_time = time.monotonic_ns()
+#         elapsed_time = end_time - start_time
+#         l.append(elapsed_time)
+#     minimum = min(l)
+#     s = l.index(minimum)
+#     return funcs[s]
+#
+#
+# def for_and_append():  # с использованием цикла for и метода append()
+#     iterations = 10_000_00
+#     result = []
+#     for i in range(iterations):
+#         result.append(i + 1)
+#     return result
+#
+#
+# def list_comprehension():  # с использованием списочного выражения
+#     iterations = 10_000_00
+#     return [i + 1 for i in range(iterations)]
+#
+# print(get_the_fastest_func([for_and_append, list_comprehension]).__name__)
+
+# import time
+# def for_and_append(iterable):  # с использованием цикла for и метода append()
+#     result = []
+#     for elem in iterable:
+#         result.append(elem)
+#     return result
+#
+#
+# def list_comprehension(iterable):  # с использованием списочного выражения
+#     return [elem for elem in iterable]
+#
+#
+# def list_function(iterable):  # с использованием встроенной функции list()
+#     return list(iterable)
+#
+#
+# def get_time_func(f, l: list):
+#     start_time = time.perf_counter_ns()
+#     _ = f(l)
+#     end_time = time.perf_counter_ns()
+#     total_time = end_time - start_time
+#     print(total_time/10000)
+#
+#
+# some_list = [i for i in range(1000000)]
+#
+# get_time_func(list_function, some_list)
+
+# import time
+#
+# result = time.localtime(1630387918)
+# print('Результат:', result)
+# print('Год:', result.tm_year)
+# print('Месяц:', result.tm_mon)
+# print('День:', result.tm_mday)
+# print('Час:', result.tm_hour)
+
+# import time
+#
+# seconds = 1530377118
+# time_tuple = (2021, 8, 31, 5, 31, 58, 1, 243, 0)
+#
+# print(time.ctime(seconds))
+# print(time.asctime(time_tuple))
+
+
+# import time
+#
+# time_obj = time.localtime()
+# result = time.strftime('%d.%m.%Y, %H:%M:%S', time_obj)
+# print(time_obj)
+# print(result)
