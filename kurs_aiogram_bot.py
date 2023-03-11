@@ -95,3 +95,16 @@
 
 
 
+def custom_filter(l: list):
+    flag = False
+    l = list(filter(lambda x: type(x) == int, l))
+    l = list(filter(lambda x: x%7 == 0, l))
+    if sum(l) < 83:
+        flag = True
+    return flag
+
+
+
+some_list = [7, 14, 28, 32, 32, 56]
+
+print(custom_filter(some_list))
