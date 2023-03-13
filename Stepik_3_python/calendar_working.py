@@ -155,3 +155,70 @@
 # a = datetime.strptime(input(), '%Y-%m-%d').weekday()
 #
 # print(calendar.day_name[a])
+
+# import calendar
+# a = input()
+# y, m = a.split(' ')
+#
+# l = calendar.monthcalendar(int(y), int(m))
+# counter = 0
+# for row in l:
+#     for j in row:
+#         if j != 0:
+#             counter += 1
+# print(counter)
+
+
+# import calendar
+#
+# year, number = map(int, input().split())
+# days = calendar.monthrange(year, number)[1]
+#
+# print(days)
+
+
+# import calendar
+#
+# year, m = input().split(' ')
+# d = dict(zip(calendar.month_abbr, [i for i in range(13)]))
+#
+# days = calendar.monthrange(int(year), d[m])[1]
+#
+# print(days)
+
+
+
+# import calendar
+#
+# year, month = input().split()
+# month = list(calendar.month_name).index(month)
+# print(month)
+#
+# print(calendar.monthrange(int(year), int(month))[1])
+
+
+# import calendar
+# from datetime import date
+# def get_days_in_month(god: int, mesyac: str) -> list:
+#     d = dict(zip(calendar.month_name, [i for i in range(13)]))
+#     l = calendar.monthcalendar(god, d[mesyac])
+#     n_l = []
+#     for row in l:
+#         for c in row:
+#             if c != 0:
+#                 n_l.append(c)
+#     n_l = list(map(lambda x: date(year=god, month=d[mesyac], day=x), n_l))
+#     return n_l
+#
+#
+#
+#
+# print(get_days_in_month(2021, 'December'))
+
+
+
+# def get_days_in_month(year, month):
+#     month = list(calendar.month_name).index(month)
+#     return [date(year, month, day) for day in range(1, calendar.monthrange(year, month)[1] + 1)]
+
+
