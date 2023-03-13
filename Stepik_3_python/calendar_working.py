@@ -222,3 +222,24 @@
 #     return [date(year, month, day) for day in range(1, calendar.monthrange(year, month)[1] + 1)]
 
 
+# import calendar
+# from datetime import date
+#
+# l: list = []
+# def get_all_mondays(god: int) -> list:
+#     for i in range(date.toordinal(date(year=god, month=1, day=1)), date.toordinal(date(year=god, month=12, day=31)) + 1):
+#         l.append(date.fromordinal(i))
+#     s = list(filter(lambda x: x.weekday() == 0, l))
+#     return s
+#
+#
+# print(get_all_mondays(2001))
+
+# def get_all_mondays(year):
+#     mondays = []
+#     for month in range(1, 13):
+#         for week in calendar.monthcalendar(year, month):
+#             monday = week[0]
+#             if monday:
+#                 mondays.append(date(year, month, monday))
+#     return mondays
