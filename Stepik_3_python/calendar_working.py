@@ -245,3 +245,56 @@
 #     return mondays
 
 
+# import calendar
+# from datetime import date
+# def get_all_mondays(year):
+#     tuesdays = []
+#     f_tuesdays = []
+#     for month in range(1, 13):
+#         counter = 0
+#         for week in calendar.monthcalendar(year, month):
+#             tuesday = week[3]
+#             if tuesday:
+#                 tuesdays.append(date(year, month, tuesday))
+#                 counter += 1
+#             if counter == 3:
+#                 f_tuesdays.append(date(year, month, tuesday))
+#     f_tuesdays = map(lambda x: date.strftime(x, '%d.%m.%Y'), f_tuesdays)
+#     print() f_tuesdays
+#
+#
+# print(*get_all_mondays(2021), sep='\n')
+
+
+
+# from calendar import weekday, THURSDAY
+# from datetime import datetime
+#
+# year = int(input())
+# for month in range(1, 13):
+#     for day in range(15, 22):
+#         if weekday(year, month, day) == THURSDAY:
+#             thursday = datetime(year, month, day)
+#             print(thursday.strftime('%d.%m.%Y'))
+#             break
+
+
+# import calendar
+# from datetime import datetime
+#
+# free_days = []
+# year = int(input())
+#
+# for i in range(1, 13):
+#     c = calendar.monthcalendar(year, i)
+#     first_week = c[0]
+#     third_week = c[2]
+#     fourth_week = c[3]
+#     if first_week[calendar.THURSDAY]:
+#         free_day = third_week[calendar.THURSDAY]
+#     else:
+#         free_day = fourth_week[calendar.THURSDAY]
+#     free_days.append(datetime(year, i, free_day))
+#
+# for day in free_days:
+#     print(day.strftime('%d.%m.%Y'))
