@@ -45,3 +45,11 @@ import sys
 # else:
 #     print('нет учеников')
 
+
+# import sys
+# counter = 0
+# for line in sys.stdin.readlines():
+#     if line.strip().startswith('#'):
+#         counter += 1
+# print(counter)
+
