@@ -53,3 +53,11 @@ import sys
 #         counter += 1
 # print(counter)
 
+# import sys
+# for line in sys.stdin.readlines():
+#     if line.strip().startswith('#'):
+#         continue
+#     sys.stdout.write(line)
+
+
+
