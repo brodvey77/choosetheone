@@ -7,7 +7,7 @@
 # minimum = min(data)
 # f_d = maximum - minimum
 # print(f_d.days)
-import sys
+
 
 # import sys
 # from datetime import datetime
@@ -74,7 +74,7 @@ import sys
 # 08.11.2022 12:00
 # Выходные данные:
 # Курс уже вышел!
-from datetime import datetime
+
 
 
 # def choose_plural(number, list_of_forms):
