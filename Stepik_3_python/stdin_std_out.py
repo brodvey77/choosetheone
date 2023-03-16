@@ -178,3 +178,37 @@
 #
 # print(*(i[0] for i in sorted(filtered, key=lambda x: (float(x[2]), x[0]))), sep='\n')
 
+# import sys
+# from datetime import datetime
+#
+# dates = [datetime.strptime(line.strip(), '%d.%m.%Y') for line in sys.stdin]
+#
+# # определяем порядок дат
+# asc = sorted(dates) == dates
+# desc = sorted(dates, reverse=True) == dates
+# flag = True
+#
+# if len(set(dates)) != len(dates):
+#     flag = False
+#
+# # выводим результат
+#
+# if asc and flag:
+#     print('ASC')
+# elif desc and flag:
+#     print('DESC')
+# else:
+#     print('MIX')
+
+
+# import sys
+# from datetime import datetime, date
+#
+# dates = [datetime.strptime(line.strip(), '%d.%m.%Y') for line in sys.stdin]
+#
+# if sorted(list(set(dates))) == dates:
+#     print('ASC')
+# elif sorted(list(set(dates)), reverse=True) == dates:
+#     print('DESC')
+# else:
+#     print('MIX')
