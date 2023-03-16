@@ -1133,3 +1133,60 @@ import time
 # result = time.strftime('%d.%m.%Y, %H:%M:%S', time_obj)
 # print(time_obj)
 # print(result)
+
+
+# from datetime import datetime
+#
+# # считываем дату и время
+# current_date = datetime.strptime(input(), '%d.%m.%Y %H:%M')
+# # задаем дату и время выхода курса
+# target_date = datetime(2022, 11, 8, 12, 0)
+# # считаем разницу между датами
+# time_delta = target_date - current_date
+# # если разница меньше или равна нулю, то курс уже вышел
+# if time_delta.total_seconds() <= 0:
+#     print('Курс уже вышел!')
+# else:
+#     # считаем количество дней, часов и минут
+#     days = time_delta.days
+#     hours = time_delta.seconds // 3600
+#     minutes = (time_delta.seconds // 60) % 60
+#
+#     # определяем правильное склонение слова "час"
+#     if hours == 1:
+#         hours_word = "час"
+#     elif hours in (2, 3, 4):
+#         hours_word = "часа"
+#     else:
+#         hours_word = "часов"
+#
+#     # определяем правильное склонение слова "день"
+#     if days == 1:
+#         days_word = "день"
+#     elif days in (2, 3, 4):
+#         days_word = "дня"
+#     else:
+#         days_word = "дней"
+#
+#     # определяем правильное склонение слова "минута"
+#     if minutes == 1:
+#         minutes_word = "минута"
+#     elif minutes in (2, 3, 4):
+#         minutes_word = "минуты"
+#     else:
+#         minutes_word = "минут"
+#
+#     # выводим результат в зависимости от количества дней, часов и минут
+#     if days > 0:
+#         if hours == 0:
+#             print(f'До выхода курса осталось: {days} {days_word}')
+#         else:
+#             print(f'До выхода курса осталось: {days} {days_word} и {hours} {hours_word}')
+#     else:
+#         if hours > 0:
+#             if minutes == 0:
+#                 print(f'До выхода курса осталось: {hours} {hours_word}')
+#             else:
+#                 print(f'До выхода курса осталось: {hours} {hours_word} и {minutes} {minutes_word}')
+#         else:
+#             print(f'До выхода курса осталось: {minutes} {minutes_word}')
