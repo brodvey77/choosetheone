@@ -213,8 +213,19 @@
 # else:
 #     print('MIX')
 
-import sys
-
-
-data = [int(i.strip()) for i in sys.stdin]
-
+# import sys
+#
+# def is_arithmetic_progression(lst):
+#     return all(data[i] - data[i - 1] == data[1] - data[0] for i in range(2, len(data)))
+#
+# def is_geometric_progression(lst):
+#     return all(data[i] / data[i - 1] == data[1] / data[0] for i in range(2, len(data)))
+#
+# data = [int(i.strip()) for i in sys.stdin]
+#
+# if is_arithmetic_progression(lst):
+#     print("Арифметическая прогрессия")
+# elif is_geometric_progression(lst):
+#     print("Геометрическая прогрессия")
+# else:
+#     print("Не прогрессия")
