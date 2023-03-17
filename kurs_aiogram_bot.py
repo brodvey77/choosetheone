@@ -145,49 +145,116 @@
 #     async def __call__(self, message: Message) -> bool:
 #         return message.from_user.id in self.admin_ids
 
+
+# class IsAdmin(BaseFilter):
+#     admins: str
+#
+#     async def __call__(self, message: Message) -> bool:
+#         return str(message.chat.id) == admins
+
+# from aiogram import Bot, Dispatcher
+# from aiogram.filters import BaseFilter, Command
+# from aiogram.types import Message
+# import logging
+#
+# logging.basicConfig(level=logging.INFO)
+#
+# API_TOKEN: str = '1363273986:AAEHIpzsNhJYEeeiN1I3s4sAr4j86vQYVL4'
+#
+# # Создаем объекты бота
+# bot: Bot = Bot(token=API_TOKEN)
+# dp: Dispatcher = Dispatcher()
+#
+# # Список с ID администраторов бота.
+# admin_ids: list[int] = [237071938]
+
+
+# @dp.message(Command(commands=['start']))
+# async def start_command(message: Message):
+#     await message.answer(text=f'{message.from_user.id}')
+
+
+# Собственный фильтр, проверяющий юзера на админа
+# class IsAdmin(BaseFilter):
+#     def __init__(self, admin_ids: list[int]) -> None:
+#         # В качестве параметра фильтр принимает список с целыми числами
+#         self.admin_ids = admin_ids
+#
+#     async def __call__(self, message: Message) -> bool:
+#         return message.from_user.id in self.admin_ids
+#
+#
+#
+# @dp.message(IsAdmin(admin_ids))
+# async def answer_if_admins_update(message: Message):
+#     await message.answer(text='You are Admin')
+#
+#
+#
+# @dp.message()
+# async def answer_if_not_admins_update(message: Message):
+#     await message.answer(text='You are not admin')
+#
+#
+# if __name__ == "__main__":
+#     dp.run_polling(bot)
+
 from aiogram import Bot, Dispatcher
-from aiogram.filters import BaseFilter, Command
-from aiogram.types import Message
+from aiogram.filters import BaseFilter, Text
+from aiogram. types import Message
 import logging
 
+API_TOKEN: str = '1363273986:AAEHIpzsNhJYEeeiN1I3s4sAr4j86vQYVL4'
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN: str = '1363273986:AAEHIpzsNhJYEeeiN1I3s4sAr4j86vQYVL4'
-
-# Создаем объекты бота
-bot: Bot = Bot(API_TOKEN)
+bot: Bot = Bot(token=API_TOKEN)
 dp: Dispatcher = Dispatcher()
 
-# Список с ID администраторов бота.
-admin_ids: list[int] = [237071938]
+
+# Это фильтр будет проверять наличие неотрецательных чисел
+# в сообщении от пользователя и передавать в хэндлер их список
+class NumbersInMessage(BaseFilter):
+    async def __call__(self, message: Message) -> bool | dict[str, list[int]]:
+        numbers = []
+        # Разрезаем сообщение по пробелам, нормализуем каждую часть, удаляя
+        # лишние знаки препинания и невидимыесимволы, проверяем на то, что
+        # в таких словах только цифры, приводим к целым числам и добавляем их в список
+        for word in message.text.split():
+            normalized_word = word.replace('.', '').replace(',', '').strip()
+            if normalized_word.isdigit():
+                numbers.append(normalized_word)
+        # Если в списке есть числа - возвращаем список по ключу 'numbers'
+        if numbers:
+            return {'numbers': numbers}
+        return False
 
 
-@dp.message(Command(commands=['start']))
-async def start_command(message: Message):
-    await message.answer(text=f'{message.from_user.id}')
+# Этот хэндлер будет срабатывать если сообщениепользователя
+# начинается с фразы "Найди числа".
+@dp.message(Text(startswith='найди числа', ignore_case=True), NumbersInMessage())
+# Помимо объекта типа Message, принимаем в хэндлер список из фильтра
+async def process_if_numbers(message: Message, numbers: list[int]):
+    await message.answer(
+        text=f'Нашёл: {str(", ".join(str(num) for num in numbers))}')
 
 
-# Собственный фильтра, проверяющий юзера на админа
-class IsAdmin(BaseFilter):
-    def __init__(self, admin_ids: list[int]) -> None:
-        self.admin_ids = admin_ids
-
-    async def __call__(self, message: Message) -> bool:
-        return message.from_user.id in self.admin_ids
-
-
-
-dp.message(IsAdmin(admin_ids))
-async def answer_if_admins_update(message: Message):
-    await message.answer(text='You are Admin')
-
-
-
-dp.message(IsAdmin(admin_ids))
-async def answer_if_not_admins_update(message: Message):
-    await message.answer(text='You are not admin')
+# Этот хэндлер будет срабатывать если сообщение пользователя
+# начинается с фразы "Найди числа, но в нем нет чисел
+@dp.message(Text(startswith='найди числа', ignore_case=True))
+async def process_if_not_numbers(message: Message):
+    await message.answer(
+        text='Не нашёл почему-то :('
+    )
 
 
 if __name__ == "__main__":
     dp.run_polling(bot)
+
+
+
+
+
+
+
+
 
