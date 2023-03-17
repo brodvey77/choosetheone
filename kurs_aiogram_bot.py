@@ -95,16 +95,99 @@
 
 
 
-def custom_filter(l: list):
-    flag = False
-    l = list(filter(lambda x: type(x) == int, l))
-    l = list(filter(lambda x: x%7 == 0, l))
-    if sum(l) < 83:
-        flag = True
-    return flag
+# def custom_filter(l: list):
+#     flag = False
+#     l = list(filter(lambda x: type(x) == int, l))
+#     l = list(filter(lambda x: x%7 == 0, l))
+#     if sum(l) < 83:
+#         flag = True
+#     return flag
+#
+#
+#
+# some_list = [7, 14, 28, 32, 32, 56]
+#
+# print(custom_filter(some_list))
+
+# class MyClass:
+#     def __int__(self)->None:
+#         pass
+#
+# my_class_1 = MyClass()
+# my_class_2 = MyClass()
+#
+# print(my_class_1)
+# print(my_class_2)
+#
+# print(my_class_1())
+
+# class MyClass:
+#     def __int__(self) -> None:
+#         pass
+#
+#     def __call__(self) -> str:
+#         return 'результат вызова экземпляра класса'
+#
+# my_class_1 = MyClass()
+# my_class_2 = MyClass()
+# print(my_class_1())
+# print(my_class_2())
+
+
+# from aiogram.filters import BaseFilter
+#
+# admin_ids: list[int] = [173901673, 178876776, 197177271]
+#
+# class IsAdmin(BaseFilter):
+#     def __init__(self, admin_ids: list[int]) -> None:
+#         self.admin_ids = admin_ids
+#
+#     async def __call__(self, message: Message) -> bool:
+#         return message.from_user.id in self.admin_ids
+
+from aiogram import Bot, Dispatcher
+from aiogram.filters import BaseFilter, Command
+from aiogram.types import Message
+import logging
+
+logging.basicConfig(level=logging.INFO)
+
+API_TOKEN: str = '1363273986:AAEHIpzsNhJYEeeiN1I3s4sAr4j86vQYVL4'
+
+# Создаем объекты бота
+bot: Bot = Bot(API_TOKEN)
+dp: Dispatcher = Dispatcher()
+
+# Список с ID администраторов бота.
+admin_ids: list[int] = [237071938]
+
+
+@dp.message(Command(commands=['start']))
+async def start_command(message: Message):
+    await message.answer(text=f'{message.from_user.id}')
+
+
+# Собственный фильтра, проверяющий юзера на админа
+class IsAdmin(BaseFilter):
+    def __init__(self, admin_ids: list[int]) -> None:
+        self.admin_ids = admin_ids
+
+    async def __call__(self, message: Message) -> bool:
+        return message.from_user.id in self.admin_ids
 
 
 
-some_list = [7, 14, 28, 32, 32, 56]
+dp.message(IsAdmin(admin_ids))
+async def answer_if_admins_update(message: Message):
+    await message.answer(text='You are Admin')
 
-print(custom_filter(some_list))
+
+
+dp.message(IsAdmin(admin_ids))
+async def answer_if_not_admins_update(message: Message):
+    await message.answer(text='You are not admin')
+
+
+if __name__ == "__main__":
+    dp.run_polling(bot)
+
