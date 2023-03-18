@@ -3,8 +3,10 @@ import random
 from aiogram import Bot, Dispatcher
 from aiogram.types import Message
 from aiogram.filters import Text, Command
+import logging
 
 
+logging.basicConfig(level=logging.INFO)
 # Вместо BOT TOKEN HERE нужно вставить токен вашего бота,
 # полученный у @BotFather
 BOT_TOKEN: str = '1363273986:AAEHIpzsNhJYEeeiN1I3s4sAr4j86vQYVL4'
