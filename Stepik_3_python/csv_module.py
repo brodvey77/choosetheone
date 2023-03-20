@@ -109,3 +109,41 @@
 #     # записываем строку с данными
 #     writer.writerow({'first_col': 'value1', 'second_col': 'value2'})
 
+# import csv
+#
+# with open('products.csv', encoding='UTF-8') as file:
+#     # создаем writer объект и указываем названия столбцов
+#     reader = csv.reader(file, delimiter=';')
+#     table = [i for i in reader]
+#     del(table[0])
+#     for line in table:
+#         if int(line[1]) > int(line[2]):
+#             print(line[0])
+
+
+import csv
+import statistics
+
+with open('products.csv', encoding='UTF-*') as file:
+    # create dict-reader object
+    reader = csv.DictReader(file, fieldnames=['company_name', 'salary'], delimiter=';')
+    my_dict = {}
+    for i in reader:
+        my_dict.setdefault(i['company_name'], []).append(i['salary'])
+
+    for k,v in my_dict.items():
+        print(v)
+
+
+
+
+
+
+# import pandas as pd
+#
+# file = pd.read_csv(r'salary_data.csv', sep=';', encoding='utf-8')
+# file = file.groupby(['company_name']).mean().reset_index()
+# sorted_file = file.sort_values(['salary', 'company_name'], ascending=[True, True])
+# print(*sorted_file['company_name'], sep='\n')
+
+
