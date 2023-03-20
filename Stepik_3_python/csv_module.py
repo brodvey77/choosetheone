@@ -121,18 +121,39 @@
 #             print(line[0])
 
 
-import csv
-import statistics
+# import csv
+# from statistics import mean
+#
+# with open('products.csv', encoding='UTF-*') as file:
+#     # create dict-reader object
+#     reader = csv.DictReader(file, fieldnames=['company_name', 'salary'], delimiter=';')
+#     my_dict = {}
+#     for i in reader:
+#         my_dict.setdefault(i['company_name'], []).append(i['salary'])
+#     del my_dict['company_name']
+#     for k,v in my_dict.items():
+#         # print(k, list(map(lambda x: int(x), v)))
+#         my_dict[k] = list(map(lambda x: int(x), v))
+#
+#
+#     my_dict = dict(sorted(my_dict.items(), key=lambda x:(mean(x[1]), x[0])))
+#     for k in my_dict.keys():
+#         print(k)
 
-with open('products.csv', encoding='UTF-*') as file:
-    # create dict-reader object
-    reader = csv.DictReader(file, fieldnames=['company_name', 'salary'], delimiter=';')
-    my_dict = {}
-    for i in reader:
-        my_dict.setdefault(i['company_name'], []).append(i['salary'])
 
-    for k,v in my_dict.items():
-        print(v)
+
+
+
+# import csv
+# d = {}
+# with open('salary_data.csv', encoding='utf-8') as file:
+#     rows = list(csv.reader(file, delimiter=';'))
+#     for key, value in rows[1:]:
+#         d[key] = d.get(key, []) + [int(value)]
+#
+#     d_sort = sorted(d, key=lambda x: (sum(d[x]) / len(d[x]), x))
+#     print(*d_sort, sep='\n')
+
 
 
 
