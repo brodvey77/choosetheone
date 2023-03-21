@@ -210,3 +210,19 @@
 #     with open(filename, encoding="utf-8") as file_in:
 #         rows = list(csv.reader(file_in))
 #         return {key: value for key, *value in zip(*rows)}
+
+
+
+# import csv
+#
+#
+# def csv_columns(filename):
+#     with open(filename, 'r', encoding='utf-8') as file:
+#         reader = csv.DictReader(file, delimiter=',')
+#         d = {}
+#         for row in reader:
+#             for key, value in row.items():
+#                 d[key] = d.get(key, []) + [value]
+#         return d
+
+
