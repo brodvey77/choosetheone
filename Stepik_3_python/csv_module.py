@@ -141,6 +141,31 @@
 #         print(k)
 
 
+# import csv
+#
+# n = int(input())
+# with open('products.csv', encoding='UTF-8') as file:
+#     reader = list(csv.reader(file))
+#     f_r = list(map(lambda x: [x[0], int(x[1]), int(x[2])], reader))
+#     s_f_r = sorted(f_r, key=lambda x: x[n-1])
+#     for i in s_f_r:
+#         print(*i, sep=',')
+#
+#
+# import csv
+#
+# i = int(input()) - 1
+#
+# with open('deniro.csv', 'r', encoding='utf-8') as file:
+#     data = list(csv.reader(file))
+#
+# data.sort(key=lambda x: int(x[i]) if x[i].isdigit() else x[i])
+# for lst in data:
+#     print(*lst, sep=',')
+
+
+
+
 
 
 
