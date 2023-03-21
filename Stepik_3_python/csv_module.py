@@ -226,3 +226,12 @@
 #         return d
 
 
+import csv
+import re
+
+with open('products.csv', encoding='UTF-8') as file_in:
+    reader = list(csv.reader(file_in))
+    del reader[0]
+    reader_f = list(map(lambda x: [x[2], x[0] + ' ' + x[1]], reader))
+    reader_f2 = list(map(lambda x: x[0], reader_f))
+    print(reader_f2)
