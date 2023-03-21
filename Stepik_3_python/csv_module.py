@@ -180,11 +180,6 @@
 #     print(*d_sort, sep='\n')
 
 
-
-
-
-
-
 # import pandas as pd
 #
 # file = pd.read_csv(r'salary_data.csv', sep=';', encoding='utf-8')
@@ -192,4 +187,26 @@
 # sorted_file = file.sort_values(['salary', 'company_name'], ascending=[True, True])
 # print(*sorted_file['company_name'], sep='\n')
 
+# import csv
+# def csv_columns(filename: str) -> dict:
+#     with open(filename, encoding='UTF-8') as file:
+#         reader = csv.DictReader(file)
+#         d = {}
+#         for row in reader:
+#            for i in row:
+#                d.setdefault(i, []). append(row[i])
+#         return d
+#
+#
+# print(csv_columns('products.csv'))
 
+
+
+
+# import csv
+#
+# def csv_columns(filename):
+#
+#     with open(filename, encoding="utf-8") as file_in:
+#         rows = list(csv.reader(file_in))
+#         return {key: value for key, *value in zip(*rows)}
