@@ -263,3 +263,30 @@
 #     writer.writerow(['domain', 'count'])
 #     for row in sorted(domens.items(), key=lambda x: (x[1], x[0])):
 #         writer.writerow(row)
+
+
+# import csv
+#
+# with open('products.csv', encoding='UTF-8') as file:
+#     reader = list(csv.reader(file, delimiter=';'))
+#     f_reader = list(map(lambda x: [x[1], int(x[3])], reader[1:]))
+#     d = {}
+#     for row in f_reader:
+#         d.setdefault(row[0], []).append(row[1])
+#     d = {k: sum(v) for k,v in d.items()}
+#     sorted_d = dict(sorted(d.items(), key=lambda x: (-x[1], x[0])))
+#     for k,v in sorted_d.items():
+#         print(f'{k}: {v}')
+
+
+# import csv
+#
+# with open('wifi.csv', encoding='UTF-8') as f:
+#     d = {}
+#     for r in [*csv.reader(f, delimiter=';')][1:]:
+#         d[r[1]] = d.get(r[1], 0) + int(r[3])
+#
+# for i in sorted(d, key=lambda x:(-d[x], x)):
+#     print(f'{i}: {d[i]}')
+
+
