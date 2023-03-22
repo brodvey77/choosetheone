@@ -226,12 +226,40 @@
 #         return d
 
 
-import csv
-import re
+# import csv
+# import re
+#
+# with open('products.csv', encoding='UTF-8') as file_in:
+#     reader = list(csv.reader(file_in))
+#     del reader[0]
+#     reader_f = list(map(lambda x: [x[2], x[0] + ' ' + x[1]], reader))
+#     reader_f2 = list(map(lambda x: x[0], reader_f))
+#     reader_f3 = list(map(lambda x: x[x.index('@') + 1:], reader_f2))
+#     d = {}
+#     for adres in reader_f3:
+#         d[adres] = d.get(adres, 0) + 1
+#     sorted_d = list(sorted(d.items(), key=lambda x: (x[1], x[0])))
+#
+# columns = ['domain', 'count']
+# with open('domain_usage.csv', 'w', encoding='UTF-8', newline='') as file_out:
+#     writer = csv.writer(file_out)
+#     writer.writerow(columns)
+#     for row in sorted_d:
+#         writer.writerow(row)
 
-with open('products.csv', encoding='UTF-8') as file_in:
-    reader = list(csv.reader(file_in))
-    del reader[0]
-    reader_f = list(map(lambda x: [x[2], x[0] + ' ' + x[1]], reader))
-    reader_f2 = list(map(lambda x: x[0], reader_f))
-    print(reader_f2)
+# import csv
+#
+# domens = dict()
+#
+# with open('data.csv', encoding='utf-8') as f:
+#     for *n, d in csv.reader(f):
+#         key = d.split('@')[-1]
+#         domens[key] = domens.get(key, 0) + 1
+#
+# del domens['email']
+#
+# with open('domain_usage.csv', 'w', encoding='utf-8', newline='') as f:
+#     writer = csv.writer(f)
+#     writer.writerow(['domain', 'count'])
+#     for row in sorted(domens.items(), key=lambda x: (x[1], x[0])):
+#         writer.writerow(row)
