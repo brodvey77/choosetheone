@@ -290,3 +290,17 @@
 #     print(f'{i}: {d[i]}')
 
 
+# import csv
+#
+# with open('products.csv', 'r', encoding='UTF-8') as file:
+#     reader = [i for i in csv.reader(file, delimiter=';')]
+#     f_reader = list(map(lambda x: [int(x[0]), x[1], x[2], int(float(x[3]))], reader[1:]))
+#     l_m = list(filter(lambda x: x[0] == 1 and x[2] == 'male' and x[3] < 18, f_reader))
+#     f_m = list(filter(lambda x: x[0] == 1 and x[2] == 'female' and x[3] < 18, f_reader))
+#     f_l = l_m + f_m
+#     for i in f_l:
+#         print(i[1])
+
+
+
+
