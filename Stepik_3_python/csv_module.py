@@ -301,6 +301,39 @@
 #     for i in f_l:
 #         print(i[1])
 
+# import csv
+# from datetime import datetime
+#
+# with open('products.csv', 'r', encoding='UTF-8') as file_in:
+#     reader = list(csv.reader(file_in))[1:]
+#     f_reader = list(map(lambda x: [x[0], x[1], datetime.strptime(x[2], '%d/%m/%Y %H:%M')], reader))
+#     sorted_reader_date = list(sorted(f_reader, key=lambda x: x[2], reverse=True))
+#     d = {}
+#     for row in sorted_reader_date:
+#         d[row[1]] = d.setdefault(row[1], [row[0], row[2]])
+#     sorted_d = dict(sorted(d.items()))
+#     # williamwilson@list.ru ['nice~william7', datetime.datetime(2021, 11, 28, 4, 28)]
+#     l = []
+#     for k, v in sorted_d.items():
+#         l.append([v[0], k, datetime.strftime(v[1], '%d/%m/%Y %H:%M')])
+#
+#
+# with open('new_name_log.csv', 'w', encoding='UTF-8', newline='') as file_out:
+#     writer = csv.writer(file_out)
+#     writer.writerow(['username', 'email', 'dtime'])
+#     for row in l:
+#         writer.writerow(row)
 
-
+# import csv
+# from datetime import datetime
+#
+# with open('name_log.csv', encoding='UTF-8') as f:
+# 	header, *rows = csv.reader(f)
+#
+# d = {i[1]:i for i in sorted(rows, key=lambda x: datetime.strptime(x[2], '%d/%m/%Y %H:%M'))}
+#
+# with open('new_name_log.csv', 'w', encoding='UTF-8', newline='') as f:
+# 	w = csv.writer(f)
+# 	w.writerow(header)
+# 	w.writerows(sorted(d.values(), key=lambda x: x[1]))
 
