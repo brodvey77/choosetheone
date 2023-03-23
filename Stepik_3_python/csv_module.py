@@ -337,3 +337,54 @@
 # 	w.writerow(header)
 # 	w.writerows(sorted(d.values(), key=lambda x: x[1]))
 
+# import csv
+#
+# def condense_csv(filename, id_name):
+#   # open the input file and read it as a list of lists
+#   with open(filename) as input_file:
+#     data = list(csv.reader(input_file))
+#
+#   # create a dictionary to store the properties and values for each object
+#   objects = {}
+#   for row in data:
+#     # get the object name, property name and value from each row
+#     object_name = row[0]
+#     property_name = row[1]
+#     value = row[2]
+#
+#     # if the object name is not in the dictionary, create a new entry with an empty list
+#     if object_name not in objects:
+#       objects[object_name] = []
+#
+#     # append the property name and value to the list of the object
+#     objects[object_name].append((property_name, value))
+#
+#   # open the output file and write it with the desired format
+#   with open('condensed.csv', 'w', newline='') as output_file:
+#     writer = csv.writer(output_file)
+#
+#     # write the header row with id_name and all property names
+#     header = [id_name]
+#     properties = [p for p, v in objects[next(iter(objects))]]
+#     header.extend(properties)
+#     writer.writerow(header)
+#
+#     # write each object row with its name and values
+#     for object_name, values in objects.items():
+#       row = [object_name]
+#       values = [v for p, v in values]
+#       row.extend(values)
+#       writer.writerow(row)
+#
+#
+#
+# text = '''01,Title,Ran So Hard the Sun Went Down
+# 02,Title,Honky Tonk Heroes (Like Me)'''
+#
+# with open('data.csv', 'w', encoding='utf-8') as file:
+#     file.write(text)
+#
+# condense_csv('data.csv', id_name='ID')
+#
+# with open('condensed.csv', encoding='utf-8') as file:
+#     print(file.read().strip())
