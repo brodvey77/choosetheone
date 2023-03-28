@@ -388,3 +388,23 @@
 #
 # with open('condensed.csv', encoding='utf-8') as file:
 #     print(file.read().strip())
+
+
+
+import csv
+
+with open('products.csv', newline='', encoding='utf-8') as csvfile:
+    reader = csv.reader(csvfile)
+    header = next(reader)
+    data = [row for row in reader]
+
+# Sort the columns by class number and letter
+class_order = sorted(header[1:], key=lambda x: (int(x.split('-')[0]), x.split('-')[1]))
+header_sorted = [header[0]] + class_order
+data_sorted = [[row[0]] + [row[header.index(col)] for col in class_order] for row in data]
+
+# Write the sorted data to a new file
+with open('sorted_student_counts.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(header_sorted)
+    writer.writerows(data_sorted)
