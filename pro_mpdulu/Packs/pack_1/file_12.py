@@ -1,11 +1,6 @@
-from pack_1.file_11 import a
+from .file_11 import func_1
 
 
-print(a)
+a: int = 42
 
-
-def func_2(n: int) -> int:
-    return n + n
-
-
-print(func_2(a))
+print(func_1(a))
