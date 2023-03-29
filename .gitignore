@@ -3,3 +3,4 @@ aiobot/
 .vscode/
 .idea/
 .gitignore
+.env
