@@ -15,7 +15,7 @@ button_2: KeyboardButton = KeyboardButton(text='Огурцов 🥒')
 # Создаем объект клавиатуры, добавляя в него кнопки
 keyboard: ReplyKeyboardMarkup = ReplyKeyboardMarkup(
                                     keyboard=[[button_1, button_2]],
-                                    resize_keyboard=True)
+                                    resize_keyboard=True, one_time_keyboard=True)
 
 # Этот хэндлер будет срабатывать на команду "/start"
 # и отправлять в чат клавиатуру
@@ -28,15 +28,14 @@ async def process_start_command(message: Message):
 @dp.message(Text(text='Собак 🦮'))
 async def process_dog_answer(message: Message):
     await message.answer(text='Да, несомненно, кошки бояться собак. '
-                              'Но вы видели как они бояться огурцов?', reply_markup=ReplyKeyboardRemove())
+                              'Но вы видели как они бояться огурцов?')
 
 
 # Этот хэндлер будет срабатывать на ответ "Огурцов 🥒" и удалять клавиатуру
 @dp.message(Text(text='Огурцов 🥒'))
 async def process_cucumber_answer(message: Message):
     await message.answer(text='Да, иногда кажется, что огурцов '
-                              'кошки бояться больше',
-                         reply_markup=ReplyKeyboardRemove())
+                              'кошки бояться больше')
 
 
 if __name__ == "__main__":
