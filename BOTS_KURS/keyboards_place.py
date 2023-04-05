@@ -14,6 +14,22 @@ bot: Bot = Bot(token=API_TOKEN)
 dp: Dispatcher = Dispatcher()
 kb_builder: ReplyKeyboardBuilder = ReplyKeyboardBuilder()
 
+# Создаем список списков с кнопками
+keyboard: list[list[KeyboardButton]] = [
+    [KeyboardButton(text=str(i)) for i in range(1, 4)],
+    [KeyboardButton(text=str(i)) for i in range(4, 7)]]
+
+keyboard.append([KeyboardButton(text='7')])
+
+# Создаем объект клавиатуры, добавляя в него кнопки
+my_keyboard: ReplyKeyboardMarkup = ReplyKeyboardMarkup(
+    keyboard=keyboard,
+    resize_keyboard=True)
+
+@dp.message(CommandStart())
+async def process_start_command(message: Message):
+    await message.answer(text='test 6', reply_markup=my_keyboard)
+
 # # Создаем кнопку
 # web_app_btn: KeyboardButton = KeyboardButton(text='Start Web App', web_app=WebAppInfo(url="https://you.com/"))
 #
@@ -39,7 +55,22 @@ kb_builder: ReplyKeyboardBuilder = ReplyKeyboardBuilder()
 # async def process_start_command(message: Message):
 #     await message.answer(text='This is special buttons', reply_markup=keyboard)
 
-
+# Создаем кнопки
+# btn_1: KeyboardButton = KeyboardButton(text='Кнопка 1')
+# btn_2: KeyboardButton = KeyboardButton(text='Кнопка 2')
+#
+# # Создаем объект клавиатуры
+# placeholder_exmpl_kb: ReplyKeyboardMarkup = ReplyKeyboardMarkup(
+#                                     keyboard=[[btn_1, btn_2]],
+#                                     resize_keyboard=True,
+#                                     input_field_placeholder='fuck you')
+#
+#
+# # Этот хэндлер будет срабатывать на команду "/placeholder"
+# @dp.message(Command(commands='placeholder'))
+# async def process_placeholder_command(message: Message):
+#     await message.answer(text='Экспериментируем с полем placeholder',
+#                          reply_markup=placeholder_exmpl_kb)
 
 if __name__ == "__main__":
     dp.run_polling(bot)
