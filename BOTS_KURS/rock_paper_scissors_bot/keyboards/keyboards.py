@@ -22,6 +22,7 @@ yes_no_kb = yes_no_kb_builder.as_markup(
     resize_keyboard=True)
 
 
+#c
 
 # ------- Создаем игровую клавиатуру без использования билдера -------
 
