@@ -42,13 +42,34 @@
 # print(data_json)
 
 
+# import json
+
+# countries = {'Monaco': 'Monaco', 'Iceland': 'Reykjavik', 'Kenya': 'Nairobi', 'Kazakhstan': 'Nur-Sultan',
+#              'Mali': 'Bamako', 'Colombia': 'Bogota', 'Finland': 'Helsinki', 'Costa Rica': 'San Jose',
+#              'Cuba': 'Havana', 'France': 'Paris', 'Gabon': 'Libreville', 'Liberia': 'Monrovia',
+#              'Angola': 'Luanda', 'India': 'New Delhi', 'Canada': 'Ottawa', 'Australia': 'Canberra'}
+
+# countries_json = json.dumps(countries, indent='   ', sort_keys=True, separators=(', ', ' - '))
+
+# print(countries_json)
+
+
 import json
 
-countries = {'Monaco': 'Monaco', 'Iceland': 'Reykjavik', 'Kenya': 'Nairobi', 'Kazakhstan': 'Nur-Sultan',
-             'Mali': 'Bamako', 'Colombia': 'Bogota', 'Finland': 'Helsinki', 'Costa Rica': 'San Jose',
-             'Cuba': 'Havana', 'France': 'Paris', 'Gabon': 'Libreville', 'Liberia': 'Monrovia',
-             'Angola': 'Luanda', 'India': 'New Delhi', 'Canada': 'Ottawa', 'Australia': 'Canberra'}
+words = {
+         frozenset(["tap", "telephone"]): ("tæp", "telifəun"),
+         "travel": "trævl",
+         ("hello", "world"): ("həˈləʊ", "wɜːld"),
+         "moonlight": "muːn.laɪt",
+         "sunshine": "ˈsʌn.ʃaɪn",
+         ("why", "is", "so", "difficult"): ("waɪ", "ɪz", "səʊ", "ˈdɪfɪkəlt"),
+         "adventure": "ədˈventʃər",
+         "beautiful": "ˈbjuːtɪfl",
+         frozenset(["spoon", "block"]): ("spu:n", "blɔk"),
+         "bicycle": "baisikl",
+         ("pilot", "fly"): ("pailət", "flai")
+        }
 
-countries_json = json.dumps(countries, indent='   ', sort_keys=True, separators=(', ', ' - '))
 
-print(countries_json)
+data_json = json.dumps(words, skipkeys=True)
+print(data_json)
