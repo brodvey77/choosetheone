@@ -111,19 +111,35 @@
 
 
 
-import json
+# import json
+#
+# def is_correct_json(string):
+#         try:
+#                 json.dumps(string)
+#                 return True
+#         except:
+#                 return False
+#
+#
+#
+# a = input()
+#
+#
+#
+# print(is_correct_json(a))
 
-def is_correct_json(string):
-        try:
-                json.dumps(string)
-                return True
-        except:
-                return False
+
+
+# import  sys
+# import json
+#
+# s = json.loads(sys.stdin.read())
+#
+# for k,v in s.items():
+#     if isinstance(v, list):
+#         print(f'{k}: {", ".join(map(str,v))}')
+#     else:
+#         print(f'{k}: {v}')
 
 
 
-a = input()
-
-
-
-print(is_correct_json(a))
