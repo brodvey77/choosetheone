@@ -185,3 +185,14 @@
 
 
 
+import json
+
+my_list = []
+with open('data1.json', encoding='utf-8') as f1, open('data2.json', encoding='utf-8') as f2:
+    a = json.load(f1)
+    b = json.load(f2)
+    my_dict = a | b
+
+
+with open('data_merg.json', 'w', encoding='utf-8') as file:
+    json.dump(my_dict, file, indent=3)
