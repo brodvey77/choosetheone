@@ -142,4 +142,46 @@
 #         print(f'{k}: {v}')
 
 
+# import json
+#
+# def change_bool(b):
+#     if b == True:
+#         return False
+#     else:
+#         return True
+#
+# my_list = []
+# with open('data.json', encoding='utf-8') as file:
+#     data = json.load(file)
+#     for i in data:
+#         if isinstance(i, str):
+#             my_list.append(i + "!")
+#         elif type(i) == int or type(i) == float:
+#             my_list.append(i + 1)
+#         elif type(i) == bool:
+#             my_list.append(change_bool(i))
+#         elif isinstance(i, list):
+#             my_list.append(i * 2)
+#         elif type(i) == dict:
+#             i.update({"newkey": None})
+#             my_list.append(i)
+#
+# with open('updated_data.json', 'w', encoding='utf-8') as f:
+#     json.dump(my_list, f, indent=3)
+
+
+
+# import json
+#
+# opers = {'str': lambda x: x + '!',
+#          'int': lambda x: x + 1,
+#          'float': lambda x: x + 1,
+#          'bool': lambda x: not x,
+#          'list': lambda x: x * 2,
+#          'dict': lambda x: x | {'newkey': None}}
+#
+# with open('data.json', encoding='utf8') as fi, open('updated_data.json', 'w', encoding='utf8') as fo:
+# 	json.dump([opers[type(i).__name__](i) for i in json.load(fi) if type(i).__name__ in opers], fo, indent=3)
+
+
 
