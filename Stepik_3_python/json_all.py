@@ -185,14 +185,50 @@
 
 
 
-import json
+# import json
+#
+# my_list = []
+# with open('data1.json', encoding='utf-8') as f1, open('data2.json', encoding='utf-8') as f2:
+#     a = json.load(f1)
+#     b = json.load(f2)
+#     my_dict = a | b
+#
+#
+# with open('data_merge.json', 'w', encoding='utf-8') as file:
+#     json.dump(my_dict, file, indent=3)
 
-my_list = []
-with open('data1.json', encoding='utf-8') as f1, open('data2.json', encoding='utf-8') as f2:
-    a = json.load(f1)
-    b = json.load(f2)
-    my_dict = a | b
+
+# import json
+#
+# with open('people.json', encoding='utf-8') as file:
+#     obj_json = json.load(file)
+#     l = []
+#     for i in obj_json:
+#         for j in i:
+#             if j not in l:
+#                 l.append(j)
+#     s = [{key: obj.get(key, None) for key in l} for obj in obj_json ]
+#
+# with open('updated_people.json', 'w', encoding='utf-8') as f:
+#     json.dump(s, f, indent=3)
+
+# import json
+#
+#
+# with open('people.json', encoding='utf-8') as js:
+#     content = json.load(js)
+#
+# keys = set()
+# for data in content:
+#     keys |= data.keys()
+#
+# for data in content:
+#     data |= dict.fromkeys(keys - data.keys())
+#
+# with open('updated_people.json', 'w') as js:
+#     json.dump(content, js, indent=3)
 
 
-with open('data_merg.json', 'w', encoding='utf-8') as file:
-    json.dump(my_dict, file, indent=3)
+
+
+
