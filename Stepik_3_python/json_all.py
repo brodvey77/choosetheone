@@ -231,4 +231,28 @@
 
 
 
+# import json
+#
+# my_dict = {}
+# with open('countries.json', encoding='utf-8') as file:
+#     data = json.load(file)
+#     for i in data:
+#         my_dict.setdefault(i['religion'], []).append(i['country'])
+#
+#
+# with open('religion.json', 'w', encoding='utf-8') as fr:
+#     json.dump(my_dict, fr, indent=3)
 
+
+
+
+# import json
+#
+# with open("countries.json") as file_in, open("religion.json", "w") as file_out:
+#
+#     d = {}
+#     datas = json.load(file_in)
+#     for data in datas:
+#         d[data['religion']] = d.get(data['religion'], []) + [data['country']]
+#
+#     json.dump(d, file_out)
