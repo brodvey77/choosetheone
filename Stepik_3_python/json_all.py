@@ -5,8 +5,7 @@
 # colors_json = json.dumps(colors, indent='-> ')
 #
 # print(colors_json)
-
-
+import csv
 # import json
 #
 # weekdays = {i: day for i, day in enumerate(['Sunday', 'Monday', 'Tuesday'])}
@@ -256,3 +255,65 @@
 #         d[data['religion']] = d.get(data['religion'], []) + [data['country']]
 #
 #     json.dump(d, file_out)
+
+
+
+# import pandas as pd
+# import json
+#
+# # Load the CSV file into a pandas DataFrame
+# df = pd.read_csv('playgrounds.csv', delimiter=';', encoding='utf-8')
+#
+# # Create an empty dictionary to store the results
+# results = {}
+#
+# # Loop over each row in the DataFrame
+# for index, row in df.iterrows():
+#     # Extract the administrative area and district from the row
+#     adm_area = row['AdmArea']
+#     district = row['District']
+#     address = row['Address']
+#
+#     # Check if the administrative area is already in the results dictionary
+#     if adm_area not in results:
+#         # If not, add it with an empty dictionary as the value
+#         results[adm_area] = {}
+#
+#     # Check if the district is already in the administrative area's dictionary
+#     if district not in results[adm_area]:
+#         # If not, add it with an empty list as the value
+#         results[adm_area][district] = []
+#
+#     # Add the address to the district's list of addresses
+#     results[adm_area][district].append(address)
+#
+# # Write the results to a JSON file
+# with open('addresses.json', 'w', encoding='utf-8') as f:
+#     json.dump(results, f, ensure_ascii=False, indent=3)
+
+
+# import json
+# import csv
+# with open('playgrounds.csv', encoding='utf-8') as file:
+#     s = list(csv.reader(file, delimiter=';'))
+#
+# my_dict = {}
+# for i in s[1:]:
+#     my_dict.setdefault(i[1], {}).setdefault(i[2], []).append(i[3])
+#
+#
+# with open('addresses.json', 'w', encoding='utf-8') as f:
+#     json.dump(my_dict, f, ensure_ascii=False, indent=3)
+
+
+# import json, csv
+#
+# with open('playgrounds.csv', encoding='utf-8') as fin, \
+#     open('addresses.json', 'w', encoding='utf-8') as fout:
+#     pgs = list(csv.reader(fin, delimiter=';'))[1:]
+#
+#     districts = {}
+#     for name, area, district, addr in pgs:
+#         districts.setdefault(area, {}).setdefault(district,[]).append(addr)
+#
+#     json.dump(districts, fout, indent=3, ensure_ascii=False)
