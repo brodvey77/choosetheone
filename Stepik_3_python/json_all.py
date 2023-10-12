@@ -317,3 +317,20 @@ import csv
 #         districts.setdefault(area, {}).setdefault(district,[]).append(addr)
 #
 #     json.dump(districts, fout, indent=3, ensure_ascii=False)
+
+
+
+import json
+
+d = {}
+my_list = []
+with open('students.json', encoding='utf-8') as file:
+    data = json.load(file)
+    for i in data:
+        if i['age'] > 17 and i['progress'] > 76:
+            d[i['name']] = i.setdefault('phone')
+                                        
+print(d)
+
+
+
