@@ -318,19 +318,23 @@ import csv
 #
 #     json.dump(districts, fout, indent=3, ensure_ascii=False)
 
-
-
-import json
-
-d = {}
-my_list = []
-with open('students.json', encoding='utf-8') as file:
-    data = json.load(file)
-    for i in data:
-        if i['age'] > 17 and i['progress'] > 76:
-            d[i['name']] = i.setdefault('phone')
-                                        
-print(d)
-
-
-
+#
+#
+# import json
+# import csv
+#
+# d = {}
+# my_list = []
+# with open('students.json', encoding='utf-8') as file:
+#     data = json.load(file)
+#     for i in data:
+#         if i['age'] >= 18 and i['progress'] >= 75:
+#             d[i['name']] = i.setdefault('phone')
+#
+#
+#
+# with open('data.csv', 'w', encoding='utf-8', newline='') as f:
+#     writer = csv.writer(f, delimiter=',')
+#     writer.writerow(('name', 'phone'))
+#     for k, v in sorted(d.items()):
+#         writer.writerow((k, v))
