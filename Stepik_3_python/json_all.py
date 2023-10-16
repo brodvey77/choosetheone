@@ -340,3 +340,10 @@ import csv
 #         writer.writerow((k, v))
 
 
+import  json
+
+
+with open('pools.json', encoding='utf-8') as file:
+    d = json.load(file)
+    for i in d:
+        print(i['WorkingHoursSummer']['Понедельник'])
