@@ -360,3 +360,14 @@ import csv
 #
 #     print(f"{f_l['DimensionsSummer']['Length']}x{f_l['DimensionsSummer']['Width']}\n{f_l['Address']}")
 
+
+
+import json
+import csv
+my_dict = {}
+pattern = '%Y-%m-%d %H:%M:%S'
+with open('exam_results.csv', encoding='utf-8') as file:
+    rows = csv.DictReader(file, delimiter=',')
+    for row in rows:
+        for k,v in row.items():
+            print(k, v)
