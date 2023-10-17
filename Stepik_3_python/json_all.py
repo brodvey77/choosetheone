@@ -341,9 +341,22 @@ import csv
 
 
 import  json
+import datetime
+from datetime import datetime
 
+my_list = []
 
 with open('pools.json', encoding='utf-8') as file:
     d = json.load(file)
     for i in d:
-        print(i['WorkingHoursSummer']['Понедельник'])
+        time_data = (i['WorkingHoursSummer']['Понедельник']).split('-')
+        if datetime.strptime(time_data[0], '%H:%M') <= datetime.strptime('10:00', '%H:%M') and \
+            datetime.strptime(time_data[1], '%H:%M') >= datetime.strptime('12:00', '%H:%M'):
+            my_list.append(i)
+        else:
+            continue
+
+    f_l = sorted(sorted(my_list, key=lambda x: x["DimensionsSummer"]['Width']), key=lambda x: x["DimensionsSummer"]['Length'])[-1]
+
+    print(f"{f_l['DimensionsSummer']['Length']}x{f_l['DimensionsSummer']['Width']}\n{f_l['Address']}")
+
