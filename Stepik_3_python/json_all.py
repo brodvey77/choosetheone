@@ -361,13 +361,71 @@ import csv
 #     print(f"{f_l['DimensionsSummer']['Length']}x{f_l['DimensionsSummer']['Width']}\n{f_l['Address']}")
 
 
-
-import json
-import csv
-my_dict = {}
-pattern = '%Y-%m-%d %H:%M:%S'
-with open('exam_results.csv', encoding='utf-8') as file:
-    rows = csv.DictReader(file, delimiter=',')
-    for row in rows:
-        for k,v in row.items():
-            print(k, v)
+#
+# import json
+# import csv
+# from datetime import datetime
+# l1 =[]
+# l2 = []
+# pattern = '%Y-%m-%d %H:%M:%S'
+# with open('exam_results.csv', encoding='utf-8') as file, open('best_scores.json', 'w', encoding='utf-8') as rfile:
+#     rows = csv.DictReader(file,  delimiter=',', fieldnames=['name','surname','best_score','date_and_time','email'])
+#     l = list(rows)
+#     data = sorted(sorted(l[1:], key=lambda item: int(item['best_score'])), key=lambda x: datetime.strptime(x['date_and_time'], pattern),reverse=True)
+#     for d in data:
+#         if d['email'] not in l1:
+#             l1.append(d['email'])
+#             l2.append(d)
+#     l2 = sorted(l2, key=lambda x: x['email'])
+#     for i in l2:
+#         i['best_score'] = int(i['best_score'])
+#
+#     json.dump(l2, rfile, indent=3)
+#
+#
+#
+# Идея заключается в следующем:
+#
+# 1) Считываем файл, тут всё понятно.
+#
+# 2) При итерации в одной строке сразу удаляем ключ 'score' и записываем его значение под ключом 'best_csore'
+#
+# 3) Из результирующего словаря получаем значение по ключу 'emai'. Если его ещё там нет, то значением будет словарь,
+# полученный из файла на текущей итерации
+#
+# 4) Из двух словарей (первый — очередной словарь из файла, второй — словарь, полученный на шаге
+# 3
+# 3) выбираем тот, в котором оценка выше. Если оценки совпадают, будет выбран тот, у которого более поздняя дата.
+#
+# 5) В результирующий словарь по ключу 'email', взятом из словаря, находящегося в файле, записываем значение из шага
+# 4
+# 4
+#
+# 6) Сортируем значения результирующего словаря по ключу 'email'
+#
+# 7) Записываем результат в новый файл
+#
+# Тем самым, за одну итерацию по входящему файлу отобрали наилучшие оценки каждого из учеников, затем отсортировали и
+# сохранили в результирующий файл
+#
+# Примечание. Здесь упущен момент при сравнении дат. Из файла json они, как и все прочие значения, поступают в виде
+# строк, поэтому при сравнении в таком виде поведение будет отличаться, т.к. строки и даты сравниваются по разному.
+# В рамках этой задачи это не повлияло на результат, но в целом нужно быть внимательнее с типами. Здесь нужно добавить
+# импорт datetime и немного подредактировать строку с нахождением максимума (# 4):
+#
+#
+# import csv
+# import json
+#
+# result = {}
+# with open('exam_results.csv', encoding='utf-8') as ex_r:
+#     rows = csv.DictReader(ex_r)  # 1
+#     for row in rows:
+#         row['best_score'] = int(row.pop('score'))  # 2
+#         r = result.get(row['email'], row)  # 3
+#         best_row = max(r, row, key=lambda item: (item['best_score'], item['date_and_time']))  # 4
+#         result[row['email']] = best_row  # 5
+#
+# with open('best_scores.json', 'w', encoding='utf-8') as bs:
+#     out = sorted(result.values(), key=lambda item: item['email'])  # 6
+#     json.dump(out, bs, indent=3)  # 7
