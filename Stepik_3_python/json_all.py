@@ -429,3 +429,39 @@ import csv
 # with open('best_scores.json', 'w', encoding='utf-8') as bs:
 #     out = sorted(result.values(), key=lambda item: item['email'])  # 6
 #     json.dump(out, bs, indent=3)  # 7
+
+
+
+
+# Name — название
+# IsNetObject — да\нет в зависимости от того, является ли заведение сетевым
+# OperatingCompany — название сети
+# TypeObject — вид (кафе, столовая, ресторан и т.д.)
+# AdmArea — административная зона
+# District — район
+# Address — полный адрес
+# SeatsCount — количество мест
+
+# import json
+#
+#
+# d1 = {}
+# d2 = {}
+# with open('food_services.json', encoding='utf-8') as file:
+#     data = json.load(file)
+#     # dict[key] = dict.get(key, 0) + 1
+#     for i in data:
+#         d1[i['District']] = d1.get(i['District'], 0) + 1
+#         d2[i['OperatingCompany']] = d2.get(i['OperatingCompany'], 0) + 1
+#         d2[''] = 0
+#
+#     maximum1 = max(d1, key=lambda x: d1[x])
+#     maximum2 = max(d2, key=lambda x: d2[x])
+#     print(f'{maximum1}: {d1[maximum1]}')
+#     print(f'{maximum2}: {d2[maximum2]}')
+
+
+
+
+
+
