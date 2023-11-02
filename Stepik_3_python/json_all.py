@@ -461,7 +461,40 @@ import csv
 #     print(f'{maximum2}: {d2[maximum2]}')
 
 
+# Name — название
+# IsNetObject — да\нет в зависимости от того, является ли заведение сетевым
+# OperatingCompany — название сети
+# TypeObject — вид (кафе, столовая, ресторан и т.д.)
+# AdmArea — административная зона
+# District — район
+# Address — полный адрес
+# SeatsCount — количество мест
 
-
-
-
+#
+# import json
+#
+#
+# d1 = {}
+# d2 = {}
+# with open('food_services.json', encoding='utf-8') as file:
+#     data = json.load(file)
+#     a = sorted(data, key=lambda x: x['SeatsCount'], reverse=True)
+#     for i in a:
+#         d1[i['TypeObject']] = d1.get(i['TypeObject'], (i['Name'], i['SeatsCount']))
+#
+# for k,v in sorted(d1.items()):
+#     print(f'{k}: {v[0]}, {v[1]}')
+#
+#
+#
+#
+#
+#
+# import json
+#
+# with open('food_services.json', 'r', encoding='utf-8') as f1:
+#     data = json.load(f1)
+#     d = {i['TypeObject']: f"{i['Name']}, {i['SeatsCount']}" for i
+#          in sorted(data, key=lambda x:(x['TypeObject'], x['SeatsCount']))}
+#     for item in d.items():
+#         print(f'{item[0]}: {item[1]}')
