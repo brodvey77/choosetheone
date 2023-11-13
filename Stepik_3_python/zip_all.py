@@ -122,7 +122,13 @@
 #     pass
 
 
-from zipfile import ZipFile
+# from zipfile import ZipFile
+# counter = 0
+# with ZipFile('workbook.zip') as zip_file:
+#     l = zip_file.infolist()
+#     for i in l:
+#         if i.is_dir() == False:
+#             counter += 1
+#     print(counter)
 
-with ZipFile('workbook.zip') as zip_file:
-    zip_file.printdir()
+
