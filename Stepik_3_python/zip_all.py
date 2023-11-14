@@ -132,3 +132,25 @@
 #     print(counter)
 
 
+# from zipfile import ZipFile
+#
+# counter_custom = 0
+# counter_arch = 0
+#
+# with ZipFile('workbook_1.zip') as zip_file:
+#     l = zip_file.infolist()
+#     for i in l:
+#         counter_custom += i.file_size
+#         counter_arch += i.compress_size
+#
+#     print(f'Объем исходных файлов: {counter_custom} байт(а)')
+#     print(f'Объем сжатых файлов: {counter_arch} байт(а)')
+#
+#
+#
+# from zipfile import ZipFile
+#
+# with ZipFile('workbook.zip') as zip_file:
+#     info = zip_file.infolist()
+#     print(f'Объем исходных файлов: {sum(f.file_size for f in info)} байт(а)')
+#     print(f'Объем сжатых файлов: {sum(f.compress_size for f in info)} байт(а)')
