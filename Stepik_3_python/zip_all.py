@@ -154,3 +154,25 @@
 #     info = zip_file.infolist()
 #     print(f'Объем исходных файлов: {sum(f.file_size for f in info)} байт(а)')
 #     print(f'Объем сжатых файлов: {sum(f.compress_size for f in info)} байт(а)')
+
+# from zipfile import ZipFile
+#
+# a = []
+# with ZipFile('workbook_16.zip') as zip_file:
+#     l = zip_file.infolist()
+#     for i in l:
+#         if not i.is_dir():
+#             size = 100-(i.compress_size/i.file_size) * 100
+#             a.append((i.filename.split('/')[-1], size))
+#
+#     a = sorted(a,key=lambda x: x[1], reverse=True)
+#     print(a[0][0])
+
+
+# from zipfile import ZipFile
+#
+# with ZipFile("workbook.zip") as zip_file:
+#     filelist = zip_file.infolist()
+#     t = ((f.filename, f.compress_size/f.file_size) for f in filelist
+#          if f.file_size != 0)
+#     print(min(t, key=lambda x: x[1])[0].split("/")[-1])
