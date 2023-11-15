@@ -178,3 +178,20 @@
 #     print(min(t, key=lambda x: x[1])[0].split("/")[-1])
 
 
+# from zipfile import ZipFile
+# from datetime import datetime
+#
+# d = '2021-11-30 14:22:00'
+# pattern = '%Y-%m-%d %H:%M:%S'
+# l_f = []
+# with ZipFile('workbook_17.zip') as zip_file:
+#     l = zip_file.infolist()
+#     for i in l:
+#         if not i.is_dir():
+#             name = i.filename.split('/')[-1]
+#             i_d = datetime(*i.date_time)
+#             if i_d > datetime.strptime(d, pattern):
+#                 l_f.append((name))
+#
+#     for i in sorted(l_f):
+#         print(i)
