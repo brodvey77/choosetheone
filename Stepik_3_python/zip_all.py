@@ -195,3 +195,40 @@
 #
 #     for i in sorted(l_f):
 #         print(i)
+
+
+# from zipfile import ZipFile
+# from datetime import datetime
+#
+# d = {}
+# counter = 0
+# with ZipFile('workbook_18.zip') as zip_file:
+#     l = zip_file.infolist()
+#     for i in l:
+#         if not i.is_dir():
+#             tt = datetime(*i.date_time)
+#             d[i.filename.split('/')[-1]] = {'date_file': tt, 'size_start': i.file_size, 'size_finish': i.compress_size}
+#
+#     for k,v in sorted(d.items()):
+#         print(k)
+#         print(f'  Дата модификации файла: {v["date_file"]}')
+#         print(f'  Объем исходного файла: {v["size_start"]} байт(а)')
+#         print(f'  Объем сжатого файла: {v["size_finish"]} байт(а)')
+#         counter +=1
+#         if counter < len(d):
+#             print()
+
+
+# from zipfile import ZipFile
+# import os
+# import datetime
+#
+# with ZipFile('workbook.zip') as zip_file:
+#     info = [i for i in zip_file.infolist() if not i.is_dir()]
+#
+#     for i in sorted(info, key=lambda x: os.path.basename(x.filename).lower()):
+#         print(f"""{os.path.basename(i.filename)}
+#   Дата модификации файла: {datetime.datetime(*i.date_time)}
+#   Объем исходного файла: {i.file_size} байт(а)
+#   Объем сжатого файла: {i.compress_size} байт(а)
+# """)
