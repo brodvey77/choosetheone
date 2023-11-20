@@ -232,3 +232,22 @@
 #   Объем исходного файла: {i.file_size} байт(а)
 #   Объем сжатого файла: {i.compress_size} байт(а)
 # """)
+
+# from zipfile import ZipFile
+#
+# file_names = ['how to prove.pdf', 'fipi_demo_2022.pdf', 'Hollow Knight Silksong.exe',
+#               'code.jpeg', 'stepik.png', 'readme.txt', 'shopping_list.txt',
+#               'Alexandra Savior – Crying All the Time.mp3', 'homework.py', 'test.py']
+
+# from zipfile import ZipFile
+#
+# file_names = ['del_1.txt', 'del_2.txt']
+# with ZipFile('files.zip', mode='w') as zip_file:
+#     for i in file_names:
+#         zip_file.write(i)
+#     print(zip_file.namelist()
+#
+#
+#
+# with ZipFile('files.zip', mode='w') as zip_file:
+#     [zip_file.write(file) for file in file_names]
