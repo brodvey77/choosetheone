@@ -252,4 +252,16 @@
 # with ZipFile('files.zip', mode='w') as zip_file:
 #     [zip_file.write(file) for file in file_names]
 
+#
+# import zipfile
+# import os
+#
+# def extract_this(zip_name, *args):
+#     with zipfile.ZipFile(zip_name, 'r') as zip_ref:
+#         if len(args) == 0:
+#             zip_ref.extractall()
+#         else:
+#             for file in args:
+#                 zip_ref.extract(file)
+
 
