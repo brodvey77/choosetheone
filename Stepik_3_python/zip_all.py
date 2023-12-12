@@ -265,3 +265,37 @@
 #                 zip_ref.extract(file)
 
 
+import os
+import json
+
+def is_correct_json(file_path):
+    try:
+        with open(file_path) as f:
+            json.load(f)
+        return True
+    except:
+        return False
+
+def get_players(file_path):
+    with open(file_path) as f:
+        data = json.load(f)
+    if data.get('team') == 'Arsenal':
+        return data.get('first_name'), data.get('last_name')
+    return None
+
+def main():
+    players = []
+    for root, dirs, files in os.walk('data'):
+        for file in files:
+            if file.endswith('.json'):
+                file_path = os.path.join(root, file)
+                if is_correct_json(file_path):
+                    player = get_players(file_path)
+                    if player is not None:
+                        players.append(player)
+    players.sort()
+    for player in players:
+        print(player[0], player[1])
+
+if __name__ == '__main__':
+    main()
