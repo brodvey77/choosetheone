@@ -326,4 +326,52 @@
 # for i in sorted(players):
 #     print(*i)
 
+import zipfile
+# import os
+#
+# def print_file_structure(zip_file, indent=''):
+#     with zipfile.ZipFile(zip_file, 'r') as archive:
+#         for item in archive.infolist():
+#             if item.is_dir():
+#                 print(f'{indent}{item.filename}/')
+#                 print_file_structure(item.filename, indent + '  ')
+#             else:
+#                 file_size = item.file_size
+#                 if file_size >= 1024 * 1024:
+#                     file_size = f'{file_size // (1024 * 1024)} MB'
+#                 elif file_size >= 1024:
+#                     file_size = f'{file_size // 1024} KB'
+#                 else:
+#                     file_size = f'{file_size} B'
+#                 print(f'{indent}{item.filename} {file_size}')
+#
+# zip_file = 'desktop.zip'
+# print_file_structure(zip_file)
+
+# from zipfile import ZipFile
+#
+#
+# def convert_bytes(size):
+#     """Конвертер байт в большие единицы"""
+#     if size < 1000:
+#         return f'{size} B'
+#     elif 1000 <= size < 1000000:
+#         return f'{round(size / 1024)} KB'
+#     elif 1000000 <= size < 1000000000:
+#         return f'{round(size / 1048576)} MB'
+#     else:
+#         return f'{round(size / 1073741824)} GB'
+#
+# with ZipFile('desktop.zip') as zip_file:
+#     info = zip_file.infolist()
+#     indent = ''
+#     for item in info:
+#         name = item.filename
+#         size = convert_bytes(item.file_size)
+#         items = name.rstrip("/").split("/")
+#         if item.is_dir():
+#             print("  " * (len(items) - 1) + items[-1])
+#         else:
+#             print("  " * (len(items) - 1) + items[-1] + ' ' + size)
+
 
