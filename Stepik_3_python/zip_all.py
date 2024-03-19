@@ -394,3 +394,17 @@ import zipfile
 #     func = pickle.load(f)
 #
 # print(func(*args))
+#
+# import pickle
+# def filter_dump(filename, object: list, typename:type):
+#     with open(filename, 'wb') as pickle_file:
+#         pickle.dump([i for i in object if type(i) == typename], pickle_file)
+#
+#
+#
+#
+# t_m = int
+# obj = [1,2,3,"d"]
+# file_name = "some_file"
+#
+# filter_dump(file_name, obj, t_m)
