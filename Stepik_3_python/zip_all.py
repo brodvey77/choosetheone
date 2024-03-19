@@ -375,3 +375,22 @@ import zipfile
 #             print("  " * (len(items) - 1) + items[-1] + ' ' + size)
 
 
+# import  sys
+# import pickle
+#
+# file_name, *data = list(map(str.strip, sys.stdin))
+#
+# with open(file_name, 'rb') as pickle_file:
+#     a_f = pickle.load(pickle_file)
+#     print(a_f(*data))
+#
+#
+# import pickle
+# import sys
+#
+# name, *args = [line.strip() for line in sys.stdin]
+#
+# with open(name, 'rb') as f:
+#     func = pickle.load(f)
+#
+# print(func(*args))
