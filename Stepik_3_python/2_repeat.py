@@ -482,24 +482,41 @@ import re
 # phrase.translate(m)
 
 
-
-
 # Ввод строки соответствия латинскому алфавиту
-alphabet_mapping = input()
+mapping_str = input()
+
+# Создание словаря соответствия с помощью maketrans()
+mapping_dict = str.maketrans(
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    mapping_str*2  # Дублирование строки для учета как заглавных, так и строчных букв
+)
 
 # Ввод текста, требующего перевода
-text_to_translate = input()
+text = input()
 
-# Создание словаря соответствия с помощью метода maketrans()
-translation_table = str.maketrans(alphabet_mapping, alphabet_mapping.upper())
+# Применение словаря соответствия для перевода текста
+translated_text = text.translate(mapping_dict)
 
-# Перевод текста с использованием созданного словаря
-translated_text = text_to_translate.translate(translation_table)
-
-# Вывод полученного результата
+# Вывод результата
 print(translated_text)
 
 
+from string import ascii_letters
+
+translator = str.maketrans(ascii_letters, input() * 2)
+
+print(input().translate(translator))
 
 
+from string import ascii_lowercase as lc
+
+tbl = str.maketrans(lc, input())
+print(input().lower().translate(tbl))
+
+
+
+from string import ascii_lowercase
+
+trans = str.maketrans(ascii_lowercase, input())
+print(input().lower().translate(trans))
 
