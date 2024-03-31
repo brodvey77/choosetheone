@@ -475,12 +475,29 @@ import re
 #         print()
 
 
+# phrase = input().lower()
+# other_alphabet = input().lower()
+# dct[letters[i]] = other_alphabet[i]
+# m = phrase.maketrans(dct)
+# phrase.translate(m)
 
 
 
 
+# Ввод строки соответствия латинскому алфавиту
+alphabet_mapping = input()
 
+# Ввод текста, требующего перевода
+text_to_translate = input()
 
+# Создание словаря соответствия с помощью метода maketrans()
+translation_table = str.maketrans(alphabet_mapping, alphabet_mapping.upper())
+
+# Перевод текста с использованием созданного словаря
+translated_text = text_to_translate.translate(translation_table)
+
+# Вывод полученного результата
+print(translated_text)
 
 
 
