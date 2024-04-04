@@ -56,3 +56,25 @@
 #     print(f'  Email: {el.email}')
 #     print(f'  Plan: {el.plan}')
 #     print()
+
+
+import csv
+from collections import namedtuple
+
+l = []
+with open('meetings.csv', encoding='utf-8') as file:
+    rows = csv.reader(file, delimiter=',')
+    for i in rows:
+        headers = i
+        break
+
+    Friend = namedtuple('Friend', headers)
+
+    for f in rows:
+        friend = Friend._make(f)
+        l.append(friend)
+
+    for _ in l:
+        print(_)
+
+
