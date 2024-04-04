@@ -58,23 +58,47 @@
 #     print()
 
 
-import csv
-from collections import namedtuple
+# import csv
+# from collections import namedtuple
+# from datetime import datetime
+#
+# friends = []
+# with open('meetings.csv', encoding='utf-8') as file:
+#     rows = csv.reader(file, delimiter=',')
+#     for i in rows:
+#         headers = i
+#         break
+#
+#     Friend = namedtuple('Friend', headers)
+#
+#     for f in rows:
+#         friends.append(Friend._make(f))
+#
+# friends_s = sorted(friends, key=lambda x: (datetime.strptime(x.meeting_date,'%d.%m.%Y' ), datetime.strptime(x.meeting_time, '%H:%M')))
+#
+# for i in friends_s:
+#     print(i.surname, i.name)
 
-l = []
-with open('meetings.csv', encoding='utf-8') as file:
-    rows = csv.reader(file, delimiter=',')
-    for i in rows:
-        headers = i
-        break
-
-    Friend = namedtuple('Friend', headers)
-
-    for f in rows:
-        friend = Friend._make(f)
-        l.append(friend)
-
-    for _ in l:
-        print(_)
 
 
+
+# import csv
+# from collections import namedtuple
+# from datetime import datetime
+#
+# with open('meetings.csv', encoding='u8') as fi:
+#     rows = csv.DictReader(fi)
+#     Friend = namedtuple('Friend', rows.fieldnames)
+#     meetings = [Friend(**row) for row in rows]
+#
+# meetings.sort(key=lambda item: datetime.strptime(f'{item.meeting_date} {item.meeting_time}', '%d.%m.%Y %H:%M'))
+# for meeting in meetings:
+#     print(meeting.surname, meeting.name)
+
+
+# from datetime import datetime as dt
+#
+# with open('meetings.csv', encoding='utf-8') as file:
+#     data, s = __import__('csv').DictReader(file), '%d.%m.%Y %H:%M'
+#     for i in sorted(data, key=lambda x: dt.strptime(f'{x["meeting_date"]} {x["meeting_time"]}', s)):
+#         print(i['surname'], i['name'])
