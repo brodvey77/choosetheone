@@ -102,3 +102,10 @@
 #     data, s = __import__('csv').DictReader(file), '%d.%m.%Y %H:%M'
 #     for i in sorted(data, key=lambda x: dt.strptime(f'{x["meeting_date"]} {x["meeting_time"]}', s)):
 #         print(i['surname'], i['name'])
+
+from collections import defaultdict
+
+my_defdict =defaultdict({'name': 'Timur', 'surname': 'Guev', 'hobby': 'math'})
+
+print(type(my_defdict))
+
