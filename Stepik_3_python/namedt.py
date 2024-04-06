@@ -105,7 +105,6 @@
 
 from collections import defaultdict
 
-my_defdict =defaultdict({'name': 'Timur', 'surname': 'Guev', 'hobby': 'math'})
 
 print(type(my_defdict))
 
