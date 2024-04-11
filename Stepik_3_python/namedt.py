@@ -234,27 +234,42 @@ from collections import defaultdict
 #             fliped_data[value].append(key)
 #     return fliped_data
 
-
-from collections import defaultdict as DD
-
-
-def best_sender(messages, senders):
-    d = DD(list, zip(messages,senders))
-
-
-
-    return d
-
-
-
-
-
-messages = ['Hi, Linda', 'Hi, Sam', 'How are you doing?']
-senders = ['Sam Fisher', 'Linda', 'Sam Fisher']
-
-print(best_sender(messages, senders))
-
-# messages = ['How is Stepik for everyone', 'Stepik is useful for practice']
-# senders = ['Bob', 'Charlie']
 #
-# print(best_sender(messages, senders))
+# from collections import defaultdict
+#
+# def best_sender(messages, senders):
+#     d = defaultdict(list)
+#     d_2 = defaultdict(int)
+#     for s, m in zip(senders, messages):
+#         d[s].extend(m.split())
+#     for k, v in d.items():
+#         d_2[k] = len(v)
+#
+#     return max(sorted(d_2, reverse=True), key=d_2.get)
+#
+#
+# # TEST_3:
+# messages = ['Hello userTwooo', 'Hi userThree', 'Wonderful day Alice', 'Nice day userThree']
+# senders = ['Alice', 'userTwo', 'userThree', 'Alice']
+#
+
+
+
+
+# from collections import defaultdict
+#
+# def best_sender(messages, senders):
+#     result = defaultdict(int)
+#     for sender, message in zip(senders, messages):
+#         result[sender] += len(message.split())
+#     return max(result, key=lambda p: (result[p], p))
+
+
+# from collections import defaultdict
+#
+#
+# def best_sender(messages, senders):
+#     result_dict = defaultdict(int)
+#     for i in range(len(senders)):
+#         result_dict[senders[i]] += len(messages[i].split())
+#     return max(result_dict.items(), key=lambda x: (x[1], x[0]))[0]
