@@ -233,3 +233,28 @@ from collections import defaultdict
 #         for value in values:
 #             fliped_data[value].append(key)
 #     return fliped_data
+
+
+from collections import defaultdict as DD
+
+
+def best_sender(messages, senders):
+    d = DD(list, zip(messages,senders))
+
+
+
+    return d
+
+
+
+
+
+messages = ['Hi, Linda', 'Hi, Sam', 'How are you doing?']
+senders = ['Sam Fisher', 'Linda', 'Sam Fisher']
+
+print(best_sender(messages, senders))
+
+# messages = ['How is Stepik for everyone', 'Stepik is useful for practice']
+# senders = ['Bob', 'Charlie']
+#
+# print(best_sender(messages, senders))
