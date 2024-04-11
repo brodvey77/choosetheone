@@ -209,7 +209,27 @@ from collections import defaultdict
 #     print(winner, '->', *sorted(losers))
 
 
-
-
-
-
+# from collections import defaultdict
+#
+# def flip_dict(d):
+#     flipped_dict = defaultdict(list)
+#     for key, values in d.items():
+#         for value in values:
+#             flipped_dict[value].append(key)
+#     return flipped_dict
+#
+# data = {'Arthur': ['cacao', 'tea', 'juice'], 'Timur': ['coffee', 'tea', 'juice'], 'Anri': ['juice', 'coffee']}
+#
+# for key, values in flip_dict(data).items():
+#     print(f'{key}: {", ".join(values)}')
+#
+#
+#
+# from collections import defaultdict
+#
+# def flip_dict(data):
+#     fliped_data = defaultdict(list)
+#     for key, values in data.items():
+#         for value in values:
+#             fliped_data[value].append(key)
+#     return fliped_data
