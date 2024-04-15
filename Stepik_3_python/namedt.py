@@ -273,3 +273,65 @@ from collections import defaultdict
 #     for i in range(len(senders)):
 #         result_dict[senders[i]] += len(messages[i].split())
 #     return max(result_dict.items(), key=lambda x: (x[1], x[0]))[0]
+
+# from collections import OrderedDict
+#
+# a = OrderedDict()
+# b = OrderedDict(name='Timur', surname='Guev', hobby='math')
+# c = OrderedDict({'name': 'Timur', 'surname': 'Guev', 'hobby': 'math'})
+# d = OrderedDict((['name', 'Timur'], ['surname', 'Guev'], ['hobby', 'math']))
+# e = OrderedDict(int, ['name': 'Timur', 'surname': 'Guev', 'hobby': 'math'])
+# f = OrderedDict.fromkeys(('name', 'surname', 'hobby'), 'Empty')
+#
+#
+# print(type(a))
+# print(type(b))
+# print(type(c))
+# print(type(d))
+# # print(type(e))
+# print(type(f))
+
+
+
+# from collections import OrderedDict
+#
+# data = OrderedDict(key1='value1')
+#
+# data['key2'] = 'value2'
+# data['key3'] = 'value3'
+#
+# for key, value in data.items():
+#     print(f'{key} -> {value}')
+
+# from collections import OrderedDict
+#
+# cloth = OrderedDict({'name': 'pants', 'size': 'm', 'color': 'grey'})
+#
+# cloth['name'] = 'shirt'
+# cloth.update(size='s')
+#
+# for key, value in cloth.items():
+#     print(f'{key}: {value}')
+
+#
+# country1 = dict(name='Finland', capital='Helsinki', currency='euro')
+# country2 = dict(capital='Helsinki', name='Finland', currency='euro')
+#
+# print(country1 == country2)
+
+# from collections import OrderedDict
+#
+# country1 = OrderedDict(name='Finland', capital='Helsinki', currency='euro')
+# country2 = OrderedDict(name='Finland', capital='Helsinki', currency='euro')
+#
+# country2.move_to_end('name')
+#
+# print(country1 == country2)
+
+
+from collections import OrderedDict
+
+country1 = dict(name='Finland', capital='Helsinki', currency='euro')
+country2 = OrderedDict(currency='euro', capital='Helsinki', name='Finland')
+
+print(country1 == country2)
