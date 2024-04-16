@@ -329,9 +329,58 @@ from collections import defaultdict
 # print(country1 == country2)
 
 
-from collections import OrderedDict
+# from collections import OrderedDict
+#
+# country1 = dict(name='Finland', capital='Helsinki', currency='euro')
+# country2 = OrderedDict(currency='euro', capital='Helsinki', name='Finland')
+#
+# print(country1 == country2)
 
-country1 = dict(name='Finland', capital='Helsinki', currency='euro')
-country2 = OrderedDict(currency='euro', capital='Helsinki', name='Finland')
 
-print(country1 == country2)
+# from collections import OrderedDict
+#
+# planets1 = OrderedDict(Mercury=None, Venues=2, Earth=None, Mars=4, Jupiter=5)
+# planets2 = OrderedDict(Mercury=1, Saturn=6, Uranus=7, Neptune=8, Earth=3)
+#
+# solar_system = planets1 | planets2
+#
+# print(*solar_system)
+
+# from collections import OrderedDict
+#
+# flower = OrderedDict([('name', 'Rose'), ('family', 'Rosaceae'), ('kingdom', 'Plantae')])
+#
+# flower.move_to_end('family')
+#
+# for key, value in flower.items():
+#     print(f'{key}: {value}')
+
+
+# from collections import OrderedDict
+#
+# flower = OrderedDict([('name', 'Viola'), ('family', 'Violaceae'), ('kingdom', 'Plantae')])
+#
+# flower.move_to_end('kingdom', last=False)
+#
+# for key, value in flower.items():
+#     print(f'{key}: {value}')
+
+
+# from collections import OrderedDict
+#
+# grades = OrderedDict(Timur=100, Arthur=84, Anri=94, Dima=98)
+# new_grades = OrderedDict()
+#
+# for rule in (True, False, False, True):
+#     name, grade = grades.popitem(last=rule)
+#     new_grades[name] = grade
+#
+# print(*new_grades)
+
+
+# from collections import OrderedDict
+#
+# vector = OrderedDict(x=3, y=4, module=5)
+#
+# print(*reversed(vector))
+
