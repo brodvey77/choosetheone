@@ -117,7 +117,7 @@
 # print(data['key3'])
 
 #
-from collections import defaultdict
+# from collections import defaultdict
 
 # data = [('Books', 1343), ('Books', 1166), ('Merch', 616), ('Courses', 966), ('Merch', 1145), ('Courses', 1061), ('Books', 848), ('Courses', 964), ('Tutorials', 832), ('Merch', 642), ('Books', 815), ('Tutorials', 1041), ('Books', 1218), ('Tutorials', 880), ('Books', 1003), ('Merch', 951), ('Books', 920), ('Merch', 729), ('Tutorials', 977), ('Books', 656)]
 #
@@ -402,3 +402,21 @@ from collections import defaultdict
 #     new_data[name] = grade
 #
 # print(new_data)
+
+from collections import OrderedDict
+
+def custom_sort(ordered_dict, by_values=False):
+    if by_values:
+        for key in sorted(ordered_dict,key=lambda x: ordered_dict[x]):
+            ordered_dict.move_to_end(key)
+    else:
+        for key in sorted(ordered_dict):
+            ordered_dict.move_to_end(key)
+
+
+data = OrderedDict(Earth=3, Mercury=1, Mars=4, Venus=2)
+custom_sort(data, by_values=True)
+
+print(*data.items())
+
+# ('Mercury', 1) ('Venus', 2) ('Earth', 3) ('Mars', 4)
