@@ -403,20 +403,37 @@
 #
 # print(new_data)
 
-from collections import OrderedDict
+# from collections import OrderedDict
+#
+# def custom_sort(ordered_dict, by_values=False):
+#     if by_values:
+#         for key in sorted(ordered_dict,key=lambda x: ordered_dict[x]):
+#             ordered_dict.move_to_end(key)
+#     else:
+#         for key in sorted(ordered_dict):
+#             ordered_dict.move_to_end(key)
+#
+#
+# data = OrderedDict(Earth=3, Mercury=1, Mars=4, Venus=2)
+# custom_sort(data, by_values=True)
+#
+# print(*data.items())
+#
+# # ('Mercury', 1) ('Venus', 2) ('Earth', 3) ('Mars', 4)
 
-def custom_sort(ordered_dict, by_values=False):
-    if by_values:
-        for key in sorted(ordered_dict,key=lambda x: ordered_dict[x]):
-            ordered_dict.move_to_end(key)
-    else:
-        for key in sorted(ordered_dict):
-            ordered_dict.move_to_end(key)
+# from collections import Counter
+#
+# print(Counter('Sandy Cheeks'))
+# print(Counter('Sandy Cheeks'.split()))
+# print(Counter(Sandy=1.5, Cheeks=-3))
+# print(Counter())
+# print(Counter({'S': 1, 'a': 5, 'n': 3, 'd': 9, 'y': 7}))
+# print(Counter(Sandy='2', Cheeks='4'))
+# print(Counter({'S': '1', 'a': '5', 'n': '3', 'd': '9', 'y': '7'}))
+# print(Counter.fromkeys('Sandy', 1))
 
-
-data = OrderedDict(Earth=3, Mercury=1, Mars=4, Venus=2)
-custom_sort(data, by_values=True)
-
-print(*data.items())
-
-# ('Mercury', 1) ('Venus', 2) ('Earth', 3) ('Mars', 4)
+# from collections import Counter
+#
+# browsers = Counter(['Firefox', 'Chrome', 'Edge', 'Edge' 'Chrome', 'Firefox', 'Opera', 'Yandex', 'Chrome'])
+#
+# print(browsers['Firefox'])
