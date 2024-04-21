@@ -437,3 +437,34 @@
 # browsers = Counter(['Firefox', 'Chrome', 'Edge', 'Edge' 'Chrome', 'Firefox', 'Opera', 'Yandex', 'Chrome'])
 #
 # print(browsers['Firefox'])
+
+# from collections import Counter
+
+# counter = Counter.fromkeys('abcd', 1)
+
+# print(*counter.keys(), sum(counter.values()))
+
+
+# from collections import Counter
+
+# counter = Counter({1: 11, 2: 22, 3: 33})
+
+# print(max(counter.keys()) + min(counter.values()))
+
+# from collections import Counter
+
+# pets = Counter(cat=3, dog=3, fox=2, hamster=1)
+
+# print(pets['elephant'])
+# print(*pets)
+
+
+
+
+
+from collections import Counter
+
+
+letters = Counter(set('Beautiful is better than ugly'))
+
+print(letters['t'])
