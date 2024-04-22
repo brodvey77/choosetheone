@@ -462,9 +462,26 @@
 
 
 
-from collections import Counter
+# from collections import Counter
+#
+#
+# letters = Counter(set('Beautiful is better than ugly'))
+#
+# print(letters['t'])
 
+# from collections import Counter
+#
+# clothes = Counter([('shirt', 3), ('dress', 1), ('shirt', 3)])
+#
+# print(clothes['shirt'])
+#
+# print(clothes)
 
-letters = Counter(set('Beautiful is better than ugly'))
-
-print(letters['t'])
+# from collections import Counter
+#
+# letters1 = Counter('abcd')
+# letters2 = Counter('abcd')
+#
+# letters2.update(e=0)
+#
+# print(letters1 == letters2)
