@@ -504,7 +504,7 @@ files = ['emoji_smile.jpeg', 'city-of-the-sun.mp3', 'dhook_hw.json', 'sample.xml
 
 
 
-d = Counter(map(lambda x: x.split('.')[1], files))
+d = Counter(map(lambda x: x.split('.')[-1], files))
 
 for k,v in sorted(d.items()):
     print(f'{k}: {v}')
