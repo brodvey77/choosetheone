@@ -486,25 +486,137 @@
 #
 # print(letters1 == letters2)
 
-from collections import Counter
+# from collections import Counter
+#
+# files = ['emoji_smile.jpeg', 'city-of-the-sun.mp3', 'dhook_hw.json', 'sample.xml',
+#          'teamspeak3.exe', 'project_module3.py', 'math_lesson3.mp4', 'old_memories.mp4',
+#          'spiritfarer.exe', 'backups.json', 'python_for_beg1.mp4', 'emoji_angry.jpeg',
+#          'exam_results.csv', 'project_main.py', 'classes.csv', 'plants.xml',
+#          'cant-help-myself.mp3', 'microsoft_edge.exe', 'steam.exe', 'math_lesson4.mp4',
+#          'city.jpeg', 'bad-disease.mp3', 'beauty.jpeg', 'hollow_knight_silksong.exe',
+#          'whatsapp.exe', 'photoshop.exe', 'telegram.exe', 'yandex_browser.exe',
+#          'math_lesson7.mp4', 'students.csv', 'emojis.zip', '7z.zip',
+#          'bones.mp3', 'python3.zip', 'dhook_lsns.json', 'carl_backups.json',
+#          'forest.jpeg', 'python_for_pro8.mp4', 'yandexdisc.exe', 'but-you.mp3',
+#          'project_module1.py', 'nothing.xml', 'flowers.jpeg', 'grades.csv',
+#          'nvidia_gf.exe', 'small_txt.zip', 'project_module2.py', 'tab.csv',
+#          'note.xml', 'sony_vegas11.exe', 'friends.jpeg', 'data.pkl']
+#
+#
+#
+# d = Counter(map(lambda x: x.split('.')[-1], files))
+#
+# for k,v in sorted(d.items()):
+#     print(f'{k}: {v}')
 
-files = ['emoji_smile.jpeg', 'city-of-the-sun.mp3', 'dhook_hw.json', 'sample.xml',
-         'teamspeak3.exe', 'project_module3.py', 'math_lesson3.mp4', 'old_memories.mp4',
-         'spiritfarer.exe', 'backups.json', 'python_for_beg1.mp4', 'emoji_angry.jpeg',
-         'exam_results.csv', 'project_main.py', 'classes.csv', 'plants.xml',
-         'cant-help-myself.mp3', 'microsoft_edge.exe', 'steam.exe', 'math_lesson4.mp4',
-         'city.jpeg', 'bad-disease.mp3', 'beauty.jpeg', 'hollow_knight_silksong.exe',
-         'whatsapp.exe', 'photoshop.exe', 'telegram.exe', 'yandex_browser.exe',
-         'math_lesson7.mp4', 'students.csv', 'emojis.zip', '7z.zip',
-         'bones.mp3', 'python3.zip', 'dhook_lsns.json', 'carl_backups.json',
-         'forest.jpeg', 'python_for_pro8.mp4', 'yandexdisc.exe', 'but-you.mp3',
-         'project_module1.py', 'nothing.xml', 'flowers.jpeg', 'grades.csv',
-         'nvidia_gf.exe', 'small_txt.zip', 'project_module2.py', 'tab.csv',
-         'note.xml', 'sony_vegas11.exe', 'friends.jpeg', 'data.pkl']
-
-
-
-d = Counter(map(lambda x: x.split('.')[-1], files))
-
-for k,v in sorted(d.items()):
-    print(f'{k}: {v}')
+# from collections import Counter
+#
+# def count_occurences(word, words):
+#     return Counter(words.lower().split())[word.lower()]
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# word = 'python'
+# words = 'Python Conferences python training python events'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_2:
+# word = 'Java'
+# words = 'Python C++ C# JavaScript Go Assembler'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_3:
+# word = 'bee'
+# words = 'bee bee bee bee bee bee bee bee'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_4:
+# word = 'bee'
+# words = 'Bee bEe Bee BEe BEE bee bee bee'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_5:
+# word = 'bee'
+# words = 'arthur asdad gkjdf BEeG bee dasdafd asfd gs beegeek stepik'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_6:
+# word = 'bee'
+# words = 'stepik bEe Bee BEe BEEgeek bee bee beegeek stepik'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_7:
+# word = 'bee'
+# words = 'stepik bEe Bee BEe BEEgeek bee bee beegeek stepik'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_8:
+# word = 'step'
+# words = 'stepik bEe Bee BEe STEP STEP bee STEP stepik stepik STEPik STEPIK'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_9:
+# word = 'step'
+# words = 'stepik stepik stepik stepik stepik stepik'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_10:
+# word = 's'
+# words = 'S sdsf sds sdfsdg dhgf gfd asd'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_11:
+# word = 'a'
+# words = 'sdsf sds sdfsdg dhgf gfd asd A'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_12:
+# word = 's'
+# words = 's sdsf sds sdfsdg dhgf gfd asd'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_13:
+# word = 'a'
+# words = 'sdsf sds sdfsdg dhgf gfd asd a'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_14:
+# word = 's'
+# words = 'sdsf sds sdfsdg S dhgf gfd asd'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_15:
+# word = 's'
+# words = 'sdsf sds sdfsdg s dhgf gfd asd'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_16:
+# word = 's'
+# words = 's sdsf sds s sdfsdg s dhgf gfd asd S'
+#
+# print(count_occurences(word, words))
+#
+# # TEST_17:
+# word = 'Se'
+# words = 'se sdsf sds SE sdfsdg Se dhgf gfd asd se'
+#
+# print(count_occurences(word, words))
