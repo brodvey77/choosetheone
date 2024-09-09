@@ -621,9 +621,26 @@
 #
 # print(count_occurences(word, words))
 
-from collections import Counter
+# from collections import Counter
+#
+# d = Counter(input().split(','))
+#
+# for k,v in sorted(d.items()):
+#     print(f'{k}: {v}')
 
-d = Counter(input().split(','))
+from collections import Counter
+from functools import reduce
+
+a = 'лимон,лимон,лимон,груша,банан,банан,киви,киви,киви,киви'
+b = a.split(',')
+
+l = len(max((b), key=len))
+
+d = Counter(a.split(','))
 
 for k,v in sorted(d.items()):
-    print(f'{k}: {v}')
+    s1 = reduce(lambda x,y: ord(y) + x,k.replace(" ", ''),0)
+    s2 = s1 * v
+    print(f'{k.ljust(l)}: {s1} UC x {v} = {s2} UC')
+
+
