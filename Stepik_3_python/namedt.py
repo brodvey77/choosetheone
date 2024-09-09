@@ -620,3 +620,10 @@
 # words = 'se sdsf sds SE sdfsdg Se dhgf gfd asd se'
 #
 # print(count_occurences(word, words))
+
+from collections import Counter
+
+d = Counter(input().split(','))
+
+for k,v in sorted(d.items()):
+    print(f'{k}: {v}')
