@@ -628,19 +628,41 @@
 # for k,v in sorted(d.items()):
 #     print(f'{k}: {v}')
 
-from collections import Counter
-from functools import reduce
+# from collections import Counter
+# from functools import reduce
+#
+# a = 'лимон,лимон,лимон,груша,банан,банан,киви,киви,киви,киви'
+# b = a.split(',')
+#
+# l = len(max((b), key=len))
+#
+# d = Counter(a.split(','))
+#
+# for k,v in sorted(d.items()):
+#     s1 = reduce(lambda x,y: ord(y) + x,k.replace(" ", ''),0)
+#     s2 = s1 * v
+#     print(f'{k.ljust(l)}: {s1} UC x {v} = {s2} UC')
 
-a = 'лимон,лимон,лимон,груша,банан,банан,киви,киви,киви,киви'
-b = a.split(',')
-
-l = len(max((b), key=len))
-
-d = Counter(a.split(','))
-
-for k,v in sorted(d.items()):
-    s1 = reduce(lambda x,y: ord(y) + x,k.replace(" ", ''),0)
-    s2 = s1 * v
-    print(f'{k.ljust(l)}: {s1} UC x {v} = {s2} UC')
-
-
+#
+# from collections import Counter
+#
+# l = []
+# with open('pythonzen.txt', encoding='utf-8') as file:
+#     data = list(map(lambda line: line.strip(), file.readlines()))
+#
+# for i in data:
+#     for j in i:
+#         if j.isalpha():
+#             l.append(j.lower())
+#
+# for k, v in sorted(Counter(l).items()):
+#     print(f'{k}: {v}')
+#
+#
+# from collections import Counter
+#
+# with open('pythonzen.txt', 'r', encoding='utf-8') as file:
+#     letters = Counter([letter.lower() for letter in file.read() if letter.isalpha()])
+#
+# for letter in sorted(letters):
+#     print(f'{letter}: {letters[letter]}')
