@@ -749,3 +749,29 @@
 # least_frequent_words.sort()
 #
 # print(", ".join(least_frequent_words))
+
+# from collections import Counter
+#
+# words = input().lower().split()
+# # t = 'МаЛиНа клубника Арбуз банаН Малина Черешня вишня арбуз клубника банан'
+# #
+# # words = t.lower().split()
+#
+# word_counts = Counter(words)
+# print(word_counts)
+#
+# max_frequency = max(word_counts.values())
+#
+# least_frequent_words = [word for word, count in word_counts.items() if count == max_frequency]
+#
+# least_frequent_words.sort(reverse=True)
+#
+# print(least_frequent_words[0])
+
+# from collections import Counter
+#
+# c = Counter(input().lower().split())
+# print(max(c, key=lambda x: (c[x], x)))
+
+# from collections import Counter
+# print(Counter(sorted(input().lower().split(), reverse=True)).most_common()[0][0])
