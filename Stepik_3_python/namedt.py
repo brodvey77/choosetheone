@@ -775,3 +775,9 @@
 
 # from collections import Counter
 # print(Counter(sorted(input().lower().split(), reverse=True)).most_common()[0][0])
+
+# from collections import Counter
+#
+# t = 'МаЛиНа клубника Арбуз банаН Малина Черешня вишня арбуз клубника банан'
+#
+# print(Counter(sorted(t.lower().split(),reverse=True)).most_common()[0][0])
