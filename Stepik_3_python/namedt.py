@@ -666,3 +666,70 @@
 #
 # for letter in sorted(letters):
 #     print(f'{letter}: {letters[letter]}')
+
+# from collections import Counter
+#
+# money = Counter({'rub': 1000, 'eur': 2000, 'usd': 2000, 'uah': 1900, 'cad': 2100})
+#
+# print(*money.most_common())
+
+# from collections import Counter
+#
+# money = Counter({'rub': 900, 'eur': 1100, 'usd': 500, 'uah': 990, 'cad': 100, 'jpy': 1120})
+#
+# print(*money.most_common(3))
+
+# from collections import Counter
+#
+# letters = Counter('beegeek')
+#
+# print(*letters.elements())
+
+
+# from collections import Counter
+#
+# letters = Counter(s=0, b=1, e=4, t=-2, g=2, k=1)
+#
+# print(*letters.elements())
+#
+# from collections import Counter
+#
+# left_pocket = Counter(coin=11, candy=4, key=1)
+# right_pocket = Counter(coin=19, candy=1, key=2, card=2)
+#
+# print(left_pocket.total() + right_pocket.total())
+# print(left_pocket.total())
+# print(right_pocket.total())
+
+# from collections import Counter
+#
+# witcher_inventory = Counter(doppler_trophy=1, alcohest=10, mahakaman_spirit=10,
+#                             siren_vocal_cords=3, ghouls_blood=4)
+#
+# losses = dict(ducat=10, alcohest=20, mahakaman_spirit=5, ghouls_blood=4)
+#
+# witcher_inventory.subtract(losses)
+#
+# print(witcher_inventory)
+
+# from collections import Counter
+#
+# letters1 = Counter('stepik')
+# letters2 = Counter({'s': 1, 't': 1, 'e': 1, 'p': 1, 'i': 1, 'k': 1})
+#
+#
+# print(letters1 + letters2)
+
+# from collections import Counter
+#
+# word = 'stepik'
+#
+# counter1 = Counter(word)
+# counter2 = Counter(word * 3)
+#
+# print(counter2)
+#
+# print(counter1 < counter2)
+from collections import Counter
+
+print(Counter(input().lower().split()).most_common()[0][0])
