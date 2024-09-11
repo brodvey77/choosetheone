@@ -781,3 +781,12 @@
 # t = 'МаЛиНа клубника Арбуз банаН Малина Черешня вишня арбуз клубника банан'
 #
 # print(Counter(sorted(t.lower().split(),reverse=True)).most_common()[0][0])
+
+# from collections import Counter
+#
+# l = Counter([len(i) for i in input().lower().split()])
+#
+# for k,v in sorted(l.items(),key=lambda x: x[1]):
+#     print(f'Слов длины {k}: {v}')
+
+
