@@ -730,6 +730,22 @@
 # print(counter2)
 #
 # print(counter1 < counter2)
-from collections import Counter
 
-print(Counter(input().lower().split()).most_common()[0][0])
+
+# from collections import Counter
+#
+# print(Counter(input().lower().split()).most_common()[0][0])
+
+# from collections import Counter
+#
+# words = input().lower().split()
+#
+# word_counts = Counter(words)
+#
+# min_frequency = min(word_counts.values())
+#
+# least_frequent_words = [word for word, count in word_counts.items() if count == min_frequency]
+#
+# least_frequent_words.sort()
+#
+# print(", ".join(least_frequent_words))
