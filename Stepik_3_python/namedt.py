@@ -849,3 +849,11 @@
 #
 # for email in sorted(logs):
 #     print(f'{email}: {logs[email]}')
+
+# from collections import Counter
+# def scrabble(symbols, word):
+#     s = Counter(symbols.lower())
+#     w = Counter(word.lower())
+#     return s >= w
+#
+# print(scrabble('bbbbbeeeeegggggggeeeeeekkkkk', 'Beegeek'))
