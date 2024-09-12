@@ -810,3 +810,19 @@
 # data = Counter({k: int(v) for line in sys.stdin for k, v in [line.split()]}).most_common()
 #
 # print(data[-2][0])
+
+
+# from collections import Counter
+#
+# data = Counter('aksjaskfjsklfjdslkfjajfopewtoieqpwdpqworiiqjskanvmcxbmpewrqopkqwlmdzczmxvmvlnjpjqpkqzxvmbowiqeorewi')
+#
+# def min_values():
+#     min_val = min(data.values())
+#     return [(k, v) for k, v in data.items() if v == min_val]
+#
+# def max_values():
+#     max_val = max(data.values())
+#     return [(k, v) for k, v in data.items() if v == max_val]
+#
+# data.min_values = min_values
+# data.max_values = max_values
