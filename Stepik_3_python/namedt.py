@@ -790,3 +790,23 @@
 #     print(f'Слов длины {k}: {v}')
 
 
+# import sys
+# from collections import Counter
+#
+# a = [s.strip() for s in sys.stdin]
+# my_list = {k: int(v) for k, v in map(str.split, a)}
+#
+# print(sorted(my_list.items(), key=lambda x: x[1])[1][0])
+
+
+# from collections import Counter
+#
+# c = Counter({i: int(j) for i, j in (s.split() for s in open(0))})
+# print(c.most_common()[-2][0])
+
+# import sys
+# from collections import Counter
+#
+# data = Counter({k: int(v) for line in sys.stdin for k, v in [line.split()]}).most_common()
+#
+# print(data[-2][0])
