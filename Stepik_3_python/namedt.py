@@ -826,3 +826,26 @@
 #
 # data.min_values = min_values
 # data.max_values = max_values
+
+# from collections import Counter
+# import csv
+# l = []
+# with open('name_log.csv', encoding='utf-8') as csvfile:
+#     data = csv.DictReader(csvfile)
+#
+#     for row in data:
+#         l.append(row['email'])
+#
+# for k,v in sorted(Counter(l).items()):
+#     print(f'{k}: {v}')
+
+#
+# from collections import Counter
+# from csv import DictReader
+#
+#
+# with open('name_log.csv', encoding='utf-8') as file:
+#     logs = Counter([line['email'] for line in DictReader(file)])
+#
+# for email in sorted(logs):
+#     print(f'{email}: {logs[email]}')
