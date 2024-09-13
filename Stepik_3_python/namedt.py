@@ -857,3 +857,61 @@
 #     return s >= w
 #
 # print(scrabble('bbbbbeeeeegggggggeeeeeekkkkk', 'Beegeek'))
+
+# from collections import Counter
+#
+# def print_bar_chart(data, mark):
+#     d_c = Counter(data)
+#     if type(data) == str:
+#         max_len = len(max(d_c.keys()))
+#         for k,v in sorted(d_c.items(), key=lambda x: x[1], reverse=True):
+#             print( f'{k:{max_len}} |{v*mark}')
+#     else:
+#         max_len = max(len(i) for i in data)
+#         for k, v in sorted(d_c.items(), key=lambda x: x[1], reverse=True):
+#             print(f'{k:{max_len}} |{v * mark}')
+
+
+# from collections import Counter
+#
+# def print_bar_chart(data, mark):
+#     result = Counter(data)
+#
+#     for key, value in result.most_common():
+#         print(f'{key.ljust(len(max(result, key=len)))} |{mark * value}')
+
+
+# # INPUT DATA:
+#
+# # TEST_1:
+# print_bar_chart('beegeek', '+')
+#
+# # TEST_2:
+# languages = ['java', 'java', 'python', 'C++', 'assembler', 'java', 'C++', 'C', 'pascal', 'C++', 'pascal', 'java']
+#
+# print_bar_chart(languages, '#')
+#
+# # TEST_3:
+# s = 'sssttteeepppiiikkk'
+#
+# print_bar_chart(s, '+')
+#
+# # TEST_4:
+# my_list = ['bbb', 'bbb', 'e', 'e', 'bbb', 'gggg', 'gggg', 'kkkkk', 'kkkkk', 'e', 'bbb', 'kkkkk']
+#
+# print_bar_chart(my_list, '#')
+#
+# # TEST_5:
+# my_list = ['TTT', 'TTT', 'i', 'MMMMM',  'TTT', 'MMMMM', 'MMMMM', 'uu', 'rrrr', 'MMMMM', 'uu', 'rrrr', 'MMMMM', 'rrrr', 'rrrr']
+#
+# print_bar_chart(my_list, '#')
+#
+# # TEST_6:
+# my_list = ['Малина', 'Клубника', 'Черешня', 'Арбуз', 'арбуз', 'арбуз', 'банан', 'Вишня', 'клубника', 'Черешня']
+#
+# print_bar_chart(my_list, '@')
+#
+# # TEST_7:
+# my_list = ['арбуз', 'черешня', 'клубника', 'арбуз', 'банан', 'Малина', 'малина', 'арбуз', 'арбуз', 'Клубника', 'Банан', 'Малина', 'Черешня', 'Вишня', 'Малина', 'малина', 'Малина', 'Клубника', 'Вишня', 'Клубника']
+#
+# print_bar_chart(my_list, '@')
