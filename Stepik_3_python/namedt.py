@@ -943,3 +943,37 @@
 # print(f_d.total())
 
 
+# # Ввод данных
+# books = list(map(int, input().split()))
+# n = int(input())
+# customers = [tuple(map(int, input().split())) for _ in range(n)]
+#
+# # Создаем словарь для хранения количества книг по классам
+# book_inventory = {}
+# for book in books:
+#     if book in book_inventory:
+#         book_inventory[book] += 1
+#     else:
+#         book_inventory[book] = 1
+#
+# # Вычисляем общую сумму заработанных денег
+# total_earnings = 0
+# for class_num, price in customers:
+#     if class_num in book_inventory and book_inventory[class_num] > 0:
+#         total_earnings += price
+#         book_inventory[class_num] -= 1
+#
+# print(total_earnings)
+
+
+# from collections import Counter
+#
+# books = Counter(map(int, input().split()))
+# total = 0
+#
+# for _ in range(int(input())):
+#     book, price = map(int, input().split())
+#     total += bool(books[book]) * price
+#     books -= Counter({book: 1})
+#
+# print(total)
