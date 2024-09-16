@@ -915,3 +915,31 @@
 # my_list = ['арбуз', 'черешня', 'клубника', 'арбуз', 'банан', 'Малина', 'малина', 'арбуз', 'арбуз', 'Клубника', 'Банан', 'Малина', 'Черешня', 'Вишня', 'Малина', 'малина', 'Малина', 'Клубника', 'Вишня', 'Клубника']
 #
 # print_bar_chart(my_list, '@')
+
+# from collections import Counter
+# import csv
+# import json
+#
+# l = []
+#
+# for i in range(1, 5):
+#     with open(f'quarter{i}.csv', encoding='utf-8') as csv_file:
+#         reader = list(csv.reader(csv_file))
+#         del reader[0]
+#         d = Counter()
+#         for row in reader:
+#             l.append([row[0], sum([int(i) for i in row if i.isdigit()])])
+#         for s in l:
+#             d += Counter({s[0]: s[1]})
+#
+# with open('prices.json', encoding='utf-8') as j_file:
+#     data = json.load(j_file)
+#
+# f_d = Counter()
+# for k, v in d.items():
+#     cost = data[k] * v
+#     f_d[k] = cost
+#
+# print(f_d.total())
+
+
