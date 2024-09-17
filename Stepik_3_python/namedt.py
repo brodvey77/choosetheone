@@ -1082,3 +1082,91 @@
 #     animals = ChainMap(*json.load(js))
 #
 # print(sum(animals.values()))
+
+# from collections import ChainMap, Counter
+#
+# bread = {'булочка с кунжутом': 15, 'обычная булочка': 10, 'ржаная булочка': 15}
+# meat = {'куриный бифштекс': 50, 'говяжий бифштекс': 70, 'рыбный бифштекс': 40}
+# sauce = {'сливочно-чесночный': 15, 'кетчуп': 10, 'горчица': 10, 'барбекю': 15, 'чили': 15}
+# vegetables = {'лук': 10, 'салат': 15, 'помидор': 15, 'огурцы': 10}
+# toppings = {'сыр': 25, 'яйцо': 15, 'бекон': 30}
+#
+#
+# ingredients = ChainMap(bread, meat, sauce, vegetables, toppings)
+#
+# a = input()
+# ask = a.split(',')
+#
+# total_cost = sum([ingredients[k] * v for k,v in Counter(ask).items()])
+#
+# max_len = len(max(ask, key=len))
+# # Определение длины самой длинной строки в чеке
+# max_length = max(len(f"{ingredient} x {count}") for ingredient, count in Counter(ask).items())
+# max_length = max(max_length, len(f"ИТОГ: {total_cost}р"))
+#
+# # Формирование чека
+# receipt = []
+# for k,v in sorted(Counter(ask).items()):
+#     receipt.append(f'{k:{max_len}} x {v}')
+# receipt.append('-' * max_length)
+# receipt.append(f"ИТОГ: {total_cost}р")
+#
+# print('\n'.join(receipt))
+
+
+
+
+#
+# # Определение длины самой длинной строки в чеке
+# max_length = max(len(f"{ingredient} x {count}") for ingredient, count in sorted_ingredients)
+# max_length = max(max_length, len(f"ИТОГ: {total_cost}р"))
+#
+# # Формирование чека
+# receipt = []
+# for ingredient, count in sorted_ingredients:
+#     receipt.append(f"{ingredient.ljust(max_length - len(f' x {count}'))} x {count}")
+# receipt.append('-' * max_length)
+# receipt.append(f"ИТОГ: {total_cost}р")
+#
+# return '\n'.join(receipt)
+#
+#from collections import ChainMap, Counter
+
+# bread = {'булочка с кунжутом': 15, 'обычная булочка': 10, 'ржаная булочка': 15}
+# meat = {'куриный бифштекс': 50, 'говяжий бифштекс': 70, 'рыбный бифштекс': 40}
+# sauce = {'сливочно-чесночный': 15, 'кетчуп': 10, 'горчица': 10, 'барбекю': 15, 'чили': 15}
+# vegetables = {'лук': 10, 'салат': 15, 'помидор': 15, 'огурцы': 10}
+# toppings = {'сыр': 25, 'яйцо': 15, 'бекон': 30}
+#
+# cm_dict = ChainMap(bread, meat, sauce, vegetables, toppings)
+# c_dict = Counter(input().split(','))
+#
+# s, lstr = 0, [] #итог и список длин строк
+#
+# for k, v in sorted(c_dict.items()):
+#     s += v * cm_dict[k]
+#     str_check = f'{k.ljust(len(max(c_dict, key=len)))} x {v}'
+#     lstr.append(len(str_check)) #апендю длину каждой строки
+#     print(str_check)
+#
+# summary = f'ИТОГ: {s}р'
+# lstr.append(len(summary)) #апендю длину итоговой строки
+#
+# print('-' * max(lstr))
+# print(summary)
+
+
+# from collections import ChainMap, Counter
+#
+# bread = {'булочка с кунжутом': 15, 'обычная булочка': 10, 'ржаная булочка': 15}
+# meat = {'куриный бифштекс': 50, 'говяжий бифштекс': 70, 'рыбный бифштекс': 40}
+# sauce = {'сливочно-чесночный': 15, 'кетчуп': 10, 'горчица': 10, 'барбекю': 15, 'чили': 15}
+# vegetables = {'лук': 10, 'салат': 15, 'помидор': 15, 'огурцы': 10}
+# toppings = {'сыр': 25, 'яйцо': 15, 'бекон': 30}
+#
+# ings = ChainMap(bread, meat, sauce, vegetables, toppings)
+# c = Counter(input().split(','))
+# lines = [f'{i.ljust(len(max(c, key=len)))} x {j}' for i, j in sorted(c.items())]
+# total = sum(ings[i] * j for i, j in c.items())
+#
+# print(*lines, '-' * len(max(lines, key=len)), f'ИТОГ: {total}р', sep='\n')
