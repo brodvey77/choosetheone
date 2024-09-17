@@ -1170,3 +1170,65 @@
 # total = sum(ings[i] * j for i, j in c.items())
 #
 # print(*lines, '-' * len(max(lines, key=len)), f'ИТОГ: {total}р', sep='\n')
+
+# from collections import ChainMap
+#
+# fruits = ChainMap({'apple': 10, 'banana': 20},
+#                   {'lemon': 10, 'pineapple': 15},
+#                   {'kiwi': 15, 'lime': 5})
+#
+# fruits.maps.append({'mango': 20, 'melon': 20})
+# print(fruits)
+# print('-' * 10)
+# del fruits.maps[0]
+# print(fruits)
+# print('-' * 10)
+# del fruits.maps[1]
+# print(fruits)
+
+#
+# from collections import ChainMap
+#
+# chainmap = ChainMap()
+# print(chainmap.maps)
+# print(len(chainmap.maps))
+
+# from collections import ChainMap
+#
+# authors = ChainMap({'name': 'Timur', 'city': 'Moscow'})
+#
+# authors.new_child({'name': 'Arthur', 'city': 'Almetyevsk'})
+#
+# print(authors)
+
+
+# from collections import ChainMap
+#
+# chainmap1 = ChainMap({'a': 1}, {'b': 2}, {'c': 3})
+# chainmap2 = ChainMap({'a': 1, 'b': 2}, {'c': 3}, {'a': 10, 'b': 20, 'c': 30})
+#
+# print(dict(chainmap1))
+# print(dict(chainmap2))
+
+
+# from collections import ChainMap
+#
+# def get_all_values(chainmap, key):
+#     result = set()
+#     for mapping in chainmap.maps:
+#         if key in mapping:
+#             result.add(mapping[key])
+#     return result
+#
+#
+#
+#
+# chainmap = ChainMap({'name': 'Arthur'}, {'name': 'Timur'})
+# result = get_all_values(chainmap, 'name')
+#
+# print(*sorted(result))
+#
+# from collections import ChainMap
+#
+# def get_all_values(chainmap, key):
+#     return {d[key] for d in chainmap.maps if key in d}
