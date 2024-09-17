@@ -1052,11 +1052,33 @@
 #
 # print(*fruits)
 
-from collections import ChainMap
+# from collections import ChainMap
+#
+# animals = ChainMap({'alligator': 3, 'jaguar': 2},
+#                    {'eagle': 5, 'zebra': 2},
+#                    {'bear': 2, 'alligator': 1},
+#                    {'lemur': 7, 'elephant': 3})
+#
+# print(len(animals))
 
-animals = ChainMap({'alligator': 3, 'jaguar': 2},
-                   {'eagle': 5, 'zebra': 2},
-                   {'bear': 2, 'alligator': 1},
-                   {'lemur': 7, 'elephant': 3})
-
-print(len(animals))
+# from collections import ChainMap, Counter
+# import json
+#
+# l = []
+# with open('zoo.json', encoding='utf-8') as file:
+#     data = json.load(file)
+#     d = ChainMap()
+#     for i in data:
+#         d.update(i)
+#     for c in d.values():
+#         l.append(int(c))
+#     print(sum(l))
+#
+#
+# import json
+# from collections import ChainMap
+#
+# with open('zoo.json', encoding='utf-8') as js:
+#     animals = ChainMap(*json.load(js))
+#
+# print(sum(animals.values()))
