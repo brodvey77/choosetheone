@@ -977,3 +977,86 @@
 #     books -= Counter({book: 1})
 #
 # print(total)
+# from collections import ChainMap, defaultdict, Counter, OrderedDict
+#
+# a = ChainMap()
+# b = ChainMap({'name': 'Rose', 'age': 17}, {'country': 'USA', 'city': 'Seattle'})
+# c = ChainMap(defaultdict(str, a='A', b='B'), OrderedDict(one=1, two=2))
+# d = ChainMap(Counter(one=1, two=2), Counter(three=3, four=4))
+# e = ChainMap.fromkeys(['math', 'physics', 'chemistry'], 0)
+# f = ChainMap(Counter(a=4, b=3), OrderedDict(c=1, d=1), defaultdict(e=6, f=11))
+# # g = ChainMap(height=100, width=50, thickness=10)
+#
+#
+# print(a)
+# print(b)
+# print(c)
+# print(d)
+# print(e)
+# print(f)
+# print(g)
+
+# from collections import ChainMap
+#
+# info = ChainMap({'name': 'Rose', 'age': 17},
+#                 {'country': 'USA', 'city': 'Seattle'})
+#
+# print(info['hobby'])
+
+
+# from collections import ChainMap, defaultdict
+#
+# info = ChainMap(defaultdict(int, {'name': 'Rose', 'age': 17}),
+#                 {'country': 'USA', 'city': 'Seattle'})
+#
+# print(info['hobby'])
+
+# from collections import ChainMap, defaultdict
+#
+# info = ChainMap({'name': 'Rose', 'age': 17},{'hobby': 'math', 'country': 'USA', 'city': 'Seattle'})
+#
+# print(info['hobby'])
+
+# from collections import ChainMap
+#
+# letters = ChainMap({'a': 'A', 'b': 'B'},
+#                    {'b': 'B', 'c': 'C'})
+#
+# letters['b'] = 'BB'
+#
+# print(letters)
+
+# from collections import ChainMap
+#
+# letters = ChainMap({'a': 'A'}, {'b': 'B', 'c': 'C'})
+#
+# letters['b'] = 'BB'
+# letters['c'] = 'CC'
+#
+# print(letters)
+
+# from collections import ChainMap
+#
+# letters = ChainMap({'a': 'A'},
+#                    {'b': 'B', 'c': 'C'},
+#                    {'d': 'D', 'e': 'E'})
+#
+# print(letters.pop('e'))
+
+
+# from collections import ChainMap
+#
+# fruits = ChainMap({'apple': 10, 'banana': 20},
+#                   {'lemon': 10, 'pineapple': 15},
+#                   {'kiwi': 15, 'lime': 5})
+#
+# print(*fruits)
+
+from collections import ChainMap
+
+animals = ChainMap({'alligator': 3, 'jaguar': 2},
+                   {'eagle': 5, 'zebra': 2},
+                   {'bear': 2, 'alligator': 1},
+                   {'lemur': 7, 'elephant': 3})
+
+print(len(animals))
