@@ -14,3 +14,17 @@
 #         total = total + 1
 #
 # print(total)
+
+# def swapcase_vowels(string):
+#     vowels = 'aeiouy'
+#     swapped_string = ''
+#
+#     for char in string:
+#         if char in vowels:
+#             swapped_string += char.upper()
+#         else:
+#             swapped_string += char
+#
+#     return swapped_string
+#
+# print(swapcase_vowels('This bank says ‘millions’ of people could be targeted by AI voice-cloning scams'))
