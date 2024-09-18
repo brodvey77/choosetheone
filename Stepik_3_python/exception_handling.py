@@ -28,3 +28,13 @@
 #     return swapped_string
 #
 # print(swapcase_vowels('This bank says ‘millions’ of people could be targeted by AI voice-cloning scams'))
+
+# a = int(input())
+# b = int(input())
+# numbers = []
+#
+# for i in range(a, b + 1):
+#     if i % 7 == 0:
+#         numbers.append(i)
+#
+# print(numbers)
