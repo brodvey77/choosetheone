@@ -1244,3 +1244,19 @@
 #     # Если ключ не найден ни в одном словаре, добавляем его в первый словарь
 #     if key not in chainmap:
 #         chainmap.maps[0][key] = value
+
+
+from collections import ChainMap
+
+
+# def get_value(chainmap, key, from_left=True):
+#     # Определяем порядок поиска в зависимости от значения from_left
+#     maps = chainmap.maps if from_left else reversed(chainmap.maps)
+#
+#     # Проходим по словарям в указанном порядке
+#     for d in maps:
+#         if key in d:
+#             return d[key]
+#
+#     # Если ключ не найден, возвращаем None
+#     return None
