@@ -1233,3 +1233,14 @@
 # def get_all_values(chainmap, key):
 #     return {d[key] for d in chainmap.maps if key in d}
 
+# from collections import ChainMap
+#
+# def deep_update(chainmap, key, value):
+#     # Проходим по всем словарям в ChainMap
+#     for d in chainmap.maps:
+#         # Если ключ найден, обновляем его значение
+#         if key in d:
+#             d[key] = value
+#     # Если ключ не найден ни в одном словаре, добавляем его в первый словарь
+#     if key not in chainmap:
+#         chainmap.maps[0][key] = value
