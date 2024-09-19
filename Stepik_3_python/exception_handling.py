@@ -100,3 +100,10 @@
 #             counter += 1
 # print(s)
 # print(counter)
+
+# try:
+#     x = 1 / 1
+# except:
+#     print('Произошла ошибка')
+# else:
+#     print('Ошибок не произошло')
