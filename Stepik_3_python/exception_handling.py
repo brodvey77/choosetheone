@@ -88,4 +88,15 @@
 #         pass
 # print(remainders)
 
-
+# import sys
+# s, counter = 0, 0
+# for line in sys.stdin:
+#     try:
+#         s += int(line)
+#     except ValueError:
+#         try:
+#             s += float(line)
+#         except ValueError:
+#             counter += 1
+# print(s)
+# print(counter)
