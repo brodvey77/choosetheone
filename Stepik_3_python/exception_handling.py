@@ -107,3 +107,20 @@
 #     print('Произошла ошибка')
 # else:
 #     print('Ошибок не произошло')
+
+# try:
+#     numbers = [1, 2, 3]
+#     print(numbers * 2)
+# except:
+#     print('Произошла ошибка')
+# finally:
+#     print('Завершение программы')
+
+
+try:
+    numbers = (1, 2, 3)
+    print(numbers + (4))
+except:
+    print('Произошла ошибка')
+finally:
+    print('Завершение программы')
