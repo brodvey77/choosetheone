@@ -117,10 +117,26 @@
 #     print('Завершение программы')
 
 
+# try:
+#     numbers = (1, 2, 3)
+#     print(numbers + (4))
+# except:
+#     print('Произошла ошибка')
+# finally:
+#     print('Завершение программы')
+
+#     numbers = list(filter(int, ['1', '2', '3', '4', '5']))
+
+letters = {'a': 'A', 'b': 'B', 'c': 'C'}
+result = None
+
 try:
-    numbers = (1, 2, 3)
-    print(numbers + (4))
+    result = letters['B']
 except:
     print('Произошла ошибка')
+else:
+    print('Ошибок не произошло')
 finally:
     print('Завершение программы')
+
+print(result)
