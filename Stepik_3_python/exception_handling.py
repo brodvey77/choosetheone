@@ -126,17 +126,101 @@
 #     print('Завершение программы')
 
 #     numbers = list(filter(int, ['1', '2', '3', '4', '5']))
+#
+# letters = {'a': 'A', 'b': 'B', 'c': 'C'}
+# result = None
+#
+# try:
+#     result = letters['B']
+# except:
+#     print('Произошла ошибка')
+# else:
+#     print('Ошибок не произошло')
+# finally:
+#     print('Завершение программы')
+#
+# print(result)
 
-letters = {'a': 'A', 'b': 'B', 'c': 'C'}
-result = None
 
-try:
-    result = letters['B']
-except:
-    print('Произошла ошибка')
-else:
-    print('Ошибок не произошло')
-finally:
-    print('Завершение программы')
+# data = {'Dima': [0, 4, 4, 5, 2],
+#         'Timur': [5, 5, 5, 5, 5],
+#         'Arthur': [5, 0, 4, 4, 2]}
+#
+# try:
+#     grades = data['Arthur']
+#     try:
+#         ratio = max(grades) / min(grades)
+#         print(ratio)
+#     except (TypeError, ValueError):
+#         print('Произошла ошибка 2')
+# except KeyError:
+#     print('Произошла ошибка 1')
 
-print(result)
+# def beegeek():
+#     try:
+#         return 'bee'
+#     finally:
+#         return 'geek'
+#
+# print(beegeek())
+
+# def beegeek():
+#     try:
+#         value = 100
+#         return value
+#     finally:
+#         value = 300
+#
+#
+# print(beegeek())
+
+# def beegeek():
+#     try:
+#         value = 100
+#         return value
+#     finally:
+#         value = 300
+#         return value
+#
+#
+# print(beegeek())
+
+# def beegeek():
+#     try:
+#         value = 100
+#     except:
+#         value = 200
+#     else:
+#         value = 300
+#     finally:
+#         return value
+#
+#
+# print(beegeek())
+
+# def beegeek():
+#     try:
+#         value = 100
+#         return value
+#     except:
+#         value = 200
+#     else:
+#         value = 300
+#     finally:
+#         return value
+#
+#
+# print(beegeek())
+
+# def beegeek():
+#     numbers = [1, 2, 3, 4]
+#     try:
+#         numbers.append(numbers[4])
+#         return numbers
+#     except:
+#         numbers.append(numbers[3])
+#         return numbers
+#     finally:
+#         numbers.append(numbers[2])
+#
+#
