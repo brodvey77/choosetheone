@@ -244,3 +244,32 @@ import calendar
 # res = input()
 # print(get_mounth(res))
 
+
+
+# def add_to_list_in_dict(data, key, element):
+#     try:
+#         data.get(key, 0).append(element)
+#         print(data)
+#     except:
+#         data[key] = [element]
+#         print(data)
+#
+#
+# data = {'a': [1, 2, 3], 'b': [4, 5, 6]}
+# add_to_list_in_dict(data, 'c', 7)
+#
+#
+# def add_to_list_in_dict(data, key, element):
+#     try:
+#         data[key].append(element)
+#     except KeyError:
+#         data[key] = [element]
+
+# def add_to_list_in_dict(data, key, element):
+#     try:
+#         data[key]
+#     except KeyError:
+#         data[key] = []
+#     finally:
+#         data[key].append(element)
+
