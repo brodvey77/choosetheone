@@ -273,3 +273,25 @@ import calendar
 #     finally:
 #         data[key].append(element)
 
+
+# def read_file(file):
+#     try:
+#         with open(file, 'r', encoding='utf-8') as f:
+#             data = f.read()
+#             for row in data:
+#                 print(row)
+#     except:
+#         print('Файл не найден')
+#
+# read_file('tet_1.txt')
+
+# try:
+
+# except KeyError, IndexError:
+# except:
+# except (KeyError, IndexError) as e:
+# except as e:
+# except KeyError, IndexError as e:
+# except Exception as e:
+# except (KeyError, IndexError):
+
