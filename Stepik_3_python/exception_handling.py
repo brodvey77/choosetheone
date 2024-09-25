@@ -224,3 +224,23 @@
 #         numbers.append(numbers[2])
 #
 #
+import calendar
+
+# c_m = {k:v for k,v in enumerate((calendar.month_name)[1:], 1)}
+#
+# def get_mounth(n):
+#     try:
+#         n = int(n)
+#         m = c_m[n]
+#         return m
+#     except KeyError:
+#         return 'Введено число из недопустимого диапазона'
+#     except:
+#         return 'Введено некорректное значение'
+#
+#
+#
+#
+# res = input()
+# print(get_mounth(res))
+
