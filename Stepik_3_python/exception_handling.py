@@ -484,3 +484,76 @@ import calendar
 #         return True
 #     else:
 #         return False
+
+
+# class LengthError(Exception):
+#     pass
+#
+#
+# class LetterError(Exception):
+#     pass
+#
+#
+# class DigitError(Exception):
+#     pass
+#
+#
+# def is_good_password(string):
+#     try:
+#         if len(string) < 9:
+#             raise LengthError("Password must be at least 9 characters long")
+#
+#         if not any(char.isalpha() for char in string):
+#             raise LetterError("Password must contain at least one letter")
+#
+#         if not any(char.isdigit() for char in string):
+#             raise DigitError("Password must contain at least one digit")
+#
+#         if string.lower() == string or string.upper() == string:
+#             raise LetterError("Password must contain both uppercase and lowercase letters")
+#
+#         return True
+#
+#     except LengthError as le:
+#         raise le
+#     except LetterError as le:
+#         raise le
+#     except DigitError as de:
+#         raise de
+#
+#
+# try:
+#     print(is_good_password('Short7'))
+# except Exception as err:
+#     print(type(err))
+
+
+# class PasswordError(Exception):
+#     pass
+#
+# class LengthError(PasswordError):
+#     pass
+#
+# class LetterError(PasswordError):
+#     pass
+#
+# class DigitError(PasswordError):
+#     pass
+#
+#
+# def is_good_password(p: str) -> bool:
+#     try:
+#         p[8]
+#     except Exception:
+#         raise LengthError
+#     try:
+#         list(filter(str.isalpha, p))[0]
+#         list(filter(str.isupper, p))[0]
+#         list(filter(str.islower, p))[0]
+#     except Exception:
+#         raise LetterError
+#     try:
+#         list(filter(str.isdigit, p))[0]
+#     except Exception:
+#         raise DigitError
+#     return True
