@@ -362,3 +362,76 @@ import calendar
 #     print(type(err))
 
 
+# def get_id(names, name):
+#     if not isinstance(name, str):
+#         raise TypeError('Имя не является строкой')
+#     if not name.isalpha() or not name.istitle():
+#         raise ValueError('Имя не является корректным')
+#     else:
+#         names.append(name)
+#         return len(names)
+#
+#
+#
+#
+# # TEST_5:
+# # TEST_6:
+# names = ['Timur', 'Anri', 'Dima', 'Arthur']
+# name = '123Ruslan'
+#
+# try:
+#     print(get_id(names, name))
+# except ValueError as e:
+#     print(e)
+#
+# # TEST_7:
+# names = ['Timur', 'Anri', 'Dima', 'Arthur', 'Ruslan']
+# name = False
+#
+# try:
+#     print(get_id(names, name))
+# except TypeError as e:
+#     print(e)
+#
+# # TEST_8:
+# names = ['Timur', 'Anri', 'Dima', 'Arthur', 'Ruslan']
+# name = 69
+#
+# try:
+#     print(get_id(names, name))
+# except TypeError as e:
+#     print(e)
+#
+# # TEST_9:
+# names = ['Timur', 'Anri', 'Dima', 'Arthur', 'Ruslan']
+# name = ['Roman']
+#
+# try:
+#     print(get_id(names, name))
+# except TypeError as e:
+#     print(e)
+#
+# # TEST_10:
+# names = []
+# name = 'Arthur'
+#
+# print(get_id(names, name))
+#
+# # TEST_11:
+# names = ['Timur']
+# name = 'Arthur'
+#
+# print(get_id(names, name))
+#
+# # TEST_12:
+# names = ['Timur', 'Anri', 'Dima', 'Roma', 'Gvido', 'Rosy', 'Soslan', 'Natasha', 'Arthur']
+# name = 'Arthur'
+#
+# print(get_id(names, name))
+#
+# # TEST_13:
+# names = ['Timur', 'Timur', 'Timur', 'Timur', 'Timur']
+# name = 'Timur'
+#
+# print(get_id(names, name))
+
