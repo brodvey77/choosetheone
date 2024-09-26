@@ -557,3 +557,54 @@ import calendar
 #     except Exception:
 #         raise DigitError
 #     return True
+
+# def is_good_password(password):
+#     if len(password) < 9:
+#         return "LengthError"
+#     if password.islower() or password.isupper() or password.isdigit():
+#         return "LetterError"
+#     if not any(char.isdigit() for char in password):
+#         return "DigitError"
+#     return "Success!"
+#
+# def main():
+#     while True:
+#         password = input()
+#         result = is_good_password(password)
+#         print(result)
+#         if result == "Success!":
+#             break
+#
+# if __name__ == "__main__":
+#     main()
+
+# class PasswordError(Exception):
+#     pass
+#
+# class LengthError(PasswordError):
+#     pass
+#
+# class LetterError(PasswordError):
+#     pass
+#
+# class DigitError(PasswordError):
+#     pass
+#
+# def is_good_password(string: str):
+#     if len(string) <= 8:
+#         raise LengthError('LengthError')
+#     if string == string.upper() or string == string.lower():
+#         raise LetterError('LetterError')
+#     if not any(map(lambda x: x.isdigit(), string)):
+#         raise DigitError('DigitError')
+#     return True
+#
+# flag = False
+# while not flag:
+#     try:
+#         is_good_password(input())
+#     except Exception as err:
+#         print(err)
+#     else:
+#         flag = True
+#         print('Success!')
