@@ -295,3 +295,40 @@ import calendar
 # except Exception as e:
 # except (KeyError, IndexError):
 
+# try:
+#     result = 10 / 0
+# except Exception:
+#     print('Произошла ошибка')
+# except ZeroDivisionError:
+#     print('Произошло деление на ноль')
+#
+#
+# try:
+#     result = 10 / 0
+# except Exception:
+#     print('Произошла ошибка 1')
+# except:
+#     print('Произошла ошибка 2')
+
+# raise NameError
+# raise NameError('beegeek')
+# NameError() raise
+# raise NameError()
+# NameError()
+# except Exception as e:
+#     raise NameError() from e
+# raise NameError('bee', 'gee', 'school')
+
+# try:
+#     raise ValueError('oops')
+# except ValueError as e:
+#     print(e)
+#     print(e.args)
+#     print(type(e.args))
+
+
+# try:
+#     raise ValueError('oops', 'something went wrong')
+# except ValueError as e:
+#     print(e)
+#     print(e.args)
