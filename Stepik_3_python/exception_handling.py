@@ -435,3 +435,18 @@ import calendar
 #
 # print(get_id(names, name))
 
+import json
+
+def get_json_data(file):
+    try:
+        with open(file, encoding='utf-8') as json_file:
+            data = json.load(json_file)
+            return data
+    except FileNotFoundError:
+        return 'Файл не найден'
+    except json.JSONDecodeError:
+        return 'Ошибка при десериализации'
+
+
+print(get_json_data(input()))
+
