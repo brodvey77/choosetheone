@@ -435,18 +435,52 @@ import calendar
 #
 # print(get_id(names, name))
 
-import json
+# import json
+#
+# def get_json_data(file):
+#     try:
+#         with open(file, encoding='utf-8') as json_file:
+#             data = json.load(json_file)
+#             return data
+#     except FileNotFoundError:
+#         return 'Файл не найден'
+#     except json.JSONDecodeError:
+#         return 'Ошибка при десериализации'
+#
+#
+# print(get_json_data(input()))
 
-def get_json_data(file):
-    try:
-        with open(file, encoding='utf-8') as json_file:
-            data = json.load(json_file)
-            return data
-    except FileNotFoundError:
-        return 'Файл не найден'
-    except json.JSONDecodeError:
-        return 'Ошибка при десериализации'
+# lowercase = 'abcdefghijklmnopqrstuvwxyzабвгдеёжзийклмнопстуфхцчшщъыьэюя'
+# uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZАБВГДЕЁЖЗИЙКЛМНОПСТУФХЦЧШЩЪЫЬЭЮЯ'
+# def is_good_password(string):
+#     '''Функция проверяет, является ли строка хорошим  паролем.
+#     Если да, то возвращает True, иначе False
+#     ароль хорошим, если
+#
+# его длина равна 9 или более символам,
+# в нем присутствуют большие и маленькие буквы любого алфавита
+# в нем имеется хотя бы одна цифра'''
+#     if len(string) < 9:
+#         return False
+#     if not any(c in lowercase for c in string):
+#         return False
+#     if not any(c in uppercase for c in string):
+#         return False
+#     if not any(c.isdigit() for c in string):
+#         return False
+#     else:
+# #         return True
+#
+#
+# print(is_good_password('41157082'))
 
-
-print(get_json_data(input()))
-
+# def is_good_password(s: str):
+#     if all(
+#         (len(s) >= 9,
+#          any(c.islower() for c in s),
+#          any(c.isupper() for c in s),
+#          any(c.isdigit() for c in s))
+#             ):
+#         return True
+#     else:
+#         return False
