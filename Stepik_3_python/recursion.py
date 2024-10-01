@@ -83,4 +83,57 @@
 #
 # bee(4)
 
+# def draw_rect(width, height, step):
+#     if step < height:
+#         print('*' * width)
+#         draw_rect(width, height, step + 1)
+#
+# draw_rect(4, 3, 0)
+# print()
+# draw_rect(6, 6, 0)
+# print()
+# draw_rect(10, 2, 0)
 
+# def draw_rect(width, height, step=0):
+#     if step < height:
+#         print('*' * width)
+#         draw_rect(width, height, step + 1)
+
+# def draw_rect(width, height):
+#     def rec(step):
+#         if step < height:
+#             print('*' * width)
+#             rec(step + 1)
+#     rec(0)
+
+# def bee(n):
+#     if n < 5:
+#         bee(n + 1)
+#     else:
+#         print(n)
+#
+# bee(0)
+
+
+# def traffic(n):
+#     while n > 0:
+#         print('Не парковаться')
+#         n -= 1
+
+
+# def traffic(n):
+#     if n > 0:
+#         print('Не парковаться')
+#         traffic(n - 1)
+
+
+def number_arr():
+    def num(number):
+        if number < 101:
+            print(number)
+            num(number + 1)
+
+    num(1)
+
+
+number_arr()
