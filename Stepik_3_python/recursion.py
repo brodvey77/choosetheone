@@ -231,4 +231,46 @@
 #
 # print_digits(2077)
 
+# def factorial(n):
+#     if n == 0:
+#         return 1                        # базовый случай
+#     else:
+#         return n * factorial(n-1)       # рекурсивный случай
+#
+# print(factorial(4))
 
+
+# def sum_to(n):
+#     if n == 0:
+#         return 0                       # базовый случай
+#     else:
+#         return n + sum_to(n - 1)       # рекурсивный случай
+
+# def recursive_sum(nums):
+#     if not nums:
+#         return 0                                       # базовый случай
+#     return nums[0] + recursive_sum(nums[1:])           # рекурсивный случай
+#
+# numbers = [1, 9, 2, 8, 7, 3]
+#
+# print(recursive_sum(numbers))
+
+
+# def fib(n):
+#     if n <= 2:
+#         return 1                             # базовый случай
+#     else:
+#         return fib(n - 1) + fib(n - 2)       # рекурсивный случай
+#
+#
+# print(fib(12))
+
+
+# cache = {1: 1, 2: 1}                # ключ - номер числа, значение - число Фибоначчи
+#
+# def fib(n):
+#     result = cache.get(n)
+#     if result is None:
+#         result = fib(n - 2) + fib(n - 1)
+#         cache[n] = result
+#     return result
