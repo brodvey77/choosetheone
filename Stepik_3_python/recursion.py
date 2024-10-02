@@ -214,3 +214,13 @@
 #
 #
 # clock(1, 5)
+
+
+# def print_digits(number):
+#     if number % 10 != 0:
+#         print(number % 10)
+#         print_digits(number // 10)
+#
+#
+# print_digits(6)
+
