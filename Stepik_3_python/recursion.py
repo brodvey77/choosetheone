@@ -155,5 +155,25 @@
 # get_elements(numbers)
 
 
+# l = []
+# def get_numbers(n):
+#     if n > 0:
+#         l.append(n)
+#         get_numbers(int(input()))
+#     else:
+#         l.append(0)
+#         print(*l[::-1], sep='\n')
+#
+#
+# get_numbers(int(input()))
+
+
+# def recursion():
+#     digit = int(input())
+#     if digit != 0:
+#         recursion()
+#     print(digit)
+#
+# recursion()
 
 
