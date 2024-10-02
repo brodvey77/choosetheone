@@ -194,3 +194,23 @@
 #
 # triangle(5)
 
+# def bee(n):
+#     if n > 1:
+#         print((f'{n}' * ((5 - n) * 4)).center(16))
+#         bee(n - 1)
+#     print((f'{n}' * ((5 - n) * 4)).center(16))
+#
+#
+# bee(4)
+
+
+# def clock(start, end):
+#     if start <= end:
+#         print((f'{start}' * ((5 - start) * 4)).center(16))
+#         clock(start + 1, end - 1)
+#     print((f'{start}' * ((5 - start) * 4)).center(16))
+#
+#
+#
+#
+# clock(1, 5)
