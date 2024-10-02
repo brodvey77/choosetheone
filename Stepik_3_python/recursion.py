@@ -224,3 +224,11 @@
 #
 # print_digits(6)
 
+# def print_digits(number):
+#     if number:
+#         print_digits(number // 10)
+#         print(number % 10)
+#
+# print_digits(2077)
+
+
