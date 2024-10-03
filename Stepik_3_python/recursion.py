@@ -288,5 +288,19 @@
 #
 # print(ndg(int(input())))
 
+# def qty_digits(number):
+#     if number < 10:
+#         return number
+#     return number % 10 + qty_digits(number // 10)
+#
+#
+# print(qty_digits(25))
 
 
+
+# def qty_digits(number):
+#     if number < 10:
+#         return 1
+#     return number % 10 + qty_digits(number // 10)
+#
+# print(qty_digits(int(input())))
