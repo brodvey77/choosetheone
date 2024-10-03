@@ -274,3 +274,19 @@
 #         result = fib(n - 2) + fib(n - 1)
 #         cache[n] = result
 #     return result
+
+# def qty_digits(number):
+#     if number < 10:
+#         return 1
+#     return 1 + qty_digits(number // 10)
+#
+#
+# print(qty_digits(122035))
+#
+#
+# ndg = lambda x: 1 if x < 10 else ndg(x // 10) + 1
+#
+# print(ndg(int(input())))
+
+
+
