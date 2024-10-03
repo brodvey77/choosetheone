@@ -324,3 +324,25 @@
 
 #
 # print(range_sum([1, 2, 3, 4, 5, 6, 7, 8, 9], 22, 32))
+
+
+
+
+# def get_pow(a, n):
+#     if n == 0:
+#         return 1
+#     else:
+#         return a * get_pow(a, n - 1)
+#
+#
+#
+
+# get_pow = lambda a, n: 1 if n == 0 else a*get_pow(a, n - 1)
+#
+# if __name__ == '__main__':
+#
+#     assert get_pow(5, 2) == 25
+#
+#     assert get_pow(2, 10) == 1024
+#
+#     assert get_pow(99, 0) == 1
