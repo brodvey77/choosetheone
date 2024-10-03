@@ -297,10 +297,21 @@
 # print(qty_digits(25))
 
 
-
 # def qty_digits(number):
 #     if number < 10:
 #         return 1
 #     return number % 10 + qty_digits(number // 10)
 #
 # print(qty_digits(int(input())))
+
+
+# def number_of_frogs(year):
+#     if year == 1:
+#         return 77
+#     return 3 * (number_of_frogs(year - 1) - 30)
+#
+#
+# print(number_of_frogs(10))
+
+
+# number_of_frogs = lambda year:  77  if year == 1 else 3 * (number_of_frogs(year - 1) - 30)
