@@ -347,14 +347,26 @@
 #
 #     assert get_pow(99, 0) == 1
 
-def get_fast_pow(a, n):
-    if n == 0:
-        return 1
-    elif n % 2 == 1: 
-        return a * get_fast_pow(a, n - 1)
+# def get_fast_pow(a, n):
+#     if n == 0:
+#         return 1
+#     elif n % 2 == 1:
+#         return a * get_fast_pow(a, n - 1)
+#     else:
+#         return get_fast_pow(a *a,  n // 2)
+#
+#
+#
+# print(get_fast_pow(2, 10))
+
+
+def recursive_sum(a, b):
+    if b == 0:
+        return a
     else:
-        return get_fast_pow(a *a,  n // 2)
+        return recursive_sum(a + 1, b - 1)
 
 
-
-print(get_fast_pow(2, 10))
+print(recursive_sum(10, 22))
+print(recursive_sum(99, 0))
+print(recursive_sum(0, 0))
