@@ -506,9 +506,27 @@
 # # TEST_9:
 # print(to_binary(532))
 
+# def play_digits(n):
+#     if n > 0:
+#         print(n)
+#         play_digits(n - 5)
+#     print(n)
+#
+#
+#
+#
+#
+# play_digits(16)
 
 
 
+
+
+
+
+# print(play_digits(16))
+# print(play_digits(10))
+# print(play_digits(1))
 
 
 
