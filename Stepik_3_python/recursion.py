@@ -430,6 +430,46 @@
 # print(tribonacci(100))
 
 
+# def is_palindrome(string):
+#     if len(string) <= 1:
+#         return True
+#     if string[0] != string[-1]:
+#         return False
+#     else:
+#         return is_palindrome(string[1:-1])
+#
+# # TEST_1:
+# print(is_palindrome('stepik'))
+#
+# # TEST_2:
+# print(is_palindrome('level'))
+#
+# # TEST_3:
+# print(is_palindrome('122333221'))
+#
+# # TEST_4:
+# print(is_palindrome('b'))
+#
+# # TEST_5:
+# print(is_palindrome('beegeek'))
+#
+# # TEST_6:
+# print(is_palindrome('redivider'))
+#
+# # TEST_7:
+# print(is_palindrome(''))
+#
+# # TEST_8:
+# print(is_palindrome('aa'))
+#
+# # TEST_9:
+# print(is_palindrome('ab'))
+#
+# # TEST_10:
+# print(is_palindrome('abcca'))
+
+
+
 
 
 
