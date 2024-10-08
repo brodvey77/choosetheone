@@ -360,13 +360,36 @@
 # print(get_fast_pow(2, 10))
 
 
-def recursive_sum(a, b):
-    if b == 0:
-        return a
-    else:
-        return recursive_sum(a + 1, b - 1)
+# def recursive_sum(a, b):
+#     if b == 0:
+#         return a
+#     else:
+#         return recursive_sum(a + 1, b - 1)
+#
+#
+# print(recursive_sum(10, 22))
+# print(recursive_sum(99, 0))
+# print(recursive_sum(0, 0))
+
+# def is_power(number):
+#     if number <= 2:
+#         return True
+#     elif number % 2 == 1:
+#         return False
+#     else:
+#         return is_power(number / 2)
+#
+#
+# if __name__ == "__main__":
+#     assert is_power(512) == True
+#     assert is_power(15) == False
+#     assert is_power(1) == True
+#     assert is_power(2)== True
+#     assert is_power(100) == False
+#     assert is_power(128) == True
+#     assert is_power(1024) == True
+#     assert is_power(1111111) == False
 
 
-print(recursive_sum(10, 22))
-print(recursive_sum(99, 0))
-print(recursive_sum(0, 0))
+
+
