@@ -584,3 +584,30 @@
 # import sys
 #
 # print(sys.getrecursionlimit())
+
+
+# def recursive_sum(nested_lists):
+#     total = 0
+#     for element in nested_lists:
+#         if isinstance(element, list):
+#             total += recursive_sum(element)  # Рекурсивный вызов для вложенного списка
+#         else:
+#             total += element  # Суммируем целое число
+#     return total
+
+
+# def recursive_sum(nested_lists):
+#     if nested_lists == []:
+#         return 0
+#     elif isinstance(nested_lists, int):
+#         return nested_lists
+#     elif isinstance(nested_lists, list):
+#         return recursive_sum(nested_lists[0]) + recursive_sum(nested_lists[1:])
+#
+#
+#
+# my_list = [1, [4, 4], 2, [1, [2, 10]]]
+# print(recursive_sum(my_list))
+#
+# my_list = []
+# print(recursive_sum(my_list))
