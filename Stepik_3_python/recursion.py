@@ -679,14 +679,122 @@
 # print(linear(my_list))
 
 
-def get_value(nested_dicts, key):
-    if key in nested_dicts:
-        return nested_dicts.get(key)
-    for v in nested_dicts.values():
-        if isinstance(v, dict):
-            value = get_value(v, key)
-            if value is not None:
-                return value
+# def get_all_values(nested_dicts, key):
+#     if key in nested_dicts:
+#         return nested_dicts.get(key)
+#     for v in nested_dicts.values():
+#         if isinstance(v, dict):
+#             value = get_all_values(v, key)
+#             if value is not None:
+#                 return value
 
 
+# def get_all_str(data):
+#     result = []
+#
+#     def wrapper(elemnt):
+#         if isinstance(elemnt, str):
+#             result.append(elemnt)
+#
+#         elif isinstance(elemnt, list):
+#             for item in elemnt:
+#                 wrapper(item)
+#
+#     wrapper(data)
+#     return result
+#
+#
+# numbers = ['1', ['2', '3', ['4'], ['5', [['6', []], '7']]]]
+# print(get_all_str(numbers))
 
+# def get_all_values(nested_dicts, key):
+#     result = []
+#     def gav_rec(element):
+#         if key in element:                 # base case
+#             result.append(element.get(key))
+#
+#         for v in element.values():         # recursive case
+#             if isinstance(v, dict):
+#                 value = gav_rec(v)
+#                 if value is not None:
+#                     return value
+#
+#     gav_rec(nested_dicts)
+#     return set(result)
+#
+#
+# def get_all_values(data, key):
+#     values = set()
+#     if key in data:
+#         values.add(data[key])
+#     for item in data.values():
+#         if isinstance(item, dict):
+#             values |= get_all_values(item, key)
+#     return values
+#
+#
+# # TEST_1:
+# my_dict = {'users': {'Arthur': {'grades': [4, 4, 3], 'top_grade': 4}, 'Timur': {'grades': [5, 5, 5], 'top_grade': 5}}}
+# result = get_all_values(my_dict, 'top_grade')
+#
+# print(*sorted(result))
+#
+# # TEST_2:
+# my_dict = {'Arthur': {'hobby': 'videogames', 'drink': 'cacao'}, 'Timur': {'hobby': 'math'}}
+# result = get_all_values(my_dict, 'hobby')
+#
+# print(*sorted(result))
+#
+# # TEST_3:
+# my_dict = {'Arthur': {'hobby': 'videogames', 'drink': 'cacao'}, 'Timur': {'hobby': 'math'}}
+# result = get_all_values(my_dict, 'top_grade')
+#
+# print(len(sorted(result)))
+#
+# # TEST_4:
+# my_dict = {
+#            'Arthur': {'hobby': 'videogames', 'drink': 'cacao'},
+#            'Timur': {'hobby': 'math'},
+#            'Dima': {
+#                    'hobby': 'CS',
+#                    'sister':
+#                        {
+#                          'name': 'Anna',
+#                          'hobby': 'TV',
+#                          'age': 14
+#                        }
+#                    }
+#            }
+#
+# result = get_all_values(my_dict, 'hobby')
+# print(*sorted(result))
+#
+# # TEST_5:
+# my_dict = {
+#            'Arthur': {'hobby': 'videogames', 'drink': 'cacao'},
+#            'Timur': {'hobby': 'math'},
+#            'Dima': {
+#                    'hobby': 'CS',
+#                    'sister':
+#                        {
+#                          'name': 'Anna',
+#                          'hobby': 'TV',
+#                          'age': 14
+#                        }
+#                    }
+#            }
+#
+# result = get_all_values(my_dict, 'age')
+# print(*result)
+#
+# # TEST_6:
+# my_dict = {'users': {'Arthur': {'grades': [4, 4, 3], 'top_grade': 4}, 'Timur': {'grades': [5, 5, 5], 'top_grade': 5}}}
+# result = get_all_values(my_dict, 'top_grade')
+#
+# print(*sorted(result))
+# print(type(result))
+#
+# my_dict = {'Arthur': {'hobby': 'videogames', 'drink': 'cacao'}, 'Timur': {'hobby': 'math'}}
+# result = get_all_values(my_dict, 'hobby')
+#
+# print(*sorted(result))
