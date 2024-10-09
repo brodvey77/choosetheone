@@ -807,3 +807,12 @@
 #         if isinstance(v, dict):
 #             s.update(get_all_values(v, key))
 #     return s
+
+# def get_all_values(data, key):
+#     values = set()
+#     if key in data:
+#         values.add(data[key])
+#     for item in data.values():
+#         if isinstance(item, dict):
+#             values |= get_all_values(item, key)
+#     return values
