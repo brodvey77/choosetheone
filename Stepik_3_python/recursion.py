@@ -798,3 +798,12 @@
 # result = get_all_values(my_dict, 'hobby')
 #
 # print(*sorted(result))
+
+# def get_all_values(data, key):
+#     s = set()
+#     if key in data:
+#         s.add(data[key])
+#     for k, v in data.items():
+#         if isinstance(v, dict):
+#             s.update(get_all_values(v, key))
+#     return s
