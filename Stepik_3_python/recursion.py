@@ -816,3 +816,58 @@
 #         if isinstance(item, dict):
 #             values |= get_all_values(item, key)
 #     return values
+
+# def dict_travel(nested_dicts, parent_key=''):
+#     items = []
+#     for k, v in sorted(nested_dicts.items()):
+#         new_key = f"{parent_key}.{k}" if parent_key else k
+#         if isinstance(v, dict):
+#             items.extend(dict_travel(v, new_key).items())
+#         else:
+#             items.append((new_key, v))
+#     return dict(items)
+#
+#
+# data = {'a': 1, 'b': {'c': 30, 'a': 10, 'b': 20}}
+# result = dict_travel(data)
+#
+# for key, value in result.items():
+#     print(f"{key}: {value}")
+
+
+def dict_travel(nested_dicts, parent_key=''):
+    items = []
+    for key, value in sorted(nested_dicts.items()):
+        new_key = f"{parent_key}.{key}" if parent_key else key
+        if isinstance(value, dict):
+            items.extend(dict_travel(value, new_key).items())
+        else:
+            items.append((new_key, value))
+    return dict(items)
+
+
+
+
+# TEST_1:
+data = {'a': 1, 'b': {'c': 30, 'a': 10, 'b': 20}}
+dict_travel(data)
+
+# TEST_2:
+data = {'d': 1, 'b': {'c': 30, 'a': 10, 'b': 20}, 'a': 100}
+
+dict_travel(data)
+
+# TEST_3:
+data = {'b': {'c': 30, 'a': 10, 'b': {'d': 40, 'e': 50}}}
+
+dict_travel(data)
+
+# TEST_4:
+data = {'firstname': 'Alyson', 'lastname': 'Hannigan', 'birthday': {'day': 24, 'month': 'March', 'year': 1974}}
+
+dict_travel(data)
+
+# TEST_5:
+data = {'firstname': 'Тимур', 'lastname': 'Гуев', 'birthdate': {'day': 10, 'month': 'October', 'year': 1993},'address': {'streetaddress': 'Часовая 25, кв. 127', 'city': {'region': 'Московская область', 'type': 'город', 'cityname': 'Москва'}, 'postalcode': '125315'}}
+
+dict_travel(data)
