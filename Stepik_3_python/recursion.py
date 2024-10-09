@@ -604,10 +604,20 @@
 #     elif isinstance(nested_lists, list):
 #         return recursive_sum(nested_lists[0]) + recursive_sum(nested_lists[1:])
 #
+# def recursive_sum(nested_lists):
+#     if type(nested_lists) == int:
+#         return nested_lists
+#     if type(nested_lists) == list:
+#         total = 0
+#         for i in nested_lists:
+#             total += recursive_sum(i)
+#         return  total
 #
-#
+# #
 # my_list = [1, [4, 4], 2, [1, [2, 10]]]
 # print(recursive_sum(my_list))
 #
 # my_list = []
 # print(recursive_sum(my_list))
+
+
