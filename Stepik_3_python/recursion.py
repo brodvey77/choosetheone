@@ -869,3 +869,37 @@
 #
 # data = {'firstname': 'Тимур', 'lastname': 'Гуев', 'birthdate': {'day': 10, 'month': 'October', 'year': 1993},'address': {'streetaddress': 'Часовая 25, кв. 127', 'city': {'region': 'Московская область', 'type': 'город', 'cityname': 'Москва'}, 'postalcode': '125315'}}
 # dict_travel(data)
+
+# def custom_isinstance(objects, typeinfo):
+#     s = 0
+#     for element in objects:
+#         if isinstance(element, typeinfo):
+#             s += 1
+#     return s
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# numbers = [1, 'two', 3.0, 'четыре', 5, 6.0]
+# print(custom_isinstance(numbers, int))
+#
+# # TEST_2:
+# numbers = [1, 'two', 3.0, 'четыре', 5, 6.0]
+# print(custom_isinstance(numbers, (int, float)))
+#
+# # TEST_3:
+# numbers = [1, 'two', 3.0, 'четыре', 5, 6.0]
+# print(custom_isinstance(numbers, list))
+#
+# # TEST_4:
+# numbers = [1, 'two', 3.0, 'четыре', 5, 6.0]
+# print(custom_isinstance(numbers, (set, tuple)))
+#
+# # TEST_5:
+# objects = [{2, 3, 4}, (5, 7, 1243), ["Hello World", "Тимур"]]
+# print(custom_isinstance(objects, (tuple, list)))
+#
+# def custom_isinstance(objects, typeinfo):
+#     return sum(isinstance(i, typeinfo) for i in objects)
