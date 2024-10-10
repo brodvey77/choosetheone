@@ -835,39 +835,37 @@
 #     print(f"{key}: {value}")
 
 
-def dict_travel(nested_dicts, parent_key=''):
-    items = []
-    for key, value in sorted(nested_dicts.items()):
-        new_key = f"{parent_key}.{key}" if parent_key else key
-        if isinstance(value, dict):
-            items.extend(dict_travel(value, new_key).items())
-        else:
-            items.append((new_key, value))
-    return dict(items)
 
 
 
-
-# TEST_1:
-data = {'a': 1, 'b': {'c': 30, 'a': 10, 'b': 20}}
-dict_travel(data)
-
-# TEST_2:
-data = {'d': 1, 'b': {'c': 30, 'a': 10, 'b': 20}, 'a': 100}
-
-dict_travel(data)
-
-# TEST_3:
-data = {'b': {'c': 30, 'a': 10, 'b': {'d': 40, 'e': 50}}}
-
-dict_travel(data)
-
-# TEST_4:
-data = {'firstname': 'Alyson', 'lastname': 'Hannigan', 'birthday': {'day': 24, 'month': 'March', 'year': 1974}}
-
-dict_travel(data)
-
-# TEST_5:
-data = {'firstname': 'Тимур', 'lastname': 'Гуев', 'birthdate': {'day': 10, 'month': 'October', 'year': 1993},'address': {'streetaddress': 'Часовая 25, кв. 127', 'city': {'region': 'Московская область', 'type': 'город', 'cityname': 'Москва'}, 'postalcode': '125315'}}
-
-dict_travel(data)
+# def sec():
+#     result = dict_travel(data)
+#     return result
+#
+# def dict_travel(nested_dicts, i=''):
+#     for k,v in sorted(nested_dicts.items()):
+#         if isinstance(v, dict):
+#             dict_travel(v, i + f'{k}.')
+#         else:
+#             print(f'{i}{k}: {v}')
+#
+#
+#
+# data = {'a': 1, 'b': {'c': 30, 'a': 10, 'b': 20}}
+# dict_travel(data)
+#
+#
+# data = {'d': 1, 'b': {'c': 30, 'a': 10, 'b': 20}, 'a': 100}
+# dict_travel(data)
+#
+#
+# data = {'b': {'c': 30, 'a': 10, 'b': {'d': 40, 'e': 50}}}
+# dict_travel(data)
+#
+#
+# data = {'firstname': 'Alyson', 'lastname': 'Hannigan', 'birthday': {'day': 24, 'month': 'March', 'year': 1974}}
+# dict_travel(data)
+#
+#
+# data = {'firstname': 'Тимур', 'lastname': 'Гуев', 'birthdate': {'day': 10, 'month': 'October', 'year': 1993},'address': {'streetaddress': 'Часовая 25, кв. 127', 'city': {'region': 'Московская область', 'type': 'город', 'cityname': 'Москва'}, 'postalcode': '125315'}}
+# dict_travel(data)
