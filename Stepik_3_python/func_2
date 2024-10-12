@@ -1,0 +1,10 @@
+def my_pow(number, l = []):
+    for i in enumerate(str(number), 1):
+        l.append(int(i[1])**i[0])
+    print(sum(l))
+
+
+
+
+
+print(my_pow(139))
