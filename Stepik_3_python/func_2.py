@@ -118,3 +118,26 @@
 #
 # data = [(1, 2, 3), (1, 2, 3), (0, 0, 0), 10, (144, 75, 60), 20, 30]
 # print(hash_as_key(data))
+
+
+# expression1 = "print('Привет из функции eval()')"
+# expression2 = "len([1, 1, 1, 1, 1])"
+#
+# result1 = eval(expression1)
+# result2 = eval(expression2)
+
+# print(result1)
+# print(result2)
+
+# code = 'print(100 + 10 + 1)'
+#
+# print(exec(code))
+
+# s = eval(input())
+#
+# if isinstance(s, list):
+#     print(s[-1])
+# if isinstance(s, set):
+#     print(len(s))
+# if isinstance(s, tuple):
+#     print((s[0]))
