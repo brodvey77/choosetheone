@@ -81,3 +81,19 @@
 #         [False, False, True, True], [1, 5, 9, 9, 104, -24, 13.4, 'f']]
 # print(zip_longest(*data, fill='skip'))
 
+# def custom_sort(s):
+#     # Разделяем символы на три категории
+#     lower = sorted([c for c in s if c.islower()])  # строчные буквы
+#     upper = sorted([c for c in s if c.isupper()])  # заглавные буквы
+#     odd_digits = sorted([c for c in s if c.isdigit() and int(c) % 2 != 0])  # нечетные цифры
+#     even_digits = sorted([c for c in s if c.isdigit() and int(c) % 2 == 0])  # четные цифры
+#
+#     # Объединяем отсортированные категории
+#     return ''.join(lower + upper + odd_digits + even_digits)
+#
+#
+# # Чтение входных данных
+# input_string = input().strip()
+# # Вывод результата
+# print(custom_sort(input_string))
+
