@@ -97,3 +97,24 @@
 # # Вывод результата
 # print(custom_sort(input_string))
 
+# print(hash(-1) == -1)
+# print(hash(-2) == -2)
+
+# def hash_as_key(objects):
+#     d = {}
+#     for i in objects:
+#         d.setdefault(hash(i), []).append(i)
+#     for k, v in d.items():
+#         if len(v) == 1:
+#             d[k] = d[k][0]
+#     return d
+#
+#
+# data = [1, 2, 3, 4, 5, 5]
+# print(hash_as_key(data))
+#
+# data = [-1, -2, -3, -4, -5]
+# print(hash_as_key(data))
+#
+# data = [(1, 2, 3), (1, 2, 3), (0, 0, 0), 10, (144, 75, 60), 20, 30]
+# print(hash_as_key(data))
