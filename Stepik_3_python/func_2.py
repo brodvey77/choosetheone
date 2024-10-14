@@ -141,3 +141,12 @@
 #     print(len(s))
 # if isinstance(s, tuple):
 #     print((s[0]))
+
+# import sys
+#
+# for i in sys.stdin:
+#     print(eval(i))
+#
+# import sys
+#
+# print(max(map(eval, sys.stdin)))
