@@ -249,3 +249,20 @@
 # print(fib(5))
 #
 # # 5
+
+# def print_operation_table(operation, rows, cols):
+#     for i in range(rows):
+#         for j in range(cols):
+#             print(operation(i + 1, j + 1), end=' ')
+#         print()
+#
+#
+#
+#
+# print_operation_table(lambda a, b: a * b, 5, 5)
+# #
+# # print_operation_table(pow, 5, 4)
+#
+# def print_operation_table(operation, rows, cols):
+#     for i in range(1, rows + 1):
+#         print(*map(operation, [i] * cols, range(1, cols + 1)))
