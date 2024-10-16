@@ -232,3 +232,20 @@
 # print(*sorted(map(lambda x: x.capitalize(), n)))
 #
 # print(*sorted(map(str.title, filter(lambda x: x[0] in 'аАмМ' and len(x) > 4, names))))
+
+
+# fib = lambda n: 1 if n <= 2 else fib(n - 1) + fib(n - 2)
+# d = {1: 1, 2: 1}
+# fib = lambda x: d[x] if x in d else d.setdefault(x, fib(x - 1) + fib(x - 2))
+#
+# print(fib(1))
+#
+# # 1
+#
+# print(fib(2))
+#
+# # 1
+#
+# print(fib(5))
+#
+# # 5
