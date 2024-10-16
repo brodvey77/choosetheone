@@ -266,3 +266,130 @@
 # def print_operation_table(operation, rows, cols):
 #     for i in range(1, rows + 1):
 #         print(*map(operation, [i] * cols, range(1, cols + 1)))
+
+
+# import string
+#
+#
+# def verification(login, password, success, failure):
+#     if not any(c in string.ascii_letters for c in password):
+#         failure(login, 'в пароле нет ни одной буквы')
+#     elif not any(c.isupper() and c in string.ascii_uppercase for c in password):
+#         failure(login, 'в пароле нет ни одной заглавной буквы')
+#     elif not any(c.islower() and c in string.ascii_lowercase for c in password):
+#         failure(login, 'в пароле нет ни одной строчной буквы')
+#     elif not any(c.isdigit() for c in password):
+#         failure(login, 'в пароле нет ни одной цифры')
+#     else:
+#
+#         success(login)
+#
+#
+#
+#
+# def verification(login, password, success, failure):
+#     vd = {str.isalpha: 'в пароле нет ни одной буквы',
+#           str.islower: 'в пароле нет ни одной строчной буквы',
+#           str.isupper: 'в пароле нет ни одной заглавной буквы',
+#           str.isdigit: 'в пароле нет ни одной цифры'}
+#     for f in vd:
+#         if not any(f(i) for i in password):
+#             return failure(login, vd[f])
+#     success(login)
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# def success(login):
+#     print(f'Привет, {login}!')
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Ошибка: {text}')
+#
+# verification('timyrik20', 'Beegeek314', success, failure)
+#
+# # TEST_2:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+# verification('Ruslan_Chaniev', 'stepikstepik2', success, failure)
+#
+# # TEST_3:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+# verification('Arthur_Davletov', 'HELLO_WORLD', success, failure)
+#
+# # TEST_4:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+#
+# verification('Arthur_Davletov', '797777777777', success, failure)
+#
+# # TEST_5:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+#
+# verification('Arthur_Davletov', 'Python777', success, failure)
+#
+# # TEST_6:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+#
+# verification('Arthur_Davletov', 'qwerty', success, failure)
+#
+# # TEST_7:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+#
+# verification('Arthur_Davletov', 'мойпароль123', success, failure)
+#
+# # TEST_8:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+#
+# verification('Arthur_Davletov', 'мойпарольbee123', success, failure)
+#
+# # TEST_9:
+# def success(login):
+#     print(f'Здравствуйте, {login}!')
+#
+#
+# def failure(login, text):
+#     print(f'{login}, попробуйте снова. Текст ошибки: {text}')
+#
+#
+# verification('Arthur_Davletov', 'мойпарольBEE123', success, failure)
+
