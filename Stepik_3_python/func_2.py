@@ -393,3 +393,72 @@
 #
 # verification('Arthur_Davletov', 'мойпарольBEE123', success, failure)
 
+# def my_func():
+# #     return 17
+# #
+# # input = my_func
+# # num = input()
+# # print(num)
+
+
+# def func(name, language='Python', year=1992):
+#     pass
+#
+# print(func.__name__)          # имя функции
+# print(func.__doc__)           # строка документации
+# print(func.__defaults__)      # кортеж с аргументами по умолчанию
+#
+# print(abs.__doc__)
+# print(str.lower.__doc__)
+
+# def bee():
+#     '''bee docstring'''
+#     return 'bee'
+#
+#
+# def geek():
+#     return 'geek'
+#     '''geek docstring'''
+#
+#
+# print(bee.__doc__)
+# print(geek.__doc__)
+
+# def ru_greeting(name):
+#     print('Привет,', name)
+#
+#
+# def en_greeting(name):
+#     print('Hello,', name)
+#
+#
+# greeting = {'ru': ru_greeting,
+#             'en': en_greeting}
+#
+# greeting['ru']('Тимур')
+
+
+# def add_name(name, names=[]):
+#     names.append(name)
+#
+# add_name('Timur')
+# add_name('Arthur')
+# add_name('Dima')
+#
+# print(*add_name.__defaults__)
+
+# def numbers_sum(*args):
+#     """Принимает список и возвращает сумму его чисел (int, float),
+# игнорируя нечисловые объекты. 0 - если в списке чисел нет."""
+#     return sum(filter(lambda x: isinstance(x, (int, float)), *args))
+#
+#
+#
+#
+# print(numbers_sum([1, '2', 3, 4, 'five']))
+# print(numbers_sum(['beegeek', 'stepik', '100']))
+# print(numbers_sum.__doc__)
+#
+# print(numbers_sum([10, 100, 1000, 10000]))
+#
+# print(numbers_sum(['beegeek', 11, 'stepik', 28.5, '100', 11.2]))
