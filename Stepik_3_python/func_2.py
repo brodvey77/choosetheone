@@ -667,13 +667,49 @@ import struct
 # print(say_hi('Dima'))
 # print(say_hello('Ruslan'))
 
+
+
+
 # def outer(x):
+#     y = 5
+#     z = 10
 #     def inner():
-#         nonlocal x
-#         x += 10
-#         print(x)
-#
+#         nonlocal y
+#         y += 1
+#         z = 20
+#         print('x =', x)
+#         print('z =', z)
 #     inner()
+#     print('x =', x)
+#     print('y =', y)
+#     print('z =', z)
+#
+# outer(5)
+
+# def outer(x):
+#     y = 20
+#
+#     def inner(z):
+#         t = 30
+#         return x + y + z + t
+#
+#     return inner
 #
 #
-# outer(10)
+# func = outer(10)
+#
+# for var in func.__closure__:
+#     print(var.cell_contents)
+
+# def f():
+#     s = 'foo'
+#     loc = locals()
+#     print(loc)
+#
+#     x = 20
+#     loc['s'] = 'bar'
+#     print(s)
+#
+#
+# f()
+
