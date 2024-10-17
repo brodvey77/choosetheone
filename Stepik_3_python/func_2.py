@@ -652,3 +652,17 @@ import struct
 # another()                       # выводит 1
 #
 # start()                         # выводит 3
+
+
+# def greeting_creator(greeting_word):
+#     def greet(name):
+#         return f'{greeting_word}, {name}'
+#
+#     return greet
+#
+#
+# say_hi = greeting_creator('Hi')
+# say_hello = greeting_creator('Hello')
+#
+# print(say_hi('Dima'))
+# print(say_hello('Ruslan'))
