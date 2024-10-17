@@ -2,6 +2,7 @@
 #     for i in enumerate(str(number), 1):
 #         l.append(int(i[1])**i[0])
 #     print(sum(l))
+import struct
 
 
 # def my_pow(number):
@@ -462,3 +463,39 @@
 # print(numbers_sum([10, 100, 1000, 10000]))
 #
 # print(numbers_sum(['beegeek', 11, 'stepik', 28.5, '100', 11.2]))
+
+# old_print = print
+# def print(*args, **kwargs):
+#     caps = tuple(c.upper() if isinstance(c, str) else c for c in args)
+#     if kwargs == {}:
+#         return old_print(*caps)
+#     else:
+#         kwargs['end'] = kwargs['end'].upper()
+#         kwargs['sep'] = kwargs['sep'].upper()
+#         return old_print(*caps, sep=kwargs['sep'], end=kwargs['end'])
+
+
+# old_print = print
+# def print(*args, **kwargs):
+#     caps = tuple(c.upper() if isinstance(c, str) else c for c in args)
+#     if kwargs == {}:
+#         return old_print(*caps)
+#     else:
+#         kwargs["end"] = kwargs["end"].upper()
+#         kwargs["sep"] = kwargs["sep"].upper()
+#         return old_print(*caps, sep=kwargs['sep'], end=kwargs['end'])
+
+
+#
+# print('beegeek', [1, 2, 3], 4)
+# print('bee', 'geek', sep=' and ', end=' wow')
+# words = ('black', 'white', 'grey', 'black-1', 'white-1', 'python')
+# print(*words, sep=' to ', end=' LOVE')
+
+
+# from sys import stdout
+#
+# def print(*s, sep=" ", end="\n"):
+#     result = sep.upper().join(map(lambda x: str(x).upper() if type(x) is str else str(x), s)) + end.upper()
+#     stdout.write(result)
+
