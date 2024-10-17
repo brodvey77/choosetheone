@@ -499,3 +499,58 @@ import struct
 #     result = sep.upper().join(map(lambda x: str(x).upper() if type(x) is str else str(x), s)) + end.upper()
 #     stdout.write(result)
 
+# func.__dict__['attr'] = value
+# func.attr = value
+
+# def countries(country, capital):
+#     countries.__dict__[country] = capital
+#
+#
+# countries.__dict__['Germany'] = 'Berlin'
+# countries.Norway = 'Oslo'
+# countries('Finland', 'Helsinki')
+#
+# print(countries.__dict__)
+
+# def greeting(name):
+#     print('Hello,', name)
+#
+#
+# greeting.publish = True
+# greeting.names = ['Timur', 'Arthur']
+#
+# if greeting.publish:
+#     greeting('Dima')
+# if hasattr(greeting, 'names'):
+#     name = greeting.names[0]
+#     greeting(name)
+
+# def polynom(x):
+#     v = x**2 + 1
+#     polynom.values.add(v)
+#     return v
+#
+#
+# polynom.values = set()
+
+# def polynom(x):
+#     polynom.__dict__.setdefault('values', set())
+#     value = x**2 + 1
+#     polynom.values.add(value)
+#     return value
+
+#
+# print(polynom(5))
+# print(polynom.values)
+
+
+# polynom(1)
+# polynom(2)
+# polynom(3)
+#
+# print(*sorted(polynom.values))
+
+# for _ in range(10):
+#     polynom(10)
+#
+# print(polynom.values)
