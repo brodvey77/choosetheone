@@ -554,3 +554,83 @@ import struct
 #     polynom(10)
 #
 # print(polynom.values)
+
+
+# def remove_marks(text, marks):
+#     remove_marks.__dict__['count'] += 1
+#     f_t = ''
+#     for i in text:
+#         if i not in marks:
+#             f_t += i
+#
+#     return f_t
+#
+# remove_marks.count = 0
+#
+#
+# def remove_marks(text, marks):
+#     remove_marks.__dict__['count'] = remove_marks.__dict__.get('count', 0) + 1
+#     for i in marks:
+#         text = text.replace(i, '')
+#     return text
+
+
+# INPUT DATA:
+
+# TEST_1:
+# text = 'Hi! Will we go together?'
+#
+# print(remove_marks(text, '!?'))
+# print(remove_marks.count)
+#
+# # TEST_2:
+# marks = '.,!?'
+# text = 'Are you listening? Meet my family! There are my parents, my brother and me.'
+#
+# for mark in marks:
+#     print(remove_marks(text, mark))
+#
+# print(remove_marks.count)
+
+# TEST_3:
+# text = '!Hi!!!! Will we ????go together?????'
+# print(remove_marks(text, '!?'))
+
+# TEST_4:
+# text = '!Hi!!!! Will we ????go together?????'
+#
+# print(remove_marks(text, '!?'))
+# print(remove_marks.count)
+#
+# TEST_5:
+# text = 'Qwerty'
+# marks = 'qwerty'
+# print(remove_marks(text, marks))
+# print(remove_marks.count)
+#
+# # TEST_6:
+# text = 'Application for drivers!'
+# marks = ''
+# print(remove_marks(text, marks))
+# print(remove_marks.count)
+#
+# # TEST_7:
+# text = 'Application for drivers!'
+# marks = ' '
+# print(remove_marks(text, marks))
+# print(remove_marks.count)
+#
+# # TEST_8:
+# text = 'Application for drivers!'
+# marks = ' p!'
+# print(remove_marks(text, marks))
+# print(remove_marks.count)
+#
+# # TEST_9:
+# text = '-TTTTTTTtttttttRRRRRRrrrrrr-'
+# print(remove_marks(text, 't'))
+# print(remove_marks(text, 'r'))
+# print(remove_marks(text, 'T'))
+# print(remove_marks(text, 'R'))
+# print(remove_marks(text, '-'))
+# print(remove_marks.count)
