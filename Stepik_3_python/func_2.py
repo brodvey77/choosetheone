@@ -666,3 +666,14 @@ import struct
 #
 # print(say_hi('Dima'))
 # print(say_hello('Ruslan'))
+
+# def outer(x):
+#     def inner():
+#         nonlocal x
+#         x += 10
+#         print(x)
+#
+#     inner()
+#
+#
+# outer(10)
