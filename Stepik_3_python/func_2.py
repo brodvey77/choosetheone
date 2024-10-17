@@ -634,3 +634,21 @@ import struct
 # print(remove_marks(text, 'R'))
 # print(remove_marks(text, '-'))
 # print(remove_marks.count)
+
+# def closure():
+#     count = 0
+#     def inner():
+#         nonlocal count
+#         count += 1
+#         print(count)
+#     return inner
+#
+# start = closure()
+# another = closure()             # другое замыкание, со своими локальными значениями
+#
+# start()                         # выводит 1
+# start()                         # выводит 2
+#
+# another()                       # выводит 1
+#
+# start()                         # выводит 3
