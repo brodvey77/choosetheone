@@ -713,3 +713,154 @@ import struct
 #
 # f()
 
+
+# def speak(text):
+#     def whisper(t):
+#         return t.lower() + '+++'
+#     return whisper(text)
+#
+# print(speak('Hello World!'))
+
+# def get_speak_func(volume):
+#     def whisper(text):
+#         return text.lower() + '...'
+#     def yell(text):
+#         return text.upper() + '!'
+#
+#     if volume > 0.5:
+#         return yell
+#     else:
+#         return whisper
+#
+# whisper = get_speak_func(0.3)     # функция whisper()
+# yell = get_speak_func(0.6)        # функция yell()
+#
+# print(whisper('Hello'))           # говорим шепотом
+# print(yell('Hello'))              # кричим
+
+
+# def get_speak_func(text, volume):
+#     def whisper():
+#         return text.lower() + '...'
+#
+#     def yell():
+#         return text.upper() + '!'
+#
+#     if volume > 0.5:
+#         return yell
+#     else:
+#         return whisper
+#
+#
+# yell = get_speak_func('Hello, World', 0.7)
+#
+# print(yell())
+
+# def closure():
+#     count = 0
+#     def inner():
+#         nonlocal count
+#         count += 1
+#         print(count)
+#     return inner
+#
+# start = closure()
+# another = closure()             # другое замыкание, со своими локальными значениями
+#
+# start()                         # выводит 1
+# start()                         # выводит 2
+#
+# another()                       # выводит 1
+#
+# start()                         # выводит 3
+
+# def greeting_creator(greeting_word):
+#     def greet(name):
+#         return f'{greeting_word}, {name}'
+#     return greet
+#
+# say_hi = greeting_creator('Hi')
+# say_hello = greeting_creator('Hello')
+#
+# print(say_hi('Sergey'))
+# print(say_hello('Alena'))
+
+# def outer_function():
+#     num = 5
+#
+#     def inner_function():  # определяем вложенную функцию
+#         num += 10
+#         print(num)
+#
+#     inner_function()  # вызываем вложенную функцию
+#
+#
+# outer_function()
+
+# def outer_function(arg):
+#     num = 5
+#     name = 'Timur'
+#     numbers = [1, 2, 3]
+#
+#     def inner_function():  # определяем вложенную функцию
+#         print(arg)
+#         print(num)
+#         print(numbers)
+#
+#     return inner_function  # возвращаем вложенную функцию
+#
+#
+# inner = outer_function('python')
+#
+# for var in inner.__closure__:
+#     print(var.cell_contents)
+
+#
+# def outer(x, y=2):
+#     def inner(z=y):
+#         return x, z
+#     x, y = None, None
+#     return inner
+#
+# print(outer(10)())
+
+
+# def make_counter(i):
+#     def counter():
+#         nonlocal i
+#         i += 1
+#         return i
+#     return counter
+#
+# counter1 = make_counter(100)
+# counter2 = make_counter(200)
+#
+# print(counter1(), counter1())
+# print(counter2(), counter2())
+
+# def greeting(language):
+#     def greeting_ru():
+#         print('Привет!')
+#
+#     def greeting_fr():
+#         print('Bonjour!')
+#
+#     if language == 'ru':
+#         return greeting_ru
+#     if language == 'fr':
+#         return greeting_fr
+#
+#
+# func = greeting('fr')
+# func()
+
+# def power(degree):
+#     def f(x):
+#         return pow(x, degree)
+#     return f
+
+
+# def power(degree):
+#     return lambda x: x ** degree
+#
+# power = lambda degree: (lambda num: pow(num, degree))
