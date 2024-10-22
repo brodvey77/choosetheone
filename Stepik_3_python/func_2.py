@@ -864,3 +864,15 @@ import struct
 #     return lambda x: x ** degree
 #
 # power = lambda degree: (lambda num: pow(num, degree))
+
+# def generator_square_polynom(a, b, c):
+#     return lambda x: a * pow(x, 2) + b * x + c
+#     # def f(x):
+#     #     return a * pow(x, 2) + b * x + c
+#     # return f
+#
+#
+#
+#
+# f = generator_square_polynom(1, 2, 1)
+# print(f(5))
