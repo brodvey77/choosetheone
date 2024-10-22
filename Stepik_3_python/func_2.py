@@ -876,3 +876,60 @@ import struct
 #
 # f = generator_square_polynom(1, 2, 1)
 # print(f(5))
+
+# def sourcetemplate(url):
+#     l = []
+#     def f(**kwargs):
+#         if kwargs:
+#             for k,v in sorted(kwargs.items()):
+#                 l.append(f'{k}={v}')
+#             return f'{url}?{"&".join(l)}'
+#         else:
+#             return url
+#     return f
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# url = 'https://beegeek.ru'
+# load = sourcetemplate(url)
+# print(load(name='timur'))
+#
+# # TEST_2:
+# url = 'https://stepik.org/lesson/651459/step/14'
+# load = sourcetemplate(url)
+# print(load(thread='solutions', unit=648165))
+#
+# # TEST_3:
+# url = 'https://beegeek.ru'
+# load = sourcetemplate(url)
+# print(load())
+#
+# # TEST_4:
+# url = 'https://all_for_comfort_life.com'
+# load = sourcetemplate(url)
+# print(load(smartphone='iPhone', notebook='huawei', sale=True))
+#
+# # TEST_5:
+# url = 'https://hide_and_seek.harvard'
+# load = sourcetemplate(url)
+# print(load(wizard='Dambldor', magic_wand='elderberry', thief='Volandemord'))
+
+# OUTPUT DATA:
+
+# # TEST_1:
+# https://beegeek.ru?name=timur
+#
+# # TEST_2:
+# https://stepik.org/lesson/651459/step/14?thread=solutions&unit=648165
+#
+# # TEST_3:
+# https://beegeek.ru
+#
+# # TEST_4:
+# https://all_for_comfort_life.com?notebook=huawei&sale=True&smartphone=iPhone
+#
+# # TEST_5:
+# https://hide_and_seek.harvard?magic_wand=elderberry&thief=Volandemord&wizard=Dambldor
