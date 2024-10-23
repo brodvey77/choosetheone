@@ -957,5 +957,18 @@ import struct
 # print(date_ru(today))
 
 
-# 0
+# 'python' * 3
 
+# 9.99 + 1
+#
+# False - 'stepik'
+#
+# 0 + 'python'
+#
+# 'python' * 'stepik'
+#
+# [1, 2, 3] + 4
+#
+# [0] + [1, 2, 3]
+#
+# 'python' + 'stepik'
