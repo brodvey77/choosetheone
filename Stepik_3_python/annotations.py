@@ -63,3 +63,20 @@
 # info = {'name': 'Roman', 'grades': [40]}
 #
 # print(top_grade(info))
+#
+# from collections import deque
+# def cyclic_shift(numbers: list[int|float], step: int) -> None:
+#     temp = deque(numbers)
+#     temp.rotate(step)
+#     numbers[:] = [i for i in temp]
+#
+#
+#
+#
+# numbers = [1, 2, 3, 4, 5]
+# cyclic_shift(numbers, 1)
+#
+# print(numbers)
+# Sample Output 1:
+#
+# [5, 1, 2, 3, 4]
