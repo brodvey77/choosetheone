@@ -200,20 +200,31 @@ def null_decorator(func):
 
 
 
-def sandwich(func):
-    def wrapper(*args, **kwargs):
-        up = f'---- Верхний ломтик хлеба ----'
-        down = f"---- Нижний ломтик хлеба ----"
-        print(up)
-        result = func(*args, **kwargs)
-        print(down)
-        return result
+# def sandwich(func):
+#     def wrapper(*args, **kwargs):
+#         up = f'---- Верхний ломтик хлеба ----'
+#         down = f"---- Нижний ломтик хлеба ----"
+#         print(up)
+#         result = func(*args, **kwargs)
+#         print(down)
+#         return result
+#
+#     return wrapper
+#
+#
+# @sandwich
+# def add_ingredients(ingredients):
+#     print(' | '.join(ingredients))
+#
+# add_ingredients(['томат', 'салат', 'сыр', 'бекон'])
 
-    return wrapper
 
+# def decorator(func):
+#     def wrapper(*args, sep=" ", end="\n"):
+#         res = [c.upper() if type(c) == str else c for c in args]
+#         end, sep = end.upper(), sep.upper()
+#         result = func(*res, end=end, sep=sep)
+#         return result
+#
+#     return wrapper
 
-@sandwich
-def add_ingredients(ingredients):
-    print(' | '.join(ingredients))
-
-add_ingredients(['томат', 'салат', 'сыр', 'бекон'])
