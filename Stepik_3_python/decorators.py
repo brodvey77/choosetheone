@@ -228,66 +228,162 @@ def null_decorator(func):
 #     return wrapper
 
 
-def do_twice(func):
-    def wrapper(*args, **kwargs):
-        func(*args, **kwargs)
-        return func(*args, **kwargs)
-    return wrapper
+# def do_twice(func):
+#     def wrapper(*args, **kwargs):
+#         func(*args, **kwargs)
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# @do_twice
+# def beegeek():
+#     print('beegeek')
+#
+#
+# beegeek()
+#
+#
+# # TEST_2:
+# @do_twice
+# def beegeek():
+#     print('beegeek')
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_3:
+# @do_twice
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_4:
+# @do_twice
+# def beegeek():
+#     print('beegeek')
+#
+#
+# beegeek()
+# beegeek()
+# beegeek()
+#
+#
+# # TEST_5:
+# @do_twice
+# def beegeek(a, b, sep):
+#     print(a + b + sep)
+#
+#
+# beegeek(1, 2, sep=10)
+#
+#
+# # TEST_6:
+# @do_twice
+# def beegeek(*args, **kwargs):
+#     print('beegeek' * sum(args + tuple(kwargs.values())))
+#
+#
+# beegeek(1, 1, 1, sep=1, end=2, step=3)
+
+
+# def reverse_args(func):
+#     def wrapper(*args, **kwargs):
+#         result = func(*args[::-1], **kwargs)
+#         return result
+#     return wrapper
+
+# def reverse_args(func):
+#     def wrapper(*args, **kwargs):
+#         result = func(*reversed(args), **kwargs)
+#         return result
+#     return wrapper
+
 
 
 # INPUT DATA:
 
 # TEST_1:
-@do_twice
-def beegeek():
-    print('beegeek')
+# @reverse_args
+# def power(a, n):
+#     return a ** n
+#
+#
+# print(power(2, 3))
+#
+#
+# # TEST_2:
+# @reverse_args
+# def concat(a, b, c):
+#     return a + b + c
+#
+#
+# print(concat('apple', 'cherry', 'melon'))
+#
+#
+# # TEST_3:
+# @reverse_args
+# def operation(a, b, c):
+#     return a // b + c
+#
+#
+# print(operation(10, 20, 80))
+#
+#
+# # TEST_4:
+# @reverse_args
+# def operation(a, b):
+#     return a // b
+#
+#
+# print(operation(90, 0))
+#
+#
+# # TEST_5:
+# @reverse_args
+# def operation(a, b):
+#     return a // b
+#
+#
+# try:
+#     print(operation(0, 70))
+# except ZeroDivisionError:
+#     print('ZeroDivisionError')
+#
+#
+# # TEST_6:
+# @reverse_args
+# def operation(a, b, name):
+#     return a // b + name
+#
+#
+# print(operation(10, 90, name=1))
+#
+#
+# # TEST_7:
+# @reverse_args
+# def operation(a, b, value=10):
+#     return a // b + value
+#
+#
+# try:
+#     print(operation(0, 70))
+# except ZeroDivisionError:
+#     print('ZeroDivisionError')
+#
+#
+# # TEST_8:
+# @reverse_args
+# def operation(a, b, value=10):
+#     return a // b - value
+#
+#
+# print(operation(70, 70, value=70))
 
 
-beegeek()
-
-
-# TEST_2:
-@do_twice
-def beegeek():
-    print('beegeek')
-
-
-print(beegeek())
-
-
-# TEST_3:
-@do_twice
-def beegeek():
-    return 'beegeek'
-
-
-print(beegeek())
-
-
-# TEST_4:
-@do_twice
-def beegeek():
-    print('beegeek')
-
-
-beegeek()
-beegeek()
-beegeek()
-
-
-# TEST_5:
-@do_twice
-def beegeek(a, b, sep):
-    print(a + b + sep)
-
-
-beegeek(1, 2, sep=10)
-
-
-# TEST_6:
-@do_twice
-def beegeek(*args, **kwargs):
-    print('beegeek' * sum(args + tuple(kwargs.values())))
-
-
-beegeek(1, 1, 1, sep=1, end=2, step=3)
