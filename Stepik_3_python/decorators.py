@@ -1,6 +1,7 @@
 def null_decorator(func):
     return func
 
+
 # def say():
 #     print('Hello world')
 #
@@ -198,8 +199,6 @@ def null_decorator(func):
 # print(get_price(item='puzzle'))
 
 
-
-
 # def sandwich(func):
 #     def wrapper(*args, **kwargs):
 #         up = f'---- Верхний ломтик хлеба ----'
@@ -228,3 +227,67 @@ def null_decorator(func):
 #
 #     return wrapper
 
+
+def do_twice(func):
+    def wrapper(*args, **kwargs):
+        func(*args, **kwargs)
+        return func(*args, **kwargs)
+    return wrapper
+
+
+# INPUT DATA:
+
+# TEST_1:
+@do_twice
+def beegeek():
+    print('beegeek')
+
+
+beegeek()
+
+
+# TEST_2:
+@do_twice
+def beegeek():
+    print('beegeek')
+
+
+print(beegeek())
+
+
+# TEST_3:
+@do_twice
+def beegeek():
+    return 'beegeek'
+
+
+print(beegeek())
+
+
+# TEST_4:
+@do_twice
+def beegeek():
+    print('beegeek')
+
+
+beegeek()
+beegeek()
+beegeek()
+
+
+# TEST_5:
+@do_twice
+def beegeek(a, b, sep):
+    print(a + b + sep)
+
+
+beegeek(1, 2, sep=10)
+
+
+# TEST_6:
+@do_twice
+def beegeek(*args, **kwargs):
+    print('beegeek' * sum(args + tuple(kwargs.values())))
+
+
+beegeek(1, 1, 1, sep=1, end=2, step=3)
