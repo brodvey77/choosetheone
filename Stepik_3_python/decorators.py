@@ -306,7 +306,6 @@ def null_decorator(func):
 #     return wrapper
 
 
-
 # INPUT DATA:
 
 # TEST_1:
@@ -459,4 +458,175 @@ def null_decorator(func):
 # print(f(1, 2, 3, param1=4, param2='10'))
 # #
 #
+
+
+# def takes_positive(func):
+#     def wrapper(*args, **kwargs):
+#         if all(i > 0 and isinstance(i, int) for i in [*args, *kwargs.values()]):
+#             return func(*args, **kwargs)
+#         if any(not isinstance(i, int) for i in [*args, *kwargs.values()]):
+#             raise TypeError
+#         if any(i <= 0 for i in [*args, *kwargs.values()]):
+#             raise ValueError
 #
+#     return wrapper
+#
+#
+# def takes_positive(func):
+#     def wrapper(*args, **kwargs):
+#         for i in [*args, *kwargs.values()]:
+#             if not type(i) is int:
+#                 raise TypeError
+#             elif i <= 0:
+#                 raise ValueError
+#         return func(*args, **kwargs)
+#     return wrapper
+#
+# # all(i > 0 and isinstance(i, int) for i in args)
+# # INPUT DATA:
+#
+# # TEST_1:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# print(positive_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+#
+#
+# # TEST_2:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# try:
+#     print(positive_sum(-3, -2, -1, 0, 1, 2, 3))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_3:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# try:
+#     print(positive_sum('10', 20, 10))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_4:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# try:
+#     print(positive_sum(10, 20, 16, 18, '10'))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_5:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# try:
+#     print(positive_sum(10, 20, '16', 18, '10'))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_6:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# print(positive_sum(*range(10, 100)))
+#
+#
+# # TEST_7:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# try:
+#     print(positive_sum(3, 2, 1, -8, 1, 2, 3))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_8:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# try:
+#     print(positive_sum(*range(100, -1, -1)))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_9:
+# @takes_positive
+# def positive_sum(*args, **kwargs):
+#     return sum(args) + sum(kwargs.values())
+#
+#
+# print(positive_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, par1=1, sep=4))
+#
+#
+# # TEST_10:
+# @takes_positive
+# def positive_sum(*args, **kwargs):
+#     return sum(args) + sum(kwargs.values())
+#
+#
+# try:
+#     print(positive_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, par1=1, sep=-40))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_11:
+# @takes_positive
+# def positive_sum(*args, **kwargs):
+#     return sum(args) + sum(kwargs.values())
+#
+#
+# try:
+#     print(positive_sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, par1=1, sep='40'))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_12:
+# @takes_positive
+# def positive_sum(*args):
+#     return sum(args)
+#
+#
+# try:
+#     print(positive_sum(11, 20.7, 10))
+# except Exception as err:
+#     print(type(err))
+#
+#
+# # TEST_13:
+# @takes_positive
+# def power(a, n):
+#     return a ** n
+#
+#
+# try:
+#     print(power(a="3", n="2"))
+# except Exception as err:
+#     print(type(err))
