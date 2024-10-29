@@ -386,4 +386,77 @@ def null_decorator(func):
 #
 # print(operation(70, 70, value=70))
 
+# def exception_decorator(func):
+#     def wrapper(*args, **kwargs):
+#         try:
+#             return func(*args, **kwargs), 'Функция выполнилась без ошибок'
+#         except:
+#             return None, 'При вызове функции произошла ошибка'
+#
+#     return wrapper
 
+
+# def exception_decorator(func):
+#     def wrapper(*args, **kargv):
+#         try:
+#             res, msg = func(*args, **kargv), 'Функция выполнилась без ошибок'
+#         except:
+#             res, msg = None, "При вызове функции произошла ошибка"
+#         finally:
+#             return res, msg
+#
+#     return wrapper
+
+# # INPUT DATA:
+#
+# # TEST_1:
+# @exception_decorator
+# def f(x):
+#     return x ** 2 + 2 * x + 1
+#
+#
+# print(f(7))
+# #
+# # TEST_2:
+# sum = exception_decorator(sum)
+#
+# print(sum(['199', '1', 187]))
+#
+#
+# # TEST_3:
+# @exception_decorator
+# def f(x, y):
+#     return x * y
+#
+#
+# print(f('stepik', 10))
+
+
+# TEST_4:
+# @exception_decorator
+# def f(x, y):
+#     return x * y
+#
+#
+# print(f('stepik', 'stepik'))
+
+
+# TEST_5:
+# @exception_decorator
+# def f(*args, **kwargs):
+#     return sum(args) + sum(kwargs.values())
+#
+#
+# print(f(1, 2, 3, param1=4, param2=10))
+
+
+# TEST_6:
+# @exception_decorator
+# def f(*args, **kwargs):
+#     return sum(args) + sum(kwargs.values())
+#
+#
+# print(f(1, 2, 3, param1=4, param2='10'))
+# #
+#
+#
