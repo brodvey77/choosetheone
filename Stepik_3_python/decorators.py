@@ -630,3 +630,270 @@ def null_decorator(func):
 #     print(power(a="3", n="2"))
 # except Exception as err:
 #     print(type(err))
+
+# def greet(name):
+#     '''Функция приветствия пользователя.'''
+#     return f'Hello {name}!'
+#
+# print(greet.__name__)
+# print(greet.__doc__)
+
+# def bold(func):
+# #     def wrapper(*args, **kwargs):
+# #         return '<b>' + func(*args, **kwargs) + '</b>'
+# #     return wrapper
+# #
+# # @bold
+# # def greet(name):
+# #     '''Функция приветствия пользователя.'''
+# #     return f'Hello {name}!'
+# #
+# # print(greet.__name__)
+# # print(greet.__doc__)
+
+# def bold(func):
+#     def wrapper(*args, **kwargs):
+#         return '<b>' + func(*args, **kwargs) + '</b>'
+#     wrapper.__name__ = func.__name__
+#     wrapper.__doc__ = func.__doc__
+#     return wrapper
+#
+# @bold
+# def greet(name):
+#     '''Функция приветствия пользователя.'''
+#     return f'Hello {name}!'
+#
+# print(greet.__name__)
+# print(greet.__doc__)
+
+
+# import functools
+#
+# def bold(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         return '<b>' + func(*args, **kwargs) + '</b>'
+#     return wrapper
+#
+# @bold
+# def greet(name):
+#     '''Функция приветствие пользователя.'''
+#     return f'Hello {name}!'
+#
+# print(greet.__name__)
+# print(greet.__doc__)
+
+# Шаблон декоратора общего назначения
+# Все декораторы в большинстве случаев делают примерно одно и то же. Наиболее частый шаблон декоратора выглядит следующим образом:
+
+# import functools
+#
+# def decorator(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         # Что-то выполняется до вызова декорируемой функции
+#         value = func(*args, **kwargs)
+#         # декорируется возвращаемое значение функции
+#         # или что-то выполняется после вызова декорируемой функции
+#         return value
+#     return wrapper
+
+# Декоратор измерения времени работы функции
+# Следующий декоратор измеряет и выводит время выполнения декорируемой функции. Декоратор вычисляет время непосредственно перед запуском функции и сразу после ее завершения и выводит разницу подсчитанных времен.
+#
+# Приведенный ниже код:
+
+# import functools, time
+#
+# def timer(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         start = time.perf_counter()
+#         val = func(*args, **kwargs)
+#         end = time.perf_counter()
+#         work_time = end - start
+#         print(f'Время выполнения {func.__name__}: {round(work_time, 4)} сек.')
+#         return val
+#     return wrapper
+#
+# @timer
+# def test(n):
+#     return sum([(i/99)**2 for i in range(n)])
+#
+# @timer
+# def sleep(n):
+#     time.sleep(n)
+#
+# res1 = test(10000)
+# res2 = sleep(4)
+#
+# print(f'Результат функции test = {res1}')
+# print(f'Результат функции sleep = {res2}')
+
+# Декоратор отслеживания количества вызовов функции
+# Иногда полезно иметь декоратор, который может отслеживать состояние вызова функции. Создадим декоратор, который подсчитывает, сколько раз вызывается функция. Для сохранения состояния счетчика будем использовать пользовательский атрибут функции.
+#
+# Приведенный ниже код:
+
+import functools
+
+# def counter(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         wrapper.num += 1
+#         print(f'Вызов {func.__name__}: {wrapper.num}')
+#         val = func(*args, **kwargs)
+#         return val
+#     wrapper.num = 0
+#     return wrapper
+#
+# @counter
+# def greet(name):
+#     return f'Hello {name}!'
+#
+# print(greet('Timur'))
+# print(greet('Ruslan'))
+# print(greet('Arthur'))
+# print(greet('Gvido'))
+
+
+# Декоратор замедления времени выполнения функции
+# Иногда полезно иметь декоратор, который замедляет время выполнения функции.Создадим декоратор slow_down, который
+# будет добавлять задержку выполнения программы в 1 секунду, прежде чем вызовет декорируемую
+# функцию.
+#
+# Приведенный ниже код:
+
+# import functools
+# import time
+#
+#
+# def slow_down(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         time.sleep(1)
+#         return func(*args, **kwargs)
+#
+#     return wrapper
+#
+#
+# @slow_down
+# def countdown(number):
+#     if number < 1:
+#         print('Конец!')
+#     else:
+#         print(number)
+#         countdown(number - 1)
+#
+#
+# countdown(5)
+
+# import sys, time
+#
+#
+# def teleprint(*args, delay=0.05, str_join=' '):
+#     text = str_join.join(str(x) for x in args)
+#     n = len(text)
+#     for i, char in enumerate(text, 1):
+#         if i == n:
+#             char = f'{char}\n'
+#         print(char, end='')
+#         time.sleep(delay)
+#
+#
+# teleprint('Привет Python!', 'Меня зовут Тимур', 'Beegeek = <3', str_join='*')
+# teleprint('Привет Python!', 'Меня зовут Тимур', 'Beegeek = <3', str_join='*')
+
+# import functools
+#
+# def make_capitalize(func):
+#     @functools.wraps
+#     def wrapper():
+#         return func().capitalize()
+#     return wrapper
+#
+# @make_capitalize
+# def beegeek():
+#     '''documentation'''
+#     return 'beegeek'
+#
+# print(beegeek.__name__)
+# print(beegeek.__doc__)
+
+
+# import functools
+#
+# def square(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         val = func(*args, **kwargs)
+#         return pow(val, 2)
+#     return wrapper
+#
+#
+# from functools import wraps
+#
+#
+# def square(func):
+#     @wraps(func)
+#     def wrapper(*args, **kwargs):
+#         return func(*args, **kwargs) ** 2
+#
+#     return wrapper
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# @square
+# def add(a, b):
+#     return a + b
+#
+# print(add(3, 7))
+#
+# # TEST_2:
+# @square
+# def add(a, b):
+#     '''прекрасная функция'''
+#     return a + b
+#
+# print(add(1, 1))
+# print(add.__name__)
+# print(add.__doc__)
+#
+# # TEST_3:
+# @square
+# def beegeek():
+#     '''beegeek docs'''
+#     return 99
+#
+# print(beegeek())
+# print(beegeek.__name__)
+# print(beegeek.__doc__)
+#
+# # TEST_4:
+# @square
+# def func(x):
+#     '''classic f(x)'''
+#     return (x + 1) ** 3
+#
+# print(func(7))
+# print(func.__name__)
+# print(func.__doc__)
+#
+# # TEST_5:
+# @square
+# def add(a, b, c, d, e):
+#     return a + b + c + d + e
+#
+# print(add(1, 2, 3, 4, 5))
+# print(add.__name__)
+# print(add.__doc__)
+#
+# # TEST_6:
+# @square
+# def add(*args, **kwargs):
+#     return sum([*args, *kwargs.values()])
+#
+# print(add(3, 7, x=10, y=30))
