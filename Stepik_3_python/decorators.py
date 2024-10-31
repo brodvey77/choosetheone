@@ -1194,3 +1194,152 @@ import functools
 #     print('beegeek')
 #
 # beegeek()
+
+
+# def add_smiley_face(face):
+#     def smiley_face_decorator(func):
+#         def wrapper():
+#             return func() + ' ' + face
+#         return wrapper
+#     return smiley_face_decorator
+#
+# @add_smiley_face('^~^')
+# def beegeek():
+#     return 'beegeek'
+#
+# print(beegeek())
+
+
+# def make_upper(func):
+#     def wrapper():
+#         return func().upper()
+#     return wrapper
+#
+# def del_first_char(func):
+#     def wrapper():
+#         return func()[1:]
+#     return wrapper
+#
+# def reverse(func):
+#     def wrapper():
+#         return func()[::-1]
+#     return wrapper
+#
+# @reverse
+# @del_first_char
+# @make_upper
+# def beegeek():
+#     return 'beegeek'
+#
+# print(beegeek())
+#
+# import functools
+# def prefix(string, to_the_end=False):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args,**kwargs):
+#             res = func(*args, **kwargs)
+#             if to_the_end:
+#                 return f'{res}{string}'
+#             else:
+#                 return f'{string}{res}'
+#         return wrapper
+#     return decorator
+#
+#
+# import functools
+#
+# def prefix(string: str, to_the_end: bool=False):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             if to_the_end:
+#                 return func(*args, **kwargs) + string
+#             return string + func(*args, **kwargs)
+#         return wrapper
+#     return decorator
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# @prefix('€')
+# def get_bonus():
+#     return '2000'
+#
+#
+# print(get_bonus())
+#
+#
+# # TEST_2:
+# @prefix('$$$', to_the_end=True)
+# def get_bonus():
+#     return '2000'
+#
+#
+# print(get_bonus())
+#
+#
+# # TEST_3:
+# @prefix(' online-school', to_the_end=True)
+# def beegeek():
+#     '''beegeek docs'''
+#     return 'beegeek'
+#
+#
+# print(beegeek.__name__)
+# print(beegeek.__doc__)
+# print(beegeek())
+#
+#
+# # TEST_4:
+# @prefix('online-school ')
+# def beegeek():
+#     '''beegeek docs'''
+#     return 'beegeek'
+#
+#
+# print(beegeek.__name__)
+# print(beegeek.__doc__)
+# print(beegeek())
+#
+#
+# # TEST_5:
+# @prefix('online-school ')
+# def make_lower(string, lower=True):
+#     '''makes string upper or lower'''
+#     if lower:
+#         return string.lower()
+#     return string.upper()
+#
+#
+# print(make_lower.__name__)
+# print(make_lower.__doc__)
+# print(make_lower('beegeek', False))
+#
+#
+# # TEST_6:
+# @prefix(' rocks', True)
+# def make_lower(string, lower=True):
+#     '''makes string upper or lower'''
+#     if lower:
+#         return string.lower()
+#     return string.upper()
+#
+#
+# print(make_lower.__name__)
+# print(make_lower.__doc__)
+# print(make_lower('Beegeek'))
+#
+#
+# # TEST_7:
+# @prefix('online-school ')
+# def make_lower(string, lower=True):
+#     if lower:
+#         return string.lower()
+#     return string.upper()
+#
+#
+# print(make_lower('beegeek', lower=False))
+
+
