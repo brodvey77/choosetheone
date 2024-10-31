@@ -1509,4 +1509,107 @@ import functools
 #
 # say(word="Hey!")
 
+#
+# import functools
+#
+# def strip_range(start, end, char='.'):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             val = func(*args, *kwargs)
+#             if isinstance(val, str):
+#                 return val[:start] + len(val[start:end]) * char + val[end:]
+#             return val
+#         return wrapper
+#     return decorator
+
+
+# from functools import wraps
+#
+# def strip_range(start, end, char='.'):
+#     def decorator(func):
+#         @wraps(func)
+#         def wrapper(*args, **kwargs):
+#             result = func(*args, **kwargs)
+#             return result[:start] + char * len(result[start:end]) + result[end:]
+#         return wrapper
+#     return decorator
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# @strip_range(3, 5)
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_2:
+# @strip_range(3, 20, '_')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_3:
+# @strip_range(20, 30)
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_4:
+# @strip_range(1, 2, '-')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_5:
+# @strip_range(100, 200, '=')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_6:
+# @strip_range(0, 300, '=')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_7:
+# @strip_range(0, 4, '=')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_8:
+# @strip_range(0, 1)
+# def beegeek(word, end=" "):
+#     """This is... Requiem. What you are seeing is indeed the truth"""
+#     return word + end
+#
+#
+# print(beegeek("beegee", end="k"))
+# print(beegeek.__name__)
+# print(beegeek.__doc__)
+
 
