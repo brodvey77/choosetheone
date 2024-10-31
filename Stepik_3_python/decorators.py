@@ -1105,3 +1105,92 @@ import functools
 # print(func.__doc__)
 # func([1, 2, 3, 4, 5, 6], degree=5)
 
+# Декоратор delayed
+# Реализуем декоратор delayed, который создает требуемую задержку выполнения кода. Такое поведение иногда требуется для мониторинга доступности какого-нибудь ресурса.
+
+# import functools
+# import time
+#
+# def delayed(delay=2):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             print(f'Спим {delay} сек.')
+#             time.sleep(delay)
+#             value = func(*args, **kwargs)
+#             return value
+#         return wrapper
+#     return decorator
+#
+#
+# @delayed(1)
+# def countdown(number):
+#     if number < 1:
+#         print('Конец!')
+#     else:
+#         print(number)
+#         countdown(number - 1)
+#
+#
+# countdown(5)
+
+
+# Декоратор timer
+# Рассмотрим декоратор timer, который подсчитывает время выполнения функции. Для более точного подсчета декоратор принимает аргумент iters, который задает количество измерений.
+
+# import functools, time
+#
+# def timer(iters=1):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             total = 0
+#             for i in range(iters):
+#                 start = time.perf_counter()
+#                 value = func(*args, **kwargs)
+#                 end = time.perf_counter()
+#                 total += end - start
+#             print(f'Среднее время выполнения {func.__name__}: {round(total/iters, 4)} сек.')
+#             return value
+#         return wrapper
+#     return decorator
+#
+#
+#
+# @timer(iters=1000)
+# def test(n):
+#     return sum([(i/99)**2 for i in range(n)])
+#
+# @timer(iters=3)
+# def sleep(n):
+#     time.sleep(n)
+#
+# res1 = test(10000)
+# res2 = sleep(4)
+#
+# print(f'Результат функции test = {res1}')
+# print(f'Результат функции sleep = {res2}')
+
+
+# Декоратор repeater
+# Рассмотрим декоратор repeater, который вызывает декорируемую функцию переданное в качестве аргумента количество раз.
+
+# import functools
+#
+# def repeater(repeat=1):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             for i in range(1, repeat + 1):
+#                 print(f'{i}-й запуск функции.')
+#                 value = func(*args, **kwargs)
+#             return value
+#         return wrapper
+#     return decorator
+#
+#
+# @repeater(repeat=7)
+# def beegeek():
+#     print('beegeek')
+#
+# beegeek()
