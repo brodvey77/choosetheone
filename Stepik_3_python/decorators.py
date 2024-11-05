@@ -1,5 +1,5 @@
-def null_decorator(func):
-    return func
+# def null_decorator(func):
+#     return func
 
 
 # def say():
@@ -1872,5 +1872,85 @@ import functools
 #     print(beegeek('beegeek', repeat=2))
 # except TypeError as e:
 #     print(type(e))
+
+
+
+# import functools
+# def add_attrs(*args_a, **kwargs_a):
+#     def decorator(func):
+#         for k,v in kwargs_a.items():
+#             func.__dict__[k] = v
+#         @functools.wraps(func)
+#         def wrapper(*args, **kwargs):
+#             return func(*args, **kwargs)
+#
+#         return wrapper
+#     return decorator
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# @add_attrs(attr1='bee', attr2='geek')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek.attr1)
+# print(beegeek.attr2)
+#
+#
+# # TEST_2:
+# @add_attrs(attr2='geek')
+# @add_attrs(attr1='bee')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek.attr1)
+# print(beegeek.attr2)
+# print(beegeek.__name__)
+#
+#
+# # TEST_3:
+# @add_attrs(attr1='bee', attr2='geek', attr3='stepik')
+# def beegeek():
+#     return 'beegeek'
+#
+#
+# print(beegeek.attr1)
+# print(beegeek.attr2)
+# print(beegeek.attr3)
+# print(beegeek.__name__)
+# print(beegeek.__doc__)
+#
+#
+# # TEST_4:
+# @add_attrs(at1=10, at2=20, at3=30, at4=40, atf=50)
+# def add(a, b):
+#     '''add docs'''
+#     return a + b
+#
+#
+# print(add.at1)
+# print(add.at2)
+# print(add.at3)
+# print(add.__name__)
+# print(add.__doc__)
+# print(add(1, 2))
+# print(add(b=12, a=13))
+# print(add.at4)
+# print(add.atf)
+#
+#
+# # TEST_5:
+# @add_attrs(func_attr='i am attribute')
+# def func(a, b):
+#     '''func docs'''
+#     return
+#
+#
+# print(func.func_attr)
+
 
 
