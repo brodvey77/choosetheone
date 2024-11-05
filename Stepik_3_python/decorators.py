@@ -1689,3 +1689,188 @@ import functools
 #     return a + b
 #
 # print(add(a=10, b=5))
+
+import functools
+# def takes(*args_t):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args_w, **kwargs):
+#             flag = True
+#             for a in args_w:
+#                 if type(a) in args_t:
+#                     flag = True
+#                 else:
+#                     raise TypeError
+#             for k in kwargs.values():
+#                 if type(k) in args_t:
+#                     flag = True
+#                 else:
+#                     raise TypeError
+#             return func(*args_w, **kwargs)
+#         return wrapper
+#     return decorator
+#
+#
+# import functools
+#
+# def takes(*datatypes):
+#     def decorator(func):
+#         @functools.wraps(func)
+#         def wrapper(*args, ** kwargs):
+#             if any(type(i) not in datatypes for i in (*args, *kwargs.values())):
+#                 raise TypeError
+#             return func(*args, ** kwargs)
+#         return wrapper
+#     return decorator
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# @takes(int, str)
+# def repeat_string(string, times):
+#     return string * times
+#
+#
+# print(repeat_string('bee', 3))
+#
+#
+# # TEST_2:
+# @takes(list, bool, float, int)
+# def repeat_string(string, times):
+#     return string * times
+#
+#
+# try:
+#     print(repeat_string('bee', 4))
+# except TypeError as e:
+#     print(type(e))
+#
+#
+# # TEST_3:
+# @takes(list)
+# def append_this(li, elem):
+#     '''append_this docs'''
+#     return li + [elem]
+#
+#
+# print(append_this.__name__)
+# print(append_this.__doc__)
+#
+# try:
+#     print(append_this([1, 2], [3, 4]))
+# except TypeError as e:
+#     print(type(e))
+#
+#
+# # TEST_4:
+# @takes(list)
+# def append_this(li, elem):
+#     '''append_this docs'''
+#     return li + [elem]
+#
+#
+# print(append_this.__name__)
+# print(append_this.__doc__)
+#
+# try:
+#     print(append_this([1, 2], 3))
+# except TypeError as e:
+#     print(type(e))
+#
+#
+# # TEST_5:
+# @takes(str, int, list)
+# def add(a, b):
+#     '''add docs'''
+#     return a + b
+#
+#
+# print(add.__name__)
+# print(add.__doc__)
+#
+# try:
+#     print(add('a', 'b'))
+# except TypeError as e:
+#     print(type(e))
+#
+#
+# # TEST_6:
+# @takes(list, int, tuple, str)
+# def add(a, b):
+#     '''add docs'''
+#     return a + b
+#
+#
+# print(add.__name__)
+# print(add.__doc__)
+#
+# try:
+#     print(add(a='a', b='c'))
+# except TypeError as e:
+#     print(type(e))
+#
+#
+# # TEST_7:
+# @takes(list, int, tuple, str)
+# def add(a, b):
+#     '''add docs'''
+#     return a + b
+#
+#
+# print(add.__name__)
+# print(add.__doc__)
+#
+# try:
+#     print(add(1, b=2))
+# except TypeError as e:
+#     print(type(e))
+#
+#
+# # TEST_8:
+# @takes(list, int, float, str)
+# def add(a, b):
+#     '''add docs'''
+#     return a + b
+#
+#
+# print(add.__name__)
+# print(add.__doc__)
+#
+# try:
+#     print(add((1, 2), (3, 4, 5)))
+# except TypeError as e:
+#     print(type(e))
+#
+#
+# # TEST_9:
+# @takes()
+# def beegeek():
+#     '''beegeek docs'''
+#     return 'beegeek'
+#
+#
+# print(beegeek())
+#
+#
+# # TEST_10:
+# @takes(str)
+# def beegeek(word):
+#     return word
+#
+#
+# print(beegeek(word="beegeek"))
+#
+#
+# # TEST_11:
+# @takes(str)
+# def beegeek(word, repeat):
+#     return word * repeat
+#
+#
+# try:
+#     print(beegeek('beegeek', repeat=2))
+# except TypeError as e:
+#     print(type(e))
+
+
