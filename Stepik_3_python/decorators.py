@@ -2293,3 +2293,171 @@ import functools
 #     print(type(e))
 
 
+# print(int('123'))
+# print(int('123', base=5))
+# print(int('1001', base=2))
+# print(int('A12B', base=16))
+
+
+# from functools import partial
+#
+# basetwo = partial(int, base=2)
+#
+# print(basetwo('101'))
+# print(basetwo('1000'))
+# print(basetwo('11111'))
+
+
+# from functools import partial
+#
+# def pretty_print(text, symbol, count):
+#     print(symbol * count)
+#     print(text)
+#     print(symbol * count)
+#
+# star_pretty_print = partial(pretty_print, 'Hi!!!', symbol='*')
+#
+# star_pretty_print(count=7)
+#
+# print(star_pretty_print.args)
+# print(star_pretty_print.keywords)
+#
+# star_pretty_print.func('Исходная функция', symbol='~', count=20)
+
+#
+# from functools import partial
+#
+# def add(a, b):
+#     return a + b
+#
+# add_one = partial(add, 1)
+#
+# print(add_one(2, 3))
+
+# from functools import partial
+#
+# def add(a, b):
+#     '''documentation'''
+#     return a + b
+#
+# add_one = partial(add, 1)
+#
+# print(add_one.__name__)
+# print(add_one.__doc__)
+
+# from functools import partial
+#
+# def add(a, b):
+#     return a + b
+#
+# add_one = partial(add, 1)
+#
+# print(add_one.func.__name__)
+# print(add_one.func(2, 3))
+
+
+# from functools import partial, update_wrapper
+#
+# def add(a, b):
+#     '''documentation'''
+#     return a + b
+#
+# add_one = partial(add, 1)
+# update_wrapper(add_one, add)
+#
+# print(add_one.__name__)
+# print(add_one.__doc__)
+
+
+# from functools import partial
+#
+# beegeek = partial(print, 'beegeek')
+#
+# beegeek('stepik', 'python')
+
+# from functools import partial
+#
+# beegeek = partial(print, 'bee', 'geek', end='!')
+#
+# print(beegeek.args)
+# print(beegeek.keywords)
+
+
+# from functools import partial
+#
+# beegeek = partial(print, 'beegeek', sep=', ')
+#
+# beegeek('stepik', 'python')
+
+# from functools import partial
+#
+# beegeek = partial(print, sep=', ')
+#
+# beegeek('beegeek', 'stepik', 'python', sep='-')
+
+
+# from functools import partial
+#
+# def send_email(name, email_address, text):
+#     return f'В письме для {name} по электроному адресу {email_address} нписано так - {text}'
+#
+#
+# to_Timur = partial(send_email, 'Тимур',  'timyrik20@beegeek.ru')
+#
+# send_an_invitation = partial(send_email, text='Школа BEEGEEK приглашает Вас на новый курс по программированию на языке Python. тутут....')
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# print(to_Timur('когда курс?'))
+#
+# # TEST_2:
+# print(to_Timur('Тимур, привет, я на егэ, помоги решить 13 задачу'))
+#
+# # TEST_3:
+# print(to_Timur('хочу курс по искусственным интеллектам и криптовалютам бесплатно и завтра'))
+#
+# # TEST_4:
+# try:
+#     to_Timur()
+# except:
+#     print('ok')
+#
+# # TEST_5:
+# try:
+#     to_Timur('первое', 'второе')
+# except:
+#     print('ok')
+#
+# # TEST_6:
+# try:
+#     to_Timur('первое', 'второе', 'третье')
+# except:
+#     print('ok')
+#
+# # TEST_7:
+# try:
+#     to_Timur('beegeek')
+#     print('ok')
+# except:
+#     print('ne ok')
+#
+# # TEST_8:
+# print(send_an_invitation("Тимур", "timyrik20@beegeek.ru"))
+#
+# # TEST_9:
+# try:
+#     print(send_an_invitation("Тимур"))
+# except:
+#     print("Ошибка, и где же? Хм-м-м")
+#
+# # TEST_10:
+# print(to_Timur('Здравствуйте! Я Таня из компании Орифлэйм. Хочу предложить вам новую линейку курсов от Поколения Python'))
+#
+# # TEST_11:
+# print(to_Timur('This is... Requiem. What you are seeing is indeed the truth.'))
+
+
