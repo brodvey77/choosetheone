@@ -1691,6 +1691,7 @@ import functools
 # print(add(a=10, b=5))
 
 import functools
+import sys
 # def takes(*args_t):
 #     def decorator(func):
 #         @functools.wraps(func)
@@ -2459,5 +2460,69 @@ import functools
 #
 # # TEST_11:
 # print(to_Timur('This is... Requiem. What you are seeing is indeed the truth.'))
+
+
+# from functools import lru_cache
+#
+#
+# @lru_cache()
+# def add_one(number):
+#     print(number + 1, end=' ')
+#
+#
+# numbers = [1, 2, 3, 1, 3, 4, 4, 1]
+#
+# for i in numbers:
+#     add_one(i)
+
+
+# from functools import lru_cache
+#
+# @lru_cache()
+# def average(numbers):
+#     return sum(numbers) / len(numbers)
+#
+# numbers = [1, 2, 3, 4, 5]
+#
+# print(average(numbers))
+# print(average(numbers))
+
+# from functools import lru_cache
+#
+# @lru_cache(typed=True)
+# def return_this(a, b):
+#     return a, b
+#
+# print(return_this(1, 1))
+# print(return_this(True, True))
+# print(return_this(1.0, 1.0))
+
+
+# import sys
+# from functools import lru_cache
+#
+#
+# def dima(x):
+#     print(''.join(sorted(x)))
+#
+#
+# for i in sys.stdin:
+#     dima(i.strip())
+
+# import sys
+# from functools import lru_cache
+#
+# @lru_cache()
+# def sorting_string(text: str) -> str:
+#     return ''.join(sorted(text))
+#
+#
+# for i in sys.stdin:
+#     print(sorting_string(i.strip()))
+#
+#
+#
+# a = 'tutorial'
+# print(sorting_string(a))
 
 
