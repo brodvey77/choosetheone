@@ -2525,4 +2525,47 @@ import sys
 # a = 'tutorial'
 # print(sorting_string(a))
 
-
+# from functools import lru_cache
+#
+# @lru_cache()
+# def ways(n):
+#     if n <= 3:
+#         return 1
+#     if n == 4:
+#         return 2
+#     else:
+#         return ways(n - 1) + ways(n - 3) + ways(n - 4)
+#
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# print(ways(5))
+#
+# # TEST_2:
+# print(ways(1))
+#
+# # TEST_3:
+# print(ways(2))
+#
+# # TEST_4:
+# print(ways(50))
+#
+# # TEST_5:
+# print(ways(100))
+#
+# # TEST_6:
+# print(ways(4))
+#
+# # TEST_7:
+# print(ways(3))
+#
+# # TEST_8:
+# print(ways(6))
+#
+# # TEST_9:
+# print(ways(7))
