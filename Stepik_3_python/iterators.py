@@ -191,3 +191,54 @@ numbers = [-3, 6, 1, -90, 34, -25, 23, -21]
 # print(*filterfalse(None, objects))
 
 
+# def transpose(matrix):
+#     return [list(item) for item in zip(*matrix)]
+#
+# transpose = lambda matrix: list(map(list, zip(*matrix)))
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# matrix = [[1, 2, 3],
+#           [4, 5, 6],
+#           [7, 8, 9]]
+#
+# for row in transpose(matrix):
+#     print(row)
+#
+# # TEST_2:
+# matrix = [[1, 2, 3, 4, 5],
+#           [6, 7, 8, 9, 10]]
+#
+# for row in transpose(matrix):
+#     print(row)
+#
+# # TEST_3:
+# matrix = [[1, 2, 3, 4, 5]]
+#
+# for row in transpose(matrix):
+#     print(row)
+#
+# # TEST_4:
+# matrix = [[69]]
+#
+# for row in transpose(matrix):
+#     print(row)
+#
+# # TEST_5:
+# matrix = [['1', '2', '3'],
+#           ['4', '5', '6'],
+#           ['7', '8', '9']]
+#
+# print(*transpose(matrix))
+#
+# # TEST_6:
+# matrix = [['1', '2'],
+#           ['4', '5'],
+#           ['7', '8'],
+#           ['3', 4],
+#           [True, None],
+#           [9, 80],
+#           [1, -1]]
+#
+# print(transpose(matrix))
