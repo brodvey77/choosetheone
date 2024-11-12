@@ -338,4 +338,115 @@ numbers = [-3, 6, 1, -90, 34, -25, 23, -21]
 #
 # print(*starmap(lambda x, y, z, t, w: x + y * z + t + w ** 6, points))
 
+# def get_min_max(iterable):
+#     a = sorted(iterable)
+#     if a:
+#         return (a[0], a[-1])
+
+import copy
+
+# def get_min_max(iterable):
+#     iterable_2 = iterable.deepcopy()
+#
+
+# def get_min_max(iterable):
+#     try:
+#         iterator = iter(iterable)
+#         first = next(iterator)
+#         min_val = max_val = first
+#
+#         for item in iterator:
+#             if item < min_val:
+#                 min_val = item
+#             if item > max_val:
+#                 max_val = item
+#
+#         return (min_val, max_val)
+#     except StopIteration:
+#         return None
+#
+#     import copy
+#
+#     def get_min_max(iterable):
+#         try:
+#             C = copy.deepcopy(iterable)
+#             return (min(C), max(iterable))
+#         except:
+#             return None
+#
+#
+# # def get_min_max(iterable):
+# #     if iterable:
+# #         min_pair = min(enumerate(iterable), key=lambda pair: pair[1])
+# #         max_pair = max(enumerate(iterable), key=lambda pair: pair[1])
+# #         return min_pair[0], max_pair[0]
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# iterable = iter(range(10))
+#
+# print(get_min_max(iterable))
+#
+# # TEST_2:
+# iterable = [6, 4, 2, 33, 19, 1]
+#
+# print(get_min_max(iterable))
+#
+# # TEST_3:
+# iterable = iter([])
+#
+# print(get_min_max(iterable))
+#
+# # TEST_4:
+# data = iter((9, 9, 9, 9, 9))
+#
+# print(get_min_max(data))
+#
+# # TEST_5:
+# data = iter(range(1, 101))
+#
+# print(get_min_max(data))
+#
+# # TEST_6:
+# data = list(range(1, 101))[::-1]
+#
+# print(get_min_max(data))
+#
+# # TEST_7:
+# data = iter([-86, -51, 33, -23, 40, 96, 19, -65, 26, 12, -93, 68, 82, 47, -58, -37, -100, 5, 75, 54, -79, -72, -2, 61, -16, -9, 89, -44, -30])
+#
+# print(get_min_max(data))
+#
+# # TEST_8:
+# data = iter([-86, -51, 33, -23, 40, 96, 19, -65, 26, 12, -93, 68, 82, 47, -58, -37, -100, 5, 75, 54, -79, -72, -2, 61, -16, -9, 89, -44, -30, -100, 96, -100, 1, 2, -99, 96])
+#
+# print(get_min_max(data))
+#
+# # TEST_9:
+# iterable = []
+#
+# print(get_min_max(iterable))
+#
+# # TEST_10:
+# iterable = [69]
+#
+# print(get_min_max(iterable))
+#
+# # TEST_11:
+# data = iter(range(100_000_000))
+#
+# print(get_min_max(data))
+#
+# # TEST_12:
+# data = iter(['a', 'b', 'c', 'aaa', 'abc', 'cbc', 'bbb'])
+#
+# print(get_min_max(data))
+#
+# # TEST_13:
+# data = iter(['bbb'])
+#
+# print(get_min_max(data))
+
 
