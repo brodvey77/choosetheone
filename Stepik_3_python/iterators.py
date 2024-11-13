@@ -585,4 +585,101 @@ import copy
 #
 # print(is_iterator(beegeek))
 
+# from random import choice
+#
+# def test_iter():
+#     values = list(range(1, 11))
+#     return choice(values)
+#
+# random_iterator = iter(test_iter, 2)
+#
+# for num in random_iterator:
+#     print(num)
+
+
+# from random import choice
+# def random_numbers(left: int, right: int):
+#     values = list(range(left, right + 1))
+#     return iter(lambda: choice(values), -1)
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# iterator = random_numbers(1, 1)
+#
+# print(next(iterator))
+# print(next(iterator))
+#
+# # TEST_2:
+# iterator = random_numbers(1, 10)
+#
+# print(next(iterator) in range(1, 11))
+# print(next(iterator) in range(1, 11))
+# print(next(iterator) in range(1, 11))
+#
+# # TEST_3:
+# iterator = random_numbers(-100, -92)
+#
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+#
+# # TEST_4:
+# iterator = random_numbers(5, 5)
+#
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+#
+# # TEST_5:
+# iterator = random_numbers(1000, 1001)
+#
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+#
+# # TEST_6:
+# iterator = random_numbers(-100, 99)
+#
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
 
