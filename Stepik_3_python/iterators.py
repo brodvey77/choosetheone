@@ -450,3 +450,51 @@ import copy
 # print(get_min_max(data))
 
 
+
+# zero_iterator = iter(int, -1)
+#
+# for i in range(10):
+#     print(next(zero_iterator))
+#
+# print(type(zero_iterator))
+
+
+# from random import choice
+#
+# def test_iter():
+#     values = list(range(1, 11))
+#     return choice(values)
+#
+# random_iterator = iter(test_iter, 2)
+#
+# for num in random_iterator:
+#     print(num)
+
+# print(int())
+
+
+# numbers = [1, 2, 3, 4, 5]
+#
+# if 'pop' in dir(numbers):
+#     numbers.pop()
+#
+# print(numbers)
+
+# beegeek = 'beegeek'
+# iterator = iter(beegeek)
+#
+# print(beegeek == iterator)
+# print(iterator == iter(iterator))
+
+
+# iterator = iter(int, 1)
+
+# infinite_love = iter(lambda: 'i love beegeek!', 1)
+#
+#
+# # print(next(infinite_love))
+#
+#
+# print(next(infinite_love))
+# print(next(infinite_love))
+# print(next(infinite_love))
