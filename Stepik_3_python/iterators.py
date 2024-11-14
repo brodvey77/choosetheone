@@ -885,3 +885,97 @@ import copy
 #     print(next(squares))
 # except:
 #     print('Error')
+
+
+
+
+# @lru_cache()
+# def fibonacci(n):
+#     if n <= 2:
+#         return 1
+#     else:
+#         return fibonacci(n - 1) + fibonacci(n - 2)
+
+#
+# from functools import lru_cache
+# class Fibonacci:
+#     def __init__(self):
+#         self.n = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     @lru_cache()
+#     def fibonacci(self, n):
+#         if n <= 2:
+#             return 1
+#         else:
+#             return self.fibonacci(n - 1) + self.fibonacci(n - 2)
+#
+#
+#     def __next__(self):
+#         result = self.fibonacci(self.n)
+#         self.n += 1
+#         return result
+#
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# fibonacci = Fibonacci()
+#
+# print(next(fibonacci))
+#
+# # TEST_2:
+# fibonacci = Fibonacci()
+#
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+#
+# # TEST_3:
+# fibonacci = Fibonacci()
+#
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+#
+# # TEST_4:
+# fibonacci = Fibonacci()
+#
+# for _ in range(50):
+#     print(next(fibonacci))
+#
+# # TEST_5:
+# fibonacci = Fibonacci()
+#
+# for _ in range(100):
+#     next(fibonacci)
+#
+# print(next(fibonacci))
+#
+# # TEST_6:
+# fibonacci = Fibonacci()
+#
+# for _ in range(76):
+#     next(fibonacci)
+#
+# next(fibonacci)
+# next(fibonacci)
+# next(fibonacci)
+# next(fibonacci)
+#
+# print(next(fibonacci))
+# print(next(fibonacci))
+# print(next(fibonacci))
+
