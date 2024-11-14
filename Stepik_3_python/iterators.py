@@ -704,13 +704,115 @@ import copy
 #     del numbers[0]
 #     print(i)
 
-class Repeater:
-    def __init__(self, obj):  # конструктор принимает obj (помимо self)
-        self.obj = obj
+# class Repeater:
+#     def __init__(self, obj):  # конструктор принимает obj (помимо self)
+#         self.obj = obj
+#
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         return self.obj
 
 
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        return self.obj
+# class BoundedRepeater:
+#     def __init__(self, obj, times):
+#         self.obj = obj
+#         self.times = times
+#         self.index = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.index += 1
+#         if self.times < self.index:
+#             raise StopIteration
+#         return self.obj
+#
+#
+# class BoundedRepeater:
+#     def __init__(self, obj, times):
+#         self.obj = obj
+#         self.times = times
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.times == 0:
+#             raise StopIteration
+#         self.times -= 1
+#         return self.obj
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# bee = BoundedRepeater('bee', 2)
+#
+# print(next(bee))
+# print(next(bee))
+#
+# # TEST_2:
+# geek = BoundedRepeater('geek', 3)
+#
+# print(next(geek))
+# print(next(geek))
+# print(next(geek))
+#
+# try:
+#     print(next(geek))
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_3:
+# repeater = BoundedRepeater(['bee', 'geek'], 10)
+#
+# for _ in range(9):
+#     next(repeater)
+#
+# print(next(repeater))
+#
+# try:
+#     next(repeater)
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_4:
+# repeater = BoundedRepeater(9999, 1)
+#
+# try:
+#     print(next(repeater))
+#     print(next(repeater))
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_5:
+# repeater = BoundedRepeater((1, 2, 3, 4), 15)
+#
+# for _ in range(10):
+#     next(repeater)
+#
+# next(repeater)
+# next(repeater)
+# next(repeater)
+# next(repeater)
+# next(repeater)
+#
+# try:
+#     print(next(repeater))
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_6:
+# repeater = BoundedRepeater({'bee': 'geek'}, 55)
+#
+# for elem in repeater:
+#     print(elem)
+#
+# # TEST_7:
+# repeater = BoundedRepeater(1, 10)
+#
+# print(list(repeater))
