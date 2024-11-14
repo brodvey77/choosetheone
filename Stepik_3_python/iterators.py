@@ -683,3 +683,34 @@ import copy
 # print(next(iterator) in range(-100, 100))
 # print(next(iterator) in range(-100, 100))
 
+
+
+# numbers = [1, 2, 3, 4, 5]
+#
+# iterator = iter(numbers)
+#
+# next(iterator)
+# next(iterator)
+#
+# del numbers[0]
+# del numbers[1]
+#
+# print(next(iterator))
+
+
+# numbers = [1, 2, 3, 4, 5]
+#
+# for i in numbers:
+#     del numbers[0]
+#     print(i)
+
+class Repeater:
+    def __init__(self, obj):  # конструктор принимает obj (помимо self)
+        self.obj = obj
+
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        return self.obj
