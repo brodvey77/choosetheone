@@ -979,3 +979,57 @@ import copy
 # print(next(fibonacci))
 # print(next(fibonacci))
 
+# class PowerOf:
+#     def __init__(self, number):
+#         self.number = number
+#         self.index = 0
+#
+#
+#     def __iter__(self):
+#         return self
+#
+#
+#     def __next__(self):
+#         result = self.number ** self.index
+#         self.index += 1
+#         return result
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# power_of_two = PowerOf(2)
+#
+# print(next(power_of_two))
+# print(next(power_of_two))
+# print(next(power_of_two))
+# print(next(power_of_two))
+#
+# # TEST_2:
+# power_of_two = PowerOf(1)
+#
+# for _ in range(55):
+#     print(next(power_of_two))
+#
+# # TEST_3:
+# power_of_two = PowerOf(3)
+#
+# for _ in range(10):
+#     print(next(power_of_two))
+#
+# # TEST_4:
+# power_of_two = PowerOf(11)
+#
+# for _ in range(11):
+#     print(next(power_of_two))
+#
+# # TEST_5:
+# power_of_two = PowerOf(100)
+#
+# for _ in range(20):
+#     next(power_of_two)
+#
+# print(next(power_of_two))
+
