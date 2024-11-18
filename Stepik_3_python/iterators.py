@@ -1033,23 +1033,101 @@ import copy
 #
 # print(next(power_of_two))
 
-class DictItemsIterator:
-    def __init__(self, data):
-        self._data = data
-        self._keys = list(data)
-        self._index = 0
+# class DictItemsIterator:
+#     def __init__(self, data):
+#         self._data = data
+#         self._keys = list(data)
+#         self._index = 0
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self._index < len(self._keys):
+#             key = self._keys[self._index]
+#             value = self._data[key]
+#             self._index += 1
+#             return (key, value)
+#         else:
+#             raise StopIteration
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# pairs = DictItemsIterator({1: 'A', 2: 'B', 3: 'C'})
+#
+# print(*pairs)
+#
+# # TEST_2:
+# data = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
+#
+# pairs = DictItemsIterator(data)
+#
+# print(*pairs)
+#
+# # TEST_3:
+# data = {'Arthur': 100, 'Timur': 100, 'Dima': 100,
+#         'Anri': 101, 'Roma': 99, 'German': 98}
+#
+# pairs = DictItemsIterator(data)
+#
+# print(list(pairs))
+#
+# # TEST_4:
+# data = {'Arthur': [100, 5], 'Timur': [100, 6], 'Dima': [100, 7, 8],
+#         'Anri': [100, 101], 'Roma': [99]}
+#
+# pairs = DictItemsIterator(data)
+#
+# print(next(pairs))
+# print(next(pairs))
+# print(next(pairs))
+# print(next(pairs))
+# print(next(pairs))
+#
+# try:
+#     print(next(pairs))
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_5:
+# data = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7}
+#
+# pairs = DictItemsIterator(data)
+#
+# print(tuple(pairs))
+#
+# try:
+#     print(next(pairs))
+# except StopIteration:
+#     print('Error')
+
+
+class CardDeck:
+    def __init__(self):
+        self.suits = ['пик', 'треф', 'бубен', 'червей']
+        self.ranks = [
+            2, 3, 4, 5, 6,
+            7, 8, 9, 10, 'валет',
+            'дама', 'король', 'туз'
+        ]
+        self._index = 0  # Индекс для отслеживания текущей карты
 
     def __iter__(self):
         return self
 
     def __next__(self):
-        if self._index < len(self._keys):
-            key = self._keys[self._index]
-            value = self._data[key]
+        if self._index < 52:
+            rank = self.ranks[self._index % 13]
+            suit = self.suits[self._index // 13]
             self._index += 1
-            return (key, value)
+            return f"{rank} {suit}"
         else:
             raise StopIteration
+
 
 
 
@@ -1057,50 +1135,37 @@ class DictItemsIterator:
 # INPUT DATA:
 
 # TEST_1:
-pairs = DictItemsIterator({1: 'A', 2: 'B', 3: 'C'})
+cards = CardDeck()
 
-print(*pairs)
+print(next(cards))
+print(next(cards))
 
 # TEST_2:
-data = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
-
-pairs = DictItemsIterator(data)
-
-print(*pairs)
-
-# TEST_3:
-data = {'Arthur': 100, 'Timur': 100, 'Dima': 100,
-        'Anri': 101, 'Roma': 99, 'German': 98}
-
-pairs = DictItemsIterator(data)
-
-print(list(pairs))
-
-# TEST_4:
-data = {'Arthur': [100, 5], 'Timur': [100, 6], 'Dima': [100, 7, 8],
-        'Anri': [100, 101], 'Roma': [99]}
-
-pairs = DictItemsIterator(data)
-
-print(next(pairs))
-print(next(pairs))
-print(next(pairs))
-print(next(pairs))
-print(next(pairs))
-
-try:
-    print(next(pairs))
-except StopIteration:
-    print('Error')
-
-# TEST_5:
-data = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5, 'f': 6, 'g': 7}
-
-pairs = DictItemsIterator(data)
-
-print(tuple(pairs))
-
-try:
-    print(next(pairs))
-except StopIteration:
-    print('Error')
+# cards = list(CardDeck())
+#
+# print(cards[9])
+# print(cards[23])
+# print(cards[37])
+# print(cards[51])
+#
+# # TEST_3:
+# cards = list(CardDeck())
+#
+# print(cards)
+#
+# # TEST_4:
+# cards1 = list(CardDeck())
+# cards2 = tuple(CardDeck())
+# cards3 = list(CardDeck())
+#
+# print(cards1)
+# print(cards2)
+# print(cards3)
+#
+# # TEST_5:
+# cards = list(CardDeck())
+#
+# try:
+#     next(cards)
+# except:
+#     print('Error')
