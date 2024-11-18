@@ -1330,3 +1330,143 @@ import copy
 #         if self.ind == len(self.iterable):
 #             self.ind = 0
 #         return self.iterable[self.ind]
+
+
+# import random
+# class RandomNumbers:
+#     def __init__(self, left, right, n):
+#         self.left = left
+#         self.right = right
+#         self.n = n
+#
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.n >= 1:
+#             self.n -= 1
+#             return random.randrange(self.left, self.right + 1)
+#
+#         else:
+#             raise StopIteration
+#
+#
+# from random import randint
+#
+# class RandomNumbers():
+#     def __init__(self, left, right, n):
+#         self.n = n
+#         self.left = left
+#         self.right = right
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self.n == 0:
+#             raise StopIteration
+#         self.n -= 1
+#         return randint(self.left, self.right)
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# iterator = RandomNumbers(1, 1, 3)
+#
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+#
+# # TEST_2:
+# iterator = RandomNumbers(1, 10, 2)
+#
+# print(next(iterator) in range(1, 11))
+# print(next(iterator) in range(1, 11))
+#
+# # TEST_3:
+# iterator = RandomNumbers(-100, -92, 99)
+#
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+# print(next(iterator) in range(-100, -91))
+#
+# # TEST_4:
+# iterator = RandomNumbers(5, 5, 98)
+#
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+#
+# # TEST_5:
+# iterator = RandomNumbers(1000, 1001, 108)
+#
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+# print(next(iterator) in range(1000, 1002))
+#
+# # TEST_6:
+# iterator = RandomNumbers(-100, 99, 100)
+#
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+# print(next(iterator) in range(-100, 100))
+#
+# # TEST_7:
+# iterator = RandomNumbers(-1000, -900, 1)
+#
+# print(next(iterator) in range(-1000, -899))
+#
+# try:
+#     next(iterator)
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_8:
+# iterator = RandomNumbers(-1000, -900, 4)
+#
+# print(next(iterator) in range(-1000, -899))
+# print(next(iterator) in range(-1000, -899))
+# print(next(iterator) in range(-1000, -899))
+# print(next(iterator) in range(-1000, -899))
+#
+# try:
+#     next(iterator)
+# except StopIteration:
+#     print('Error')
