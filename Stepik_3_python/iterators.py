@@ -1315,3 +1315,18 @@ import copy
 #
 # for _ in range(100):
 #     print(next(cycle))
+
+# class Cycle:
+#
+#     def __init__(self, iterable):
+#         self.iterable = iterable
+#         self.ind = -1
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         self.ind += 1
+#         if self.ind == len(self.iterable):
+#             self.ind = 0
+#         return self.iterable[self.ind]
