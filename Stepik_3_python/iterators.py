@@ -1106,39 +1106,39 @@ import copy
 #     print('Error')
 
 
-class CardDeck:
-    def __init__(self):
-        self.suits = ['пик', 'треф', 'бубен', 'червей']
-        self.ranks = [
-            2, 3, 4, 5, 6,
-            7, 8, 9, 10, 'валет',
-            'дама', 'король', 'туз'
-        ]
-        self._index = 0  # Индекс для отслеживания текущей карты
-
-    def __iter__(self):
-        return self
-
-    def __next__(self):
-        if self._index < 52:
-            rank = self.ranks[self._index % 13]
-            suit = self.suits[self._index // 13]
-            self._index += 1
-            return f"{rank} {suit}"
-        else:
-            raise StopIteration
-
-
-
-
-
-# INPUT DATA:
-
-# TEST_1:
-cards = CardDeck()
-
-print(next(cards))
-print(next(cards))
+# class CardDeck:
+#     def __init__(self):
+#         self.suits = ['пик', 'треф', 'бубен', 'червей']
+#         self.ranks = [
+#             2, 3, 4, 5, 6,
+#             7, 8, 9, 10, 'валет',
+#             'дама', 'король', 'туз'
+#         ]
+#         self._index = 0  # Индекс для отслеживания текущей карты
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if self._index < 52:
+#             rank = self.ranks[self._index % 13]
+#             suit = self.suits[self._index // 13]
+#             self._index += 1
+#             return f"{rank} {suit}"
+#         else:
+#             raise StopIteration
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# cards = CardDeck()
+#
+# print(next(cards))
+# print(next(cards))
 
 # TEST_2:
 # cards = list(CardDeck())
@@ -1169,3 +1169,149 @@ print(next(cards))
 #     next(cards)
 # except:
 #     print('Error')
+
+# class Cycle:
+#     def __init__(self, iterable):
+#         self.iterable = iterable
+#         self._iterator = iter(iterable)  # Создаем итератор из переданного итерируемого объекта
+#         self._current = None  # Переменная для хранения текущего элемента
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         try:
+#             self._current = next(self._iterator)  # Получаем следующий элемент
+#         except StopIteration:
+#             self._iterator = iter(self.iterable)  # Если достигнут конец, создаем новый итератор
+#             self._current = next(self._iterator)  # Получаем первый элемент нового итератора
+#         return self._current
+#
+#
+# class Cycle:
+#
+#     def __init__(self, obj):
+#         self.obj = obj
+#         self.it = iter(self.obj)
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         try:
+#             return next(self.it)
+#         except StopIteration:
+#             self.it = iter(self.obj)
+#             return next(self.it)
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# cycle = Cycle('be')
+#
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+#
+# # TEST_2:
+# cycle = Cycle([1])
+#
+# print(next(cycle) + next(cycle) + next(cycle))
+#
+# # TEST_3:
+# cycle = Cycle(range(100_000_000))
+#
+# print(next(cycle))
+# print(next(cycle))
+#
+# # TEST_4:
+# cycle = Cycle(range(10_000_000))
+#
+# for _ in range(1000):
+#     next(cycle)
+#
+# print(next(cycle))
+#
+# # TEST_5:
+# cycle = Cycle('beegeek')
+#
+# for _ in range(1000):
+#     next(cycle)
+#
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+#
+# # TEST_6:
+# cycle = Cycle((0, 9, 8, 7, 6, 5, 5, 4, 3, 2, 1, 1, 2, 3, 4, 0, 9, 8, 87, 5666666))
+#
+# for _ in range(2000):
+#     next(cycle)
+#
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+#
+# # TEST_7:
+# cycle = Cycle((0,))
+#
+# for _ in range(2000):
+#     next(cycle)
+#
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+#
+# # TEST_8:
+# cycle = Cycle('B')
+#
+# for _ in range(500):
+#     next(cycle)
+#
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+# print(next(cycle))
+#
+# # TEST_9:
+# cycle = Cycle('AJFHKJSDHFWIEFJIOFKDKSVNCVNJVDJSFNdfkdsjfiwej943257438j2j123')
+#
+# for _ in range(666):
+#     next(cycle)
+#
+# print(next(cycle))
+#
+# # TEST_10:
+# cycle = Cycle([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+#
+# for _ in range(100):
+#     print(next(cycle))
