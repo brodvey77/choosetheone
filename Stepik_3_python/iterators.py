@@ -1470,3 +1470,103 @@ import copy
 #     next(iterator)
 # except StopIteration:
 #     print('Error')
+
+
+# class Alphabet:
+#     def __init__(self, language):
+#         self.language = language
+#         self.data = {'en': 'abcdefghijklmnopqrstuvwxyz', 'ru': 'абвгдежзийклмнопрстуфхцчшщъыьэюя'}.get(language)
+#         self._iterator = iter(self.data)
+#         self._current = None
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         try:
+#             self._current = next(self._iterator)
+#         except StopIteration:
+#             self._iterator = iter(self.data)
+#             self._current = next(self._iterator)
+#         return self._current
+#
+#
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# ru_alpha = Alphabet('ru')
+#
+# print(next(ru_alpha))
+# print(next(ru_alpha))
+# print(next(ru_alpha))
+#
+# # TEST_2:
+# en_alpha = Alphabet('en')
+#
+# letters = [next(en_alpha) for _ in range(28)]
+#
+# print(*letters)
+#
+# # TEST_3:
+# en_alpha = Alphabet('en')
+#
+# for _ in range(100):
+#     print(next(en_alpha))
+#
+# # TEST_4:
+# en_alpha = Alphabet('en')
+#
+# for _ in range(1000):
+#     next(en_alpha)
+#
+# print(next(en_alpha))
+#
+# # TEST_5:
+# ru_alpha = Alphabet('ru')
+#
+# for _ in range(1000):
+#     next(ru_alpha)
+#
+# print(next(ru_alpha))
+#
+# # TEST_6:
+# ru_alpha = Alphabet('ru')
+#
+# for _ in range(50):
+#     print(next(ru_alpha))
+#
+# # TEST_7:
+# ru_alpha = Alphabet('ru')
+#
+# for _ in range(40):
+#     next(ru_alpha)
+#
+# for _ in range(40):
+#     next(ru_alpha)
+#
+# for _ in range(40):
+#     next(ru_alpha)
+#
+# print(next(ru_alpha))
+#
+# # TEST_8:
+# en_alpha = Alphabet('en')
+#
+# for _ in range(40):
+#     next(en_alpha)
+#
+# for _ in range(40):
+#     next(en_alpha)
+#
+# for _ in range(40):
+#     next(en_alpha)
+#
+# print(next(en_alpha))
+
+
+
+
