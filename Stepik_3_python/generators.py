@@ -76,3 +76,113 @@
 # print(next(generator))
 # print(next(generator))
 
+
+# def alternating_sequence(count=None):
+#     c = range(1, 1_000_000_000_000_000_000)
+#     if count == None:
+#         while True:
+#             for i in c:
+#                 if i % 2 != 0:
+#                     yield i
+#                 else:
+#                     yield '-' + str(i)
+#     else:
+#         for i in range(1, count + 1):
+#             if i % 2 != 0:
+#                 yield i
+#             else:
+#                 yield '-' + str(i)
+
+
+# def alternating_sequence(count=None, n=0):
+#     while n != count:
+#         n += 1
+#         yield n if n % 2 else -n
+
+
+
+
+
+
+
+
+
+
+# INPUT DATA:
+
+# TEST_1:
+# generator = alternating_sequence()
+#
+# print(next(generator))
+# print(next(generator))
+#
+# # TEST_2:
+# generator = alternating_sequence(10)
+#
+# print(*generator)
+#
+# # TEST_3:
+# generator = alternating_sequence(100)
+#
+# print(*generator)
+#
+# # TEST_4:
+# generator = alternating_sequence(50)
+#
+# for _ in generator:
+#     pass
+#
+# try:
+#     next(generator)
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_5:
+# generator = alternating_sequence()
+#
+# for _ in range(10_000):
+#     next(generator)
+#
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+#
+# # TEST_6:
+# generator = alternating_sequence()
+#
+# for _ in range(10_124_421):
+#     next(generator)
+#
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+#
+# # TEST_7:
+# generator = alternating_sequence(1)
+#
+# try:
+#     print(next(generator))
+#     print(next(generator))
+# except StopIteration:
+#     print('Error')
+
+
+
+
+
+
+
