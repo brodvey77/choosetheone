@@ -494,7 +494,73 @@ from datetime import date, timedelta
 #
 # print(*cards)
 
+#
+# def bee():
+#     yield 'b'
+#     yield 'e'
+#     yield 'e'
+#
+# def geek():
+#     yield from 'geek'
+#
+# print(*bee())
+# print(*geek())
 
 
+# def bee():
+#     yield from 'bee'
+#
+# def geek():
+#     yield from 'geek'
+#
+# def beegeek():
+#     yield from bee()
+#     yield from geek()
+#
+# print(*beegeek())
+
+
+
+# def matrix_by_elem(matrix):
+#     for row in matrix:
+#         for elem in row:
+#             yield elem
+
+# def matrix_by_elem(matrix):
+#     for row in matrix:
+#         yield from row
+#
+# def matrix_by_elem(matrix):
+#     yield from sum(matrix, [])
+
+
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# matrix = [[1, 2, 3],
+#           [4, 5, 6],
+#           [7, 8, 9]]
+#
+# print(*matrix_by_elem(matrix))
+#
+# # TEST_2:
+# matrix = [[1, 2, 3],
+#           [4, 5, 6]]
+#
+# print(list(matrix_by_elem(matrix)))
+#
+# # TEST_3:
+# matrix = [[1, 2, 3, 5, 6, 7, 8],
+#           [9, 10, 11, 12, 13, 14, 15]]
+#
+# print(list(matrix_by_elem(matrix)))
+#
+# # TEST_4:
+# matrix = [[1, 2, 3, 5, 6, 7, 8],
+#           [9, 10, 11, 12, 13, 14, 15],
+#           [16, 17, 18, 19, 20, 21, 22]]
+#
+# print(tuple(matrix_by_elem(matrix)))
 
 
