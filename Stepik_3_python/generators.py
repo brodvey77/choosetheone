@@ -633,3 +633,73 @@ from datetime import date, timedelta
 # def palindromes():
 #     yield from (i for i, _ in enumerate(iter(bool, True), 1) if str(i) == str(i)[::-1])
 
+
+# def flatten(nested_list):
+#     for i in nested_list:
+#         if isinstance(i, list):
+#             yield from flatten(i)
+#         else:
+#             yield i
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# generator = flatten([[1, 2], [[3]], [[4], 5]])
+#
+# print(*generator)
+#
+# # TEST_2:
+# generator = flatten([1, 2, 3, 4, 5, 6, 7])
+#
+# print(*generator)
+#
+# # TEST_3:
+# generator = flatten([3, [4], [5, [6, [7, 8]]]])
+#
+# print(*generator)
+#
+# # TEST_4:
+# generator = flatten([10, 20, 30, 40, 50])
+#
+# print(*generator)
+#
+# # TEST_5:
+# generator = flatten([[1], [2], [3], [4, 5], 6, 7])
+#
+# print(*generator)
+#
+# # TEST_6:
+# generator = flatten([[1], [2], [3], [4], [5], [6], [7]])
+#
+# print(*generator)
+#
+# # TEST_7:
+# generator = flatten([[123], 23, 43, 65, 754, 3, 1, 2])
+#
+# print(*generator)
+#
+# # TEST_8:
+# generator = flatten([3123, 424, 5343, 11, 1, 23, 43, 65, 754, 3, 1, [2]])
+#
+# print(*generator)
+#
+# # TEST_9:
+# generator = flatten([[3, 2, 5345, 65, 7, 777, 0, 43, 65, 754, 3, 1, 2]])
+#
+# print(*generator)
+#
+# # TEST_10:
+# generator = flatten([34534, [656, [7867, [[234, [123, 34534, [758, 978]]]], 667, [4546]]], [2324, [234234, [7656]], 9879, 55]])
+#
+# print(*generator)
+#
+# # TEST_11:
+# generator = flatten([12, [13, [53, [632, [6, [2342341, [98, [3123], [2432], [4324]]]]]]]])
+#
+# print(*generator)
+
+
