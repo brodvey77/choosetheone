@@ -183,6 +183,73 @@
 
 
 
+# def primes(left, right):
+#     for i in range(left, right + 1):
+#         count = 0
+#         for j in range(1, i + 1):
+#             if i % j == 0:
+#                 count += 1
+#         if count == 2:
+#             yield i
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# generator = primes(1, 15)
+#
+# print(*generator)
+#
+# # TEST_2:
+# generator = primes(6, 36)
+#
+# print(next(generator))
+# print(next(generator))
+#
+# # TEST_3:
+# generator = primes(37, 37)
+#
+# try:
+#     print(next(generator))
+#     print(next(generator))
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_4:
+# generator = primes(39, 83)
+#
+# print(*generator)
+#
+# # TEST_5:
+# generator = primes(43, 79)
+#
+# print(*generator)
+#
+# # TEST_6:
+# generator = primes(43, 72)
+#
+# print(*generator)
+#
+# # TEST_7:
+# generator = primes(1000, 2000)
+#
+# print(*generator)
+#
+# # TEST_8:
+# generator = primes(2000, 100000)
+#
+# for _ in range(1000):
+#     next(generator)
+#
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+
 
 
 
