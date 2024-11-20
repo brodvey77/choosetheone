@@ -629,3 +629,7 @@ from datetime import date, timedelta
 #
 # for _ in range(100):
 #     print(next(generator))
+
+# def palindromes():
+#     yield from (i for i, _ in enumerate(iter(bool, True), 1) if str(i) == str(i)[::-1])
+
