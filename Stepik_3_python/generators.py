@@ -446,6 +446,54 @@ from datetime import date, timedelta
 #     print('Error')
 
 
+# def card_deck(suit):
+#     suits = ['пик', 'треф', 'бубен', 'червей']
+#     ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'валет', 'дама', 'король', 'туз']
+#
+#     cards = [f"{rank} {s}" for s in suits if s != suit for rank in ranks]
+#
+#     while True:
+#         for card in cards:
+#             yield card
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# generator = card_deck('пик')
+#
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+#
+# # TEST_2:
+# generator = card_deck('треф')
+# cards = [next(generator) for _ in range(40)]
+#
+# print(*cards)
+#
+# # TEST_3:
+# generator = card_deck('бубен')
+#
+# cards = [next(generator) for _ in range(50)]
+#
+# print(*cards)
+#
+# # TEST_4:
+# generator = card_deck('червей')
+#
+# cards = [next(generator) for _ in range(60)]
+#
+# print(*cards)
+#
+# # TEST_5:
+# generator = card_deck('пик')
+#
+# cards = [next(generator) for _ in range(80)]
+#
+# print(*cards)
+
 
 
 
