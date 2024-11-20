@@ -343,6 +343,110 @@
 # # TEST_8:
 # print(list(reverse([])))
 
+from datetime import date, timedelta
+
+
+# def dates(start, count=None):
+#     current = start
+#     delta = timedelta(days=1)
+#     try:
+#         if count is None:
+#             while current.year <= 9999:
+#                 yield current
+#                 current += delta
+#         else:
+#             for _ in range(count):
+#                 if current.year > 9999:
+#                     raise StopIteration
+#                 yield current
+#                 current += delta
+#     except:
+#         return
+
+
+# from datetime import date, timedelta
+#
+#
+# def dates(start, count=None):
+#     count = count or (date.max - start).days + 1
+#     for i in range(count):
+#         yield start + timedelta(days=i)
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# generator = dates(date(2022, 3, 8))
+#
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+#
+# # TEST_2:
+# generator = dates(date(2022, 3, 8), 5)
+#
+# print(*generator)
+#
+# # TEST_3:
+# generator = dates(date(2025, 9, 11), 99)
+#
+# print(*generator)
+#
+# # TEST_4:
+# generator = dates(date(2024, 9, 13), 1)
+#
+# try:
+#     d = next(generator)
+#     print(type(d))
+#     print(d)
+#     next(generator)
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_5:
+# generator = dates(date(2049, 1, 7))
+#
+# for _ in range(10_000):
+#     next(generator)
+#
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+#
+# # TEST_6:
+# generator = dates(date(9999, 1, 7))
+#
+# for _ in range(348):
+#     next(generator)
+#
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+# print(next(generator))
+#
+# try:
+#    print(next(generator))
+# except StopIteration:
+#     print('Error')
+
+
+
 
 
 
