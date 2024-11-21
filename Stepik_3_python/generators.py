@@ -703,3 +703,44 @@ from datetime import date, timedelta
 # print(*generator)
 
 
+from datetime import datetime, timedelta
+
+
+def choose_plural(value, forms):
+    if value % 10 == 1 and value % 100 != 11:
+        return forms[0]
+    elif 2 <= value % 10 <= 4 and (value % 100 < 10 or value % 100 >= 20):
+        return forms[1]
+    else:
+        return forms[2]
+
+
+def time_until_course_release(current_datetime):
+    release_datetime = datetime(2022, 11, 8, 12, 0)
+
+    if current_datetime >= release_datetime:
+        return "Курс уже вышел!"
+
+    delta = release_datetime - current_datetime
+    days = delta.days
+    hours, remainder = divmod(delta.seconds, 3600)
+    minutes, seconds = divmod(remainder, 60)
+
+    if days > 0 and hours > 0:
+        return f"До выхода курса осталось: {days} {choose_plural(days, ['день', 'дня', 'дней'])} и {hours} {choose_plural(hours, ['час', 'часа', 'часов'])}"
+    elif days > 0:
+        return f"До выхода курса осталось: {days} {choose_plural(days, ['день', 'дня', 'дней'])}"
+    elif hours > 0 and minutes > 0:
+        return f"До выхода курса осталось: {hours} {choose_plural(hours, ['час', 'часа', 'часов'])} и {minutes} {choose_plural(minutes, ['минута', 'минуты', 'минут'])}"
+    elif hours > 0:
+        return f"До выхода курса осталось: {hours} {choose_plural(hours, ['час', 'часа', 'часов'])}"
+    else:
+        return f"До выхода курса осталось: {minutes} {choose_plural(minutes, ['минута', 'минуты', 'минут'])}"
+
+
+# Пример использования
+input_str = input()
+current_datetime = datetime.strptime(input_str, "%d.%m.%Y %H:%M")
+print(time_until_course_release(current_datetime))
+
+
