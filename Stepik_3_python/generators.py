@@ -843,46 +843,91 @@ from datetime import date, timedelta
 # print(count_iterable(data))
 
 
-def all_together(*args):
-    # return (i for it in args for i in it)
-    for i in args:
-        for j in i:
-            return j
+# def all_together(*args):
+#     return (j for i in args for j in i)
+
+
+
+# # INPUT DATA:
+
+# # TEST_1:
+# objects = [range(3), 'bee', [1, 3, 5], (2, 4, 6)]
+
+# print(*all_together(*objects))
+
+# # TEST_2:
+# objects = [[1, 2, 3], [(0, 0), (1, 1)], {'geek': 1}]
+
+# print(*all_together(*objects))
+
+# # TEST_3:
+# print(list(all_together()))
+
+# # TEST_4:
+# objects = [iter('bee'), [[1, 2], [3, 4], [5, 6]], {'geek': 1, 'bee': 2}]
+
+# print(*all_together(*objects))
+
+# # TEST_5:
+# _map = map(str.upper, 'beegeek')
+# _filter = filter(str.islower, 'BEEgeek')
+# _zip = zip('bee', '123')
+
+# print(*all_together(_map, _filter, _zip))
+
+# # TEST_6:
+# _map = map(str.upper, 'stepik')
+# _filter = filter(str.islower, 'beeGEEK')
+# _zip = zip('zip', '321')
+# _reversed = reversed([1, 2, 3, 4])
+# _enumerate = enumerate('bee')
+
+# print(*all_together(_map, _filter, _zip, _reversed, _enumerate))
+
+
+
+def interleave(*args):
+    return (j for i in zip(*args) for j in i)
+
+
+    # for i in zip(*args):
+    #     for j in i:
+    #         yield j
+
 
 
 
 # INPUT DATA:
 
 # TEST_1:
-objects = [range(3), 'bee', [1, 3, 5], (2, 4, 6)]
-
-print(*all_together(*objects))
+print(*interleave('bee', '123'))
 
 # TEST_2:
-objects = [[1, 2, 3], [(0, 0), (1, 1)], {'geek': 1}]
+numbers = [1, 2, 3]
+squares = [1, 4, 9]
+qubes = [1, 8, 27]
 
-print(*all_together(*objects))
+print(*interleave(numbers, squares, qubes))
 
 # TEST_3:
-print(list(all_together()))
+numbers1 = tuple(range(10))
+numbers2 = list(range(10, 20))
+numbers3 = tuple(range(20, 30))
+numbers4 = tuple(range(30, 40))
+
+print(*interleave(numbers1, numbers2, numbers3, numbers4))
 
 # TEST_4:
-objects = [iter('bee'), [[1, 2], [3, 4], [5, 6]], {'geek': 1, 'bee': 2}]
+string = str(range(10, 50))
 
-print(*all_together(*objects))
+print(*interleave(string))
 
 # TEST_5:
-_map = map(str.upper, 'beegeek')
-_filter = filter(str.islower, 'BEEgeek')
-_zip = zip('bee', '123')
+numbers1 = tuple(range(38, 99, 7))
+numbers2 = tuple(range(65, 114, 6))
+string1 = 'BEEGEEKbe'
+string2 = 'STEPIKste'
+numbers3 = list(range(1, 170, 19))
+numbers4 = list(range(2, 175, 20))
 
-print(*all_together(_map, _filter, _zip))
-
-# TEST_6:
-_map = map(str.upper, 'stepik')
-_filter = filter(str.islower, 'beeGEEK')
-_zip = zip('zip', '321')
-_reversed = reversed([1, 2, 3, 4])
-_enumerate = enumerate('bee')
-
-print(*all_together(_map, _filter, _zip, _reversed, _enumerate))
+print(*interleave(numbers3, string2, numbers4, string1, numbers2, numbers1))
