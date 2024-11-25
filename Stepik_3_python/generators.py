@@ -1008,6 +1008,92 @@ from datetime import date, timedelta
 #
 # print(*numbers)
 
+#
+# def filter_names(names: list, ignore_char: str, max_names: int):
+#     start_char = (i for i in names if i[0].lower() != ignore_char.lower())
+#     consist_of_digit = (i for i in start_char if not any(j.isdigit() for j in i))
+#     return (i[0] for i in zip(consist_of_digit, range(max_names)))
+#
+#
+# def filter_names(names, ignore_char, max_names):
+#     ignore_char = ignore_char.lower()
+#     filtred_char = (name for name in names if not name.lower().startswith(ignore_char))
+#     filtred_dig = (name for name in filtred_char if name.isalpha())
+#     return (name for idx, name in enumerate(filtred_dig) if idx < max_names)
+#
+#
+# def filter_names(names, char, n):
+#     for i in names:
+#         if i[0].lower() != char.lower() and i.isalpha() and n:
+#             yield i
+#             n -= 1
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# data = ['Dima', 'Timur', 'Arthur', 'Anri20', 'Arina', 'German', 'Ruslan']
+#
+# print(*filter_names(data, 'D', 3))
+#
+# # TEST_2:
+# data = ['Dima', 'Timur', 'Arthur', 'Anri20', 'Arina', 'German', 'Ruslan']
+#
+# print(*filter_names(data, 't', 20))
+#
+# # TEST_3:
+# data = ['Di6ma', 'Ti4mur', 'Ar5thur', 'Anri7620', 'Ar3453ina', '345German', 'Ruslan543', 'Soslanfsdf123', 'Geo000000r']
+#
+# print(*filter_names(data, 'A', 100))
+#
+# # TEST_4:
+# data = ['Arthur', 'Anri', 'Arina', 'Albert', 'Angel', 'Ariel']
+#
+# print(*filter_names(data, 'F', 6))
+#
+# # TEST_5:
+# data = ['Arthur', 'Anri', 'Arina', 'Albert', 'Angel', 'Ariel']
+#
+# print(*filter_names(data, 'A', 22))
+#
+# # TEST_6:
+# data = ['Arthur', 'Anri', 'Arina', 'Albert', 'Angel', 'Ariel']
+#
+# print(next(filter_names(data, 'R', 1)))
+#
+# # TEST_7:
+# data = ['Barry']
+#
+# print(*filter_names(data, 'B', 1))
+#
+# # TEST_8:
+# data = ['Dima1', 'Timur2', 'Arthur', 'Anri', 'Arina', '3German', '4Ruslan']
+#
+# print(*filter_names(data, 'a', 20))
+#
+# # TEST_9:
+# data = ['Dima', 'Timur2', 'Arthur', 'Anri', 'Arina', '3German', '4Ruslan']
+#
+# print(*filter_names(data, 'A', 1))
+#
+# # TEST_10:
+# data = ['1Dima', 'Timur2', 'Arthur', 'Anri', 'Arina', '3German', 'Ruslan']
+#
+# print(*filter_names(data, 'A', 1))
+#
+# # TEST_11:
+# data = []
+#
+# print(list(filter_names(data, 'B', 1)))
+#
+# # TEST_12:
+# data = ['Dima', 'Timur', 'Arthur', 'Anri', 'Arina', 'German', 'Ruslan', 'Roma5', 'Jenya', 'Anna']
+#
+# print(*filter_names(data, 'A', 8))
+
 
 
 
