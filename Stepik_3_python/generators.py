@@ -1105,6 +1105,47 @@ from datetime import date, timedelta
 #     result = (int(i['raisedAmt']) for i in r_a)
 #     print(sum(result))
 
+# from datetime import date, datetime
+#
+# def years_days(y: int):
+#     first_date = date(year=y, month=1, day=1)
+#     last_date = date(year=y, month=12, day=31)
+#     return (date.fromordinal(i) for i in range(first_date.toordinal(), last_date.toordinal() + 1))
+#
+# from datetime import date, timedelta
+# from calendar import isleap
+#
+# def years_days(year):
+#     n_days = 365 + isleap(year)
+#     return (date(year, 1, 1) + timedelta(days=i) for i in range(n_days))
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# dates = years_days(2022)
+#
+# print(next(dates))
+# print(next(dates))
+# print(next(dates))
+# print(next(dates))
+#
+# # TEST_2:
+# dates = years_days(2077)
+#
+# print(*dates)
+#
+# # TEST_3:
+# dates = years_days(2000)
+#
+# print(*dates)
+#
+# # TEST_4:
+# dates = years_days(1900)
+#
+# print(*dates)
 
 
 
