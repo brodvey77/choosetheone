@@ -1188,6 +1188,56 @@ from datetime import date, timedelta
 # print(*nonempty_lines('file5.txt'))
 
 
+# def txt_to_dict():
+#     with open('planets.txt', 'r', encoding='utf-8') as file:
+#         d = {}
+#         file_lines = (line.strip().split(' = ') for line in file)
+#         for line in file_lines:
+#             if line !=['']:
+#                 d[line[0]] = line[1]
+#             else:
+#                 yield d
+#                 d = {}
+#         yield d
+#
+#
+# def txt_to_dict():
+#     with open('planets.txt', 'r', encoding='utf-8') as file:
+#         items = (i.split('\n') for i in file.read().split('\n\n'))
+#         return (dict(i.split(' = ') for i in planet) for planet in items)
+#
+# def txt_to_dict():
+#     with open('planets.txt', encoding='utf-8') as fi:
+#         # генератор объектов вида:
+#         # ['Name = Mercury', 'Diameter = 4879.4', 'Mass = 3.302×10^23', 'OrbitalPeriod = 0.241']
+#         planets = (planet.split('\n') for planet in fi.read().split('\n\n'))
+#
+#         # генератор объектов вида:
+#         # [['Name', 'Mercury'], ['Diameter', '4879.4'], ['Mass', '3.302×10^23'], ['OrbitalPeriod', '0.241']]
+#         planets_info = ((p.split(' = ') for p in planet) for planet in planets)
+#
+#     # преобразование объектов генератора в словари согласно условию
+#     for planet in planets_info:
+#         yield dict(planet)
+#
+#
+#
+#
+# # print(*txt_to_dict())
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# planets = txt_to_dict()
+#
+# print(next(planets))
+#
+# # TEST_2:
+# planets = txt_to_dict()
+#
+# print(*planets)
+
+
 
 
 
