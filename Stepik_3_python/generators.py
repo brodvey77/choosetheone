@@ -1147,6 +1147,49 @@ from datetime import date, timedelta
 #
 # print(*dates)
 
+# def nonempty_lines(file):
+#     with open(file, 'r', encoding='utf-8') as f:
+#         for line in f:
+#             line = line.strip('\n')
+#             if line:
+#                 if len(line) > 25:
+#                     yield '...'
+#                 else:
+#                     yield line
+#
+#
+# def nonempty_lines(file):
+#     with open(file, encoding='utf-8') as f:
+#         yield from ('...' if len(i.strip()) > 25 else i.strip() for i in f if i.strip() != '')
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# lines = nonempty_lines('file1.txt')
+#
+# print(next(lines))
+# print(next(lines))
+# print(next(lines))
+# print(next(lines))
+#
+# # TEST_2:
+# print(*nonempty_lines('file2.txt'))
+#
+# # TEST_3:
+# print(*nonempty_lines('file3.txt'))
+#
+# # TEST_4:
+# print(*nonempty_lines('file4.txt'))
+#
+# # TEST_5:
+# print(*nonempty_lines('file5.txt'))
+
+
+
+
 
 
 
