@@ -1496,5 +1496,95 @@ from datetime import date, timedelta
 #
 # print(*pairwise(data))
 
+# def with_previous(iterable):
+#     prev_elem = None
+#     for elem in iterable:
+#         yield elem, prev_elem
+#         prev_elem = elem
+
+# def pairwise(iterable):
+#     it = iter(iterable)
+#     i = next(it, None)
+#     while i != None:
+#         i, prev = next(it, None), i
+#         yield prev, i
+
+# def around(iterable):
+#     prev_elem = None
+#     it = iter(iterable)
+#     i = next(it, None)
+#     while i != None:
+#         i, elem = next(it, None), i
+#         yield prev_elem, elem, i
+#         prev_elem = elem
+#
+#
+# def around(iterable):
+#     it = iter(iterable)
+#     a = None
+#     b = next(it, None)
+#     c = next(it, None)
+#     while b != None:
+#         yield a, b, c
+#         a, b, c = b, c, next(it, None)
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# numbers = [1, 2, 3, 4, 5]
+#
+# print(*around(numbers))
+#
+# # TEST_2:
+# iterator = iter('hey')
+#
+# print(*around(iterator))
+#
+# # TEST_3:
+# iterator = around(iter('beegeek'))
+#
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+#
+# # TEST_4:
+# data = map(abs, range(-100, 100))
+#
+# print(*around(data))
+#
+# # TEST_5:
+# data = map(str.upper, 'jhfjgshgkjfdjsgriyteryowpqerkelfsldfmnmnbmvcnmlgqweootiyoeytkldjhmvxcmkasd')
+#
+# print(*around(data))
+#
+# # TEST_6:
+# data = map(str.upper, 'y')
+#
+# iterator = around(data)
+#
+# print(next(iterator))
+#
+# # TEST_7:
+# data = map(str.upper, 'yt')
+#
+# print(*around(data))
+#
+# # TEST_8:
+# data = map(str.upper, 'ytu')
+#
+# print(*around(data))
+#
+# # TEST_9:
+# data = ['bee', 'geek', 'stepik', 'python']
+#
+# print(*around(data))
+#
+# # TEST_10:
+# print(list(around([])))
+
 
 
