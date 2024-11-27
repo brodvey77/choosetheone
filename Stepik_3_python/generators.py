@@ -1238,55 +1238,147 @@ from datetime import date, timedelta
 # print(*planets)
 
 
-from collections import Counter
-def unique(iterable):
-    c = Counter(iterable)
-    return (i for i in c)
+# from collections import Counter
+# def unique(iterable):
+#     c = Counter(iterable)
+#     return (i for i in c)
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# numbers = [1, 2, 2, 3, 4, 5, 5, 5]
+#
+# print(*unique(numbers))
+#
+# # TEST_2:
+# iterator = iter('111222333')
+# uniques = unique(iterator)
+#
+# print(next(uniques))
+# print(next(uniques))
+# print(next(uniques))
+#
+# # TEST_3:
+# data = map(abs, range(-100, 100))
+#
+# print(*unique(data))
+#
+# # TEST_4:
+# data = map(str.upper, 'jhfjgshgkjfdjsgriyteryowpqerkelfsldfmnmnbmvcnmlgqweootiyoeytkldjhmvxcmkasd')
+#
+# print(*unique(data))
+#
+# # TEST_5:
+# data = 'JSKFJSDIFjejfkdjKJFIOJfkgkSDJGIEJGsklGDnvmmcvlwoqeriwjndSKF'
+#
+# print(*unique(data))
+#
+# # TEST_6:
+# data = map(str.lower, 'STEPIK')
+#
+# print(*unique(data))
+#
+# # TEST_7:
+# data = map(str.lower, 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS')
+#
+# print(*unique(data))
+#
+# # TEST_8:
+# data = ['bee', 'geek', 'stepik', 'python']
+#
+# print(*unique(data))
+#
+# # TEST_9:
+# print(list(unique([])))
 
-# INPUT DATA:
-
-# TEST_1:
-numbers = [1, 2, 2, 3, 4, 5, 5, 5]
-
-print(*unique(numbers))
-
-# TEST_2:
-iterator = iter('111222333')
-uniques = unique(iterator)
-
-print(next(uniques))
-print(next(uniques))
-print(next(uniques))
-
-# TEST_3:
-data = map(abs, range(-100, 100))
-
-print(*unique(data))
-
-# TEST_4:
-data = map(str.upper, 'jhfjgshgkjfdjsgriyteryowpqerkelfsldfmnmnbmvcnmlgqweootiyoeytkldjhmvxcmkasd')
-
-print(*unique(data))
-
-# TEST_5:
-data = 'JSKFJSDIFjejfkdjKJFIOJfkgkSDJGIEJGsklGDnvmmcvlwoqeriwjndSKF'
-
-print(*unique(data))
-
-# TEST_6:
-data = map(str.lower, 'STEPIK')
-
-print(*unique(data))
-
-# TEST_7:
-data = map(str.lower, 'SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS')
-
-print(*unique(data))
-
-# TEST_8:
-data = ['bee', 'geek', 'stepik', 'python']
-
-print(*unique(data))
-
-# TEST_9:
-print(list(unique([])))
+# def stop_on(iterable, obj):
+#     i_o = (i for i in iterable)
+#     for i in i_o:
+#         if i != obj:
+#             yield i
+#         else:
+#             break
+#
+#
+# def stop_on(iterable, obj):
+#     it = iter(iterable)
+#     return iter(lambda: next(it), obj)
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# numbers = [1, 2, 3, 4, 5]
+#
+# print(*stop_on(numbers, 4))
+#
+# # TEST_2:
+# iterator = iter('beegeek')
+#
+# print(*stop_on(iterator, 'a'))
+#
+# # TEST_3:
+# data = map(abs, range(-100, 100))
+#
+# iterator = stop_on(data, 76)
+#
+# print(*iterator)
+#
+# # TEST_4:
+# data = map(str.upper, 'jhfjgshgkjfdjsgriyteryowpqerkelfsldfmnmnbmvcnmlgqweootiyoeytkldjhmvxcmkasd')
+#
+# iterator = stop_on(data, 'o')
+#
+# print(*iterator)
+#
+# # TEST_5:
+# data = 'JSKFJSDIFjejfkdjKJFIOJfkgkSDJGIEJGsklGDnvmmcvlwoqeriwjndSKF'
+#
+# iterator = stop_on(data, 'e')
+#
+# print(*iterator)
+#
+# # TEST_6:
+# data = 'g'
+#
+# iterator = stop_on(data, 'g')
+#
+# print(*iterator)
+#
+# # TEST_7:
+# data = 'eeeeeeeeeeeeee'
+#
+# iterator = stop_on(data, 'e')
+#
+# print(*iterator)
+#
+# # TEST_8:
+# data = iter('qweretqwewerqweqwerewr')
+#
+# iterator = stop_on(data, 'H')
+#
+# print(*iterator)
+#
+# # TEST_9:
+# data = iter('beegeek')
+#
+# iterator = stop_on(data, 'g')
+#
+# print(next(iterator))
+# print(next(iterator))
+# print(next(iterator))
+#
+# try:
+#     print(next(iterator))
+# except StopIteration:
+#     print('Error')
+#
+# # TEST_10:
+# data = ['bee', 'geek', 'stepik', 'python']
+#
+# print(*stop_on(data, 'stepik'))
+#
+# # TEST_11:
+# data = []
+#
+# print(list(stop_on(data, 'stepik')))
