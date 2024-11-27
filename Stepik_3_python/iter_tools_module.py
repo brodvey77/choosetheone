@@ -32,3 +32,77 @@
 # print(next(cycler))
 # print(next(cycler))
 # print(next(cycler))
+# from itertools import repeat
+#
+# repeater = repeat(['bee', 'ff'])
+#
+# for _ in range(100):
+#     next(repeater)
+#
+# print(next(repeater))
+# print(next(repeater))
+
+# from itertools import repeat
+#
+# repeater = repeat('geek', 4)
+#
+# print(list(repeater))
+
+#
+# from itertools import repeat
+#
+# beegeek = ['bee', 'geek']
+# repeater = repeat(beegeek)
+#
+# print(next(repeater))
+#
+# beegeek = beegeek + ['imposter']
+#
+# print(next(repeater))
+
+
+# import itertools as it
+# def tabulate(func):
+#     return (func(i) for i in it.count(1))
+#
+#
+# from itertools import count
+#
+# def tabulate(func):
+#     return map(func, count(1))
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# func = lambda x: x
+# values = tabulate(func)
+#
+# print(next(values))
+# print(next(values))
+#
+# # TEST_2:
+# func = lambda x: x + 10
+# values = tabulate(func)
+#
+# print(next(values))
+# print(next(values))
+# print(next(values))
+#
+# # TEST_3:
+# func = lambda x: x ** 2
+# values = tabulate(func)
+#
+# for _ in range(100):
+#     print(next(values))
+#
+# # TEST_4:
+# def func(n):
+#     return 'beegeek' * n
+#
+# values = tabulate(func)
+#
+# for _ in range(10):
+#     print(next(values))
+
