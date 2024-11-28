@@ -106,3 +106,52 @@
 # for _ in range(10):
 #     print(next(values))
 
+
+# from itertools import accumulate, count
+# from operator import mul
+#
+# def fuck(x):
+#     if x == 1 or x == 0:
+#         return 1
+#     else:
+#         return x * factorials(x - 1)
+#
+#
+# def factorials(n):
+#     return accumulate(range(1, n + 1), mul)
+#
+# from itertools import accumulate
+#
+# def factorials(n):
+#     yield from accumulate(range(1, n + 1), lambda x, y: x * y)
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# numbers = factorials(6)
+#
+# print(*numbers)
+#
+# # TEST_2:
+# numbers = factorials(2)
+#
+# print(next(numbers))
+# print(next(numbers))
+#
+# # TEST_3:
+# numbers = factorials(100)
+#
+# print(*numbers)
+#
+# # TEST_4:
+# numbers = factorials(1001)
+#
+# for _ in range(1000):
+#     next(numbers)
+#
+# print(next(numbers))
+
+
+
