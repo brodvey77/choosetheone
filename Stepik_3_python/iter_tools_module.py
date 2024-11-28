@@ -286,3 +286,8 @@
 # nones = iter([None, None, None, None])
 #
 # print(*roundrobin(numbers, nones))
+
+
+from itertools import islice
+
+print(islice('hello world!', None))
