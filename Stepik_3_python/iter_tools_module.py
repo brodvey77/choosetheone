@@ -152,6 +152,64 @@
 #     next(numbers)
 #
 # print(next(numbers))
-
+# from itertools import cycle
+# import string
+#
+# def alnum_sequence():
+#     digits = (num for num in range(1, 27))
+#     letters = map(lambda x: x, string.ascii_uppercase)
+#     return cycle(j for i in zip(digits, letters) for j in i)
+#
+# from itertools import cycle
+# from string import ascii_uppercase
+#
+#
+# def alnum_sequence():
+#     for item in zip(cycle(range(1, 27)), cycle(ascii_uppercase)):
+#         yield from item
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# alnum = alnum_sequence()
+#
+# print(*(next(alnum) for _ in range(55)))
+#
+# # TEST_2:
+# alnum = alnum_sequence()
+#
+# print(*(next(alnum) for _ in range(100)))
+#
+# # TEST_3:
+# alnum = alnum_sequence()
+#
+# print(next(alnum))
+# print(next(alnum))
+# print(next(alnum))
+# print(next(alnum))
+#
+# # TEST_4:
+# alnum = alnum_sequence()
+#
+# for _ in range(10_000):
+#     next(alnum)
+#
+# print(next(alnum))
+# print(next(alnum))
+# print(next(alnum))
+# print(next(alnum))
+#
+# # TEST_5:
+# alnum = alnum_sequence()
+#
+# for _ in range(100_000):
+#     next(alnum)
+#
+# print(next(alnum))
+# print(next(alnum))
+# print(next(alnum))
+# print(next(alnum))
 
 
