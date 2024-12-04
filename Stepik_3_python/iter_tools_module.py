@@ -230,8 +230,6 @@
 #             break
 
 
-
-
 # # INPUT DATA:
 #
 # # TEST_1:
@@ -288,6 +286,25 @@
 # print(*roundrobin(numbers, nones))
 
 
-from itertools import islice
+# from itertools import islice
+#
+# print(*islice('hello world!', None))
 
-print(islice('hello world!', None))
+
+# from itertools import count
+# def factorial(x):
+#     if x == 0 or x == 1:
+#         return 1
+#     else:
+#         return x * factorial(x - 1)
+#
+#
+# for i in count():
+#     print(factorial(i))
+
+
+# from itertools import dropwhile
+#
+#
+# def drop_while_negative(iterable):
+#     return dropwhile(lambda x: x >= 0, iterable)
