@@ -308,3 +308,23 @@
 #
 # def drop_while_negative(iterable):
 #     return dropwhile(lambda x: x >= 0, iterable)
+
+
+# from itertools import takewhile, dropwhile
+#
+# def drop_this(iterable, obj):
+#     return dropwhile(lambda x: x == obj, iterable)
+#
+#
+# iterator = iter('bbbbeebee')
+#
+# print(*drop_this(iterator, 'b'))
+#
+#
+# iterator = iter('ssssssssssssssssssssssss')
+#
+# print(list(drop_this(iterator, 's')))
+
+
+
+
