@@ -326,5 +326,42 @@
 # print(list(drop_this(iterator, 's')))
 
 
+from itertools import filterfalse, takewhile, dropwhile
+
+# def first_true(iterable, predicate=None):
+#     for item in iterable:
+#         if predicate is None:
+#             if item:  # Если predicate не задан, используем bool()
+#                 return item
+#         elif predicate(item):
+#             return item
+#     return None
+
+
+
+# def first_true(iterable, predicate):
+#     for i in filter(predicate, iterable):
+#         return i
+
+# from itertools import islice
+# def first_true(it, pred):
+#     return next(islice(filter(pred, it), 1), None)
+#
+#
+# numbers = [1, 1, 1, 1, 2, 4, 5, 6]
+# print(first_true(numbers, lambda num: num % 2 == 0))
+#
+#
+# numbers = iter([1, 1, 1, 1, 2, 4, 5, 6, 10, 100, 200])
+# print(first_true(numbers, lambda num: num > 10))
+#
+#
+# numbers = (0, 0, 0, 69, 1, 1, 1, 2, 4, 5, 6, 10, 100, 200)
+# print(first_true(numbers, None))
+
+
+
+
+
 
 
