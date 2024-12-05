@@ -376,3 +376,64 @@ from itertools import filterfalse, takewhile, dropwhile
 #
 # iterator = iter('beegeek')
 # print(*take(iterator, 1))
+
+
+# import itertools
+#
+# def take_nth(iterable, n):
+#     for i in itertools.islice(iterable, n-1, n):
+#         return i
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# numbers = [11, 22, 33, 44, 55]
+#
+# print(take_nth(numbers, 3))
+#
+# # TEST_2:
+# iterator = iter('beegeek')
+#
+# print(take_nth(iterator, 4))
+#
+# # TEST_3:
+# iterator = iter('beegeek')
+#
+# print(take_nth(iterator, 10))
+#
+# # TEST_4:
+# iterator = iter('beegeek')
+#
+# print(take_nth(iterator, 1))
+#
+# # TEST_5:
+# iterator = tuple('stepik')
+#
+# print(take_nth(iterator, 6))
+#
+# # TEST_6:
+# iterator = iter('p')
+#
+# print(take_nth(iterator, 1))
+#
+# # TEST_7:
+# iterator = iter('p')
+#
+# print(take_nth(iterator, 2))
+#
+# # TEST_8:
+# iterator = iter('beegeek')
+#
+# print(take_nth(iterator, 7))
+#
+# # TEST_9:
+# iterator = iter('beegeek')
+#
+# print(take_nth(iterator, 8))
+#
+# # TEST_10:
+# print(take_nth([], 4))
+
+
+
