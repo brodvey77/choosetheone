@@ -359,9 +359,20 @@ from itertools import filterfalse, takewhile, dropwhile
 # numbers = (0, 0, 0, 69, 1, 1, 1, 2, 4, 5, 6, 10, 100, 200)
 # print(first_true(numbers, None))
 
-
-
-
-
-
-
+#
+# import itertools
+#
+# def take(iterable, n):
+#     return itertools.islice(iterable, n)
+#
+#
+# print(*take(range(10), 5))
+#
+#
+# iterator = iter('beegeek')
+# print(*take(iterator, 22))
+#
+#
+#
+# iterator = iter('beegeek')
+# print(*take(iterator, 1))
