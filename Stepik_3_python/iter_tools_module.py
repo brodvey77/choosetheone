@@ -510,3 +510,52 @@ from itertools import filterfalse, takewhile, dropwhile
 # iterator = iter([-400, -100, -102, -334, -5])
 #
 # print(first_largest(iterator, -6))
+
+# from itertools import tee
+#
+# iters = tee('beegeek')
+#
+# print(type(iters), len(iters))
+#
+# for i in iters:
+#     print(*i)
+
+
+# from itertools import tee
+#
+# iters = tee([1, 2, 3], 3)
+#
+# totals = map(lambda a, b, c: a + b + c, *iters)
+#
+# print(list(totals))
+
+# import itertools
+#
+# def sum_of_digits(iterable):
+#     return sum(map(int, itertools.chain.from_iterable(map(str, iterable))))
+#
+#
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# print(sum_of_digits([13, 20, 41, 2, 2, 5]))
+#
+# # TEST_2:
+# print(sum_of_digits((1, 2, 3, 4, 5, 6, 7, 8, 9, 10)))
+#
+# # TEST_3:
+# print(sum_of_digits([123456789]))
+#
+# # TEST_4:
+# numbers = [10]*100
+#
+# iterator = iter(numbers)
+# print(sum_of_digits(iterator))
+#
+# # TEST_5:
+# numbers = [100, 20, 30, 400, 500, 5]*100000
+#
+# print(sum_of_digits(numbers))
