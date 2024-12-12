@@ -745,3 +745,11 @@ from itertools import filterfalse, takewhile, dropwhile
 # iterator = iter('beegeek')
 #
 # print(*grouper(iterator, 20))
+
+
+# from itertools import groupby
+#
+# groups = groupby('aaabbbcccaaaa')
+#
+# for _, group in groups:
+#     print(*group)
