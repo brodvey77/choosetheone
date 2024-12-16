@@ -745,3 +745,17 @@ from itertools import filterfalse, takewhile, dropwhile
 # iterator = iter('beegeek')
 #
 # print(*grouper(iterator, 20))
+
+
+# key_func = lambda x: x % 2
+
+# print(key_func(4))
+
+from itertools import groupby
+
+groups = groupby('aaabbbcccaabb')
+
+key1, group1 = next(groups)
+key2, group2 = next(groups)
+
+print(key1, list(group1))
