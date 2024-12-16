@@ -751,11 +751,30 @@ from itertools import filterfalse, takewhile, dropwhile
 
 # print(key_func(4))
 
+# from itertools import groupby
+
+# groups = groupby('aaabbbcccaabb')
+
+# key1, group1 = next(groups)
+# key2, group2 = next(groups)
+
+# print(key1, list(group1))
+
+
+from collections import namedtuple
 from itertools import groupby
 
-groups = groupby('aaabbbcccaabb')
+Person = namedtuple('Person', ['name', 'age', 'height'])
 
-key1, group1 = next(groups)
-key2, group2 = next(groups)
+persons = [Person('Tim', 63, 193), Person('Eva', 47, 158),
+           Person('Mark', 71, 172), Person('Alex', 45, 193),
+           Person('Jeff', 63, 193), Person('Ryan', 41, 184),
+           Person('Ariana', 28, 158), Person('Liam', 69, 193)]
 
-print(key1, list(group1))
+
+s_p = sorted(persons, key=lambda x: x.height)
+group_iter = groupby(s_p,key=lambda x: x.height)
+
+
+for k,data in group_iter:
+    print(f'{k}: {", ".join([i.name for i in sorted(data, key=lambda x: x.name)])}')
