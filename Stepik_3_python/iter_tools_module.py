@@ -761,20 +761,49 @@ from itertools import filterfalse, takewhile, dropwhile
 # print(key1, list(group1))
 
 
+# from collections import namedtuple
+# from itertools import groupby
+
+# Person = namedtuple('Person', ['name', 'age', 'height'])
+
+# persons = [Person('Tim', 63, 193), Person('Eva', 47, 158),
+#            Person('Mark', 71, 172), Person('Alex', 45, 193),
+#            Person('Jeff', 63, 193), Person('Ryan', 41, 184),
+#            Person('Ariana', 28, 158), Person('Liam', 69, 193)]
+
+
+# s_p = sorted(persons, key=lambda x: x.height)
+# group_iter = groupby(s_p,key=lambda x: x.height)
+
+
+# for k,data in group_iter:
+#     print(f'{k}: {", ".join([i.name for i in sorted(data, key=lambda x: x.name)])}')
+
+
+
+
 from collections import namedtuple
 from itertools import groupby
 
-Person = namedtuple('Person', ['name', 'age', 'height'])
+Student = namedtuple('Student', ['surname', 'name', 'grade'])
 
-persons = [Person('Tim', 63, 193), Person('Eva', 47, 158),
-           Person('Mark', 71, 172), Person('Alex', 45, 193),
-           Person('Jeff', 63, 193), Person('Ryan', 41, 184),
-           Person('Ariana', 28, 158), Person('Liam', 69, 193)]
+students = [Student('Гагиев', 'Александр', 10), Student('Дедегкаев', 'Илья', 11), Student('Кодзаев', 'Георгий', 10),
+            Student('Набокова', 'Алиса', 11), Student('Кораев', 'Артур', 10), Student('Шилин', 'Александр', 11),
+            Student('Уртаева', 'Илина', 11), Student('Салбиев', 'Максим', 10), Student('Капустин', 'Илья', 11),
+            Student('Гудцев', 'Таймураз', 11), Student('Перчиков', 'Максим', 10), Student('Чен', 'Илья', 11),
+            Student('Елькина', 'Мария', 11),Student('Макоев', 'Руслан', 11), Student('Албегов', 'Хетаг', 11),
+            Student('Щербак', 'Илья', 10), Student('Идрисов', 'Баграт', 11), Student('Гапбаев', 'Герман', 10),
+            Student('Цивинская', 'Анна', 10), Student('Туткевич', 'Юрий', 11), Student('Мусиков', 'Андраник', 11),
+            Student('Гадзиев', 'Георгий', 11), Student('Белов', 'Юрий', 11), Student('Акоева', 'Диана', 11),
+            Student('Денисов', 'Илья', 11), Student('Букулова', 'Диана', 10), Student('Акоева', 'Лера', 11)]
 
 
-s_p = sorted(persons, key=lambda x: x.height)
-group_iter = groupby(s_p,key=lambda x: x.height)
+
+gr_st_name = groupby(sorted(students, key=lambda x: x.name), key=lambda x: x.name)
 
 
-for k,data in group_iter:
-    print(f'{k}: {", ".join([i.name for i in sorted(data, key=lambda x: x.name)])}')
+l = []
+for k, data in gr_st_name:
+    l.append([k, len(list(i.name for i in data))])
+
+print(max(l, key=lambda x: x[1] )[0])
