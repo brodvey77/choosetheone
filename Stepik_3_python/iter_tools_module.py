@@ -813,13 +813,18 @@ from itertools import filterfalse, takewhile, dropwhile
 # max_result = max(group_iter, key=lambda tpl: sum(1 for i in tpl[1]))
 # print(max_result[0])
 
-from itertools import groupby
+# from itertools import groupby
 
-def group_anagrams(words):
-    l = []
-    iter_g = groupby(sorted(words, key=sorted), key=sorted)
-    for k,v in iter_g:
-        yield tuple(v)
+# def group_anagrams(words):
+#     l = []
+#     iter_g = groupby(sorted(words, key=sorted), key=sorted)
+#     for k,v in iter_g:
+#         yield tuple(v)
+
+# from itertools import groupby
+
+# def group_anagrams(words):
+#     return (tuple(i) for _, i in groupby(sorted(words, key=sorted), key=sorted))
 
 
 
@@ -827,44 +832,73 @@ def group_anagrams(words):
 
 
 
-# INPUT DATA:
+# # INPUT DATA:
 
-# TEST_1:
-groups = group_anagrams(['evil', 'father', 'live', 'levi', 'book', 'afther', 'boko'])
+# # TEST_1:
+# groups = group_anagrams(['evil', 'father', 'live', 'levi', 'book', 'afther', 'boko'])
 
-print(*groups)
+# print(*groups)
 
-# TEST_2:
-groups = group_anagrams(['evil', 'father', 'book', 'stepik', 'beegeek'])
+# # TEST_2:
+# groups = group_anagrams(['evil', 'father', 'book', 'stepik', 'beegeek'])
 
-print(*groups)
+# print(*groups)
 
-# TEST_3:
-groups = group_anagrams(['крона', 'сеточка', 'тесачок', 'лучик', 'стоечка', 'норка', 'чулки'])
+# # TEST_3:
+# groups = group_anagrams(['крона', 'сеточка', 'тесачок', 'лучик', 'стоечка', 'норка', 'чулки'])
 
-print(*groups)
+# print(*groups)
 
-# TEST_4:
-groups = group_anagrams(['чулки', 'чулки', 'чулки', 'чулки', 'чулки', 'чулки', 'чулки'])
+# # TEST_4:
+# groups = group_anagrams(['чулки', 'чулки', 'чулки', 'чулки', 'чулки', 'чулки', 'чулки'])
 
-print(*groups)
+# print(*groups)
 
-# TEST_5:
-groups = group_anagrams(['beegeek'])
+# # TEST_5:
+# groups = group_anagrams(['beegeek'])
 
-print(*groups)
+# print(*groups)
 
-# TEST_6:
-groups = group_anagrams(['клоун', 'отсечка', 'кулон', 'уклон', 'чесотка', 'чулки', 'яяя', 'чулки', 'чесотка', 'яяя'])
+# # TEST_6:
+# groups = group_anagrams(['клоун', 'отсечка', 'кулон', 'уклон', 'чесотка', 'чулки', 'яяя', 'чулки', 'чесотка', 'яяя'])
 
-print(*groups)
+# print(*groups)
 
-# TEST_7:
-groups = group_anagrams(['клоун', 'яяя', 'жжж', 'бббб', 'кулон'])
+# # TEST_7:
+# groups = group_anagrams(['клоун', 'яяя', 'жжж', 'бббб', 'кулон'])
 
-print(*groups)
+# print(*groups)
 
-# TEST_8:
-groups = group_anagrams(['катет', 'кета'])
+# # TEST_8:
+# groups = group_anagrams(['катет', 'кета'])
 
-print(*groups)
+# print(*groups)
+
+
+# from itertools import groupby
+
+# def ranges(numbers):
+#     result = []
+#     for _, group in groupby(numbers, key=lambda n: n - numbers.index(n)):
+#         group = tuple(group)
+#         group = group[0], group[-1]
+#         result.append(group)
+#     return result
+
+# from itertools import groupby
+
+# def ranges(numbers):
+#     if not numbers:
+#         return []
+
+#     # Создаем список отрезков
+#     result = []
+    
+#     # Группируем числа по их последовательности
+#     for k, g in groupby(enumerate(numbers), lambda x: x[1] - x[0]):
+#         group = list(g)
+#         start = group[0][1]
+#         end = group[-1][1]
+#         result.append((start, end))
+    
+#     return result
