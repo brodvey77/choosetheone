@@ -784,9 +784,9 @@ from itertools import filterfalse, takewhile, dropwhile
 
 # from collections import namedtuple
 # from itertools import groupby
-#
+
 # Student = namedtuple('Student', ['surname', 'name', 'grade'])
-#
+
 # students = [Student('Гагиев', 'Александр', 10), Student('Дедегкаев', 'Илья', 11), Student('Кодзаев', 'Георгий', 10),
 #             Student('Набокова', 'Алиса', 11), Student('Кораев', 'Артур', 10), Student('Шилин', 'Александр', 11),
 #             Student('Уртаева', 'Илина', 11), Student('Салбиев', 'Максим', 10), Student('Капустин', 'Илья', 11),
@@ -796,63 +796,35 @@ from itertools import filterfalse, takewhile, dropwhile
 #             Student('Цивинская', 'Анна', 10), Student('Туткевич', 'Юрий', 11), Student('Мусиков', 'Андраник', 11),
 #             Student('Гадзиев', 'Георгий', 11), Student('Белов', 'Юрий', 11), Student('Акоева', 'Диана', 11),
 #             Student('Денисов', 'Илья', 11), Student('Букулова', 'Диана', 10), Student('Акоева', 'Лера', 11)]
-#
-#
-#
+
+
+
 # gr_st_name = groupby(sorted(students, key=lambda x: x.name), key=lambda x: x.name)
-#
-#
+
+
 # l = []
 # for k, data in gr_st_name:
 #     l.append([k, len(list(i.name for i in data))])
-#
+
 # print(max(l, key=lambda x: x[1] )[0])
-#
-# from itertools import groupby
-#
-# s = sorted(input().split(), key=len)
-#
-# iter_group = groupby(s, key=len)
-#
-#
-# for k, v in iter_group:
-#     print(f'{k} -> {", ".join(sorted(v))}')
-#
-#
-#
-# from itertools import groupby
-#
-# for k, v in groupby(sorted(input().split(), key = len), key = len):
-#     print(f'{k} -> {", ".join(sorted(v))}')
 
+
+# group_iter = groupby(sorted(students, key=lambda x: x.name), key=lambda x: x.name)
+# max_result = max(group_iter, key=lambda tpl: sum(1 for i in tpl[1]))
+# print(max_result[0])
 
 # from itertools import groupby
-#
-# tasks = [('Отдых', 'поспать днем', 3),
-#         ('Ответы на вопросы', 'ответить на вопросы в дискорде', 1),
-#         ('ЕГЭ Математика', 'доделать курс по параметрам', 1),
-#         ('Ответы на вопросы', 'ответить на вопросы в курсах', 2),
-#         ('Отдых', 'погулять вечером', 4),
-#         ('Курс по ооп', 'обсудить темы', 1),
-#         ('Урок по groupby', 'добавить задачи на программирование', 3),
-#         ('Урок по groupby', 'написать конспект', 1),
-#         ('Отдых', 'погулять днем', 2),
-#         ('Урок по groupby', 'добавить тестовые задачи', 2),
-#         ('Уборка', 'убраться в ванной', 2),
-#         ('Уборка', 'убраться в комнате', 1),
-#         ('Уборка', 'убраться на кухне', 3),
-#         ('Отдых', 'погулять утром', 1),
-#         ('Курс по ооп', 'обсудить задачи', 2)]
-#
-#
-# iter_group = groupby(sorted(tasks), key=lambda x: x[0])
-#
-#
-# for k, v in iter_group:
-#         print(f'{k}:')
-#         for j in sorted([i[1:] for i in v], key=lambda x: x[1]):
-#                 print(f'    {j[1]}. {j[0]}')
-#         print()
+
+# def group_anagrams(words):
+#     l = []
+#     iter_g = groupby(sorted(words, key=sorted), key=sorted)
+#     for k,v in iter_g:
+#         yield tuple(v)
+
+# from itertools import groupby
+
+# def group_anagrams(words):
+#     return (tuple(i) for _, i in groupby(sorted(words, key=sorted), key=sorted))
 
 
 
@@ -860,5 +832,73 @@ from itertools import filterfalse, takewhile, dropwhile
 
 
 
+# # INPUT DATA:
+
+# # TEST_1:
+# groups = group_anagrams(['evil', 'father', 'live', 'levi', 'book', 'afther', 'boko'])
+
+# print(*groups)
+
+# # TEST_2:
+# groups = group_anagrams(['evil', 'father', 'book', 'stepik', 'beegeek'])
+
+# print(*groups)
+
+# # TEST_3:
+# groups = group_anagrams(['крона', 'сеточка', 'тесачок', 'лучик', 'стоечка', 'норка', 'чулки'])
+
+# print(*groups)
+
+# # TEST_4:
+# groups = group_anagrams(['чулки', 'чулки', 'чулки', 'чулки', 'чулки', 'чулки', 'чулки'])
+
+# print(*groups)
+
+# # TEST_5:
+# groups = group_anagrams(['beegeek'])
+
+# print(*groups)
+
+# # TEST_6:
+# groups = group_anagrams(['клоун', 'отсечка', 'кулон', 'уклон', 'чесотка', 'чулки', 'яяя', 'чулки', 'чесотка', 'яяя'])
+
+# print(*groups)
+
+# # TEST_7:
+# groups = group_anagrams(['клоун', 'яяя', 'жжж', 'бббб', 'кулон'])
+
+# print(*groups)
+
+# # TEST_8:
+# groups = group_anagrams(['катет', 'кета'])
+
+# print(*groups)
 
 
+# from itertools import groupby
+
+# def ranges(numbers):
+#     result = []
+#     for _, group in groupby(numbers, key=lambda n: n - numbers.index(n)):
+#         group = tuple(group)
+#         group = group[0], group[-1]
+#         result.append(group)
+#     return result
+
+# from itertools import groupby
+
+# def ranges(numbers):
+#     if not numbers:
+#         return []
+
+#     # Создаем список отрезков
+#     result = []
+    
+#     # Группируем числа по их последовательности
+#     for k, g in groupby(enumerate(numbers), lambda x: x[1] - x[0]):
+#         group = list(g)
+#         start = group[0][1]
+#         end = group[-1][1]
+#         result.append((start, end))
+    
+#     return result
