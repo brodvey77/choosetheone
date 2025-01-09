@@ -920,6 +920,7 @@ from itertools import filterfalse, takewhile, dropwhile
 # for i in range(1, len(wallet)):
 #     for j in set(combinations(wallet, i)):
 #         if sum(j) == 100:
+#             print(*j)
 #             counter += 1
 #
 # print(counter)
