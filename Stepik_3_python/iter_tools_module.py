@@ -972,4 +972,9 @@ from itertools import filterfalse, takewhile, dropwhile
 # else:
 #     print("Рюкзак собрать не удастся")
 
-
+# from itertools import product
+#
+# numbers = [1, 2, 3]
+# letters = ['a', 'b']
+#
+# print(*product(numbers, letters))
