@@ -902,3 +902,15 @@ from itertools import filterfalse, takewhile, dropwhile
 #         result.append((start, end))
     
 #     return result
+
+# from itertools import permutations
+#
+#
+# s = sorted(set(permutations(input())))
+#
+# for i in s:
+#     print(*i, sep='')
+
+
+
+
