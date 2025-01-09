@@ -912,16 +912,17 @@ from itertools import filterfalse, takewhile, dropwhile
 #     print(*i, sep='')
 
 #
-# from itertools import combinations
+# from itertools import combinations_with_replacement
 #
-# wallet = [100, 100, 50, 50, 50, 50, 20, 20, 20, 10, 10, 10, 10, 10, 5, 5, 1, 1, 1, 1, 1]
+# wallet = [100, 50, 20, 10, 5]
 #
 # counter = 0
-# for i in range(1, len(wallet)):
-#     for j in set(combinations(wallet, i)):
+# for i in range(1, 21):
+#     for j in set(combinations_with_replacement(wallet, i)):
 #         if sum(j) == 100:
-#             print(*j)
 #             counter += 1
 #
 # print(counter)
+
+
 
