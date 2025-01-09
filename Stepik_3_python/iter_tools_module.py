@@ -924,5 +924,52 @@ from itertools import filterfalse, takewhile, dropwhile
 #
 # print(counter)
 
+#
+# from collections import namedtuple
+# import itertools
+#
+# # Определяем структуру для предметов
+# Item = namedtuple('Item', ['name', 'mass', 'price'])
+#
+# # Список предметов
+# items = [
+#     Item('Обручальное кольцо', 7, 49_000),
+#     Item('Мобильный телефон', 200, 110_000),
+#     Item('Ноутбук', 2000, 150_000),
+#     Item('Ручка Паркер', 20, 37_000),
+#     Item('Статуэтка Оскар', 4000, 28_000),
+#     Item('Наушники', 150, 11_000),
+#     Item('Гитара', 1500, 32_000),
+#     Item('Золотая монета', 8, 140_000),
+#     Item('Фотоаппарат', 720, 79_000),
+#     Item('Лимитированные кроссовки', 300, 80_000)
+# ]
+#
+# # Чтение грузоподъемности рюкзака
+# capacity = int(input().strip())
+#
+# # Переменные для хранения максимальной ценности и соответствующих предметов
+# max_value = 0
+# best_combination = []
+#
+# # Перебираем все возможные комбинации предметов
+# for r in range(len(items) + 1):
+#     for combination in itertools.combinations(items, r):
+#         total_mass = sum(item.mass for item in combination)
+#         total_price = sum(item.price for item in combination)
+#
+#         # Проверяем, не превышает ли масса грузоподъемность
+#         if total_mass <= capacity:
+#             if total_price > max_value:
+#                 max_value = total_price
+#                 best_combination = combination
+#
+# # Выводим результат
+# if best_combination:
+#     # Сортируем названия предметов в лексикографическом порядке
+#     result = sorted(item.name for item in best_combination)
+#     print("\n".join(result))
+# else:
+#     print("Рюкзак собрать не удастся")
 
 
