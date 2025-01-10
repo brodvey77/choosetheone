@@ -1020,3 +1020,31 @@ from itertools import filterfalse, takewhile, dropwhile
 # print(next(passwords))
 # print(next(passwords))
 
+# from itertools import product
+#
+# def ss(a, b, x=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']):
+#     for i in (i  for i in product(x[:n], repeat=m)):
+#         print(*i, sep='', end=' ')
+#
+# n, m = int(input()), int(input())
+# ss(n,m)
+
+
+# import itertools as it
+# from string import ascii_uppercase, digits
+#
+# n, m = int(input()), int(input())
+# symbols = (digits + ascii_uppercase)[:n]
+#
+# print(*map("".join, it.product(symbols, repeat=m)))
+#
+#
+#
+#
+# from itertools import product
+#
+# n, m = int(input()), int(input())
+# s = '0123456789ABCDEF'[:n]
+#
+# print(*[''.join(el) for el in product(s, repeat=m)])
+
