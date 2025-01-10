@@ -993,3 +993,30 @@ from itertools import filterfalse, takewhile, dropwhile
 #
 # for i in list(product(letters, digits)):
 #     print(*i, sep='', end=' ')
+
+# def password_gen():
+#     for i in range(10):
+#         for j in range(10):
+#             for k in range(10):
+#                 yield str(i) + str(j) + str(k)
+
+
+# from itertools import product
+# def password_gen():
+#    s = (i for i in product(range(10),range(10), range(10)))
+#    for i in s:
+#        yield str(i[0])+str(i[1])+str(i[2])
+#
+# from itertools import product
+#
+#
+# def password_gen():
+#     for i, j, k in product(range(10), repeat=3):
+#         yield f'{i}{j}{k}'
+#
+# passwords = password_gen()
+#
+# print(next(passwords))
+# print(next(passwords))
+# print(next(passwords))
+
