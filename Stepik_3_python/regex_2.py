@@ -35,3 +35,17 @@
 # for line in map(str.rstrip, sys.stdin):
 #     if re.fullmatch(r'(\w+)\1', line):
 #         print(line)
+
+# import sys
+# import re
+#
+# bee = geek = 0
+#
+# for line in sys.stdin:
+#     if re.search(r'bee.*bee', line):
+#         bee += 1
+#     if re.search(r'\bgeek\b', line):
+#         geek += 1
+#
+# print(bee)
+# print(geek)
