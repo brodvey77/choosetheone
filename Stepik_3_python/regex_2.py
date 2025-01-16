@@ -67,3 +67,25 @@
 # for line in sys.stdin:
 #     match = search('^Здравствуйте.*|^Доброе утро.*|^Добрый день.*|Добрый вечер.*', line, flags=IGNORECASE|MULTILINE)
 #     print(bool(match))
+
+# import sys
+# import re
+#
+# pattern = r'beegeek'
+# counter = 0
+#
+# for line in sys.stdin:
+#     match = re.search(pattern, line, re.I)
+#     if match:
+#         counter += 1
+#
+# print(counter)
+#
+#
+# import sys
+# import re
+# counter = 0
+# for line in sys.stdin:
+#     counter += bool(re.search('beegeek', line, re.I))
+#
+# print(counter)
