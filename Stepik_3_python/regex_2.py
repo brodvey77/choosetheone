@@ -49,3 +49,21 @@
 #
 # print(bee)
 # print(geek)
+
+# import re
+#
+# message = input()
+# pattern = r"^Здравствуйте|^Доброе утро|^Добрый (день|вечер).*"
+#
+# match = re.match(pattern, message, re.I)
+# print(bool(match))
+#
+#
+# import sys
+# from re import search, IGNORECASE, MULTILINE
+#
+#
+#
+# for line in sys.stdin:
+#     match = search('^Здравствуйте.*|^Доброе утро.*|^Добрый день.*|Добрый вечер.*', line, flags=IGNORECASE|MULTILINE)
+#     print(bool(match))
