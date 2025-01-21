@@ -213,3 +213,26 @@ import re
 #
 # def abbreviate(phrase):
 #     return ''.join(re.findall(r'[A-Z]|\b\w',phrase)).upper()
+
+
+# import sys
+# import re
+#
+# text = sys.stdin.read()
+# pattern = r'<a href="(.+)">(.+)</a>'
+#
+# for address, pointer in re.findall(pattern, text):
+#     print(f'{address}, {pointer}')
+#
+# # put your python code here
+# import re, sys
+#
+# pattern = r'<a href="(?P<adress>.+)">(?P<index>.*)</a>'
+#
+# for line in sys.stdin:
+#     match = re.search(pattern, line.strip('\n'))
+#     if match:
+#         print(f'{match.groupdict()["adress"]}, {match.groupdict()["index"]}')
+#
+#
+
