@@ -149,12 +149,39 @@
 # print(len(result1), len(result2), sep='\n')
 
 
-import re
+# import re
+#
+# text = 'thdbakru rubabadjso babadirnid iehedba  ibebibeb duabafbf'
+# word = 'ba'
+# # text, word = input(), input()
+#
+# pattern = '\B' + '(' + word + ')' + '\B'
+#
+# print(len(re.findall(pattern, text, re.I)))
 
-text = 'thdbakru rubabadjso babadirnid iehedba  ibebibeb duabafbf'
-word = 'ba'
-# text, word = input(), input()
 
-pattern = '\B' + '(' + word + ')' + '\B'
 
-print(len(re.findall(pattern, text, re.I)))
+# import re
+#
+# s = input()
+#
+# if s.endswith('se'):
+#     eng, br = s, s[:-2] + 'ze'
+# else:
+#     br, eng = s, s[:-2] + 'se'
+#
+#
+#
+#
+# pattern = fr'\b({eng}|{br})\b'
+#
+# text = input()
+#
+# print(len(list(re.finditer(pattern, text, re.I))))
+#
+#
+# import re
+#
+# w, s = input()[:-2], input()
+#
+# print(len(re.findall(fr'\b{w}(ze|se)\b', s, re.I)))
