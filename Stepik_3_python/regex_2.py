@@ -185,3 +185,31 @@
 # w, s = input()[:-2], input()
 #
 # print(len(re.findall(fr'\b{w}(ze|se)\b', s, re.I)))
+
+
+# import re
+#
+# w, s = input()[:-2], input()
+#
+# a = re.findall(fr'{w}(our|or)\b', s, re.I)
+#
+# print(len(re.findall(fr'\b{w}u?r\b', s, re.I)))
+
+
+#
+# uour
+# ghour uuour uourr uour uorik uor uuor uorr Uor Uour
+
+import re
+
+# def abbreviate(phrase):
+#     pattern = rf'\b[a-zA-Z|]|[A-Z]'
+#     s = re.findall(pattern, phrase)
+#     return ''.join(s).upper()
+#
+# print(abbreviate('javaScript object notation'))
+#
+# import re
+#
+# def abbreviate(phrase):
+#     return ''.join(re.findall(r'[A-Z]|\b\w',phrase)).upper()
