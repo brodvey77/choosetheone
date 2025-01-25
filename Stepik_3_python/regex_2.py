@@ -252,11 +252,67 @@ import re
 
 # print(result)
 
+# import re
+
+
+# def normalize_jpeg(filename):
+#     s = re.sub(r'(jpe?g)$', 'jpg', filename, flags=re.I)
+#     return s
+
+
+
+# # INPUT DATA:
+
+# # TEST_1:
+# print(normalize_jpeg('stepik.jPeG'))
+
+# # TEST_2:
+# print(normalize_jpeg('mountains.JPG'))
+
+# # TEST_3:
+# print(normalize_jpeg('windows11.jpg'))
+
+# # TEST_4:
+# print(normalize_jpeg('jepg_file.jPG'))
+
+# # TEST_5:
+# print(normalize_jpeg('file_jepg.jPeG'))
+
+# # TEST_6:
+# print(normalize_jpeg('file.jepg.JPEG'))
+
+# # TEST_7:
+# print(normalize_jpeg('filename.jpg.jpg'))
+
+# # TEST_8:
+# print(normalize_jpeg('stepik.jpeg.jpeg'))
+
+# # TEST_9:
+# print(normalize_jpeg('stepik.jpg.jpeg'))
+
+# # TEST_10:
+# print(normalize_jpeg('stepik.jpeg.jpg'))
+
+# # TEST_11:
+# print(normalize_jpeg('beegeek.JPg'))
+
+# # TEST_12:
+# print(normalize_jpeg('нарусском.JPg'))
+
+# # TEST_13:
+# print(normalize_jpeg('на русском языке.JPG'))
+
+# # TEST_14:
+# print(normalize_jpeg('jpg.jPg.Jpg.JPG'))
+
+# # TEST_15:
+# print(normalize_jpeg('Это тест.JpEg'))
+
+
 import re
 
-
-def normalize_jpeg(filename):
-    s = re.sub(r'(jpe?g)$', 'jpg', filename, flags=re.I)
+def normalize_whitespace(string):
+    s = re.sub(r'\s{2,}', ' ', string)
     return s
 
 
@@ -264,46 +320,46 @@ def normalize_jpeg(filename):
 # INPUT DATA:
 
 # TEST_1:
-print(normalize_jpeg('stepik.jPeG'))
+print(normalize_whitespace('AAAA                A                AAAA'))
 
 # TEST_2:
-print(normalize_jpeg('mountains.JPG'))
+print(normalize_whitespace('Тут нет лишних пробелов'))
 
 # TEST_3:
-print(normalize_jpeg('windows11.jpg'))
+print(normalize_whitespace('Тут   н   е   т     л   и     шних пробелов     '))
 
 # TEST_4:
-print(normalize_jpeg('jepg_file.jPG'))
+print(normalize_whitespace('K L  L    O    I!  !  I OP    PPPppdj O   P'))
 
 # TEST_5:
-print(normalize_jpeg('file_jepg.jPeG'))
+print(normalize_whitespace('               '))
 
 # TEST_6:
-print(normalize_jpeg('file.jepg.JPEG'))
+print(normalize_whitespace('aaaaaaaaaaaaaaaaaaaaaaaaaa'))
 
 # TEST_7:
-print(normalize_jpeg('filename.jpg.jpg'))
+print(normalize_whitespace('Раз два  три   четыре    пять      шесть      '))
 
 # TEST_8:
-print(normalize_jpeg('stepik.jpeg.jpeg'))
+print(normalize_whitespace('      Шесть-----пять    четыре***три  два+один'))
 
 # TEST_9:
-print(normalize_jpeg('stepik.jpg.jpeg'))
+print(normalize_whitespace('1 9  2  8   3   7    6    5'))
 
 # TEST_10:
-print(normalize_jpeg('stepik.jpeg.jpg'))
+print(normalize_whitespace('Проб.елов,нетв-этом:очень\длинно*мслове'))
 
 # TEST_11:
-print(normalize_jpeg('beegeek.JPg'))
+print(normalize_whitespace(''))
 
 # TEST_12:
-print(normalize_jpeg('нарусском.JPg'))
+print(normalize_whitespace(' '))
 
 # TEST_13:
-print(normalize_jpeg('на русском языке.JPG'))
+print(normalize_whitespace('There are no unnecessary gaps.'))
 
 # TEST_14:
-print(normalize_jpeg('jpg.jPg.Jpg.JPG'))
+print(normalize_whitespace('. ,  ;   :    "     (       )      '))
 
 # TEST_15:
-print(normalize_jpeg('Это тест.JpEg'))
+print(normalize_whitespace('111111111111 2222222222222 333333333333'))
