@@ -480,3 +480,11 @@ import re
 #     s = re.sub(r'(\d+)\((\w+)\)', lambda match_onj: int(match_onj[1]) * match_onj[2], s)
 #
 # print(s)
+
+
+
+# import re
+#
+# pattern = r'\b(\w+)(?:\W+\1\b)+'
+# print(re.sub(pattern, r'\1', input()))
+
