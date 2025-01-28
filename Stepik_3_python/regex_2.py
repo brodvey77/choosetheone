@@ -488,3 +488,32 @@ import re
 # pattern = r'\b(\w+)(?:\W+\1\b)+'
 # print(re.sub(pattern, r'\1', input()))
 
+# text = 'bee     geek py  stepik          python'
+#
+# result1 = text.split()
+# result2 = text.split(' ')
+#
+# print(result1)
+# print(result2)
+# print(result1 == result2)
+
+# text = '''bee geek
+# stepik python'''
+#
+# print(text.split())
+
+
+
+# import re
+#
+# result = re.split(r'--|__', 'red--blue__green--yellow')
+#
+# print(result)
+
+
+# import re
+#
+# result = re.split(r'--|__', 'red--blue__green--yellow', maxsplit=2)
+#
+# print(result)
+
