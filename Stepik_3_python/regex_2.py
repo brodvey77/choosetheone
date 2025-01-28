@@ -410,15 +410,73 @@ import re
 
 
 
-import re
-
-def func(match_obj):
-    s = match_obj.group(0)         # строка совпадения
-    first = s[:2]
-    return first[::-1] + s[2:]
-
-text = 'This is Python'
-
-s = re.sub(r'\b\w{2,}\b', func, text)
-
-print(s)
+# import re
+#
+# def func(match_obj):
+#     s = match_obj.group(0)         # строка совпадения
+#     first = s[:2]
+#     return first[::-1] + s[2:]
+#
+# text = 'This is Python'
+#
+# s = re.sub(r'\b\w{2,}\b', func, text)
+#
+# print(s)
+#
+# import re
+#
+#
+#
+# def multtyplay_string(string):
+#     for i in string:
+#         if ['(', ')']:
+#             print(string)
+#
+#
+#
+#
+#
+# multtyplay_string('hello3(world)hi')
+#
+#
+# import re
+#
+#
+# def mult_string(match):
+#     n, string = match.group(1, 2)
+#     return string * int(n)
+#
+#
+# def unpuck_string(string):
+#     res = re.sub(r'(\d+)\((\w+?)\)', mult_string, string)
+#     if string == res:
+#         return res
+#     else:
+#         return unpuck_string(res)
+#
+#
+# print(unpuck_string(input()))
+#
+#
+#
+#
+#
+# from re import subn
+#
+# s, n = input(), 1
+#
+# while n:
+#     s, n = subn(r'(\d+)\((\w*)\)', lambda m: m[2] * int(m[1]), s)
+#
+# print(s)
+#
+#
+#
+# import re
+#
+# s = input()
+#
+# while '(' in s:
+#     s = re.sub(r'(\d+)\((\w+)\)', lambda match_onj: int(match_onj[1]) * match_onj[2], s)
+#
+# print(s)
