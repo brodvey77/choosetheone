@@ -544,3 +544,14 @@ import re
 # print(' '.join(result))
 
 
+# import re
+#
+# result = re.split(r'\s*\|\s*|\s*&\s*|\s*and\s*|\s*or\s*', 'Two & Owls | a Hen')
+#
+# print(', '.join(result))
+
+
+# import re
+#
+#
+# print(*re.split(r'\s*(?:[|&]|and|or)\s*', input()), sep=', ')
