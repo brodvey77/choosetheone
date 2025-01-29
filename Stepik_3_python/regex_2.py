@@ -517,3 +517,30 @@ import re
 #
 # print(result)
 
+# import re
+#
+# result = re.split(r'\D+', '1 + 2 - 3 * 4')
+#
+# print(result)
+
+
+# import re
+#
+# result = re.split(r'(\w+)\1', 're pypy py rere re')
+#
+# print(result)
+
+# import re
+#
+# result = re.findall(r'(\w+)\1', 're pypy py rere re')
+#
+# print(result)
+
+
+# import re
+#
+# result = re.split(r'\s*[.,;]\s*', 'bee,geek . Python   ,  C++')
+#
+# print(' '.join(result))
+
+
