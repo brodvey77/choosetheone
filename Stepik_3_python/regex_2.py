@@ -612,3 +612,26 @@ import re
 # # TEST_15:
 # print(multiple_split('There"was/a"small/boy"of/Quebec', ['/', '"']))
 
+
+
+# import re
+#
+# regex_obj = re.compile(r'\s*[.,]\s*')
+# result = re.split(regex_obj, 'red, green. big, small')
+#
+# print(result)
+
+
+# import re
+#
+# regex_obj = re.compile(r'\ba\w+\b', re.IGNORECASE)
+# result = regex_obj.search('bee Auto Car python art Geek Astra')
+#
+# print(result.group())
+
+# import re
+#
+# regex_obj = re.compile(r'\ba\w+\b')
+# result = regex_obj.findall('auto apple art astra assert', pos=12)
+#
+# print(result)
