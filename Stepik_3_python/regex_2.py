@@ -632,6 +632,22 @@ import re
 # import re
 #
 # regex_obj = re.compile(r'\ba\w+\b')
-# result = regex_obj.findall('auto apple art astra assert', pos=12)
+# result = regex_obj.findall('auto apple art astra assert', endpos=14)
 #
 # print(result)
+
+# import re
+#
+# regex_obj = re.compile(r'\ba\w+\b')
+# result = regex_obj.findall('auto apple art astra assert', pos=3, endpos=14)
+#
+# print(result)
+
+# import  re
+#
+# a, b = map(int, input().split())
+# s = input()
+#
+# regex_obj = re.compile(r'\d+')
+# result = map(int, regex_obj.findall(s, pos=a, endpos=b))
+# print(sum(result))
