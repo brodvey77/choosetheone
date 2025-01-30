@@ -690,3 +690,7 @@ import re
 #     extract_attributes(html)
 
 
+# from sys import stdin
+# from bs4 import BeautifulSoup as BS
+# a = {i.name: list(i.attrs) for line in stdin for i in BS(line, "html.parser")()}
+# [print(f'{i}: {", ".join(sorted(j))}') for i, j in sorted(a.items())]
