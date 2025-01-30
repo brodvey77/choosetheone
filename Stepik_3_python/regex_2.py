@@ -694,3 +694,15 @@ import re
 # from bs4 import BeautifulSoup as BS
 # a = {i.name: list(i.attrs) for line in stdin for i in BS(line, "html.parser")()}
 # [print(f'{i}: {", ".join(sorted(j))}') for i, j in sorted(a.items())]
+
+# import re
+#
+# res = {}
+#
+# for line in open(0):
+#     for tag, params in re.findall(r'<(\w+)(.*?)>', line):
+#         res[tag] = re.findall(r'([\w-]+)=', params)
+#
+# for k, v in sorted(res.items()):
+#     print(f'{k}: {', '.join(sorted(v))}')
+
