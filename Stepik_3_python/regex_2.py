@@ -651,3 +651,42 @@ import re
 # regex_obj = re.compile(r'\d+')
 # result = map(int, regex_obj.findall(s, pos=a, endpos=b))
 # print(sum(result))
+
+#
+# import re
+#
+# res = {}
+# for line in open(0):
+#     for tag, params in re.findall(r'<(\w+)(.*?)>', line):
+#         res.setdefault(tag, set()).update(re.findall(r'([\w-]+)=', params))
+#
+# for key in sorted(res):
+#     print(f'{key}: {", ".join(sorted(res[key]))}')
+#
+#
+#
+#
+#
+# import sys
+# import re
+# from collections import defaultdict
+#
+# def extract_attributes(html):
+#     tags = defaultdict(set)
+#     tag_pattern = re.compile(r'<\s*(\w+)(.*?)\s*/?\s*>')
+#     attr_pattern = re.compile(r'(\S+)\s*=\s*\"[^\"]*\"')
+#
+#     for line in html:
+#         for tag, attrs in tag_pattern.findall(line):
+#             attributes = attr_pattern.findall(attrs)
+#             tags[tag].update(attributes)
+#
+#     for tag in sorted(tags):
+#         attrs = ', '.join(sorted(tags[tag]))
+#         print(f'{tag}: {attrs}')
+#
+# if __name__ == "__main__":
+#     html = sys.stdin.read().splitlines()
+#     extract_attributes(html)
+
+
