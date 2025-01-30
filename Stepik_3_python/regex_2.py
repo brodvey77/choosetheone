@@ -706,3 +706,8 @@ import re
 # for k, v in sorted(res.items()):
 #     print(f'{k}: {', '.join(sorted(v))}')
 
+import re
+
+simple_comment = r'^#+\s.+$'
+second = r'\s{2,10}(#\s.+$)'
+third = r'(\"{3}).+\1'
