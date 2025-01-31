@@ -707,7 +707,26 @@ import re
 #     print(f'{k}: {', '.join(sorted(v))}')
 
 import re
+import sys
 
-simple_comment = r'^#+\s.+$'
-second = r'\s{2,10}(#\s.+$)'
-third = r'(\"{3}).+\1'
+def remove_comments(code):
+    # Удаляем многострочные комментарии
+    code = re.sub(r'""".*?"""', '', code, flags=re.DOTALL)
+    # Удаляем однострочные комментарии
+    code = re.sub(r'#.*$', '', code, flags=re.MULTILINE)
+    # Удаляем комментарии, следующие за строкой кода
+    code = re.sub(r'  # .*$', '', code, flags=re.MULTILINE)
+    # Удаляем пустые строки
+    code = '\n'.join([line for line in code.splitlines() if line.strip()])
+    return code
+
+def main():
+    # Чтение входных данных
+    input_code = sys.stdin.read()
+    # Удаление комментариев
+    cleaned_code = remove_comments(input_code)
+    # Вывод результата
+    print(cleaned_code)
+
+if __name__ == "__main__":
+    main()
