@@ -1,12 +1,7 @@
 
-leight = 3
+n = int(input())
 
-matrix = [[for i in range(1, leight + 1)]for i in range(1, leight + 1)]
-
-
-
-
-
-for i in matrix:
-    for j in i:
-        print(i, j)
+for i in range(n):
+    for j in range(n):
+        print(min(i + 1, j + 1, n - i, n - j), end=' ')
+    print()
