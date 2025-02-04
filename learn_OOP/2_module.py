@@ -109,11 +109,19 @@
 
 
 
-class Notes:
-    uid = 1005435
-    title = "Шутка"
-    author = "И.С. Бах"
-    pages = 2
+# class Notes:
+#     uid = 1005435
+#     title = "Шутка"
+#     author = "И.С. Бах"
+#     pages = 2
 
 
-print(getattr(Notes, 'author'))
+# print(getattr(Notes, 'author'))
+
+
+class Dictionary:
+    rus = "Питон"
+    eng = "Python"
+
+
+print(getattr(Dictionary, 'rus_word', False))
