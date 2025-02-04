@@ -127,25 +127,41 @@
 # print(getattr(Dictionary, 'rus_word', False))
 
 
-class TravelBlog:
-    total_blogs = 0
+# class TravelBlog:
+#     total_blogs = 0
 
 
-tb1 = TravelBlog()
+# tb1 = TravelBlog()
 
-setattr(tb1, 'name', 'Франция')
-setattr(tb1, 'days', 6)
-
-
-setattr(TravelBlog, 'total_blogs', 2)
+# setattr(tb1, 'name', 'Франция')
+# setattr(tb1, 'days', 6)
 
 
-tb2 = TravelBlog()
-setattr(tb2, 'name', 'Италия')
-setattr(tb2, 'days', 5)
+# setattr(TravelBlog, 'total_blogs', 2)
 
-setattr(TravelBlog, 'total_blogs', 3)
 
-print(tb1.__dict__)
-print(tb2.__dict__)
-print(TravelBlog.__dict__)
+# tb2 = TravelBlog()
+# setattr(tb2, 'name', 'Италия')
+# setattr(tb2, 'days', 5)
+
+# setattr(TravelBlog, 'total_blogs', 3)
+
+# print(tb1.__dict__)
+# print(tb2.__dict__)
+# print(TravelBlog.__dict__)
+
+class Figure:
+    type_fig = 'ellipse'
+    color = 'red'
+
+
+fig1 = Figure()
+
+fig1.start_pt = (10, 5)
+fig1.end_pt = (100, 20)
+fig1.color = 'blue'
+
+del fig1.color
+
+for k,v in fig1.__dict__.items():
+    print(k, end=' ')
