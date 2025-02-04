@@ -83,13 +83,37 @@
 # print(inversions(sequence))
 
 
-class Car:
-    pass
+# class Car:
+#     pass
 
 
 
-setattr(Car, 'model', 'Тойота')
-setattr(Car, 'color', 'Розовый')
-setattr(Car, 'number', 'П111УУ77')
+# setattr(Car, 'model', 'Тойота')
+# setattr(Car, 'color', 'Розовый')
+# setattr(Car, 'number', 'П111УУ77')
 
-print(Car.__dict__['color'])
+# print(Car.__dict__['color'])
+
+
+
+# class Car:
+#     pass
+# d = {
+#     'model': "Тойота",
+#     'color': "Розовый",
+#     'number': "О111АА77"
+# }
+# [setattr(Car,k,v) for k,v in d.items()]
+
+# print(Car.__dict__['color'])
+
+
+
+class Notes:
+    uid = 1005435
+    title = "Шутка"
+    author = "И.С. Бах"
+    pages = 2
+
+
+print(getattr(Notes, 'author'))
