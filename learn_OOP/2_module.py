@@ -150,18 +150,34 @@
 # print(tb2.__dict__)
 # print(TravelBlog.__dict__)
 
-class Figure:
-    type_fig = 'ellipse'
-    color = 'red'
+# class Figure:
+#     type_fig = 'ellipse'
+#     color = 'red'
 
 
-fig1 = Figure()
+# fig1 = Figure()
 
-fig1.start_pt = (10, 5)
-fig1.end_pt = (100, 20)
-fig1.color = 'blue'
+# fig1.start_pt = (10, 5)
+# fig1.end_pt = (100, 20)
+# fig1.color = 'blue'
 
-del fig1.color
+# del fig1.color
 
-for k,v in fig1.__dict__.items():
-    print(k, end=' ')
+# for k,v in fig1.__dict__.items():
+#     print(k, end=' ')
+
+
+class Person:
+    name = 'Сергей Балакирев'
+    job = 'Программист'
+    city = 'Москва'
+
+
+p1 = Person()
+
+print('job' in p1.__dict__)
+
+# if 'job' in p1.__dict__:
+#     print(True)
+# else:
+#     print(False)
