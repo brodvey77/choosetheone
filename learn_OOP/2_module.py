@@ -209,70 +209,80 @@
 # pokemons = [pokemon.strip() for pokemon in sys.stdin]
 # print(len(pokemons) - len(set(pokemons)))
 
-import json
-import functools
-
-def jsonify(func):
-    @functools.wraps(func)
-    def wrapper(*args, **kwargs):
-        json_data = json.dumps(func(*args, **kwargs))
-        return json_data
-    return wrapper
+# import json
+# import functools
 
 
+# def jsonify(func):
+#     @functools.wraps(func)
+#     def wrapper(*args, **kwargs):
+#         json_data = json.dumps(func(*args, **kwargs))
+#         return json_data
+#     return wrapper
 
 
-# TEST_1:
-@jsonify
-def make_user(id, live, options):
-    return {'id': id, 'live': live, 'options': options}
-
-print(make_user(4, False, None))
-
-# TEST_2:
-@jsonify
-def make_list(n):
-    return list(range(1, n + 1))
-
-print(make_list(10))
-
-# TEST_3:
-@jsonify
-def make_str(s1, s2):
-    return (s1 + s2) * 5
-
-print(make_str('bee', 'geek'))
-
-# TEST_4:
-@jsonify
-def make_square(num):
-    return num**2
-
-print(make_square(10))
-print(make_square(10.5))
-
-# TEST_5:
-@jsonify
-def make_bool(flag):
-    return not flag
-
-print(make_bool(True))
-print(make_bool(False))
-
-# TEST_6:
-@jsonify
-def make_None():
-    return None
-
-print(make_None())
-
-# TEST_7:
-@jsonify
-def make_tuple():
-    """JSON-Tuple object"""
-    return (1, '2', 3.0, None, False, {'1': True})
 
 
-print(make_tuple())
-print(make_tuple.__name__)
-print(make_tuple.__doc__)
+# # TEST_1:
+# @jsonify
+# def make_user(id, live, options):
+#     return {'id': id, 'live': live, 'options': options}
+
+# print(make_user(4, False, None))
+
+# # TEST_2:
+# @jsonify
+# def make_list(n):
+#     return list(range(1, n + 1))
+
+# print(make_list(10))
+
+# # TEST_3:
+# @jsonify
+# def make_str(s1, s2):
+#     return (s1 + s2) * 5
+
+# print(make_str('bee', 'geek'))
+
+# # TEST_4:
+# @jsonify
+# def make_square(num):
+#     return num**2
+
+# print(make_square(10))
+# print(make_square(10.5))
+
+# # TEST_5:
+# @jsonify
+# def make_bool(flag):
+#     return not flag
+
+# print(make_bool(True))
+# print(make_bool(False))
+
+# # TEST_6:
+# @jsonify
+# def make_None():
+#     return None
+
+# print(make_None())
+
+# # TEST_7:
+# @jsonify
+# def make_tuple():
+#     """JSON-Tuple object"""
+#     return (1, '2', 3.0, None, False, {'1': True})
+
+
+# print(make_tuple())
+# print(make_tuple.__name__)
+# print(make_tuple.__doc__)
+
+import sys, math
+
+
+data = [i.strip('()\n').split(',') for i in sys.stdin]
+
+for val in data:
+    if -90 <= math.ceil(eval(val[0])) <= 90 and -180 <= math.ceil(eval((val[1]))) <= 180:
+        print(True)
