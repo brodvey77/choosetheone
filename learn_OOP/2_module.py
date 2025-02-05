@@ -19,6 +19,19 @@
 # print(is_correct_bracket_sequence(input()))
 
 
+# # объявление функции
+# def is_correct_bracket(text):
+#     while '()' in text:
+#         text = text.replace('()', '')
+#     return not text
+
+# # считываем данные
+# txt = input()
+
+# # вызываем функцию
+# print(is_correct_bracket(txt))
+
+
 # def inversions(sequence):
 #     counter = 0
 #     ind = 1
@@ -167,17 +180,31 @@
 #     print(k, end=' ')
 
 
-class Person:
-    name = 'Сергей Балакирев'
-    job = 'Программист'
-    city = 'Москва'
+# class Person:
+#     name = 'Сергей Балакирев'
+#     job = 'Программист'
+#     city = 'Москва'
 
 
-p1 = Person()
+# p1 = Person()
 
-print('job' in p1.__dict__)
+# print('job' in p1.__dict__)
 
 # if 'job' in p1.__dict__:
 #     print(True)
 # else:
 #     print(False)
+
+
+# class Person:
+#     name = 'Сергей Балакирев'
+#     job = 'Программист'
+#     city = 'Москва'
+# p1 = Person()
+# print(hasattr(p1, p1.job)
+
+
+import sys
+
+for i in sys.stdin:
+    print(i.strip())
