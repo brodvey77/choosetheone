@@ -278,11 +278,91 @@
 # print(make_tuple.__name__)
 # print(make_tuple.__doc__)
 
-import sys, math
+# import sys
 
 
-data = [i.strip('()\n').split(',') for i in sys.stdin]
+# data = [i.strip('()\n').split(',') for i in sys.stdin]
 
-for val in data:
-    if -90 <= math.ceil(eval(val[0])) <= 90 and -180 <= math.ceil(eval((val[1]))) <= 180:
-        print(True)
+# for val in data:
+#     if -90 <= eval(val[0]) <= 90 and -180 <= eval(val[1]) <= 180:
+#         print(True)
+#     else:
+#         print(False)
+
+# import sys
+
+# axis = [eval(line.strip()) for line in sys.stdin]
+# for x, y in axis:
+#     print(-90 <= x <= 90 and -180 <= y <= 180)
+
+
+
+# for coords in open(0):
+#     latitude, longitude = map(float, coords.strip('\n()').split(', '))
+#     print(-90 <= latitude <= 90 and -180 <= longitude <= 180)
+
+
+
+
+# def filterfalse(predicate, iterable):
+#     return itertools.filterfalse(predicate, iterable)
+
+import itertools
+
+def quantify(iterable, predicate):
+    return len(list(filter(predicate, iterable)))
+
+
+
+
+# INPUT DATA:
+
+# TEST_1:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(quantify(numbers, lambda x: x > 1))
+
+# TEST_2:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(quantify(numbers, lambda x: x % 2 == 0))
+
+# TEST_3:
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(quantify(numbers, lambda x: x < 0))
+
+# TEST_4:
+iterable = ['dddddd', 'a', 'aa', 'aaa', 'bbbb', 'ccccc']
+
+print(quantify(iterable, lambda elem: len(elem) > 3))
+
+# TEST_5:
+iterable = iter(['cdddddd', 'ca', 'caa', 'caaa', 'cbbbb', 'ccccc', 'c'])
+
+print(quantify(iterable, lambda elem: elem.startswith('c')))
+
+# TEST_6:
+iterable = iter(['cdddddd', 'ca', 'caa', 'caaa', 'cbbbb', 'ccccc', 'c'])
+
+print(quantify(iterable, lambda elem: elem.endswith('A')))
+
+# TEST_7:
+iterable = iter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+print(quantify(iterable, lambda elem: elem == 1))
+
+# TEST_8:
+iterable = iter([2, 3, 4, 5, 6, 7, 8, 9, 1])
+
+print(quantify(iterable, lambda elem: elem == 1))
+
+# TEST_9:
+iterable = iter([2, 3, 4, 1, 5, 6, 7, 8, 9, 10])
+
+print(quantify(iterable, lambda elem: elem == 1))
+
+# TEST_10:
+iterable = iter(['', 1, 0, (), [[]], [], {1: 2}])
+
+print(quantify(iterable, None))
