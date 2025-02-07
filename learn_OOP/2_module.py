@@ -307,10 +307,77 @@
 # def filterfalse(predicate, iterable):
 #     return itertools.filterfalse(predicate, iterable)
 
-import itertools
+# import itertools
 
-def quantify(iterable, predicate):
-    return len(list(filter(predicate, iterable)))
+# def quantify(iterable, predicate):
+#     return len(list(filter(predicate, iterable)))
+
+
+
+
+# # INPUT DATA:
+
+# # TEST_1:
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# print(quantify(numbers, lambda x: x > 1))
+
+# # TEST_2:
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# print(quantify(numbers, lambda x: x % 2 == 0))
+
+# # TEST_3:
+# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# print(quantify(numbers, lambda x: x < 0))
+
+# # TEST_4:
+# iterable = ['dddddd', 'a', 'aa', 'aaa', 'bbbb', 'ccccc']
+
+# print(quantify(iterable, lambda elem: len(elem) > 3))
+
+# # TEST_5:
+# iterable = iter(['cdddddd', 'ca', 'caa', 'caaa', 'cbbbb', 'ccccc', 'c'])
+
+# print(quantify(iterable, lambda elem: elem.startswith('c')))
+
+# # TEST_6:
+# iterable = iter(['cdddddd', 'ca', 'caa', 'caaa', 'cbbbb', 'ccccc', 'c'])
+
+# print(quantify(iterable, lambda elem: elem.endswith('A')))
+
+# # TEST_7:
+# iterable = iter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+# print(quantify(iterable, lambda elem: elem == 1))
+
+# # TEST_8:
+# iterable = iter([2, 3, 4, 5, 6, 7, 8, 9, 1])
+
+# print(quantify(iterable, lambda elem: elem == 1))
+
+# # TEST_9:
+# iterable = iter([2, 3, 4, 1, 5, 6, 7, 8, 9, 10])
+
+# print(quantify(iterable, lambda elem: elem == 1))
+
+# # TEST_10:
+# iterable = iter(['', 1, 0, (), [[]], [], {1: 2}])
+
+# print(quantify(iterable, None))
+
+import re
+
+def is_integer(string: str):
+    match = re.fullmatch(r'-?\d+', string)
+    if match:
+        return True
+    else:
+        return False
+
+
+
 
 
 
@@ -318,51 +385,44 @@ def quantify(iterable, predicate):
 # INPUT DATA:
 
 # TEST_1:
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-print(quantify(numbers, lambda x: x > 1))
+print(is_integer('199'))
 
 # TEST_2:
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-print(quantify(numbers, lambda x: x % 2 == 0))
+print(is_integer('-43'))
 
 # TEST_3:
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-print(quantify(numbers, lambda x: x < 0))
+print(is_integer('5f'))
 
 # TEST_4:
-iterable = ['dddddd', 'a', 'aa', 'aaa', 'bbbb', 'ccccc']
-
-print(quantify(iterable, lambda elem: len(elem) > 3))
+print(is_integer('5.0'))
 
 # TEST_5:
-iterable = iter(['cdddddd', 'ca', 'caa', 'caaa', 'cbbbb', 'ccccc', 'c'])
-
-print(quantify(iterable, lambda elem: elem.startswith('c')))
+print(is_integer('1.1'))
 
 # TEST_6:
-iterable = iter(['cdddddd', 'ca', 'caa', 'caaa', 'cbbbb', 'ccccc', 'c'])
-
-print(quantify(iterable, lambda elem: elem.endswith('A')))
+print(is_integer('1-1'))
 
 # TEST_7:
-iterable = iter([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-
-print(quantify(iterable, lambda elem: elem == 1))
+print(is_integer('58593485349483423'))
 
 # TEST_8:
-iterable = iter([2, 3, 4, 5, 6, 7, 8, 9, 1])
-
-print(quantify(iterable, lambda elem: elem == 1))
+print(is_integer('585934853t49483423'))
 
 # TEST_9:
-iterable = iter([2, 3, 4, 1, 5, 6, 7, 8, 9, 10])
-
-print(quantify(iterable, lambda elem: elem == 1))
+print(is_integer('1-2-3'))
 
 # TEST_10:
-iterable = iter(['', 1, 0, (), [[]], [], {1: 2}])
+print(is_integer('5-'))
 
-print(quantify(iterable, None))
+# TEST_11:
+print(is_integer('-p'))
+
+# TEST_12:
+print(is_integer('1111111111'))
+
+# TEST_13:
+print(is_integer('--9'))
+
+# TEST_14:
+print(is_integer('-0001'))
+print(is_integer('0001'))
