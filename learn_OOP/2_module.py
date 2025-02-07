@@ -367,62 +367,77 @@
 
 # print(quantify(iterable, None))
 
-import re
+# import re
 
-def is_integer(string: str):
-    match = re.fullmatch(r'-?\d+', string)
-    if match:
-        return True
-    else:
-        return False
-
-
+# def is_integer(string: str):
+#     match = re.fullmatch(r'-?\d+', string)
+#     if match:
+#         return True
+#     else:
+#         return False
 
 
 
 
 
-# INPUT DATA:
 
-# TEST_1:
-print(is_integer('199'))
 
-# TEST_2:
-print(is_integer('-43'))
+# # INPUT DATA:
 
-# TEST_3:
-print(is_integer('5f'))
+# # TEST_1:
+# print(is_integer('199'))
 
-# TEST_4:
-print(is_integer('5.0'))
+# # TEST_2:
+# print(is_integer('-43'))
 
-# TEST_5:
-print(is_integer('1.1'))
+# # TEST_3:
+# print(is_integer('5f'))
 
-# TEST_6:
-print(is_integer('1-1'))
+# # TEST_4:
+# print(is_integer('5.0'))
 
-# TEST_7:
-print(is_integer('58593485349483423'))
+# # TEST_5:
+# print(is_integer('1.1'))
 
-# TEST_8:
-print(is_integer('585934853t49483423'))
+# # TEST_6:
+# print(is_integer('1-1'))
 
-# TEST_9:
-print(is_integer('1-2-3'))
+# # TEST_7:
+# print(is_integer('58593485349483423'))
 
-# TEST_10:
-print(is_integer('5-'))
+# # TEST_8:
+# print(is_integer('585934853t49483423'))
 
-# TEST_11:
-print(is_integer('-p'))
+# # TEST_9:
+# print(is_integer('1-2-3'))
 
-# TEST_12:
-print(is_integer('1111111111'))
+# # TEST_10:
+# print(is_integer('5-'))
 
-# TEST_13:
-print(is_integer('--9'))
+# # TEST_11:
+# print(is_integer('-p'))
 
-# TEST_14:
-print(is_integer('-0001'))
-print(is_integer('0001'))
+# # TEST_12:
+# print(is_integer('1111111111'))
+
+# # TEST_13:
+# print(is_integer('--9'))
+
+# # TEST_14:
+# print(is_integer('-0001'))
+# print(is_integer('0001'))
+
+
+import calendar, datetime
+
+year, mounth = 2012, 3
+
+# start_date = date(year=year, month=mounth, day=1)
+counter = 0
+for i in calendar.monthcalendar(year, mounth):
+    if i[3] != 0:
+        counter += 1
+        if counter == 4:
+            x = datetime.date(day=i[3], month=mounth, year=year)
+
+print(x.strftime('%d.%m.%Y'))
