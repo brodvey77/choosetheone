@@ -428,16 +428,16 @@
 # print(is_integer('0001'))
 
 
-import calendar, datetime
-
-year, mounth = 2012, 3
-
-# start_date = date(year=year, month=mounth, day=1)
-counter = 0
-for i in calendar.monthcalendar(year, mounth):
-    if i[3] != 0:
-        counter += 1
-        if counter == 4:
-            x = datetime.date(day=i[3], month=mounth, year=year)
-
-print(x.strftime('%d.%m.%Y'))
+# import calendar, datetime
+#
+# year, mounth = 2012, 3
+#
+# # start_date = date(year=year, month=mounth, day=1)
+# counter = 0
+# for i in calendar.monthcalendar(year, mounth):
+#     if i[3] != 0:
+#         counter += 1
+#         if counter == 4:
+#             x = datetime.date(day=i[3], month=mounth, year=year)
+#
+# print(x.strftime('%d.%m.%Y'))
