@@ -623,5 +623,60 @@
 # print(is_fraction('1000/0000'))
 # print(is_fraction('1000/00000008000'))
 
-
-
+# def intersperse(iterable, delimiter):
+#     it = iter(iterable)  # Получаем итератор из итерируемого объекта
+#     try:
+#         yield next(it)  # Первый элемент без разделителя
+#     except StopIteration:
+#         return  # Если итерируемый объект пуст, завершаем генератор
+#
+#     for item in it:
+#         yield delimiter  # Вставляем разделитель
+#         yield item  # Вставляем следующий элемент
+#
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# print(*intersperse([1, 2, 3], 0))
+#
+# # TEST_2:
+# inter = intersperse('beegeek', '!')
+# print(next(inter))
+# print(next(inter))
+# print(*inter)
+#
+# # TEST_3:
+# print(*intersperse('A', '...'))
+#
+# # TEST_4:
+# print(*intersperse(range(5), '>'))
+#
+# # TEST_5:
+# iterable = iter('Beegeek')
+#
+# print(*intersperse(iterable, '+'))
+#
+# # TEST_6:
+# iterable = iter('Be')
+#
+# print(*intersperse(iterable, '---'))
+#
+# # TEST_7:
+# print(*intersperse([], 100))
+#
+# # TEST_8:
+# print(*intersperse('beegeek', '   '))
+#
+# # TEST_9:
+# data = intersperse(range(5), -1)
+# print(list(data))
+#
+# # TEST_10:
+# data = intersperse(range(5), '!!!')
+# print(list(data))
+#
+# # TEST_11:
+# data = intersperse(['John Warner Backus', 5, 'Niklaus Emil Wirth', True, 'Lawrence Gordon Tesler', None, {1, 2, 3}, {'hello': 'world'}], '—')
+# print(list(data))
