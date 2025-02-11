@@ -680,3 +680,63 @@
 # # TEST_11:
 # data = intersperse(['John Warner Backus', 5, 'Niklaus Emil Wirth', True, 'Lawrence Gordon Tesler', None, {1, 2, 3}, {'hello': 'world'}], '—')
 # print(list(data))
+
+# from itertools import starmap
+#
+# def annual_return(start: int, percent: int, years: int):
+#     current = start
+#     for i in range(years):
+#         s = current + (current * percent) / 100
+#         current = s
+#         yield s
+
+
+# from typing import Iterator
+#
+# def annual_return(start: int, percentage: int, years: int) -> Iterator:
+#     return (start := start * ((percentage + 100) / 100) for _ in range(years))
+
+
+
+
+
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# for value in annual_return(120000, 10, 3):
+#     print(round(value))
+#
+# # TEST_2:
+# for value in annual_return(70000, 8, 10):
+#     print(round(value))
+#
+# # TEST_3:
+# for value in annual_return(0, 0, 10):
+#     print(round(value))
+#
+# # TEST_4:
+# for value in annual_return(100, 7, 1):
+#     print(round(value))
+#
+# # TEST_5:
+# for value in annual_return(100, 4, 40):
+#     print(round(value))
+#
+# # TEST_6:
+# for value in annual_return(100, 0, 10):
+#     print(round(value))
+#
+# # TEST_7:
+# for value in annual_return(0, 7, 10):
+#     print(round(value))
+#
+# # TEST_8:
+# for value in annual_return(0, 0, 0):
+#     print(round(value))
+#
+# # TEST_9:
+# for value in annual_return(100, 7, 10):
+#     print(round(value))
+
