@@ -740,3 +740,88 @@
 # for value in annual_return(100, 7, 10):
 #     print(round(value))
 
+# def pluck(data, path, default=None):
+#     for key in path.split('.'):
+#         if isinstance(data, dict) and key in data:
+#             data = data[key]
+#         else:
+#             return default
+#     return data
+#
+#
+#
+# def get_value(data, key):
+#     if key in data:
+#         return data[key]
+#     for item in data.values():
+#         if isinstance(item, dict):
+#             value = get_value(item, key)
+#             if value is not None:
+#                 return value
+#
+#
+# def get_value(d, key):
+#     if key in d:
+#         return d[key]  # базовый случай
+#
+#     for k, v in d.items():
+#         if type(v) == dict:
+#             vl = get_value(v, key)  # рекурсивный случай
+#             if vl is not None:
+#                 return vl
+#
+#
+# # INPUT DATA:
+#
+# # TEST_1:
+# d = {'a': {'b': 5, 'z': 20}, 'c': {'d': 3}, 'x': 40}
+#
+# print(pluck(d, 'x'))
+#
+# # TEST_2:
+# d = {'a': {'b': 5, 'z': 20}, 'c': {'d': 3}, 'x': 40}
+#
+# print(pluck(d, 'a.b'))
+#
+# # TEST_3:
+# d = {'a': {'b': {'c': {'d': {'e': 4}}}}}
+#
+# print(pluck(d, 'a.b.c'))
+#
+# # TEST_4:
+# d = {'a': {'b': 5, 'z': 20}, 'c': {'d': 3}, 'x': 40}
+#
+# print(pluck(d, 'c.e'))
+#
+# # TEST_5:
+# d = {'a': {'b': 5, 'z': 20}, 'c': {'d': 3}, 'x': 40}
+#
+# print(pluck(d, 'c'))
+#
+# # TEST_6:
+# d = {'a': {'b': {'c': {'d': {'e': 4}}}}}
+#
+# print(pluck(d, 'a.b.c.d'))
+#
+# # TEST_7:
+# d = {'a': {'b': {'c': {'d': {'e': 4}}}}}
+#
+# print(pluck(d, 'a.b.c.d.e'))
+#
+# # TEST_8:
+# d = {'a': {'b': 5, 'z': 20}, 'c': {'d': 3}, 'x': 40}
+#
+# print(pluck(d, 'c.d'))
+#
+# # TEST_9:
+# d = {'a': {'b': 5, 'z': 20}, 'c': {'d': 3}, 'x': 40}
+#
+# print(pluck(d, 'z', 0))
+#
+# # TEST_10:
+# d = {'firstname': 'Тимур', 'lastname': 'Гуев', 'birthdate': {'day': 10, 'month': 'October', 'year': 1993},
+#      'address': {'streetaddress': 'Часовая 25, кв. 127',
+#                  'city': {'region': 'Московская область', 'type': 'город', 'cityname': 'Москва'},
+#                  'postalcode': '125315'}}
+#
+# print(pluck(d, 'birthdate.weekday', default='Not found'))
