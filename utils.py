@@ -4,9 +4,12 @@
 # Создайте файл main_file.py и в нем 2 переменные - color и number. Присвойте значения этим переменным при помощи вызова
 # функций get_favorite_color() и get_favorite_number(). Выведите значение переменных на экран
 
-def get_favorite_color():
-    return 'super-duper color'
 
-def get_favorite_number():
-    return 13
 
+a = 'С54550'
+l = []
+
+for i in a:
+    l.append(ord(i))
+
+print(l)
