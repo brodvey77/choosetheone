@@ -2,6 +2,8 @@
 #     def __init__(self, balance = 0, volume = 500) -> None:
 #         self.balance = balance
 #         self.volume = volume
+from itertools import cycle
+
 
 #     def add_coins(self,coins):
 #         if self.balance + coins > self.volume:
@@ -124,3 +126,67 @@
 # gun.shoot()
 # gun.shoot()
 # gun.shoot()
+
+#
+# class Gun():
+#     def __init__(self):
+#         self.sounds = cycle(('pif', 'paf'))
+#         self.counter = 0
+#
+#     def shoot(self):
+#         print(next(self.sounds))
+#         self.counter += 1
+#
+#     def shots_count(self):
+#         return self.counter
+#
+#
+#     def shots_reset(self):
+#         self.counter = 0
+#         self.sounds = cycle(('pif', 'paf'))
+#
+#
+#
+#
+# gun = Gun()
+#
+# gun.shoot()
+# print(gun.shots_count())
+# gun.shots_reset()
+# print(gun.shots_count())
+# gun.shoot()
+# gun.shoot()
+
+
+# TEST_7:
+# pif
+# 1
+# 0
+# pif
+# paf
+
+# class Scales():
+#     def __init__(self):
+#         self.weight = 0
+#
+#     def add_right(self, weight):
+#         self.weight += weight
+#
+#     def add_left(self, weight):
+#         self.weight -= weight
+#
+#     def get_result(self):
+#         if self.weight > 0:
+#             return 'Правая чаша тяжелее'
+#         if self.weight < 0:
+#             return 'Левая чаша тяжелее'
+#         else:
+#             return 'Весы в равновесии'
+#
+#
+# scales = Scales()
+#
+# scales.add_right(2)
+# scales.add_left(1)
+#
+# print(scales.get_result())
