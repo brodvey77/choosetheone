@@ -207,3 +207,24 @@ from itertools import cycle
 #
 # print(vector.x, vector.y)
 # print(vector.abs())
+
+
+# class Numbers:
+#     def __init__(self):
+#         self.l = []
+#
+#     def add_number(self, num):
+#         self.l.append(num)
+#
+#     def get_even(self):
+#         return list(filter(lambda x: x % 2 == 0, self.l))
+#
+#     def get_odd(self):
+#         return list(filter(lambda x: x % 2 != 0, self.l))
+#
+#
+#
+# numbers = Numbers()
+#
+# print(numbers.get_even())
+# print(numbers.get_odd())
