@@ -4,6 +4,7 @@
 #         self.volume = volume
 from itertools import cycle
 
+from numpy.ma.core import argsort
 
 #     def add_coins(self,coins):
 #         if self.balance + coins > self.volume:
@@ -289,3 +290,30 @@ from itertools import cycle
 # print(todo.get_by_priority(1))
 # print(todo.get_low_priority())
 # print(todo.get_high_priority())
+
+
+class Postman:
+    def __init__(self):
+        self.delivery_data = []
+
+    def add_delivery(self, street, house, flat):
+        self.delivery_data.append((street, house, flat))
+
+    def get_houses_for_street(self, street):
+        return list(dict.fromkeys(map(lambda x: x[1], list(filter(lambda x: x[0] == street, self.delivery_data)))))
+
+    def get_flats_for_house(self, street, house):
+        return list(dict.fromkeys(map(lambda x: x[2], list(filter(lambda x: x[0] == street and x[1] == house, self.delivery_data)))))
+
+
+
+postman = Postman()
+
+postman.add_delivery('Советская', 151, 74)
+postman.add_delivery('Советская', 151, 75)
+postman.add_delivery('Советская', 90, 2)
+postman.add_delivery('Советская', 151, 74)
+
+
+print(postman.get_houses_for_street('Советская'))
+print(postman.get_flats_for_house('Советская', 151))
