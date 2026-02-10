@@ -228,3 +228,33 @@ from itertools import cycle
 #
 # print(numbers.get_even())
 # print(numbers.get_odd())
+
+class TextHandler:
+    def __init__(self):
+        self.l = []
+
+
+    def add_words(self, text):
+        for i in text.split():
+            self.l.append(i)
+
+    def get_shortest_words(self):
+        return list(filter(lambda x: len(x) == len(min(self.l, key=len)), self.l))
+
+    def get_longest_words(self):
+        return list(filter(lambda x: len(x) == len(max(self.l, key=len)), self.l))
+
+
+
+
+texthandler = TextHandler()
+
+texthandler.add_words('The world will hold my trial for your sins')
+texthandler.add_words('Never meant to see the sky never meant to live')
+
+print(texthandler.get_shortest_words())
+print(texthandler.get_longest_words())
+
+
+
+
