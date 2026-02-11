@@ -4,7 +4,8 @@
 #         self.volume = volume
 from itertools import cycle
 
-from numpy.ma.core import argsort
+from numpy.ma.core import argsort, append
+
 
 #     def add_coins(self,coins):
 #         if self.balance + coins > self.volume:
@@ -19,7 +20,6 @@ from numpy.ma.core import argsort
 #             self.balance -= coins
 
 
-
 # piggybank = PiggyBank(0, 10)
 
 # print(piggybank.balance)
@@ -28,8 +28,6 @@ from numpy.ma.core import argsort
 # piggybank.add_coins(20)                               # пробуем добавить избыточное количество монет
 
 # print(piggybank.balance)
-
-
 
 
 # class Gun():
@@ -70,7 +68,6 @@ from numpy.ma.core import argsort
 
 #     def add_rooms(self, n):
 #         self.rooms += n
-
 
 
 # house = House('white', 4)
@@ -246,7 +243,6 @@ from numpy.ma.core import argsort
 #         return list(filter(lambda x: len(x) == len(max(self.l, key=len)), self.l))
 
 
-
 #
 # texthandler = TextHandler()
 #
@@ -292,28 +288,65 @@ from numpy.ma.core import argsort
 # print(todo.get_high_priority())
 
 
-class Postman:
-    def __init__(self):
-        self.delivery_data = []
+# class Postman:
+#     def __init__(self):
+#         self.delivery_data = []
+#
+#     def add_delivery(self, street, house, flat):
+#         self.delivery_data.append((street, house, flat))
+#
+#     def get_houses_for_street(self, street):
+#         return list(dict.fromkeys(map(lambda x: x[1], list(filter(lambda x: x[0] == street, self.delivery_data)))))
+#
+#     def get_flats_for_house(self, street, house):
+#         return list(dict.fromkeys(map(lambda x: x[2], list(filter(lambda x: x[0] == street and x[1] == house, self.delivery_data)))))
+#
+#
+#
+# postman = Postman()
+#
+# postman.add_delivery('Советская', 151, 74)
+# postman.add_delivery('Советская', 151, 75)
+# postman.add_delivery('Советская', 90, 2)
+# postman.add_delivery('Советская', 151, 74)
+#
+#
+# print(postman.get_houses_for_street('Советская'))
+# print(postman.get_flats_for_house('Советская', 151))
 
-    def add_delivery(self, street, house, flat):
-        self.delivery_data.append((street, house, flat))
 
-    def get_houses_for_street(self, street):
-        return list(dict.fromkeys(map(lambda x: x[1], list(filter(lambda x: x[0] == street, self.delivery_data)))))
-
-    def get_flats_for_house(self, street, house):
-        return list(dict.fromkeys(map(lambda x: x[2], list(filter(lambda x: x[0] == street and x[1] == house, self.delivery_data)))))
-
-
-
-postman = Postman()
-
-postman.add_delivery('Советская', 151, 74)
-postman.add_delivery('Советская', 151, 75)
-postman.add_delivery('Советская', 90, 2)
-postman.add_delivery('Советская', 151, 74)
-
-
-print(postman.get_houses_for_street('Советская'))
-print(postman.get_flats_for_house('Советская', 151))
+# class Wordplay:
+#     def __init__(self, words=None):
+#         if words == None:
+#             self.words = []
+#         else:
+#             self.words = words.copy()
+#         self.only_l = []
+#         self.avoid_l = []
+#
+#     def add_word(self, text: str):
+#         if text not in self.words:
+#             self.words.append(text)
+#
+#     def words_with_length(self, n: int):
+#         return list(filter(lambda x: len(x) == n, self.words))
+#
+#     def only(self, *args):
+#         for word in self.words:
+#             if set(word).issubset(set(args)):
+#                 self.only_l.append(word)
+#         return self.only_l
+#
+#     def avoid(self, *args):
+#         for word in self.words:
+#             if set(word).isdisjoint(set(args)):
+#                 self.avoid_l.append(word)
+#         return self.avoid_l
+#
+#
+#
+#
+# wordplay = Wordplay(['o', 'to', 'otto', 'top', 't', 'sao', 'wer', 'qar'])
+#
+# print(wordplay.only('o', 't'))
+# print(wordplay.avoid('o', 't'))
