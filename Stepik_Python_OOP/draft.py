@@ -350,3 +350,60 @@ from numpy.ma.core import argsort, append
 #
 # print(wordplay.only('o', 't'))
 # print(wordplay.avoid('o', 't'))
+
+
+# class Knight:
+#     def __init__(self, horizontal, vertical: int, color):
+#         self.horizontal = horizontal
+#         self.vertical = vertical
+#         self.color = color
+#
+#     def get_char(self):
+#         return 'N'
+#
+#     def can_move(self, horizontal, vertical):
+#         if horizontal not in 'abcdefgh' or not (1 <= vertical <= 8):
+#             return False
+#
+#         return (abs(ord(horizontal) - ord(self.horizontal)) == 1 and
+#                 abs(vertical - self.vertical) == 2) or \
+#             (abs(ord(horizontal) - ord(self.horizontal)) == 2 and
+#              abs(vertical - self.vertical) == 1)
+#
+#     def move_to(self, horizontal, vertical):
+#         if self.can_move(horizontal, vertical):
+#             self.horizontal = horizontal
+#             self.vertical = vertical
+#             return True
+#         return False
+#
+#     def draw_board(self):
+#         knight_x = ord(self.horizontal) - ord('a')
+#         knight_y = 8 - self.vertical
+#
+#         possible_moves = []
+#         offsets = [(2, 1), (2, -1), (-2, 1), (-2, -1),
+#                    (1, 2), (1, -2), (-1, 2), (-1, -2)]
+#
+#         for dx, dy in offsets:
+#             new_x = knight_x + dx
+#             new_y = knight_y + dy
+#             if 0 <= new_x < 8 and 0 <= new_y < 8:
+#                 possible_moves.append((new_y, new_x))
+#
+#         for row in range(8):
+#             for col in range(8):
+#                 if row == knight_y and col == knight_x:
+#                     print('N', end="")
+#                 elif (row, col) in possible_moves:
+#                     print('*', end="")
+#                 else:
+#                     print('.', end="")
+#             print()
+#
+#
+#
+#
+# knight = Knight('c', 3, 'white')
+#
+# knight.draw_board()
