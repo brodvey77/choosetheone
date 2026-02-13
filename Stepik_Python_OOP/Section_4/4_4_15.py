@@ -17,8 +17,8 @@ class Circle:
         return self._area
 
 
-circle = Circle(5)
-
-print(circle.get_radius())
-print(circle.get_diameter())
-print(round(circle.get_area()))
+if __name__ == '__main__':
+    circle = Circle(5)
+    print(circle.get_radius())
+    print(circle.get_diameter())
+    print(circle.get_area())
