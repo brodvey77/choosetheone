@@ -407,3 +407,51 @@ from numpy.ma.core import argsort, append
 # knight = Knight('c', 3, 'white')
 #
 # knight.draw_board()
+
+# class ElectricCar:
+#     def __init__(self, color):
+#         self._color = color
+#
+#     def get_color(self):
+#         print(f'Returning {self._color}')
+#         return self._color
+#
+#     def set_color(self, color):
+#         print(f'Changing {self._color} to {color}')
+#         self._color = color
+#
+#     color = property(get_color, set_color)
+#
+#
+# car = ElectricCar('black')
+#
+# car.color = 'yellow'
+# car.color = 'white'
+# car.color = 'orange'
+#
+# print(car.color)
+
+class ElectricCar:
+    def __init__(self, color):
+        self._color = color
+
+    def get_color(self):
+        return self._color
+
+    def set_color(self, color):
+        self._color = color
+
+    def del_color(self):
+        del self._color
+
+    color = property(get_color, set_color, del_color)
+
+
+car = ElectricCar('black')
+
+car.color = 'yellow'
+car.color = 'white'
+
+del car.color
+
+print(car.color)
