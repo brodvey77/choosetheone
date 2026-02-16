@@ -60,5 +60,5 @@
 #
 # cat.del_name()
 # print(cat.__dict__)
-# print(cat.get_name())
+# print(cat.get_name())clear
 
