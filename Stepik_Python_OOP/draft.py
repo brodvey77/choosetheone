@@ -431,27 +431,61 @@ from numpy.ma.core import argsort, append
 #
 # print(car.color)
 
-class ElectricCar:
-    def __init__(self, color):
-        self._color = color
+# class ElectricCar:
+# #     def __init__(self, color):
+# #         self._color = color
+# #
+# #     def get_color(self):
+# #         return self._color
+# #
+# #     def set_color(self, color):
+# #         self._color = color
+# #
+# #     def del_color(self):
+# #         del self._color
+# #
+# #     color = property(get_color, set_color, del_color)
+# #
+# #
+# # car = ElectricCar('black')
+# #
+# # car.color = 'yellow'
+# # car.color = 'white'
+# #
+# # del car.color
+# #
+# # print(car.color)
 
-    def get_color(self):
-        return self._color
+#
+# class ElectricCar:
+#     def __init__(self, owner):
+#         self._owner = owner
+#
+#     @property
+#     def owner(self):
+#         return self._owner
+#
+#     @owner.setter
+#     def set_owner(self, owner):
+#         self._owner = owner
+#
+#
+# car = ElectricCar('Elon')
+#
+# car.owner = 'Gvido'
+#
+# print(car.owner)
 
-    def set_color(self, color):
-        self._color = color
+# class Person:
+#     def __init__(self, name, surname):
+#         self.name = name
+#         self.surname = surname
+#
+#     @property
+#     def fullname(self):
+#         return self.name + ' ' + self.surname
+#
+#     @fullname.setter
+#     def fullname(self, fullname):
+#         self.name, self.surname = fullname.split()
 
-    def del_color(self):
-        del self._color
-
-    color = property(get_color, set_color, del_color)
-
-
-car = ElectricCar('black')
-
-car.color = 'yellow'
-car.color = 'white'
-
-del car.color
-
-print(car.color)
