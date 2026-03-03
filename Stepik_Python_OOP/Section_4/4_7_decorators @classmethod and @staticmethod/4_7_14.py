@@ -28,5 +28,40 @@ print(Pet.last_pet().name)
 print(Pet.num_of_pets())
 
 
+class Pet:
+    # Атрибуты класса для хранения информации о всех созданных экземплярах
+    _first = None  # самый первый созданный экземпляр
+    _last = None  # самый последний созданный экземпляр
+    _count = 0  # количество созданных экземпляров
+
+    def __init__(self, name):
+        self.name = name
+
+        # Обновляем информацию о созданных экземплярах
+        Pet._count += 1
+
+        # Если это первый созданный экземпляр
+        if Pet._first is None:
+            Pet._first = self
+
+        # Обновляем последний созданный экземпляр
+        Pet._last = self
+
+    @classmethod
+    def first_pet(cls):
+        """Возвращает самый первый созданный экземпляр класса Pet"""
+        return cls._first
+
+    @classmethod
+    def last_pet(cls):
+        """Возвращает самый последний созданный экземпляр класса Pet"""
+        return cls._last
+
+    @classmethod
+    def num_of_pets(cls):
+        """Возвращает количество созданных экземпляров класса Pet"""
+        return cls._count
+
+
 
 
