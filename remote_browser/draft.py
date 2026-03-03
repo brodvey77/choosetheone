@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-sgr = 'RU.23.КК.08.008.Е.000964.08.14'
+sgr = 'RU.01.РА.02.008.Е.000740.04.23'
 link = 'https://nsi.eaeunion.org/portal/1995'
 
 options = Options()
@@ -23,7 +23,7 @@ apply_button = driver.find_element(By.XPATH, '/html/body/div[5]/div[2]/button[2]
 apply_button.click()
 result = driver.find_element(By.XPATH, '//*[@id="dictionary-view"]/div[1]/div[3]/div/div/div[1]/table/tbody/tr/td[2]/div/div/span')
 ActionChains(driver).double_click(result).perform()
-time.sleep(5)
+time.sleep(1)
 url = driver.current_url
 print(url)
 
