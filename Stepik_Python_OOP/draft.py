@@ -504,3 +504,10 @@ from numpy.ma.core import argsort, append
 # car1.disable()
 #
 # print(car1.status, car2.status)
+
+
+a = '-1.5 4 14.8'
+
+l = [i for i in a.split(' ')]
+
+print(l)
