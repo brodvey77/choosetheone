@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-sgr = 'RU.01.РА.02.008.Е.000740.04.23'
+sgr = input('Введите номер СГР: ')
 link = 'https://nsi.eaeunion.org/portal/1995'
 
 options = Options()
@@ -25,6 +25,6 @@ result = driver.find_element(By.XPATH, '//*[@id="dictionary-view"]/div[1]/div[3]
 ActionChains(driver).double_click(result).perform()
 time.sleep(1)
 url = driver.current_url
-print(url)
+print(f'Вот ссылка на вашу СГР в реестре: {url}')
 
 driver.quit()
