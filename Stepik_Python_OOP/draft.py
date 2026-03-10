@@ -506,8 +506,50 @@ from numpy.ma.core import argsort, append
 # print(car1.status, car2.status)
 
 
-a = '-1.5 4 14.8'
+# a = '-1.5 4 14.8'
+#
+# l = [i for i in a.split(' ')]
+#
+# print(l)
 
-l = [i for i in a.split(' ')]
 
-print(l)
+# from functools import singledispatchmethod
+#
+#
+# class ElectricCar:
+#     @singledispatchmethod
+#     def __init__(self, color, owner):
+#         self.color = color
+#         self.owner = owner
+#
+#     @__init__.register(list)
+#     def _multiple_colors_owners(self, color, owner):
+#         self.color = ', '.join(color)
+#         self.owner = ', '.join(owner)
+#
+#
+# car1 = ElectricCar('black', 'Elon')
+# car2 = ElectricCar('yellow', ['Gvido', 'Hideo'])
+#
+# print(car1.color, car1.owner)
+# print(car2.color, car2.owner)
+
+# from functools import singledispatchmethod
+#
+#
+# class ElectricCar:
+#     @singledispatchmethod
+#     def __init__(self, color, owner):
+#         self.color = color
+#         self.owner = owner
+#
+#     @__init__.register
+#     def _from_list(self, data: list):
+#         self.color, self.owner = data
+#
+#
+# car1 = ElectricCar('black', 'Elon')
+# car2 = ElectricCar(['yellow', 'Gvido'])
+#
+# print(car1.color, car1.owner)
+# print(car2.color, car2.owner)
