@@ -10,7 +10,7 @@ sgr = input('Введите номер СГР: ')
 link = 'https://nsi.eaeunion.org/portal/1995'
 
 options = Options()
-options.add_argument('--headless')
+options.add_argument('--headless')  # Эта опция запускает браузер в фоновом режиме
 driver = webdriver.Chrome(options=options)
 driver.implicitly_wait(5)
 
