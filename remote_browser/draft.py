@@ -10,6 +10,7 @@ sgr = input('Введите номер СГР: ')
 link = 'https://nsi.eaeunion.org/portal/1995'
 
 options = Options()
+options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 driver.implicitly_wait(5)
 
