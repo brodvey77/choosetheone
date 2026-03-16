@@ -9,18 +9,32 @@
 # print(obj)
 # print(type(obj))
 
-class Cat:
-    def __new__(cls, *args, **kwargs):
-        print('1. Создание экземпляра класса Cat')
-        instance = object.__new__(cls)
-        return instance
+# class Cat:
+#     def __new__(cls, *args, **kwargs):
+#         print('1. Создание экземпляра класса Cat')
+#         instance = object.__new__(cls)
+#         return instance
+#
+#     def __init__(self, name):
+#         print('2. Инициализация созданного экземпляра класса Cat')
+#         self.name = name
+#
+#
+# cat = Cat('Кемаль')
+#
+# print(type(cat))
+# print(cat.name)
 
-    def __init__(self, name):
-        print('2. Инициализация созданного экземпляра класса Cat')
-        self.name = name
 
-
-cat = Cat('Кемаль')
-
-print(type(cat))
-print(cat.name)
+# class ElectricCar:
+#     def __new__(cls, *args, **kwargs):
+#         return object.__new__(cls)
+#
+#     def __init__(self, color):
+#         self.color = color
+#         return self
+#
+#
+# car = ElectricCar('yellow')
+#
+# print(car.color)
