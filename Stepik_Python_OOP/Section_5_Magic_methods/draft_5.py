@@ -39,13 +39,56 @@
 #
 # print(car.color)
 
-class ElectricCar:
-    def __del__(self):
-        print('Вызов метода __del__()')
+# class ElectricCar:
+#     def __init__(self, color):
+#         self.color = color
+#
+#     def __str__(self):
+#         return f'ElectricCar >> color: {self.color}'
+#
+#
+# car = ElectricCar('black')
+#
+# print(car)
+# print(str(car))
 
 
-cars = [ElectricCar(), ElectricCar()]
+# class ElectricCar:
+#     def __init__(self, color):
+#         self.color = color
+#
+#     def __str__(self):
+#         return None
+#
+#
+# car = ElectricCar('black')
+#
+# print(str(car))
 
-del cars
+# class ElectricCar:
+#     def __init__(self, color):
+#         self.color = color
+#
+#     def __str__(self):
+#         return f'ElectricCar >> color: {self.color}'
+#
+#     def __repr__(self):
+#         return f'{self.color}'
+#
+#
+# car = ElectricCar('black')
+#
+# print(str(car))
+# print(repr(car))
 
-print('Завершение работы')
+# class ElectricCar:
+#     def __init__(self, color):
+#         self.color = color
+#
+#     def __str__(self):
+#         return f'ElectricCar >> color: {self.color}'
+#
+#
+# car = ElectricCar('black')
+#
+# print(repr(car) == str(car))
