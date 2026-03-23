@@ -48,3 +48,17 @@ obj = AnyClass(attr1=10, attr2='beegeek', attr3=True, attr4=[1, 2, 3], attr5=('o
 
 print(str(obj))
 print(repr(obj))
+
+
+class AnyClass:
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+
+    def _attrs(self):
+        return [f'{k}={repr(v)}' for (k, v) in self.__dict__.items()]
+
+    def __repr__(self):
+        return f"AnyClass({', '.join(self._attrs())})"
+
+    def __str__(self):
+        return f"AnyClass: {', '.join(self._attrs())}"
