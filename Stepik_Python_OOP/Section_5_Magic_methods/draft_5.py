@@ -92,3 +92,29 @@
 # car = ElectricCar('black')
 #
 # print(repr(car) == str(car))
+# class ElectricCar:
+#     def __init__(self, color):
+#         self.color = color
+#
+#     def __eq__(self, other):
+#         print('Вызов метода __eq__()')
+#         if isinstance(other, ElectricCar):
+#             return self.color == other.color
+#         return NotImplemented
+#
+#
+# class ElectricBike:
+#     def __init__(self, color):
+#         self.color = color
+#
+#     def __eq__(self, other):
+#         print('Вызов метода __eq__()')
+#         if isinstance(other, ElectricBike):
+#             return self.color == other.color
+#         return NotImplemented
+#
+#
+# car = ElectricCar('white')
+# bike = ElectricBike('white')
+#
+# print(car == bike)
