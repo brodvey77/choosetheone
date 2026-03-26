@@ -354,3 +354,304 @@ True
 Примечание 2. Ветка с обсуждением константы NotImplemented на StackOverflow доступна по ссылке.
 
 Примечание 3. Обычно при переопределении магического метода __eq__() также переопределяют метод __hash__(). Подробнее об этом мы поговорим в уроках, посвященных хешированию объектов.
+
+
+Магические методы __lt__() и __gt__()
+
+Мы научились реализовывать сравнение на равенство с помощью оператора ==, однако без нашего внимания остались сравнения на больше/меньше с помощью операторов >, <. Аналогично сравнению на равенство, данные операции реализуются с помощью соответствующих магических методов.
+
+Рассмотрим класс Fruit, описывающий фрукт, и создадим два экземпляра этого класса:
+
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name                          # название фрукта
+        self.mass = mass                          # масса фрукта в граммах
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass == other.mass        # два фрукта равны, если равны их массы
+        return NotImplemented
+
+
+fruit1 = Fruit('банан', 150)
+fruit2 = Fruit('яблоко', 180)
+
+
+
+
+В данном классе определено сравнение на равенство по следующему правилу: два фрукта считаются равными, если равны их массы. Однако масса является численной величиной, поэтому помимо равенства мы можем определить, например, какой из фруктов меньше (больше), в зависимости от того, чья масса меньше (больше). Для этого нам потребуется реализовать магические методы __lt__() и __gt__().
+
+Магический метод __lt__() отвечает за сравнение на меньше. То есть выражение fruit1 < fruit2 равносильно вызову fruit1.__lt__(fruit2). За сравнение на больше отвечает магический метод __gt__(), и аналогично предыдущему методу выражение fruit1 > fruit2 равносильно вызову fruit1.__gt__(fruit2).
+
+Приведенный ниже код:
+
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name
+        self.mass = mass
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass == other.mass
+        return NotImplemented
+
+    def __lt__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass < other.mass
+        return NotImplemented
+
+    def __gt__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass > other.mass
+        return NotImplemented
+
+
+fruit1 = Fruit('банан', 150)
+fruit2 = Fruit('яблоко', 180)
+
+print(fruit1 < fruit2)
+print(fruit1 > fruit2)
+print(fruit2 < fruit1)
+print(fruit2 > fruit1)
+
+
+
+
+выводит:
+
+True
+False
+False
+True
+
+
+
+
+Магические методы __le__() и __ge__()
+
+Помимо строгих сравнений на больше/меньше существуют нестрогие сравнения, которые допускают равенство (операторы >=, <=). Данные операции реализуются с помощью магических методов __le__() и __ge__().
+
+Магический метод __le__() отвечает за сравнение на меньше или равно. То есть выражение fruit1 <= fruit2 равносильно вызову fruit1.__le__(fruit2). За сравнение на больше или равно отвечает магический метод __ge__(), и аналогично предыдущему методу выражение fruit1 >= fruit2 равносильно вызову fruit1.__ge__(fruit2).
+
+Приведенный ниже код:
+
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name
+        self.mass = mass
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass == other.mass
+        return NotImplemented
+
+    def __le__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass <= other.mass
+        return NotImplemented
+
+    def __ge__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass >= other.mass
+        return NotImplemented
+
+
+fruit1 = Fruit('банан', 150)
+fruit2 = Fruit('яблоко', 180)
+fruit3 = Fruit('груша', 150)
+
+print(fruit1 <= fruit2)
+print(fruit1 >= fruit2)
+print(fruit1 <= fruit3)
+print(fruit1 >= fruit3)
+
+
+
+
+выводит:
+
+True
+False
+True
+True
+
+
+
+
+Декоратор @total_ordering
+
+Реализовывать каждую операцию сравнения в классе достаточно утомительно и многословно, особенно если сравнение имеет сложную структуру. Конечно, мы можем упростить данный процесс, явно реализовав только сравнение на равенство и, например, сравнение на меньше, а все остальные операции сравнения построить на основе этих двух с помощью логических операторов and, or и not:
+
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name
+        self.mass = mass
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass == other.mass
+        return NotImplemented
+
+    def __lt__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass < other.mass
+        return NotImplemented
+
+    def __gt__(self, other):
+        if isinstance(other, Fruit):
+            return not self.__lt__(other) and not self.__eq__(other)
+        return NotImplemented
+
+    def __le__(self, other):
+        if isinstance(other, Fruit):
+            return self.__lt__(other) or self.__eq__(other)
+        return NotImplemented
+
+    def __ge__(self, other):
+        if isinstance(other, Fruit):
+            return not self.__lt__(other)
+        return NotImplemented
+
+
+
+
+Однако проблему многословности такой подход не решает, так как в нашем классе по-прежнему присутствуют определения методов __gt__(), __le__() и __ge__().
+
+Декоратор класса @total_ordering из модуля functools позволяет определить в классе лишь метод __eq__() и один из методов __lt__(), __le__(), __gt__() или __ge__(). Все недостающие методы декоратор определит и реализует самостоятельно.
+
+Приведенный ниже код реализует в классе Fruit все возможные операции сравнения:
+
+from functools import total_ordering
+
+
+@total_ordering
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name
+        self.mass = mass
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass == other.mass
+        return NotImplemented
+
+    def __lt__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass < other.mass
+        return NotImplemented
+
+
+
+
+Принцип декорирования классов мы пока опустим, о нем мы будем говорить в модуле Дополнительные возможности.
+Примечания
+
+Примечание 1. Документация по всем операторам сравнения доступна по ссылке.
+
+Примечание 2. Если в классе реализовано сравнение на больше (меньше), то сравнение на меньше (больше) для объектов этого класса можно считать реализованным автоматически. Аналогично себя ведут и нестрогие сравнения на больше/меньше.
+
+Приведенный ниже код:
+
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name
+        self.mass = mass
+
+    def __lt__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass < other.mass
+        return NotImplemented
+
+
+fruit1 = Fruit('банан', 150)
+fruit2 = Fruit('яблоко', 180)
+
+print(fruit1 < fruit2)
+print(fruit1 > fruit2)
+
+
+
+
+выводит:
+
+True
+False
+
+
+
+
+Дело в том, что выражение fruit1 > fruit2 приводит к вызову метода __gt__() у fruit1, который возвращает константу NotImplemented, так как метод не реализован. Далее Python пытается получить значение выражения fruit2 < fruit1, что приводит к вызову метода __lt__() у fruit2, и так как данный метод уже реализован, возвращается результат сравнения в виде значения False.
+
+Несмотря на данную особенность реализации, рекомендуется явно определять все методы сравнения вручную либо с помощью декоратора @total_ordering.
+
+Примечание 3. После реализации в классе операторов сравнения на больше/меньше появляется возможность сортировать экземпляры этого класса и выбирать среди них наименьший/наибольший.
+
+Приведенный ниже код:
+
+from functools import total_ordering
+
+
+@total_ordering
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name
+        self.mass = mass
+
+    def __repr__(self):
+        return f'Fruit({repr(self.name)}, {self.mass})'
+
+    def __eq__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass == other.mass
+        return NotImplemented
+
+    def __lt__(self, other):
+        if isinstance(other, Fruit):
+            return self.mass < other.mass
+        return NotImplemented
+
+
+fruits = [Fruit('яблоко', 180), Fruit('груша', 160), Fruit('авокадо', 170), Fruit('банан', 150)]
+
+print(sorted(fruits))
+print(min(fruits))
+print(max(fruits))
+
+
+
+
+выводит:
+
+[Fruit('банан', 150), Fruit('груша', 160), Fruit('авокадо', 170), Fruit('яблоко', 180)]
+Fruit('банан', 150)
+Fruit('яблоко', 180)
+
+
+
+
+Примечание 4. Любая операция сравнения реализуется с помощью соответствующего магического метода. Методы для сравнения на равенство есть у любого класса по умолчанию, в то время как методы для сравнения на больше/меньше необходимо реализовывать самостоятельно, и если этого не сделать, при попытке сравнения двух объектов на больше/меньше будет возбуждено исключение.
+
+Приведенный ниже код:
+
+class Fruit:
+    def __init__(self, name, mass):
+        self.name = name
+        self.mass = mass
+
+
+fruit1 = Fruit('банан', 150)
+fruit2 = Fruit('яблоко', 180)
+
+print(fruit1 < fruit2)
+
+
+
+
+приводит к возбуждению исключения:
+
+TypeError: '<' not supported between instances of 'Fruit' and 'Fruit'
+
+
+
+
+Примечание 5. Магические методы __eq__(), __ne__(), __gt__(), __lt__(), __ge__() и __le__() буквально соответствуют английским equal (равно), not equal (не равно), greater than (больше, чем), less than (меньше, чем), greater than or equal (больше или равно) и less than or equal (меньше или равно) соответственно.
