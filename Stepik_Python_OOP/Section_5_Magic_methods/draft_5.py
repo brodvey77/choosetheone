@@ -118,3 +118,34 @@
 # bike = ElectricBike('white')
 #
 # print(car == bike)
+
+# num = 'str'
+# id1 = id(num)
+# print(id1)
+#
+# num += 'str'
+# print(id1)
+# print(num)
+# id2 = id(num)
+# # print(id2)
+# print(id1 == id2)
+
+# class PiggyBank:
+#     def __init__(self, coins):
+#         self.coins = coins
+#
+#     def __repr__(self):
+#         return f'PiggyBank({self.coins})'
+#
+#     def __mul__(self, other):
+#         return PiggyBank(self.coins * other)
+#
+#     def __imul__(self, other):
+#         self.coins *= other
+#
+#
+# bank = PiggyBank(10)
+#
+# bank *= 5
+#
+# print(bank)
