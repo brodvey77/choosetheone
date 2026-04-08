@@ -149,3 +149,12 @@
 # bank *= 5
 #
 # print(bank)
+
+class Adder:
+    def __init__(self, value):
+        self.value = value
+
+
+add_ten = Adder(10)
+
+print(add_ten(11))
