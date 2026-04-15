@@ -150,11 +150,29 @@
 #
 # print(bank)
 
-class Adder:
-    def __init__(self, value):
-        self.value = value
+# class Adder:
+#     def __init__(self, value):
+#         self.value = value
+#
+#
+# add_ten = Adder(10)
+#
+# print(add_ten(11))
 
 
-add_ten = Adder(10)
 
-print(add_ten(11))
+# class ElectricCar:
+#     def __init__(self, power_reserve):
+#         self.power_reserve = power_reserve
+#
+#     def __int__(self):
+#         return int(self.power_reserve)
+#
+#     def __float__(self):
+#         return float(self.power_reserve)
+#
+#
+# car = ElectricCar(330.8)
+#
+# print(int(car))
+# print(float(car))
