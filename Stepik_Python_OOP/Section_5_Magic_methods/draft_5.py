@@ -176,3 +176,17 @@
 #
 # print(int(car))
 # print(float(car))
+
+print(hash(-1) == hash(-2))                          # хеш-значение целого числа
+print(hash(2.5))                        # хеш-значение вещественного числа
+print(hash('bee'))                      # хеш-значение строки
+print(hash((1, 2, 3)))                  # хеш-значение кортежа
+
+print(hash('beegeek'))
+print(hash('beegeek'))
+print(hash('beegeek!'))
+print(hash('beek'))
+print(hash('geek'))
+import sys
+
+print(sys.hash_info)
