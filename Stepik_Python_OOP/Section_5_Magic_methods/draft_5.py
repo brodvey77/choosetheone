@@ -177,16 +177,92 @@
 # print(int(car))
 # print(float(car))
 
-print(hash(-1) == hash(-2))                          # хеш-значение целого числа
-print(hash(2.5))                        # хеш-значение вещественного числа
-print(hash('bee'))                      # хеш-значение строки
-print(hash((1, 2, 3)))                  # хеш-значение кортежа
+# print(hash(-1) == hash(-2))                          # хеш-значение целого числа
+# print(hash(2.5))                        # хеш-значение вещественного числа
+# print(hash('bee'))                      # хеш-значение строки
+# print(hash((1, 2, 3)))                  # хеш-значение кортежа
+#
+# print(hash('beegeek'))
+# print(hash('beegeek'))
+# print(hash('beegeek!'))
+# print(hash('beek'))
+# print(hash('geek'))
+# import sys
+#
+# print(sys.hash_info)
+#
+# print(hash('beegeek'))
+#
+# from fractions import Fraction
+#
+# num1 = 0.5
+# num2 = Fraction(1, 2)
+#
+# print(num1 == num2)
+# print(hash(num1) == hash(num2))
+#
+# hashes = set()
+#
+# for _ in range(100):
+#     hashes.add(hash('beegeek'))
+#
+# print(len(hashes))
+#
+#
+# def hash_function(obj):
+#     return hash(obj) % 1000
+#
+# data = [2077, 3.14, 'beaeeee', 'geek', (1, 2, 3)]
+#
+# for obj in data:
+#     print(hash_function(obj))
+#
+#
+#
+# from time import perf_counter
+#
+# start = perf_counter()
+#
+# hash('b' * 100_000_000)
+#
+# end = perf_counter()
+# print(end - start)                      # результат в секундах
+#
+#
+#
+# from collections import defaultdict
+# from string import printable
+#
+# hashes = defaultdict(int)
+#
+# for char in printable:
+#     hashes[hash(char) % 20] += 1
+#
+# for hash_value, hash_count in sorted(hashes.items()):
+#     print(hash_value, '■' * hash_count)
+#
 
-print(hash('beegeek'))
-print(hash('beegeek'))
-print(hash('beegeek!'))
-print(hash('beek'))
-print(hash('geek'))
-import sys
 
-print(sys.hash_info)
+
+# def hash_function(obj):
+#     return sum(ord(character) for character in obj)
+
+# def hash_function(obj):
+#     return sum(ord(character) for character in str(obj))
+
+# def hash_function(obj):
+#     return sum(index * ord(character) for index, character in enumerate(str(obj), start=1))
+
+
+# def hash_function(obj):
+#     return sum(index * ord(character) for index, character in enumerate(str(obj), start=1)) % 123456761
+#
+#
+# print(hash_function('Python'))
+# print(hash_function(123))
+# print(hash_function(12.34))
+# print(hash_function(None))
+# print(hash_function(True))
+# print(hash_function('Python'))
+# print(hash_function('Beegeek'*1000))
+# print(hash_function('Stepik'*10000000))
