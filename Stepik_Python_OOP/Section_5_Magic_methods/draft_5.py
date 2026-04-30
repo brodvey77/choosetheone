@@ -295,3 +295,24 @@
 # cat2 = Cat('Кемаль')
 #
 # print(cat1 == cat2)
+#
+# class Cat:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def __eq__(self, other):
+#         if isinstance(other, Cat):
+#             return self.name == other.name
+#         return NotImplemented
+#
+#     def __hash__(self):
+#         return hash(self.name)
+#
+#
+#
+# cat1 = Cat('Кемаль')
+# cat2 = Cat('Кемаль')
+#
+# print(cat1 == cat2)
+# print(hash(cat1) == hash(cat2))
+
