@@ -126,3 +126,20 @@ class CyclicList:
         """Бесконечная итерация по списку (используем cycle)."""
         # yield from cycle(self._data) — отличный и чистый способ
         yield from cycle(self._data)
+
+
+class CyclicList:
+    def __init__(self, iterable):
+        self.iterable = list(iterable)
+
+    def __getitem__(self, index):
+        return self.iterable[index % len(self.iterable)]
+
+    def __len__(self):
+        return len(self.iterable)
+
+    def append(self, value):
+        self.iterable.append(value)
+
+    def pop(self, value=-1):
+        return self.iterable.pop(value)
