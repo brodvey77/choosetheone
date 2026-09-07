@@ -1,0 +1,188 @@
+Тема урока: контекстные менеджеры модуля contextlib
+
+    Контекстный менеджер closing
+    Контекстный менеджер suppress
+    Контекстный менеджер nullcontext
+    Контекстный менеджер redirect_stdout
+    Контекстный менеджер ExitStack
+
+Аннотация. Урок посвящен контекстным менеджерам модуля contextlib.
+Контекстный менеджер closing
+
+Функция closing() используется для построения контекстных менеджеров из объектов, которые предоставляют метод close(), но не реализуют протокол контекстного менеджера (отсутствуют методы __enter__() и __exit__()).
+
+Примерный код функции closing():
+
+from contextlib import contextmanager
+
+@contextmanager
+def closing(thing):
+    try:
+        yield thing
+    finally:
+        thing.close()
+
+
+
+
+Приведенный ниже код:
+
+from contextlib import closing
+
+class Cat:
+    def __init__(self, name):
+        self.name = name
+
+    def __str__(self):
+        return self.name
+
+    def close(self):
+        print('Пока,', self.name)
+
+
+with closing(Cat('Кемаль')) as cat:
+    print('Привет,', cat)
+
+
+
+
+выводит:
+
+Привет, Кемаль
+Пока, Кемаль
+
+
+
+
+Метод close() объекта cat будет вызываться всегда, даже если в блоке with возникает ошибка.
+
+   В случае отсутствия метода close() у объекта возбуждается исключение AttributeError.
+Контекстный менеджер suppress
+
+Функция suppress() используется для построения контекстных менеджеров, которые игнорируют заданные типы исключений.
+
+Примерный код функции suppress():
+
+from contextlib import contextmanager
+
+@contextmanager
+def suppress(*exceptions):
+    try:
+        yield
+    except Exception as error:
+        if type(error) not in exceptions:
+            raise
+
+
+
+
+Приведенный ниже код:
+
+from contextlib import suppress
+
+with suppress(ValueError):
+    num = int('python')
+
+print('beegeek')
+
+with suppress(TypeError, ZeroDivisionError):
+    num = 1 / 0
+
+print('pygen')
+
+
+
+
+выводит:
+
+beegeek
+pygen
+
+
+
+
+Как и с любым другим механизмом, который полностью подавляет исключения, этот контекстный менеджер следует использовать только для покрытия специфических ошибок, когда точно известно, что продолжение работы программы без вывода сообщений будет корректным.
+
+   Контекстный менеджер, возвращаемый функцией suppress(), является реентерабельным.
+Контекстный менеджер nullcontext
+
+Функция nullcontext() используется для построения пустых контекстных менеджеров, которые ничего не делают.
+
+Примерный код функции nullcontext():
+
+from contextlib import contextmanager
+
+@contextmanager
+def nullcontext(enter_result=None):
+    yield enter_result
+
+
+
+
+Приведенный ниже код:
+
+from contextlib import nullcontext
+
+with nullcontext(2077) as manager:
+    print(manager)
+
+with nullcontext('pygen') as manager:
+    print(manager)
+
+
+
+
+выводит:
+
+2077
+pygen
+
+
+
+
+Функцию nullcontext() удобно использовать для создания необязательного контекстного менеджера, например:
+
+from contextlib import suppress, nullcontext
+
+def my_function(ignore_exceptions=False):
+    if ignore_exceptions:
+        manager = suppress(Exception)           # игнорируем исключения
+    else:
+        manager = nullcontext()                 # не игнорируем исключения
+
+    with manager:
+        # код
+
+
+
+
+Контекстный менеджер redirect_stdout
+
+Функция redirect_stdout() используется для построения контекстных менеджеров, которые временно перенаправляют поток sys.stdout в указанный файлоподобный объект.
+
+Приведенный ниже код:
+
+from contextlib import redirect_stdout
+
+with open('output.txt', mode='w', encoding='utf-8') as file:
+    with redirect_stdout(file):
+        print('Python generation!')
+        help(len)
+
+
+
+
+создает файл output.txt с содержимым:
+
+Python generation!
+Help on built-in function len in module builtins:
+
+len(obj, /)
+    Return the number of items in a container.
+
+
+
+
+Примечания
+
+Примечание 1. Официальная документация модуля contextlib доступна по ссылке.
