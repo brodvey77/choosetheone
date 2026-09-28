@@ -13,3 +13,13 @@ class UpperPrintString(str):
 s = UpperPrintString('beegeek')
 print(s)
 print(list(s))
+
+
+class UpperPrintString(str):
+    def __str__(self):
+        return self.upper()
+
+
+
+class UpperPrintString(str):
+    __str__ = lambda self: self.upper()
