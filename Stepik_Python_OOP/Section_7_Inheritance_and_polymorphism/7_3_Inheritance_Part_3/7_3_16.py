@@ -20,3 +20,21 @@ contents = ['Нужно всего лишь...', 'Обратитесь к нам
 for heading, content in zip(headlines, contents):
     titledtext = TitledText(content, heading)
     print(titledtext.title(), titledtext)
+
+
+class TitledText(str):
+    def __new__(cls, content, text_title, *args, **kwargs):
+        instance = super().__new__(cls, content)
+        instance._text_title = text_title
+        return instance
+
+    def title(self) -> str:
+        return self._text_title
+
+
+class TitledText(str):
+    def __new__(cls, content, text_title):
+        instance = super().__new__(cls, content)
+        instance.text_title = text_title
+        instance.title = lambda: instance.text_title
+        return instance
