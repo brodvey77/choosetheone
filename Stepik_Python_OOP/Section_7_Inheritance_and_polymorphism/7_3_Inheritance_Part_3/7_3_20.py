@@ -49,3 +49,13 @@ class ModularTuple(tuple):
 class ModularTuple(tuple):
     def __new__(cls, iterable=(), size=100):
         return super().__new__(cls, (i % size for i in iterable))
+
+
+
+
+txt = 'python'
+
+for i in range(len(txt)):
+    txt[i] = txt[i].upper()
+
+print(txt)
