@@ -4,7 +4,7 @@
 #         self.volume = volume
 from itertools import cycle
 
-from numpy.ma.core import argsort, append
+# from numpy.ma.core import argsort, append
 
 
 #     def add_coins(self,coins):
@@ -553,3 +553,14 @@ from numpy.ma.core import argsort, append
 #
 # print(car1.color, car1.owner)
 # print(car2.color, car2.owner)
+
+from collections.abc import *
+
+print(isinstance({1, 2, 3}, Iterable))
+print(isinstance({1, 2, 3}, Iterator))
+print(isinstance({1, 2, 3}, Reversible))
+print(isinstance({1, 2, 3}, Collection))
+print(isinstance({1, 2, 3}, Sequence))
+print(isinstance({1, 2, 3}, MutableSequence))
+print(isinstance({1, 2, 3}, Set))
+print(isinstance({1, 2, 3}, MutableSet))
