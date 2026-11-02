@@ -556,11 +556,18 @@ from itertools import cycle
 
 from collections.abc import *
 
-print(isinstance({1, 2, 3}, Iterable))
-print(isinstance({1, 2, 3}, Iterator))
-print(isinstance({1, 2, 3}, Reversible))
-print(isinstance({1, 2, 3}, Collection))
-print(isinstance({1, 2, 3}, Sequence))
-print(isinstance({1, 2, 3}, MutableSequence))
-print(isinstance({1, 2, 3}, Set))
-print(isinstance({1, 2, 3}, MutableSet))
+# print(isinstance({1, 2, 3}, Iterable))
+# print(isinstance({1, 2, 3}, Iterator))
+# print(isinstance({1, 2, 3}, Reversible))
+# print(isinstance({1, 2, 3}, Collection))
+# print(isinstance({1, 2, 3}, Sequence))
+# print(isinstance({1, 2, 3}, MutableSequence))
+# print(isinstance({1, 2, 3}, Set))
+# print(isinstance({1, 2, 3}, MutableSet))
+
+# from collections.abc import Sequence, MutableSequence
+#
+# obj = range(10)
+#
+# print(isinstance(obj, Sequence))
+# print(isinstance(obj, MutableSequence))
