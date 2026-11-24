@@ -230,3 +230,23 @@
 # READ_WRITE = Permission.READ | Permission.WRITE
 #
 # print(~READ_WRITE)
+
+
+import functools
+
+
+class add_one:
+    def __init__(self, func):
+        functools.update_wrapper(self, func)
+        self.func = func
+
+    def __call__(self, *args, **kwargs):
+        return self.func(*args, **kwargs) + 1
+
+
+@add_one
+def add(a, b):
+    return a + b
+
+
+print(type(add))
